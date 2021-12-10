@@ -5,6 +5,8 @@ import Dev from './serve.vue';
 import VueTailwindElements from '@/entry.esm';
 Vue.use(VueTailwindElements);
 
+import './index.css';
+
 Vue.config.productionTip = false;
 
 new Vue({
