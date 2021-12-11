@@ -15,6 +15,11 @@ const router = new VueRouter({
       path: '/accordion',
       name: 'Accordion',
       component: () => import('../views/Accordion.vue')
+    },
+    {
+      path: '/alert',
+      name: 'Alert',
+      component: () => import('../views/Alert.vue')
     }
   ]
 });
