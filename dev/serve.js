@@ -4,6 +4,7 @@ import VueTailwindElements from '@/entry.esm';
 import VuePrism from 'vue-prism';
 
 import './index.css';
+import './styles/styles.css';
 import 'prismjs/themes/prism.css'
 
 Vue.use(VueTailwindElements);
