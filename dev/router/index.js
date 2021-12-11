@@ -20,6 +20,11 @@ const router = new VueRouter({
       path: '/alert',
       name: 'Alert',
       component: () => import('../views/Alert.vue')
+    },
+    {
+      path: '/badge',
+      name: 'Badge',
+      component: () => import('../views/Badge.vue')
     }
   ]
 });
