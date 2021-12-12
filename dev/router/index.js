@@ -30,6 +30,11 @@ const router = new VueRouter({
       path: '/buttons',
       name: 'Button',
       component: () => import('../views/Button.vue')
+    },
+    {
+      path: '/buttongroup',
+      name: 'ButtonGroup',
+      component: () => import('../views/ButtonGroup.vue')
     }
   ]
 });

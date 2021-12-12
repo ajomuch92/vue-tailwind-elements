@@ -95,6 +95,19 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Uppercase / Shadow</h1>
+    <div class="flex space-x-2">
+      <te-button size="medium" type="warning" uppercased>Button</te-button>
+      <te-button size="medium" type="info" shadowed>Button</te-button>
+    </div>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-button size="medium" type="warning" uppercased>Button</te-button>
+          <te-button size="medium" type="info" shadowed>Button</te-button>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
