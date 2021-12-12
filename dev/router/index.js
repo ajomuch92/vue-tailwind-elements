@@ -25,6 +25,11 @@ const router = new VueRouter({
       path: '/badge',
       name: 'Badge',
       component: () => import('../views/Badge.vue')
+    },
+    {
+      path: '/buttons',
+      name: 'Button',
+      component: () => import('../views/Button.vue')
     }
   ]
 });
