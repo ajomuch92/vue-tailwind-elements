@@ -4,3 +4,4 @@ export { default as teAlert } from './teAlert.vue';
 export { default as teBadge } from './teBadge.vue';
 export { default as teButton } from './teButton.vue';
 export { default as teButtonGroup } from './teButtonGroup.vue';
+export { default as teCard } from './teCard.vue';

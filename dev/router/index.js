@@ -35,6 +35,11 @@ const router = new VueRouter({
       path: '/buttongroup',
       name: 'ButtonGroup',
       component: () => import('../views/ButtonGroup.vue')
+    },
+    {
+      path: '/card',
+      name: 'Card',
+      component: () => import('../views/Card.vue')
     }
   ]
 });

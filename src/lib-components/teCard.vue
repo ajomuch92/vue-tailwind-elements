@@ -1,0 +1,63 @@
+<template>
+  <div class="overflow-hidden" :class="{'shadow-md rounded-md': !borderless}" :style="getWidth">
+    <div v-if="hasHeader" class="py-3 px-5 bg-gray-100">
+      <slot name="header" />
+    </div>
+    <img
+      v-if="imgSrc"
+      :src="imgSrc"
+      class="mb-4"
+      :class="{'rounded-lg shadow-xl': borderless}"
+    />
+    <div class="p-5">
+      <h5 class="text-xl font-semibold mb-2">{{title}}</h5>
+      <slot name="default"></slot>
+    </div>
+    <div v-if="hasFooter" class="py-3 px-5 bg-gray-100">
+      <slot name="footer" />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'teCard',
+  props: {
+    imgSrc: {
+      type: String,
+      default: '',
+    },
+    width: {
+      type: [String, Number],
+      default: '350px',
+    },
+    hasHeader: {
+      type: Boolean,
+      default: false
+    },
+    hasFooter: {
+      type: Boolean,
+      default: false
+    },
+    borderless: {
+      type: Boolean,
+      default: false
+    },
+    title: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    getWidth() {
+      return {
+        width: this.width
+      }
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
