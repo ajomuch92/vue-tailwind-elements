@@ -20,6 +20,7 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.4.0",
     "prismjs": "^1.25.0",
     "vue-router": "^3.5.3"
   },
