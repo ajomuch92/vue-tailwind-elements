@@ -29,24 +29,28 @@
     <div class="flex space-x-2">
       <te-button size="small" type="normal">Button</te-button>
       <te-button size="small" type="primary">Button</te-button>
+      <te-button size="small" type="secondary">Button</te-button>
       <te-button size="small" type="success">Button</te-button>
-      <te-button size="small" type="info">Button</te-button>
       <te-button size="small" type="warning">Button</te-button>
       <te-button size="small" type="danger">Button</te-button>
       <te-button size="small" type="pink">Button</te-button>
       <te-button size="small" type="purple">Button</te-button>
+      <te-button size="small" type="dark">Button</te-button>
+      <te-button size="small" type="light">Button</te-button>
     </div>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
           <te-button size="small" type="normal">Button</te-button>
           <te-button size="small" type="primary">Button</te-button>
+          <te-button size="small" type="secondary">Button</te-button>
           <te-button size="small" type="success">Button</te-button>
-          <te-button size="small" type="info">Button</te-button>
           <te-button size="small" type="warning">Button</te-button>
           <te-button size="small" type="danger">Button</te-button>
           <te-button size="small" type="pink">Button</te-button>
           <te-button size="small" type="purple">Button</te-button>
+          <te-button size="small" type="dark">Button</te-button>
+          <te-button size="small" type="light">Button</te-button>
         </script>
       </code>
     </pre>
