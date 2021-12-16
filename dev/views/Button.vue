@@ -72,14 +72,14 @@
     <h1 class="text-lg">Outlined</h1>
     <div class="flex space-x-2">
       <te-button size="small" type="warning" rounded outlined>Button</te-button>
-      <te-button size="medium" type="info" rounded outlined>Button</te-button>
+      <te-button size="medium" type="primary" rounded outlined>Button</te-button>
       <te-button size="large" type="danger" rounded outlined>Button</te-button>
     </div>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
           <te-button size="small" type="warning" rounded outlined>Button</te-button>
-          <te-button size="medium" type="info" rounded outlined>Button</te-button>
+          <te-button size="medium" type="primary" rounded outlined>Button</te-button>
           <te-button size="large" type="danger" rounded outlined>Button</te-button>
         </script>
       </code>
@@ -87,14 +87,14 @@
     <h1 class="text-lg">Only Text</h1>
     <div class="flex space-x-2">
       <te-button size="medium" type="warning" only-text>Button</te-button>
-      <te-button size="medium" type="info" only-text>Button</te-button>
+      <te-button size="medium" type="primary" only-text>Button</te-button>
       <te-button size="medium" type="danger" only-text>Button</te-button>
     </div>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
           <te-button size="medium" type="warning" only-text>Button</te-button>
-          <te-button size="medium" type="info" only-text>Button</te-button>
+          <te-button size="medium" type="primary" only-text>Button</te-button>
           <te-button size="medium" type="danger" only-text>Button</te-button>
         </script>
       </code>
@@ -102,16 +102,17 @@
     <h1 class="text-lg">Uppercase / Shadow</h1>
     <div class="flex space-x-2">
       <te-button size="medium" type="warning" uppercased>Button</te-button>
-      <te-button size="medium" type="info" shadowed>Button</te-button>
+      <te-button size="medium" type="primary" shadowed>Button</te-button>
     </div>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
           <te-button size="medium" type="warning" uppercased>Button</te-button>
-          <te-button size="medium" type="info" shadowed>Button</te-button>
+          <te-button size="medium" type="primary" shadowed>Button</te-button>
         </script>
       </code>
     </pre>
+    <te-date-picker />
   </div>
 </template>
 

@@ -10,6 +10,7 @@
         align-middle
       "
     :class="getClass"
+    :disabled="disabled"
     type="button"
     @click="$emit('click', $event)"
   >
@@ -56,6 +57,10 @@ export default {
       default: false,
     },
     noRounded: {
+      type: Boolean,
+      default: false,
+    },
+    disabled: {
       type: Boolean,
       default: false,
     }
