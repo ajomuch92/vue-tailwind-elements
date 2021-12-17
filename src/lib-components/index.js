@@ -5,3 +5,5 @@ export { default as teBadge } from './teBadge.vue';
 export { default as teButton } from './teButton.vue';
 export { default as teButtonGroup } from './teButtonGroup.vue';
 export { default as teCard } from './teCard.vue';
+export { default as teCheckbox } from './teCheckbox.vue';
+export { default as teSwitch } from './teSwitch.vue';

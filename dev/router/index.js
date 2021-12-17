@@ -40,7 +40,13 @@ const router = new VueRouter({
       path: '/card',
       name: 'Card',
       component: () => import('../views/Card.vue')
-    }
+    },
+    {
+      path: '/switchable',
+      name: 'Switchable',
+      component: () => import('../views/Switchable.vue')
+    },
+
   ]
 });
 
