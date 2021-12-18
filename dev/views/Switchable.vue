@@ -61,6 +61,22 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Radio</h1>
+    <div class="flex flex-col">
+      <te-radio v-model="value3" native-value="M" label="Male"/>
+      <te-radio v-model="value3" native-value="F" label="Female"/>
+      <te-radio v-model="value3" native-value="O" label="Other"/>
+    </div>
+    <p>{{value3}}</p>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-radio v-model="value3" native-value="M" label="Male"/>
+          <te-radio v-model="value3" native-value="F" label="Female"/>
+          <te-radio v-model="value3" native-value="O" label="Other"/>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
@@ -70,6 +86,7 @@ export default {
   data: () => ({
     value1: false,
     value2: false,
+    value3: ''
   })
 }
 </script>
