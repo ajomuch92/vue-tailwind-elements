@@ -56,6 +56,11 @@ const router = new VueRouter({
       name: 'Breadcrumb',
       component: () => import('../views/Breadcrumb.vue')
     },
+    {
+      path: '/input',
+      name: 'Input',
+      component: () => import('../views/Input.vue')
+    },
   ]
 });
 

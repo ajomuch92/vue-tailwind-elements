@@ -10,3 +10,4 @@ export { default as teSwitch } from './teSwitch.vue';
 export { default as teSelect } from './teSelect.vue';
 export { default as teMultipleSelect } from './teMultipleSelect.vue';
 export { default as teBreadcrumb } from './teBreadcrumb.vue';
+export { default as teTextarea } from './teTextarea.vue';
