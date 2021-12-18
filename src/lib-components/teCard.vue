@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden" :class="{'shadow-md rounded-md': !borderless}" :style="getWidth">
-    <div v-if="hasHeader" class="py-3 px-5 bg-gray-100">
+    <div v-if="hasHeader" class="py-3 px-6 border-b border-gray-300 text-center">
       <slot name="header" />
     </div>
     <img
@@ -13,7 +13,7 @@
       <h5 class="text-xl font-semibold mb-2">{{title}}</h5>
       <slot name="default"></slot>
     </div>
-    <div v-if="hasFooter" class="py-3 px-5 bg-gray-100">
+    <div v-if="hasFooter" class="py-3 px-6 border-t border-gray-300 text-gray-600 text-center">
       <slot name="footer" />
     </div>
   </div>
