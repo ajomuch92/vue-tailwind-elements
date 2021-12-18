@@ -9,3 +9,4 @@ export { default as teCheckbox } from './teCheckbox.vue';
 export { default as teSwitch } from './teSwitch.vue';
 export { default as teSelect } from './teSelect.vue';
 export { default as teMultipleSelect } from './teMultipleSelect.vue';
+export { default as teBreadcrumb } from './teBreadcrumb.vue';
