@@ -7,3 +7,5 @@ export { default as teButtonGroup } from './teButtonGroup.vue';
 export { default as teCard } from './teCard.vue';
 export { default as teCheckbox } from './teCheckbox.vue';
 export { default as teSwitch } from './teSwitch.vue';
+export { default as teSelect } from './teSelect.vue';
+export { default as teMultipleSelect } from './teMultipleSelect.vue';

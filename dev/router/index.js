@@ -46,7 +46,11 @@ const router = new VueRouter({
       name: 'Switchable',
       component: () => import('../views/Switchable.vue')
     },
-
+    {
+      path: '/select',
+      name: 'Selects',
+      component: () => import('../views/Selects.vue')
+    },
   ]
 });
 
