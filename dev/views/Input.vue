@@ -12,16 +12,44 @@
       </code>
     </pre>
     <h1 class="text-lg my-2">Input</h1>
-    <te-input v-model="inputValue" class="my-1" :disabled="false" placeholder="Write a text"/>
     <te-input type="number" class="my-1" size="small" placeholder="Write a number"/>
-    <te-input type="emal" class="my-1" size="large" placeholder="Write an email"/>
+    <te-input v-model="inputValue" class="my-1" :disabled="false" placeholder="Write a text"/>
+    <te-input type="email" class="my-1" size="large" placeholder="Write an email"/>
     <p>Value: {{inputValue}}</p>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-input v-model="inputValue" :disabled="false" placeholder="Write a text"/>
           <te-input type="number" size="small" placeholder="Write a number"/>
-          <te-input type="emal" size="large" placeholder="Write an email"/>
+          <te-input v-model="inputValue" :disabled="false" placeholder="Write a text"/>
+          <te-input type="email" size="large" placeholder="Write an email"/>
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg my-2">Helper text</h1>
+    <te-input type="password" class="my-1" size="medium" placeholder="Password" helper-text="Min 9 characters" />
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-input type="password" class="my-1" size="medium" placeholder="Password" helper-text="Min 9 characters" />
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg my-2">Invalid</h1>
+    <te-input type="password" class="my-1" size="medium" placeholder="Password" helper-text="Min 9 characters" invalid />
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-input type="password" class="my-1" size="medium" placeholder="Password" helper-text="Min 9 characters" invalid />
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg my-2">Floating</h1>
+    <p>When floating is applied, size are not available</p>
+    <te-input type="password" class="my-1" placeholder="Password" floating helper-text="Min 9 characters" />
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-input type="password" class="my-1" placeholder="Password" floating helper-text="Min 9 characters" />
         </script>
       </code>
     </pre>

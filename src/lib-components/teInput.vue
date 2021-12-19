@@ -1,5 +1,5 @@
 <template>
-  <div class="input-container">
+  <div class="input-container" :class="{'form-floating': floating}">
     <input
       v-bind="validProps"
       v-model="currentValue"
@@ -15,9 +15,9 @@
         transition
         ease-in-out
         m-0
-        focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        focus:bg-white focus:outline-none
       "
-      :class="[sizeClass, ...disabledClass]"
+      :class="[sizeClass, ...disabledClass, ...invalidadClass]"
       @blur="onBlurHandler"
       @change="onChangeHandler"
       @focus="onFocusHandler"
@@ -26,6 +26,8 @@
       @keyup="onKeyUpHandler"
       @click="onClickHandler"
     />
+    <label v-if="floating" class="text-gray-700">{{placeholder}}</label>
+    <div v-if="helperText" class="text-sm mt-1" :class="{'text-red-500':invalid, 'text-gray-500': !invalid}">{{helperText}}</div>
   </div>
 </template>
 
@@ -104,6 +106,14 @@ export default {
       default: 'medium',
       validator: (value) => ['small', 'medium', 'large'].includes(value)
     },
+    helperText: {
+      type: String,
+      default: null,
+    },
+    floating: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     sizeClass() {
@@ -119,9 +129,16 @@ export default {
         'text-gray-700 bg-gray-100': this.disabled
       }
     },
+    invalidadClass() {
+      return {
+        'border-red-500 focus:border-red-600 invalid': this.invalid,
+        'focus:text-gray-700 focus:border-blue-600': !this.invalid
+      };
+    },
     validProps() {
       const props = { ...this.$props };
       delete props.size;
+      delete props.helperText;
       return props;
     }
   },
@@ -142,6 +159,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .form-control.invalid {
+    box-shadow: none !important;
+  }
 </style>
