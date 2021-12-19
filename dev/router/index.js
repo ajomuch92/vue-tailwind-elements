@@ -66,6 +66,11 @@ const router = new VueRouter({
       name: 'Date',
       component: () => import('../views/Date.vue')
     },
+    {
+      path: '/range',
+      name: 'Range',
+      component: () => import('../views/Range.vue')
+    },
   ]
 });
 
