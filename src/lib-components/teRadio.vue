@@ -34,7 +34,7 @@ export default {
     currentValue: false,
   }),
   created() {
-    this.currentValue = value;
+    this.currentValue = this.value;
   },
   watch: {
     currentValue(val) {
