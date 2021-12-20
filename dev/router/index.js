@@ -71,6 +71,11 @@ const router = new VueRouter({
       name: 'Range',
       component: () => import('../views/Range.vue')
     },
+    {
+      path: '/tab',
+      name: 'Tab',
+      component: () => import('../views/Tab.vue')
+    },
   ]
 });
 

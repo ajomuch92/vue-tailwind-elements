@@ -17,3 +17,4 @@ export { default as teDatePicker } from './teDatePicker.vue';
 export { default as teTimePicker } from './teTimePicker.vue';
 export { default as teRange } from './teRange.vue';
 export { default as teProgress } from './teProgress.vue';
+export { default as teTabs } from './teTabs.vue';
