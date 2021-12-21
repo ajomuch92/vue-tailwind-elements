@@ -76,6 +76,11 @@ const router = new VueRouter({
       name: 'Tab',
       component: () => import('../views/Tab.vue')
     },
+    {
+      path: '/listgroup',
+      name: 'ListGroup',
+      component: () => import('../views/ListGroup.vue')
+    },
   ]
 });
 
