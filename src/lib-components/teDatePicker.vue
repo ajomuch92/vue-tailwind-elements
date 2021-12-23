@@ -54,6 +54,7 @@
         "
         style="width: 17rem"
         v-show="showDatepicker"
+        v-click-outside="hideCalendar"
       >
         <div class="flex justify-between items-center mb-2">
           <div>
@@ -81,9 +82,7 @@
                 p-1
                 rounded-full
               "
-              :class="{'cursor-not-allowed opacity-25': month == 0 }"
-              :disabled="month == 0"
-              @click="month--; getNoOfDays()"
+              @click="deductMonth"
             >
               <svg
                 class="h-6 w-6 text-gray-500 inline-flex"
@@ -111,9 +110,7 @@
                 p-1
                 rounded-full
               "
-              :class="{'cursor-not-allowed opacity-25': month == 11 }"
-              :disabled="month == 11"
-              @click="month++; getNoOfDays()"
+              @click="addMonth"
             >
               <svg
                 class="h-6 w-6 text-gray-500 inline-flex"
@@ -185,8 +182,13 @@
 </template>
 
 <script>
+import clickOutside from './directives/v-outside';
+
 export default {
   name: 'teDatePicker',
+  directives: {
+    'click-outside': clickOutside
+  },
   props: {
     value: {
       type: Date,
@@ -249,8 +251,8 @@ export default {
       }
     },
     isToday(date) {
-      const today = new Date();
       const d = new Date(this.year, this.month, date);
+      const today = this.value || new Date();
       return today.toDateString() === d.toDateString();
     },
     getDateValue(date) {
@@ -258,6 +260,22 @@ export default {
       this.$emit('input', selectedDate);
       this.datepickerValue = selectedDate.toLocaleDateString();
       this.showDatepicker = false;
+    },
+    addMonth() {
+      if (this.month == 11) {
+        this.month = -1;
+        this.year++;
+      }
+      this.month++;
+      this.getNoOfDays();
+    },
+    deductMonth() {
+      if (this.month === 0) {
+        this.month = 12;
+        this.year--;
+      }
+      this.month--;
+      this.getNoOfDays();
     },
     getNoOfDays() {
       const daysInMonth = new Date(
@@ -277,6 +295,9 @@ export default {
       this.blankdays = blankdaysArray;
       this.noOfDays = daysArray;
     },
+    hideCalendar() {
+      this.showDatepicker = false;
+    }
   }
 }
 </script>
