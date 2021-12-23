@@ -21,3 +21,4 @@ export { default as teTabs } from './teTabs.vue';
 export { default as teListGroup } from './teListGroup.vue';
 export { default as teDropdown } from './dropdown/teDropdown.vue';
 export { default as teDropdownItem } from './dropdown/teDropdownItem.vue';
+export { default as teModal } from './teModal.vue';

@@ -86,6 +86,11 @@ const router = new VueRouter({
       name: 'Dropdown',
       component: () => import('../views/Dropdown.vue')
     },
+    {
+      path: '/modal',
+      name: 'Modal',
+      component: () => import('../views/Modal.vue')
+    },
   ]
 });
 
