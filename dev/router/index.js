@@ -81,6 +81,11 @@ const router = new VueRouter({
       name: 'ListGroup',
       component: () => import('../views/ListGroup.vue')
     },
+    {
+      path: '/dropdown',
+      name: 'Dropdown',
+      component: () => import('../views/Dropdown.vue')
+    },
   ]
 });
 
