@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export { default as teAccordion } from './teAccordion.vue';
 export { default as teAlert } from './teAlert.vue';
 export { default as teBadge } from './teBadge.vue';
@@ -25,3 +24,4 @@ export { default as teModal } from './teModal.vue';
 export { default as teSpinner } from './teSpinner.vue';
 export { default as teStepper } from './teStepper.vue';
 export { default as teToast } from './teToast.vue';
+export { default as tePagination } from './tePagination.vue';

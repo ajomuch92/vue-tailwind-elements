@@ -106,6 +106,11 @@ const router = new VueRouter({
       name: 'Toast',
       component: () => import('../views/Toast.vue')
     },
+    {
+      path: '/pagination',
+      name: 'Pagination',
+      component: () => import('../views/Pagination.vue')
+    },
   ]
 });
 
