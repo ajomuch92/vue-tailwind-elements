@@ -101,6 +101,11 @@ const router = new VueRouter({
       name: 'Stepper',
       component: () => import('../views/Stepper.vue')
     },
+    {
+      path: '/toast',
+      name: 'Toast',
+      component: () => import('../views/Toast.vue')
+    },
   ]
 });
 
