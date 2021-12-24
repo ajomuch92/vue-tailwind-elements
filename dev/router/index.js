@@ -91,6 +91,11 @@ const router = new VueRouter({
       name: 'Modal',
       component: () => import('../views/Modal.vue')
     },
+    {
+      path: '/spinner',
+      name: 'Spinner',
+      component: () => import('../views/Spinner.vue')
+    },
   ]
 });
 
