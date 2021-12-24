@@ -25,3 +25,5 @@ export { default as teSpinner } from './teSpinner.vue';
 export { default as teStepper } from './teStepper.vue';
 export { default as teToast } from './teToast.vue';
 export { default as tePagination } from './tePagination.vue';
+export { default as teNavbar } from './navbar/teNavbar.vue';
+export { default as teNavbarItem } from './navbar/teNavbarItem.vue';

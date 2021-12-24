@@ -111,6 +111,11 @@ const router = new VueRouter({
       name: 'Pagination',
       component: () => import('../views/Pagination.vue')
     },
+    {
+      path: '/navbar',
+      name: 'Navbar',
+      component: () => import('../views/Navbar.vue')
+    },
   ]
 });
 
