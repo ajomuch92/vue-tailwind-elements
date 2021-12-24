@@ -23,3 +23,4 @@ export { default as teDropdown } from './dropdown/teDropdown.vue';
 export { default as teDropdownItem } from './dropdown/teDropdownItem.vue';
 export { default as teModal } from './teModal.vue';
 export { default as teSpinner } from './teSpinner.vue';
+export { default as teStepper } from './teStepper.vue';

@@ -96,6 +96,11 @@ const router = new VueRouter({
       name: 'Spinner',
       component: () => import('../views/Spinner.vue')
     },
+    {
+      path: '/stepper',
+      name: 'Stepper',
+      component: () => import('../views/Stepper.vue')
+    },
   ]
 });
 
