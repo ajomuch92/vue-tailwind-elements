@@ -116,6 +116,11 @@ const router = new VueRouter({
       name: 'Navbar',
       component: () => import('../views/Navbar.vue')
     },
+    {
+      path: '/table',
+      name: 'Table',
+      component: () => import('../views/Table.vue')
+    },
   ]
 });
 

@@ -27,3 +27,4 @@ export { default as teToast } from './teToast.vue';
 export { default as tePagination } from './tePagination.vue';
 export { default as teNavbar } from './navbar/teNavbar.vue';
 export { default as teNavbarItem } from './navbar/teNavbarItem.vue';
+export { default as teTable } from './teTable.vue';
