@@ -6,12 +6,7 @@
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-breadcrumb :options="options" />
-          ...
-          export default {
-            ...
-            data: () => ({
-              options: [
+          <te-breadcrumb :options="[
                 {
                   href: '/',
                   label: 'Index'
@@ -20,10 +15,7 @@
                   href: '/breadcrumb',
                   label: 'Breadcrumb'
                 },
-              ]
-            })
-            ...
-          }
+              ]" />
         </script>
       </code>
     </pre>

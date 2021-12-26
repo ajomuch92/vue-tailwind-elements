@@ -112,7 +112,6 @@
         </script>
       </code>
     </pre>
-    <te-date-picker />
   </div>
 </template>
 

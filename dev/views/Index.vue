@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex">
-    <aside class="p-6 sm:w-60 bg-white text-gray-800 overflow-y-auto">
+    <aside class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto">
       <nav class="space-y-8 text-sm">
         <div v-for="(item, key) in items" :key="key" class="space-y-2">
           <h2
@@ -20,7 +20,7 @@
         </div>
       </nav>
     </aside>
-    <main class="container">
+    <main class="container w-full sm:w-9/12 lg:w-10/12 px-4 sm:pr-10 lg:pr-4">
       <router-view />
     </main>
   </div>
