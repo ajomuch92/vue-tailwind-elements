@@ -11,6 +11,7 @@
       </code>
     </pre>
     <h1 class="text-lg my-2">Usage</h1>
+    <p>Importing the styles, there is no need to install Tailwind and you can use everything on it</p>
     <pre class="language-javascript">
       <code>
         <script type="prism-javascript">
