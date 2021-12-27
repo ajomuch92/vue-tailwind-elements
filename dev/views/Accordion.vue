@@ -16,7 +16,7 @@
         <script type="prism-html-markup">
           <te-accordion>
             <template slot="title">
-              <h1 class="text-2xl">Title</h1>
+              <h1 class="text-2xl my-0">Title</h1>
             </template>
             <template slot="default">
               <h1 class="text-2xl">Content</h1>
@@ -31,7 +31,7 @@
     </pre>
     <te-accordion>
       <template slot="title">
-        <h1 class="text-2xl">Title</h1>
+        <h1 class="text-2xl my-0">Title</h1>
       </template>
       <template slot="default">
         <h1 class="text-2xl">Content</h1>
@@ -45,12 +45,8 @@
 </template>
 
 <script>
-import teAccordion from '../../src/lib-components/teAccordion.vue'
 export default {
-  components: { teAccordion },
   name: 'Accordion',
-  data: () => ({
-  })
 }
 </script>
 

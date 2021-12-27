@@ -11,6 +11,7 @@
         flex
         justify-between
         cursor-pointer
+        items-center
       "
       :class="{'bg-gray-100 bg-opacity-50': open, 'hover:bg-gray-100 hover:bg-opacity-50': !open}"
       role="alert"
