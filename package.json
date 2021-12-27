@@ -9,7 +9,8 @@
   "files": [
     "dist/*",
     "src/**/*.vue",
-    "src/**/*.css"
+    "src/**/*.css",
+    "src/**/*.js"
   ],
   "keywords": [
     "tailwind",
