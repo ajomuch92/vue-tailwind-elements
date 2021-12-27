@@ -1,6 +1,6 @@
 {
   "name": "vue-tailwind-elements",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "dist/vue-tailwind-elements.ssr.js",
   "browser": "dist/vue-tailwind-elements.esm.js",
@@ -8,8 +8,19 @@
   "unpkg": "dist/vue-tailwind-elements.min.js",
   "files": [
     "dist/*",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "src/**/*.css"
   ],
+  "keywords": [
+    "tailwind",
+    "vuejs",
+    "vuetailwind",
+    "tailwind-elements",
+    "vue-tailwind-elements",
+    "library",
+    "components"
+  ],
+  "license": "MIT",
   "sideEffects": false,
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",

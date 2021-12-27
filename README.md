@@ -15,7 +15,7 @@ Import in your main.js (or index.js) file and install it:
 ...
 import 'vue-tailwind-elements/src/tailwind.min.css';
 import 'vue-tailwind-elements/src/tailwind-forms.min.css';
-import VueTailwindElements 'vue-tailwind-elements';
+import VueTailwindElements from 'vue-tailwind-elements';
 
 Vue.use(VueTailwindElements);
 ...
