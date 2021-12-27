@@ -159,6 +159,7 @@ function _nonIterableRest() {
 //
 //
 //
+//
 var script$t = {
   name: 'teAccordion',
   props: {
@@ -302,12 +303,12 @@ var __vue_render__$t = function __vue_render__() {
 
   return _c('div', {
     staticClass: "accordion-container"
-  }, [_vm._ssrNode("<div role=\"alert\"" + _vm._ssrClass("\n      text-xl\n      font-medium\n      bg-white\n      duration-300\n      p-3\n      rounded-lg\n      flex\n      justify-between\n      cursor-pointer\n    ", {
+  }, [_vm._ssrNode("<div role=\"alert\"" + _vm._ssrClass("\n      text-xl\n      font-medium\n      bg-white\n      duration-300\n      p-3\n      rounded-lg\n      flex\n      justify-between\n      cursor-pointer\n      items-center\n    ", {
     'bg-gray-100 bg-opacity-50': _vm.open,
     'hover:bg-gray-100 hover:bg-opacity-50': !_vm.open
-  }) + " data-v-2b273493>", "</div>", [_vm._t("title", function () {
+  }) + " data-v-0e812ed4>", "</div>", [_vm._t("title", function () {
     return [_vm._v("\n      " + _vm._s(_vm.title) + "\n    ")];
-  }), _vm._ssrNode(" "), _vm._ssrNode("<span data-v-2b273493>", "</span>", [_vm._t("icon", null, {
+  }), _vm._ssrNode(" "), _vm._ssrNode("<span data-v-0e812ed4>", "</span>", [_vm._t("icon", null, {
     "open": _vm.open
   })], 2)], 2), _vm._ssrNode(" "), _c('transition', {
     attrs: {
@@ -331,8 +332,8 @@ var __vue_staticRenderFns__$t = [];
 
 var __vue_inject_styles__$t = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-2b273493_0", {
-    source: ".apear-enter-active[data-v-2b273493]{animation:apear-data-v-2b273493 .25s}.apear-leave-active[data-v-2b273493]{animation:apear-data-v-2b273493 .25s reverse}@keyframes apear-data-v-2b273493{0%{opacity:0}100%{opacity:1}}",
+  inject("data-v-0e812ed4_0", {
+    source: ".apear-enter-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s}.apear-leave-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s reverse}@keyframes apear-data-v-0e812ed4{0%{opacity:0}100%{opacity:1}}",
     map: undefined,
     media: undefined
   });
@@ -340,10 +341,10 @@ var __vue_inject_styles__$t = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$t = "data-v-2b273493";
+var __vue_scope_id__$t = "data-v-0e812ed4";
 /* module identifier */
 
-var __vue_module_identifier__$t = "data-v-2b273493";
+var __vue_module_identifier__$t = "data-v-0e812ed4";
 /* functional template */
 
 var __vue_is_functional_template__$t = false;

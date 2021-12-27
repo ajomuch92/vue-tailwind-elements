@@ -33,6 +33,7 @@
 //
 //
 //
+//
 var script$t = {
   name: 'teAccordion',
   props: {
@@ -192,7 +193,7 @@ var __vue_render__$t = function () {
   return _c('div', {
     staticClass: "accordion-container"
   }, [_c('div', {
-    staticClass: "\n      text-xl\n      font-medium\n      bg-white\n      duration-300\n      p-3\n      rounded-lg\n      flex\n      justify-between\n      cursor-pointer\n    ",
+    staticClass: "\n      text-xl\n      font-medium\n      bg-white\n      duration-300\n      p-3\n      rounded-lg\n      flex\n      justify-between\n      cursor-pointer\n      items-center\n    ",
     class: {
       'bg-gray-100 bg-opacity-50': _vm.open,
       'hover:bg-gray-100 hover:bg-opacity-50': !_vm.open
@@ -231,8 +232,8 @@ var __vue_staticRenderFns__$t = [];
 
 const __vue_inject_styles__$t = function (inject) {
   if (!inject) return;
-  inject("data-v-2b273493_0", {
-    source: ".apear-enter-active[data-v-2b273493]{animation:apear-data-v-2b273493 .25s}.apear-leave-active[data-v-2b273493]{animation:apear-data-v-2b273493 .25s reverse}@keyframes apear-data-v-2b273493{0%{opacity:0}100%{opacity:1}}",
+  inject("data-v-0e812ed4_0", {
+    source: ".apear-enter-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s}.apear-leave-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s reverse}@keyframes apear-data-v-0e812ed4{0%{opacity:0}100%{opacity:1}}",
     map: undefined,
     media: undefined
   });
@@ -240,7 +241,7 @@ const __vue_inject_styles__$t = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$t = "data-v-2b273493";
+const __vue_scope_id__$t = "data-v-0e812ed4";
 /* module identifier */
 
 const __vue_module_identifier__$t = undefined;
