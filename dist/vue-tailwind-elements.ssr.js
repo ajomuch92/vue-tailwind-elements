@@ -350,12 +350,10 @@ var __vue_module_identifier__$t = "data-v-0e812ed4";
 var __vue_is_functional_template__$t = false;
 /* style inject shadow dom */
 
-var __vue_component__$V = /*#__PURE__*/normalizeComponent({
+var __vue_component__$t = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$t,
   staticRenderFns: __vue_staticRenderFns__$t
-}, __vue_inject_styles__$t, __vue_script__$t, __vue_scope_id__$t, __vue_is_functional_template__$t, __vue_module_identifier__$t, false, undefined, createInjectorSSR, undefined);
-
-var __vue_component__$W = __vue_component__$V;//
+}, __vue_inject_styles__$t, __vue_script__$t, __vue_scope_id__$t, __vue_is_functional_template__$t, __vue_module_identifier__$t, false, undefined, createInjectorSSR, undefined);//
 //
 //
 //
@@ -449,12 +447,10 @@ var __vue_is_functional_template__$s = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$T = /*#__PURE__*/normalizeComponent({
+var __vue_component__$s = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$s,
   staticRenderFns: __vue_staticRenderFns__$s
-}, __vue_inject_styles__$s, __vue_script__$s, __vue_scope_id__$s, __vue_is_functional_template__$s, __vue_module_identifier__$s, false, undefined, undefined, undefined);
-
-var __vue_component__$U = __vue_component__$T;//
+}, __vue_inject_styles__$s, __vue_script__$s, __vue_scope_id__$s, __vue_is_functional_template__$s, __vue_module_identifier__$s, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -570,12 +566,10 @@ var __vue_is_functional_template__$r = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$R = /*#__PURE__*/normalizeComponent({
+var __vue_component__$r = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$r,
   staticRenderFns: __vue_staticRenderFns__$r
-}, __vue_inject_styles__$r, __vue_script__$r, __vue_scope_id__$r, __vue_is_functional_template__$r, __vue_module_identifier__$r, false, undefined, undefined, undefined);
-
-var __vue_component__$S = __vue_component__$R;//
+}, __vue_inject_styles__$r, __vue_script__$r, __vue_scope_id__$r, __vue_is_functional_template__$r, __vue_module_identifier__$r, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -734,16 +728,14 @@ var __vue_is_functional_template__$q = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$Q = /*#__PURE__*/normalizeComponent({
+var __vue_component__$q = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$q,
   staticRenderFns: __vue_staticRenderFns__$q
-}, __vue_inject_styles__$q, __vue_script__$q, __vue_scope_id__$q, __vue_is_functional_template__$q, __vue_module_identifier__$q, false, undefined, undefined, undefined);
-
-var teButton = __vue_component__$Q;//
+}, __vue_inject_styles__$q, __vue_script__$q, __vue_scope_id__$q, __vue_is_functional_template__$q, __vue_module_identifier__$q, false, undefined, undefined, undefined);//
 var script$p = {
   name: 'teButtonGroup',
   components: {
-    teButton: teButton
+    teButton: __vue_component__$q
   },
   props: {
     quantity: {
@@ -829,12 +821,10 @@ var __vue_is_functional_template__$p = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$O = /*#__PURE__*/normalizeComponent({
+var __vue_component__$p = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$p,
   staticRenderFns: __vue_staticRenderFns__$p
-}, __vue_inject_styles__$p, __vue_script__$p, __vue_scope_id__$p, __vue_is_functional_template__$p, __vue_module_identifier__$p, false, undefined, undefined, undefined);
-
-var __vue_component__$P = __vue_component__$O;//
+}, __vue_inject_styles__$p, __vue_script__$p, __vue_scope_id__$p, __vue_is_functional_template__$p, __vue_module_identifier__$p, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -931,12 +921,10 @@ var __vue_is_functional_template__$o = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$M = /*#__PURE__*/normalizeComponent({
+var __vue_component__$o = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$o,
   staticRenderFns: __vue_staticRenderFns__$o
-}, __vue_inject_styles__$o, __vue_script__$o, __vue_scope_id__$o, __vue_is_functional_template__$o, __vue_module_identifier__$o, false, undefined, undefined, undefined);
-
-var __vue_component__$N = __vue_component__$M;//
+}, __vue_inject_styles__$o, __vue_script__$o, __vue_scope_id__$o, __vue_is_functional_template__$o, __vue_module_identifier__$o, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -1020,12 +1008,10 @@ var __vue_is_functional_template__$n = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$K = /*#__PURE__*/normalizeComponent({
+var __vue_component__$n = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$n,
   staticRenderFns: __vue_staticRenderFns__$n
-}, __vue_inject_styles__$n, __vue_script__$n, __vue_scope_id__$n, __vue_is_functional_template__$n, __vue_module_identifier__$n, false, undefined, undefined, undefined);
-
-var __vue_component__$L = __vue_component__$K;//
+}, __vue_inject_styles__$n, __vue_script__$n, __vue_scope_id__$n, __vue_is_functional_template__$n, __vue_module_identifier__$n, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -1109,12 +1095,10 @@ var __vue_is_functional_template__$m = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$I = /*#__PURE__*/normalizeComponent({
+var __vue_component__$m = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$m,
   staticRenderFns: __vue_staticRenderFns__$m
-}, __vue_inject_styles__$m, __vue_script__$m, __vue_scope_id__$m, __vue_is_functional_template__$m, __vue_module_identifier__$m, false, undefined, undefined, undefined);
-
-var __vue_component__$J = __vue_component__$I;//
+}, __vue_inject_styles__$m, __vue_script__$m, __vue_scope_id__$m, __vue_is_functional_template__$m, __vue_module_identifier__$m, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -1200,12 +1184,10 @@ var __vue_is_functional_template__$l = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$G = /*#__PURE__*/normalizeComponent({
+var __vue_component__$l = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$l,
   staticRenderFns: __vue_staticRenderFns__$l
-}, __vue_inject_styles__$l, __vue_script__$l, __vue_scope_id__$l, __vue_is_functional_template__$l, __vue_module_identifier__$l, false, undefined, undefined, undefined);
-
-var __vue_component__$H = __vue_component__$G;//
+}, __vue_inject_styles__$l, __vue_script__$l, __vue_scope_id__$l, __vue_is_functional_template__$l, __vue_module_identifier__$l, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -1364,12 +1346,10 @@ var __vue_is_functional_template__$k = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$E = /*#__PURE__*/normalizeComponent({
+var __vue_component__$k = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$k,
   staticRenderFns: __vue_staticRenderFns__$k
-}, __vue_inject_styles__$k, __vue_script__$k, __vue_scope_id__$k, __vue_is_functional_template__$k, __vue_module_identifier__$k, false, undefined, undefined, undefined);
-
-var __vue_component__$F = __vue_component__$E;//
+}, __vue_inject_styles__$k, __vue_script__$k, __vue_scope_id__$k, __vue_is_functional_template__$k, __vue_module_identifier__$k, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -1486,12 +1466,10 @@ var __vue_module_identifier__$j = "data-v-145af42a";
 var __vue_is_functional_template__$j = false;
 /* style inject shadow dom */
 
-var __vue_component__$C = /*#__PURE__*/normalizeComponent({
+var __vue_component__$j = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$j,
   staticRenderFns: __vue_staticRenderFns__$j
-}, __vue_inject_styles__$j, __vue_script__$j, __vue_scope_id__$j, __vue_is_functional_template__$j, __vue_module_identifier__$j, false, undefined, createInjectorSSR, undefined);
-
-var __vue_component__$D = __vue_component__$C;//
+}, __vue_inject_styles__$j, __vue_script__$j, __vue_scope_id__$j, __vue_is_functional_template__$j, __vue_module_identifier__$j, false, undefined, createInjectorSSR, undefined);//
 //
 //
 //
@@ -1556,12 +1534,10 @@ var __vue_is_functional_template__$i = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$A = /*#__PURE__*/normalizeComponent({
+var __vue_component__$i = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$i,
   staticRenderFns: __vue_staticRenderFns__$i
-}, __vue_inject_styles__$i, __vue_script__$i, __vue_scope_id__$i, __vue_is_functional_template__$i, __vue_module_identifier__$i, false, undefined, undefined, undefined);
-
-var __vue_component__$B = __vue_component__$A;var EventMixin = {
+}, __vue_inject_styles__$i, __vue_script__$i, __vue_scope_id__$i, __vue_is_functional_template__$i, __vue_module_identifier__$i, false, undefined, undefined, undefined);var EventMixin = {
   methods: {
     onBlurHandler: function onBlurHandler(event) {
       this.$emit('blur', event);
@@ -1692,12 +1668,10 @@ var __vue_is_functional_template__$h = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$y = /*#__PURE__*/normalizeComponent({
+var __vue_component__$h = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$h,
   staticRenderFns: __vue_staticRenderFns__$h
-}, __vue_inject_styles__$h, __vue_script__$h, __vue_scope_id__$h, __vue_is_functional_template__$h, __vue_module_identifier__$h, false, undefined, undefined, undefined);
-
-var __vue_component__$z = __vue_component__$y;var script$g = {
+}, __vue_inject_styles__$h, __vue_script__$h, __vue_scope_id__$h, __vue_is_functional_template__$h, __vue_module_identifier__$h, false, undefined, undefined, undefined);var script$g = {
   name: 'teInput',
   mixins: [EventMixin],
   props: {
@@ -1871,12 +1845,10 @@ var __vue_module_identifier__$g = "data-v-5b905655";
 var __vue_is_functional_template__$g = false;
 /* style inject shadow dom */
 
-var __vue_component__$w = /*#__PURE__*/normalizeComponent({
+var __vue_component__$g = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$g,
   staticRenderFns: __vue_staticRenderFns__$g
-}, __vue_inject_styles__$g, __vue_script__$g, __vue_scope_id__$g, __vue_is_functional_template__$g, __vue_module_identifier__$g, false, undefined, createInjectorSSR, undefined);
-
-var __vue_component__$x = __vue_component__$w;var events = ['click'];
+}, __vue_inject_styles__$g, __vue_script__$g, __vue_scope_id__$g, __vue_is_functional_template__$g, __vue_module_identifier__$g, false, undefined, createInjectorSSR, undefined);var events = ['click'];
 
 function onClickOutside(_ref) {
   var event = _ref.event,
@@ -1965,12 +1937,11 @@ function unbind(el) {
 var clickOutside = {
   bind: bind,
   unbind: unbind
-};
-var clickOutside$1 = clickOutside;//
+};//
 var script$f = {
   name: 'teDatePicker',
   directives: {
-    'click-outside': clickOutside$1
+    'click-outside': clickOutside
   },
   props: {
     value: {
@@ -2154,12 +2125,10 @@ var __vue_is_functional_template__$f = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$u = /*#__PURE__*/normalizeComponent({
+var __vue_component__$f = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$f,
   staticRenderFns: __vue_staticRenderFns__$f
-}, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);
-
-var __vue_component__$v = __vue_component__$u;//
+}, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -2431,12 +2400,10 @@ var __vue_is_functional_template__$e = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$s = /*#__PURE__*/normalizeComponent({
+var __vue_component__$e = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$e,
   staticRenderFns: __vue_staticRenderFns__$e
-}, __vue_inject_styles__$e, __vue_script__$e, __vue_scope_id__$e, __vue_is_functional_template__$e, __vue_module_identifier__$e, false, undefined, undefined, undefined);
-
-var __vue_component__$t = __vue_component__$s;//
+}, __vue_inject_styles__$e, __vue_script__$e, __vue_scope_id__$e, __vue_is_functional_template__$e, __vue_module_identifier__$e, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -2558,12 +2525,10 @@ var __vue_is_functional_template__$d = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$q = /*#__PURE__*/normalizeComponent({
+var __vue_component__$d = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$d,
   staticRenderFns: __vue_staticRenderFns__$d
-}, __vue_inject_styles__$d, __vue_script__$d, __vue_scope_id__$d, __vue_is_functional_template__$d, __vue_module_identifier__$d, false, undefined, undefined, undefined);
-
-var __vue_component__$r = __vue_component__$q;//
+}, __vue_inject_styles__$d, __vue_script__$d, __vue_scope_id__$d, __vue_is_functional_template__$d, __vue_module_identifier__$d, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -2655,12 +2620,10 @@ var __vue_is_functional_template__$c = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$o = /*#__PURE__*/normalizeComponent({
+var __vue_component__$c = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$c,
   staticRenderFns: __vue_staticRenderFns__$c
-}, __vue_inject_styles__$c, __vue_script__$c, __vue_scope_id__$c, __vue_is_functional_template__$c, __vue_module_identifier__$c, false, undefined, undefined, undefined);
-
-var __vue_component__$p = __vue_component__$o;//
+}, __vue_inject_styles__$c, __vue_script__$c, __vue_scope_id__$c, __vue_is_functional_template__$c, __vue_module_identifier__$c, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -2802,12 +2765,10 @@ var __vue_is_functional_template__$b = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$m = /*#__PURE__*/normalizeComponent({
+var __vue_component__$b = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$b,
   staticRenderFns: __vue_staticRenderFns__$b
-}, __vue_inject_styles__$b, __vue_script__$b, __vue_scope_id__$b, __vue_is_functional_template__$b, __vue_module_identifier__$b, false, undefined, undefined, undefined);
-
-var __vue_component__$n = __vue_component__$m;//
+}, __vue_inject_styles__$b, __vue_script__$b, __vue_scope_id__$b, __vue_is_functional_template__$b, __vue_module_identifier__$b, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -2920,19 +2881,17 @@ var __vue_is_functional_template__$a = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$k = /*#__PURE__*/normalizeComponent({
+var __vue_component__$a = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$a,
   staticRenderFns: __vue_staticRenderFns__$a
-}, __vue_inject_styles__$a, __vue_script__$a, __vue_scope_id__$a, __vue_is_functional_template__$a, __vue_module_identifier__$a, false, undefined, undefined, undefined);
-
-var __vue_component__$l = __vue_component__$k;//
+}, __vue_inject_styles__$a, __vue_script__$a, __vue_scope_id__$a, __vue_is_functional_template__$a, __vue_module_identifier__$a, false, undefined, undefined, undefined);//
 var script$9 = {
   name: 'teDropdown',
   components: {
-    teButton: teButton
+    teButton: __vue_component__$q
   },
   directives: {
-    'click-outside': clickOutside$1
+    'click-outside': clickOutside
   },
   props: {
     type: {
@@ -3064,12 +3023,10 @@ var __vue_is_functional_template__$9 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$i = /*#__PURE__*/normalizeComponent({
+var __vue_component__$9 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$9,
   staticRenderFns: __vue_staticRenderFns__$9
-}, __vue_inject_styles__$9, __vue_script__$9, __vue_scope_id__$9, __vue_is_functional_template__$9, __vue_module_identifier__$9, false, undefined, undefined, undefined);
-
-var __vue_component__$j = __vue_component__$i;//
+}, __vue_inject_styles__$9, __vue_script__$9, __vue_scope_id__$9, __vue_is_functional_template__$9, __vue_module_identifier__$9, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3137,12 +3094,10 @@ var __vue_is_functional_template__$8 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$g = /*#__PURE__*/normalizeComponent({
+var __vue_component__$8 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$8,
   staticRenderFns: __vue_staticRenderFns__$8
-}, __vue_inject_styles__$8, __vue_script__$8, __vue_scope_id__$8, __vue_is_functional_template__$8, __vue_module_identifier__$8, false, undefined, undefined, undefined);
-
-var __vue_component__$h = __vue_component__$g;//
+}, __vue_inject_styles__$8, __vue_script__$8, __vue_scope_id__$8, __vue_is_functional_template__$8, __vue_module_identifier__$8, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3249,12 +3204,10 @@ var __vue_is_functional_template__$7 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$e = /*#__PURE__*/normalizeComponent({
+var __vue_component__$7 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$7,
   staticRenderFns: __vue_staticRenderFns__$7
-}, __vue_inject_styles__$7, __vue_script__$7, __vue_scope_id__$7, __vue_is_functional_template__$7, __vue_module_identifier__$7, false, undefined, undefined, undefined);
-
-var __vue_component__$f = __vue_component__$e;//
+}, __vue_inject_styles__$7, __vue_script__$7, __vue_scope_id__$7, __vue_is_functional_template__$7, __vue_module_identifier__$7, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3353,12 +3306,10 @@ var __vue_is_functional_template__$6 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$c = /*#__PURE__*/normalizeComponent({
+var __vue_component__$6 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$6,
   staticRenderFns: __vue_staticRenderFns__$6
-}, __vue_inject_styles__$6, __vue_script__$6, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, undefined, undefined, undefined);
-
-var __vue_component__$d = __vue_component__$c;//
+}, __vue_inject_styles__$6, __vue_script__$6, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3480,12 +3431,10 @@ var __vue_is_functional_template__$5 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$a = /*#__PURE__*/normalizeComponent({
+var __vue_component__$5 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$5,
   staticRenderFns: __vue_staticRenderFns__$5
-}, __vue_inject_styles__$5, __vue_script__$5, __vue_scope_id__$5, __vue_is_functional_template__$5, __vue_module_identifier__$5, false, undefined, undefined, undefined);
-
-var __vue_component__$b = __vue_component__$a;//
+}, __vue_inject_styles__$5, __vue_script__$5, __vue_scope_id__$5, __vue_is_functional_template__$5, __vue_module_identifier__$5, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3618,12 +3567,10 @@ var __vue_is_functional_template__$4 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$8 = /*#__PURE__*/normalizeComponent({
+var __vue_component__$4 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$4,
   staticRenderFns: __vue_staticRenderFns__$4
-}, __vue_inject_styles__$4, __vue_script__$4, __vue_scope_id__$4, __vue_is_functional_template__$4, __vue_module_identifier__$4, false, undefined, undefined, undefined);
-
-var __vue_component__$9 = __vue_component__$8;//
+}, __vue_inject_styles__$4, __vue_script__$4, __vue_scope_id__$4, __vue_is_functional_template__$4, __vue_module_identifier__$4, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3833,12 +3780,10 @@ var __vue_is_functional_template__$3 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$6 = /*#__PURE__*/normalizeComponent({
+var __vue_component__$3 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$3,
   staticRenderFns: __vue_staticRenderFns__$3
-}, __vue_inject_styles__$3, __vue_script__$3, __vue_scope_id__$3, __vue_is_functional_template__$3, __vue_module_identifier__$3, false, undefined, undefined, undefined);
-
-var __vue_component__$7 = __vue_component__$6;//
+}, __vue_inject_styles__$3, __vue_script__$3, __vue_scope_id__$3, __vue_is_functional_template__$3, __vue_module_identifier__$3, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3927,12 +3872,10 @@ var __vue_is_functional_template__$2 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$4 = /*#__PURE__*/normalizeComponent({
+var __vue_component__$2 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$2,
   staticRenderFns: __vue_staticRenderFns__$2
-}, __vue_inject_styles__$2, __vue_script__$2, __vue_scope_id__$2, __vue_is_functional_template__$2, __vue_module_identifier__$2, false, undefined, undefined, undefined);
-
-var __vue_component__$5 = __vue_component__$4;//
+}, __vue_inject_styles__$2, __vue_script__$2, __vue_scope_id__$2, __vue_is_functional_template__$2, __vue_module_identifier__$2, false, undefined, undefined, undefined);//
 //
 //
 //
@@ -3995,12 +3938,19 @@ var __vue_is_functional_template__$1 = false;
 
 /* style inject shadow dom */
 
-var __vue_component__$2 = /*#__PURE__*/normalizeComponent({
+var __vue_component__$1 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$1,
   staticRenderFns: __vue_staticRenderFns__$1
-}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);
-
-var __vue_component__$3 = __vue_component__$2;//
+}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4066,6 +4016,14 @@ var script = {
       validator: function validator(value) {
         return ['normal', 'light', 'dark'];
       }
+    },
+    search: {
+      type: String,
+      default: ''
+    },
+    noDataLabel: {
+      type: String,
+      default: 'No Data'
     }
   },
   computed: {
@@ -4087,6 +4045,21 @@ var script = {
         'py-4': !this.compact,
         'py-2': this.compact
       };
+    },
+    filteredItems: function filteredItems() {
+      var _this = this;
+
+      if (this.search) {
+        var items = this.items.filter(function (r) {
+          var values = Object.values(r);
+          return values.some(function (v) {
+            return v.toString().toLowerCase().includes(_this.search.toLowerCase());
+          });
+        });
+        return items;
+      }
+
+      return this.items;
     }
   },
   methods: {
@@ -4125,13 +4098,15 @@ var __vue_render__ = function __vue_render__() {
     return "<th scope=\"col\"" + _vm._ssrClass("text-sm font-medium px-6", Object.assign({}, {
       'text-left': !_vm.centered
     }, _vm.headerCellClass, _vm.paddingClass)) + ">" + _vm._ssrEscape("\n          " + _vm._s(header.label || header) + "\n        ") + "</th>";
-  }) + "</tr></thead> <tbody>" + _vm._ssrList(_vm.items, function (item, key) {
+  }) + "</tr></thead> <tbody>" + (_vm.filteredItems.length ? _vm._ssrList(_vm.filteredItems, function (item, key) {
     return "<tr" + _vm._ssrClass(null, _vm.rowClass(key)) + ">" + _vm._ssrList(_vm.headers, function (header, index) {
       return "<td" + _vm._ssrClass("text-sm text-gray-900 font-medium px-6 whitespace-nowrap", Object.assign({}, _vm.paddingClass, {
         'border-r': _vm.bordered
-      })) + ">" + _vm._ssrEscape("\n          " + _vm._s(item[header.field] || item[header]) + "\n        ") + "</td>";
+      })) + ">" + _vm._ssrEscape("\n            " + _vm._s(item[header.field] || item[header]) + "\n          ") + "</td>";
     }) + "</tr>";
-  }) + "</tbody></table>")]);
+  }) : "<tr><td" + _vm._ssrAttr("colspan", _vm.headers.length) + _vm._ssrClass("text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center", Object.assign({}, _vm.paddingClass, {
+    'border-r': _vm.bordered
+  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>") + "</tbody></table>")]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -4143,7 +4118,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-46f1d3f4";
+var __vue_module_identifier__ = "data-v-1eed0761";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
@@ -4156,9 +4131,7 @@ var __vue_is_functional_template__ = false;
 var __vue_component__ = /*#__PURE__*/normalizeComponent({
   render: __vue_render__,
   staticRenderFns: __vue_staticRenderFns__
-}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
-
-var __vue_component__$1 = __vue_component__;var components$1=/*#__PURE__*/Object.freeze({__proto__:null,teAccordion:__vue_component__$W,teAlert:__vue_component__$U,teBadge:__vue_component__$S,teButton:teButton,teButtonGroup:__vue_component__$P,teCard:__vue_component__$N,teCheckbox:__vue_component__$L,teSwitch:__vue_component__$J,teRadio:__vue_component__$H,teSelect:__vue_component__$F,teMultipleSelect:__vue_component__$D,teBreadcrumb:__vue_component__$B,teTextarea:__vue_component__$z,teInput:__vue_component__$x,teDatePicker:__vue_component__$v,teTimePicker:__vue_component__$t,teRange:__vue_component__$r,teProgress:__vue_component__$p,teTabs:__vue_component__$n,teListGroup:__vue_component__$l,teDropdown:__vue_component__$j,teDropdownItem:__vue_component__$h,teModal:__vue_component__$f,teSpinner:__vue_component__$d,teStepper:__vue_component__$b,teToast:__vue_component__$9,tePagination:__vue_component__$7,teNavbar:__vue_component__$5,teNavbarItem:__vue_component__$3,teTable:__vue_component__$1});var install = function installVueTailwindElements(Vue) {
+}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);var components$1=/*#__PURE__*/Object.freeze({__proto__:null,teAccordion:__vue_component__$t,teAlert:__vue_component__$s,teBadge:__vue_component__$r,teButton:__vue_component__$q,teButtonGroup:__vue_component__$p,teCard:__vue_component__$o,teCheckbox:__vue_component__$n,teSwitch:__vue_component__$m,teRadio:__vue_component__$l,teSelect:__vue_component__$k,teMultipleSelect:__vue_component__$j,teBreadcrumb:__vue_component__$i,teTextarea:__vue_component__$h,teInput:__vue_component__$g,teDatePicker:__vue_component__$f,teTimePicker:__vue_component__$e,teRange:__vue_component__$d,teProgress:__vue_component__$c,teTabs:__vue_component__$b,teListGroup:__vue_component__$a,teDropdown:__vue_component__$9,teDropdownItem:__vue_component__$8,teModal:__vue_component__$7,teSpinner:__vue_component__$6,teStepper:__vue_component__$5,teToast:__vue_component__$4,tePagination:__vue_component__$3,teNavbar:__vue_component__$2,teNavbarItem:__vue_component__$1,teTable:__vue_component__});var install = function installVueTailwindElements(Vue) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],
@@ -4167,7 +4140,7 @@ var __vue_component__$1 = __vue_component__;var components$1=/*#__PURE__*/Object
     Vue.component(componentName, component);
   });
 }; // Create module definition for Vue.use()
-var components=/*#__PURE__*/Object.freeze({__proto__:null,'default':install,teAccordion:__vue_component__$W,teAlert:__vue_component__$U,teBadge:__vue_component__$S,teButton:teButton,teButtonGroup:__vue_component__$P,teCard:__vue_component__$N,teCheckbox:__vue_component__$L,teSwitch:__vue_component__$J,teRadio:__vue_component__$H,teSelect:__vue_component__$F,teMultipleSelect:__vue_component__$D,teBreadcrumb:__vue_component__$B,teTextarea:__vue_component__$z,teInput:__vue_component__$x,teDatePicker:__vue_component__$v,teTimePicker:__vue_component__$t,teRange:__vue_component__$r,teProgress:__vue_component__$p,teTabs:__vue_component__$n,teListGroup:__vue_component__$l,teDropdown:__vue_component__$j,teDropdownItem:__vue_component__$h,teModal:__vue_component__$f,teSpinner:__vue_component__$d,teStepper:__vue_component__$b,teToast:__vue_component__$9,tePagination:__vue_component__$7,teNavbar:__vue_component__$5,teNavbarItem:__vue_component__$3,teTable:__vue_component__$1});// only expose one global var, with component exports exposed as properties of
+var components=/*#__PURE__*/Object.freeze({__proto__:null,'default':install,teAccordion:__vue_component__$t,teAlert:__vue_component__$s,teBadge:__vue_component__$r,teButton:__vue_component__$q,teButtonGroup:__vue_component__$p,teCard:__vue_component__$o,teCheckbox:__vue_component__$n,teSwitch:__vue_component__$m,teRadio:__vue_component__$l,teSelect:__vue_component__$k,teMultipleSelect:__vue_component__$j,teBreadcrumb:__vue_component__$i,teTextarea:__vue_component__$h,teInput:__vue_component__$g,teDatePicker:__vue_component__$f,teTimePicker:__vue_component__$e,teRange:__vue_component__$d,teProgress:__vue_component__$c,teTabs:__vue_component__$b,teListGroup:__vue_component__$a,teDropdown:__vue_component__$9,teDropdownItem:__vue_component__$8,teModal:__vue_component__$7,teSpinner:__vue_component__$6,teStepper:__vue_component__$5,teToast:__vue_component__$4,tePagination:__vue_component__$3,teNavbar:__vue_component__$2,teNavbarItem:__vue_component__$1,teTable:__vue_component__});// only expose one global var, with component exports exposed as properties of
 // that global var (eg. plugin.component)
 
 Object.entries(components).forEach(function (_ref) {
