@@ -11,13 +11,23 @@ npm install --save vue-tailwind-elements
 Import in your main.js (or index.js) file and install it:
 
 ```javascript
-// ES6
 ...
 import 'vue-tailwind-elements/src/tailwind.min.css';
 import 'vue-tailwind-elements/src/tailwind-forms.min.css';
 import VueTailwindElements from 'vue-tailwind-elements';
 
 Vue.use(VueTailwindElements);
+...
+```
+
+Nuxt:
+Put the last configuration into a plugin file and the use it into the nuxt.config.js file like this:
+
+```javascript
+...
+  plugins: [
+    '~/plugins/vue-tailwind-elements.js'
+  ],
 ...
 ```
 
