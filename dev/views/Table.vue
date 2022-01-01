@@ -132,6 +132,16 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-1">Search</h1>
+    <te-input v-model="search" placeholder="Search..."/>
+    <te-table :items="items" :headers="headers" :search="search" no-data-label="No Match" />
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-table :items="items" :headers="headers" :search="search" no-data-label="No Match" />
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
@@ -169,7 +179,8 @@ export default {
         last: 'Wild',
         handle: '@larwil'
       },
-    ]
+    ],
+    search: ''
   })
 }
 </script>

@@ -9,11 +9,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, key) in items" :key="key" :class="rowClass(key)">
-          <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="{...paddingClass, 'border-r': bordered}">
-            {{item[header.field] || item[header]}}
-          </td>
-        </tr>
+        <template v-if="filteredItems.length">
+          <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)">
+            <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="{...paddingClass, 'border-r': bordered}">
+              {{item[header.field] || item[header]}}
+            </td>
+          </tr>
+        </template>
+        <template v-else>
+          <tr>
+            <td class="text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center" :class="{...paddingClass, 'border-r': bordered}" :colspan="headers.length">
+              {{noDataLabel}}
+            </td>
+          </tr>
+        </template>
       </tbody>
     </table>
   </div>
@@ -64,6 +73,14 @@ export default {
       default: 'normal',
       validator: (value) => ['normal', 'light', 'dark']
     },
+    search: {
+      type: String,
+      default: '',
+    },
+    noDataLabel: {
+      type: String,
+      default: 'No Data',
+    },
   },
   computed: {
     headerBackgroundClass() {
@@ -84,6 +101,16 @@ export default {
         'py-4': !this.compact,
         'py-2': this.compact,
       }
+    },
+    filteredItems() {
+      if (this.search) {
+        const items = this.items.filter(r => {
+          const values = Object.values(r);
+          return values.some(v => v.toString().toLowerCase().includes(this.search.toLowerCase()))
+        });
+        return items;
+      }
+      return this.items;
     }
   },
   methods: {
