@@ -3685,6 +3685,14 @@ var script$3 = {
     },
     activePage: function activePage(val) {
       this.currentPage = val;
+    },
+    pages: function pages() {
+      this.setInitialPages();
+      this.currentPage = 1;
+    },
+    pagesToShow: function pagesToShow() {
+      this.setInitialPages();
+      this.currentPage = 1;
     }
   },
   computed: {
@@ -3770,7 +3778,7 @@ var __vue_inject_styles__$3 = undefined;
 var __vue_scope_id__$3 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$3 = "data-v-63973181";
+var __vue_module_identifier__$3 = "data-v-0fd5ec0e";
 /* functional template */
 
 var __vue_is_functional_template__$3 = false;
@@ -4125,6 +4133,7 @@ var __vue_render__ = function __vue_render__() {
     attrs: {
       "active-page": _vm.activePage,
       "pages": _vm.pages,
+      "pages-to-show": _vm.pages,
       "position": _vm.paginationAlign
     },
     on: {
@@ -4147,7 +4156,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-6ef4c2b7";
+var __vue_module_identifier__ = "data-v-2faae262";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

@@ -4264,6 +4264,16 @@ var script$3 = {
 
     activePage(val) {
       this.currentPage = val;
+    },
+
+    pages() {
+      this.setInitialPages();
+      this.currentPage = 1;
+    },
+
+    pagesToShow() {
+      this.setInitialPages();
+      this.currentPage = 1;
     }
 
   },
@@ -4810,6 +4820,7 @@ var __vue_render__ = function () {
     attrs: {
       "active-page": _vm.activePage,
       "pages": _vm.pages,
+      "pages-to-show": _vm.pages,
       "position": _vm.paginationAlign
     },
     on: {
