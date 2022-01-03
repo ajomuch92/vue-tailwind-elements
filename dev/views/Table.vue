@@ -142,6 +142,15 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-1">Row Number</h1>
+    <te-table :items="items" :headers="headers" show-row-num row-num-label="No."/>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-table :items="items" :headers="headers" show-row-num row-num-label="No."/>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 

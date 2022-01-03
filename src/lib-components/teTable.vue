@@ -3,6 +3,7 @@
     <table class="min-w-full" :class="{'text-center': centered, 'border': bordered}">
       <thead :class="{'border-b': !borderless, ...headerBackgroundClass}">
         <tr>
+          <th v-if="showRowNum" class="text-sm font-medium" :class="{'text-left': !centered, ...headerCellClass, ...paddingClass}">{{rowNumLabel}}</th>
           <th v-for="(header, key) in headers" :key="key" scope="col" class="text-sm font-medium px-6" :class="{'text-left': !centered, ...headerCellClass, ...paddingClass}">
             {{header.label||header}}
           </th>
@@ -11,6 +12,7 @@
       <tbody>
         <template v-if="filteredItems.length">
           <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)">
+            <td v-if="showRowNum">{{key+1}}</td>
             <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="{...paddingClass, 'border-r': bordered}">
               {{item[header.field] || item[header]}}
             </td>
@@ -81,6 +83,14 @@ export default {
       type: String,
       default: 'No Data',
     },
+    showRowNum: {
+      type: Boolean,
+      default: false,
+    },
+    rowNumLabel: {
+      type: String,
+      default: '#',
+    }
   },
   computed: {
     headerBackgroundClass() {
