@@ -105,6 +105,14 @@ export default {
     },
     activePage(val) {
       this.currentPage = val;
+    },
+    pages() {
+      this.setInitialPages();
+      this.currentPage = 1;
+    },
+    pagesToShow() {
+      this.setInitialPages();
+      this.currentPage = 1;
     }
   },
   computed: {

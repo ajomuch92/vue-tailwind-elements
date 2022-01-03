@@ -27,7 +27,7 @@
         </template>
       </tbody>
     </table>
-    <te-pagination class="my-1" v-if="itemPerPage>0" :active-page.sync="activePage" :pages="pages" :position="paginationAlign" />
+    <te-pagination class="my-1" v-if="itemPerPage>0" :active-page.sync="activePage" :pages="pages" :pages-to-show="pages" :position="paginationAlign" />
   </div>
 </template>
 
