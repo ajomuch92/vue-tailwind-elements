@@ -151,6 +151,15 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-1">Pagination</h1>
+    <te-table :items="[...items, ...items]" :headers="headers" show-row-num :item-per-page="2"/>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-table :items="[...items, ...items]" :headers="headers" show-row-num :item-per-page="2"/>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 

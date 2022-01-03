@@ -11,7 +11,7 @@
       </thead>
       <tbody>
         <template v-if="filteredItems.length">
-          <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)">
+          <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)" v-show="rowVisibility(key+1)">
             <td v-if="showRowNum">{{key+1}}</td>
             <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="{...paddingClass, 'border-r': bordered}">
               {{item[header.field] || item[header]}}
@@ -27,12 +27,16 @@
         </template>
       </tbody>
     </table>
+    <te-pagination class="my-1" v-if="itemPerPage>0" :active-page.sync="activePage" :pages="pages" :position="paginationAlign" />
   </div>
 </template>
 
 <script>
+import tePagination from './tePagination.vue';
+
 export default {
   name: 'teTable',
+  components: { tePagination },
   props: {
     items: {
       type: Array,
@@ -90,6 +94,15 @@ export default {
     rowNumLabel: {
       type: String,
       default: '#',
+    },
+    itemPerPage: {
+      type: Number,
+      default: -1
+    },
+    paginationAlign: {
+      type: String,
+      default: 'right',
+      validator: (value) => ['left', 'center','right'].includes(value)
     }
   },
   computed: {
@@ -121,8 +134,14 @@ export default {
         return items;
       }
       return this.items;
+    },
+    pages() {
+      return this.filteredItems.length / this.itemPerPage
     }
   },
+  data: () => ({
+    activePage: 1,
+  }),
   methods: {
     rowClass(index) {
       return {
@@ -131,6 +150,14 @@ export default {
         'bg-white': index % 2 === 1 && this.striped,
         'transition duration-300 ease-in-out hover:bg-gray-100': this.hoverable,
       }
+    },
+    rowVisibility(index) {
+      if (this.itemPerPage > 0) {
+        const last = this.activePage * this.itemPerPage;
+        const first = last - this.itemPerPage + 1
+        return index >= first && index <= last
+      }
+      return true;
     }
   }
 }
