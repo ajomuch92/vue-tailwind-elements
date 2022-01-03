@@ -3942,37 +3942,11 @@ var __vue_component__$1 = /*#__PURE__*/normalizeComponent({
   render: __vue_render__$1,
   staticRenderFns: __vue_staticRenderFns__$1
 }, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var script = {
   name: 'teTable',
+  components: {
+    tePagination: __vue_component__$3
+  },
   props: {
     items: {
       type: Array,
@@ -4024,6 +3998,25 @@ var script = {
     noDataLabel: {
       type: String,
       default: 'No Data'
+    },
+    showRowNum: {
+      type: Boolean,
+      default: false
+    },
+    rowNumLabel: {
+      type: String,
+      default: '#'
+    },
+    itemPerPage: {
+      type: Number,
+      default: -1
+    },
+    paginationAlign: {
+      type: String,
+      default: 'right',
+      validator: function validator(value) {
+        return ['left', 'center', 'right'].includes(value);
+      }
     }
   },
   computed: {
@@ -4060,7 +4053,15 @@ var script = {
       }
 
       return this.items;
+    },
+    pages: function pages() {
+      return this.filteredItems.length / this.itemPerPage;
     }
+  },
+  data: function data() {
+    return {
+      activePage: 1
+    };
   },
   methods: {
     rowClass: function rowClass(index) {
@@ -4070,6 +4071,15 @@ var script = {
         'bg-white': index % 2 === 1 && this.striped,
         'transition duration-300 ease-in-out hover:bg-gray-100': this.hoverable
       };
+    },
+    rowVisibility: function rowVisibility(index) {
+      if (this.itemPerPage > 0) {
+        var last = this.activePage * this.itemPerPage;
+        var first = last - this.itemPerPage + 1;
+        return index >= first && index <= last;
+      }
+
+      return true;
     }
   }
 };/* script */
@@ -4094,19 +4104,38 @@ var __vue_render__ = function __vue_render__() {
     'border': _vm.bordered
   }) + "><thead" + _vm._ssrClass(null, Object.assign({}, {
     'border-b': !_vm.borderless
-  }, _vm.headerBackgroundClass)) + "><tr>" + _vm._ssrList(_vm.headers, function (header, key) {
+  }, _vm.headerBackgroundClass)) + "><tr>" + (_vm.showRowNum ? "<th" + _vm._ssrClass("text-sm font-medium", Object.assign({}, {
+    'text-left': !_vm.centered
+  }, _vm.headerCellClass, _vm.paddingClass)) + ">" + _vm._ssrEscape(_vm._s(_vm.rowNumLabel)) + "</th>" : "<!---->") + " " + _vm._ssrList(_vm.headers, function (header, key) {
     return "<th scope=\"col\"" + _vm._ssrClass("text-sm font-medium px-6", Object.assign({}, {
       'text-left': !_vm.centered
     }, _vm.headerCellClass, _vm.paddingClass)) + ">" + _vm._ssrEscape("\n          " + _vm._s(header.label || header) + "\n        ") + "</th>";
   }) + "</tr></thead> <tbody>" + (_vm.filteredItems.length ? _vm._ssrList(_vm.filteredItems, function (item, key) {
-    return "<tr" + _vm._ssrClass(null, _vm.rowClass(key)) + ">" + _vm._ssrList(_vm.headers, function (header, index) {
+    return "<tr" + _vm._ssrClass(null, _vm.rowClass(key)) + _vm._ssrStyle(null, null, {
+      display: _vm.rowVisibility(key + 1) ? '' : 'none'
+    }) + ">" + (_vm.showRowNum ? "<td>" + _vm._ssrEscape(_vm._s(key + 1)) + "</td>" : "<!---->") + " " + _vm._ssrList(_vm.headers, function (header, index) {
       return "<td" + _vm._ssrClass("text-sm text-gray-900 font-medium px-6 whitespace-nowrap", Object.assign({}, _vm.paddingClass, {
         'border-r': _vm.bordered
       })) + ">" + _vm._ssrEscape("\n            " + _vm._s(item[header.field] || item[header]) + "\n          ") + "</td>";
     }) + "</tr>";
   }) : "<tr><td" + _vm._ssrAttr("colspan", _vm.headers.length) + _vm._ssrClass("text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center", Object.assign({}, _vm.paddingClass, {
     'border-r': _vm.bordered
-  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>") + "</tbody></table>")]);
+  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>") + "</tbody></table> "), _vm.itemPerPage > 0 ? _c('te-pagination', {
+    staticClass: "my-1",
+    attrs: {
+      "active-page": _vm.activePage,
+      "pages": _vm.pages,
+      "position": _vm.paginationAlign
+    },
+    on: {
+      "update:activePage": function updateActivePage($event) {
+        _vm.activePage = $event;
+      },
+      "update:active-page": function updateActivePage($event) {
+        _vm.activePage = $event;
+      }
+    }
+  }) : _vm._e()], 2);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -4118,7 +4147,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-1eed0761";
+var __vue_module_identifier__ = "data-v-6ef4c2b7";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

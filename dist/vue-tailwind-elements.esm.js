@@ -4596,37 +4596,11 @@ const __vue_component__$1 = /*#__PURE__*/normalizeComponent({
 }, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);
 
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var script = {
   name: 'teTable',
+  components: {
+    tePagination: __vue_component__$3
+  },
   props: {
     items: {
       type: Array,
@@ -4676,6 +4650,23 @@ var script = {
     noDataLabel: {
       type: String,
       default: 'No Data'
+    },
+    showRowNum: {
+      type: Boolean,
+      default: false
+    },
+    rowNumLabel: {
+      type: String,
+      default: '#'
+    },
+    itemPerPage: {
+      type: Number,
+      default: -1
+    },
+    paginationAlign: {
+      type: String,
+      default: 'right',
+      validator: value => ['left', 'center', 'right'].includes(value)
     }
   },
   computed: {
@@ -4711,9 +4702,16 @@ var script = {
       }
 
       return this.items;
+    },
+
+    pages() {
+      return this.filteredItems.length / this.itemPerPage;
     }
 
   },
+  data: () => ({
+    activePage: 1
+  }),
   methods: {
     rowClass(index) {
       return {
@@ -4722,6 +4720,16 @@ var script = {
         'bg-white': index % 2 === 1 && this.striped,
         'transition duration-300 ease-in-out hover:bg-gray-100': this.hoverable
       };
+    },
+
+    rowVisibility(index) {
+      if (this.itemPerPage > 0) {
+        const last = this.activePage * this.itemPerPage;
+        const first = last - this.itemPerPage + 1;
+        return index >= first && index <= last;
+      }
+
+      return true;
     }
 
   }
@@ -4754,7 +4762,12 @@ var __vue_render__ = function () {
     class: Object.assign({}, {
       'border-b': !_vm.borderless
     }, _vm.headerBackgroundClass)
-  }, [_c('tr', _vm._l(_vm.headers, function (header, key) {
+  }, [_c('tr', [_vm.showRowNum ? _c('th', {
+    staticClass: "text-sm font-medium",
+    class: Object.assign({}, {
+      'text-left': !_vm.centered
+    }, _vm.headerCellClass, _vm.paddingClass)
+  }, [_vm._v(_vm._s(_vm.rowNumLabel))]) : _vm._e(), _vm._v(" "), _vm._l(_vm.headers, function (header, key) {
     return _c('th', {
       key: key,
       staticClass: "text-sm font-medium px-6",
@@ -4765,11 +4778,17 @@ var __vue_render__ = function () {
         "scope": "col"
       }
     }, [_vm._v("\n          " + _vm._s(header.label || header) + "\n        ")]);
-  }), 0)]), _vm._v(" "), _c('tbody', [_vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
+  })], 2)]), _vm._v(" "), _c('tbody', [_vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
     return _c('tr', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: _vm.rowVisibility(key + 1),
+        expression: "rowVisibility(key+1)"
+      }],
       key: key,
       class: _vm.rowClass(key)
-    }, _vm._l(_vm.headers, function (header, index) {
+    }, [_vm.showRowNum ? _c('td', [_vm._v(_vm._s(key + 1))]) : _vm._e(), _vm._v(" "), _vm._l(_vm.headers, function (header, index) {
       return _c('td', {
         key: index,
         staticClass: "text-sm text-gray-900 font-medium px-6 whitespace-nowrap",
@@ -4777,7 +4796,7 @@ var __vue_render__ = function () {
           'border-r': _vm.bordered
         })
       }, [_vm._v("\n            " + _vm._s(item[header.field] || item[header]) + "\n          ")]);
-    }), 0);
+    })], 2);
   }) : [_c('tr', [_c('td', {
     staticClass: "text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center",
     class: Object.assign({}, _vm.paddingClass, {
@@ -4786,7 +4805,22 @@ var __vue_render__ = function () {
     attrs: {
       "colspan": _vm.headers.length
     }
-  }, [_vm._v("\n            " + _vm._s(_vm.noDataLabel) + "\n          ")])])]], 2)])]);
+  }, [_vm._v("\n            " + _vm._s(_vm.noDataLabel) + "\n          ")])])]], 2)]), _vm._v(" "), _vm.itemPerPage > 0 ? _c('te-pagination', {
+    staticClass: "my-1",
+    attrs: {
+      "active-page": _vm.activePage,
+      "pages": _vm.pages,
+      "position": _vm.paginationAlign
+    },
+    on: {
+      "update:activePage": function ($event) {
+        _vm.activePage = $event;
+      },
+      "update:active-page": function ($event) {
+        _vm.activePage = $event;
+      }
+    }
+  }) : _vm._e()], 1);
 };
 
 var __vue_staticRenderFns__ = [];
