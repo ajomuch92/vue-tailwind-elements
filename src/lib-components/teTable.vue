@@ -14,7 +14,9 @@
           <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)" v-show="rowVisibility(key+1)">
             <td v-if="showRowNum">{{key+1}}</td>
             <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="{...paddingClass, 'border-r': bordered}">
-              {{item[header.field] || item[header]}}
+              <slot :name="header.field||header" v-bind:value="item[header.field] || item[header]">
+                {{item[header.field] || item[header]}}
+              </slot>
             </td>
           </tr>
         </template>

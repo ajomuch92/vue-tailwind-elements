@@ -160,6 +160,23 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-1">Slots</h1>
+    <te-table :items="items" :headers="headers" show-row-num :item-per-page="3">
+      <template v-slot:handle="{value}">
+        <te-badge type="info" :text="value" />
+      </template>
+    </te-table>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-table :items="items" :headers="headers" show-row-num :item-per-page="3">
+            <template v-slot:handle="{value}">
+              <te-badge type="info" :text="value" />
+            </template>
+          </te-table>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
