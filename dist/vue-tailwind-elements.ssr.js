@@ -4110,7 +4110,7 @@ var __vue_render__ = function __vue_render__() {
   }, [_vm._ssrNode("<table" + _vm._ssrClass("min-w-full", {
     'text-center': _vm.centered,
     'border': _vm.bordered
-  }) + "><thead" + _vm._ssrClass(null, Object.assign({}, {
+  }) + ">", "</table>", [_vm._ssrNode("<thead" + _vm._ssrClass(null, Object.assign({}, {
     'border-b': !_vm.borderless
   }, _vm.headerBackgroundClass)) + "><tr>" + (_vm.showRowNum ? "<th" + _vm._ssrClass("text-sm font-medium", Object.assign({}, {
     'text-left': !_vm.centered
@@ -4118,17 +4118,21 @@ var __vue_render__ = function __vue_render__() {
     return "<th scope=\"col\"" + _vm._ssrClass("text-sm font-medium px-6", Object.assign({}, {
       'text-left': !_vm.centered
     }, _vm.headerCellClass, _vm.paddingClass)) + ">" + _vm._ssrEscape("\n          " + _vm._s(header.label || header) + "\n        ") + "</th>";
-  }) + "</tr></thead> <tbody>" + (_vm.filteredItems.length ? _vm._ssrList(_vm.filteredItems, function (item, key) {
-    return "<tr" + _vm._ssrClass(null, _vm.rowClass(key)) + _vm._ssrStyle(null, null, {
+  }) + "</tr></thead> "), _vm._ssrNode("<tbody>", "</tbody>", [_vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
+    return _vm._ssrNode("<tr" + _vm._ssrClass(null, _vm.rowClass(key)) + _vm._ssrStyle(null, null, {
       display: _vm.rowVisibility(key + 1) ? '' : 'none'
-    }) + ">" + (_vm.showRowNum ? "<td>" + _vm._ssrEscape(_vm._s(key + 1)) + "</td>" : "<!---->") + " " + _vm._ssrList(_vm.headers, function (header, index) {
-      return "<td" + _vm._ssrClass("text-sm text-gray-900 font-medium px-6 whitespace-nowrap", Object.assign({}, _vm.paddingClass, {
+    }) + ">", "</tr>", [_vm._ssrNode((_vm.showRowNum ? "<td>" + _vm._ssrEscape(_vm._s(key + 1)) + "</td>" : "<!---->") + " "), _vm._l(_vm.headers, function (header, index) {
+      return _vm._ssrNode("<td" + _vm._ssrClass("text-sm text-gray-900 font-medium px-6 whitespace-nowrap", Object.assign({}, _vm.paddingClass, {
         'border-r': _vm.bordered
-      })) + ">" + _vm._ssrEscape("\n            " + _vm._s(item[header.field] || item[header]) + "\n          ") + "</td>";
-    }) + "</tr>";
-  }) : "<tr><td" + _vm._ssrAttr("colspan", _vm.headers.length) + _vm._ssrClass("text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center", Object.assign({}, _vm.paddingClass, {
+      })) + ">", "</td>", [_vm._t(header.field || header, function () {
+        return [_vm._v("\n              " + _vm._s(item[header.field] || item[header]) + "\n            ")];
+      }, {
+        "value": item[header.field] || item[header]
+      })], 2);
+    })], 2);
+  }) : _vm._ssrNode("<tr><td" + _vm._ssrAttr("colspan", _vm.headers.length) + _vm._ssrClass("text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center", Object.assign({}, _vm.paddingClass, {
     'border-r': _vm.bordered
-  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>") + "</tbody></table> "), _vm.itemPerPage > 0 ? _c('te-pagination', {
+  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>")], 2)], 2), _vm._ssrNode(" "), _vm.itemPerPage > 0 ? _c('te-pagination', {
     staticClass: "my-1",
     attrs: {
       "active-page": _vm.activePage,
@@ -4156,7 +4160,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-2faae262";
+var __vue_module_identifier__ = "data-v-159efaf5";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

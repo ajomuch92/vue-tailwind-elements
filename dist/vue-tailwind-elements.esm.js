@@ -4805,7 +4805,11 @@ var __vue_render__ = function () {
         class: Object.assign({}, _vm.paddingClass, {
           'border-r': _vm.bordered
         })
-      }, [_vm._v("\n            " + _vm._s(item[header.field] || item[header]) + "\n          ")]);
+      }, [_vm._t(header.field || header, function () {
+        return [_vm._v("\n              " + _vm._s(item[header.field] || item[header]) + "\n            ")];
+      }, {
+        "value": item[header.field] || item[header]
+      })], 2);
     })], 2);
   }) : [_c('tr', [_c('td', {
     staticClass: "text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center",
