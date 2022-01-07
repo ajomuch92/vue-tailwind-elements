@@ -126,6 +126,11 @@ const router = new VueRouter({
           name: 'Table',
           component: () => import('../views/Table.vue')
         },
+        {
+          path: '/files',
+          name: 'Files',
+          component: () => import('../views/Files.vue')
+        },
       ]
     },
   ]

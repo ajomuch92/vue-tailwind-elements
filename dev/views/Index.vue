@@ -119,6 +119,10 @@ export default {
           href: '/input'
         },
         {
+          label: 'Files',
+          href: '/files'
+        },
+        {
           label: 'Range',
           href: '/range'
         },
