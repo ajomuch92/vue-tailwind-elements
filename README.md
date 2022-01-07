@@ -4,7 +4,7 @@ The documentation and examples are being building [here](https://vue-tailwind-el
 
 # Instalation
 
-1. Set up the Tailwind configuration file. Follow this [link](https://medium.com/featurepreneur/set-up-tailwind-css-for-your-vue-js-app-5a8801fd0a55) to do it.
+1. Set up the Tailwind configuration files. Follow this [link](https://medium.com/featurepreneur/set-up-tailwind-css-for-your-vue-js-app-5a8801fd0a55) to do it.
 
 2. Install from NPM:  
 ```bash
