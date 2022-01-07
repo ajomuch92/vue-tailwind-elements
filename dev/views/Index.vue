@@ -87,6 +87,10 @@ export default {
           href: '/table'
         },
         {
+          label: 'Notification',
+          href: '/notification'
+        },
+        {
           label: 'Toast',
           href: '/toast'
         },

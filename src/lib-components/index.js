@@ -29,3 +29,4 @@ export { default as teNavbar } from './navbar/teNavbar.vue';
 export { default as teNavbarItem } from './navbar/teNavbarItem.vue';
 export { default as teTable } from './teTable.vue';
 export { default as teFile } from './teFile.vue';
+export { default as teNotification } from './teNotification.vue';
