@@ -30,7 +30,6 @@ Put the last configuration into a plugin file and the use it into the nuxt.confi
     '~/plugins/vue-tailwind-elements.js'
   ],
 ... -->
-```
 
 ## Author
 
