@@ -4,7 +4,9 @@ The documentation and examples are being building [here](https://vue-tailwind-el
 
 # Instalation
 
-NPM:  
+1. Set up the Tailwind configuration file. Follow this [link](https://medium.com/featurepreneur/set-up-tailwind-css-for-your-vue-js-app-5a8801fd0a55) to do it.
+
+2. Install from NPM:  
 ```bash
 npm install --save vue-tailwind-elements
 ```
@@ -12,7 +14,6 @@ Import in your main.js (or index.js) file and install it:
 
 ```javascript
 ...
-import 'vue-tailwind-elements/src/tailwind.min.css';
 import 'vue-tailwind-elements/src/tailwind-forms.min.css';
 import VueTailwindElements from 'vue-tailwind-elements';
 
@@ -20,7 +21,7 @@ Vue.use(VueTailwindElements);
 ...
 ```
 
-Nuxt:
+<!-- Nuxt:
 Put the last configuration into a plugin file and the use it into the nuxt.config.js file like this:
 
 ```javascript
@@ -28,7 +29,7 @@ Put the last configuration into a plugin file and the use it into the nuxt.confi
   plugins: [
     '~/plugins/vue-tailwind-elements.js'
   ],
-...
+... -->
 ```
 
 ## Author
