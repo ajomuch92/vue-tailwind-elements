@@ -3,7 +3,8 @@ import Dev from './serve.vue';
 import VueTailwindElements from '@/entry.esm';
 import VuePrism from 'vue-prism';
 
-import '../src/tailwind.min.css';
+// import '../src/tailwind.min.css';
+import './index.css';
 import '../src/tailwind-forms.min.css';
 import './styles/styles.css';
 import 'prismjs/themes/prism.css';
