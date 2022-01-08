@@ -8,8 +8,6 @@
       skew-y-0
       scale-x-100
       scale-y-100
-      py-1
-      px-2.5
       text-xs
       leading-none
       text-center
@@ -18,7 +16,7 @@
       font-bold
       rounded-full
       z-10"
-      :class="{...colorClass, ...positionClass}"
+      :class="{...colorClass, ...positionClass, 'py-1 px-2.5': !!text, 'p-2.5': !text}"
       v-show="!hide"
     >
       {{text}}

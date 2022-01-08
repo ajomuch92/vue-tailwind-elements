@@ -2,13 +2,26 @@
   <div class="container p-6">
     <h1 class="text-3xl my-2">Notifications</h1>
     <h1 class="text-lg my-1">Normal</h1>
-    <te-notification text="1+">
+    <te-notification text="+1">
       <te-button outlined>Button</te-button>
     </te-notification>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
           <te-notification text="1+">
+            <te-button outlined>Button</te-button>
+          </te-notification>
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg my-1">Empty</h1>
+    <te-notification>
+      <te-button outlined>Button</te-button>
+    </te-notification>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-notification>
             <te-button outlined>Button</te-button>
           </te-notification>
         </script>
