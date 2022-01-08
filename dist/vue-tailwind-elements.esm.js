@@ -5049,7 +5049,7 @@ var script$1 = {
       validator: value => ['normal', 'primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
     },
     hide: {
-      type: String,
+      type: Boolean,
       default: false
     }
   },
@@ -5119,8 +5119,8 @@ var __vue_staticRenderFns__$1 = [];
 
 const __vue_inject_styles__$1 = function (inject) {
   if (!inject) return;
-  inject("data-v-27478f8c_0", {
-    source: ".w-fit[data-v-27478f8c]{width:-moz-fit-content;width:fit-content}",
+  inject("data-v-420a79ae_0", {
+    source: ".w-fit[data-v-420a79ae]{width:-moz-fit-content;width:fit-content}",
     map: undefined,
     media: undefined
   });
@@ -5128,7 +5128,7 @@ const __vue_inject_styles__$1 = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$1 = "data-v-27478f8c";
+const __vue_scope_id__$1 = "data-v-420a79ae";
 /* module identifier */
 
 const __vue_module_identifier__$1 = undefined;

@@ -4511,7 +4511,7 @@ var script$1 = {
       }
     },
     hide: {
-      type: String,
+      type: Boolean,
       default: false
     }
   },
@@ -4562,7 +4562,7 @@ var __vue_render__$1 = function __vue_render__() {
     'p-2.5': !_vm.text
   })) + _vm._ssrStyle(null, null, {
     display: !_vm.hide ? '' : 'none'
-  }) + " data-v-27478f8c>" + _vm._ssrEscape("\n    " + _vm._s(_vm.text) + "\n  ") + "</div> "), _vm._t("default")], 2);
+  }) + " data-v-420a79ae>" + _vm._ssrEscape("\n    " + _vm._s(_vm.text) + "\n  ") + "</div> "), _vm._t("default")], 2);
 };
 
 var __vue_staticRenderFns__$1 = [];
@@ -4570,8 +4570,8 @@ var __vue_staticRenderFns__$1 = [];
 
 var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-27478f8c_0", {
-    source: ".w-fit[data-v-27478f8c]{width:-moz-fit-content;width:fit-content}",
+  inject("data-v-420a79ae_0", {
+    source: ".w-fit[data-v-420a79ae]{width:-moz-fit-content;width:fit-content}",
     map: undefined,
     media: undefined
   });
@@ -4579,10 +4579,10 @@ var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$1 = "data-v-27478f8c";
+var __vue_scope_id__$1 = "data-v-420a79ae";
 /* module identifier */
 
-var __vue_module_identifier__$1 = "data-v-27478f8c";
+var __vue_module_identifier__$1 = "data-v-420a79ae";
 /* functional template */
 
 var __vue_is_functional_template__$1 = false;

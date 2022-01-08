@@ -45,7 +45,7 @@ export default {
       validator: (value) => ['normal','primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
     },
     hide: {
-      type: String,
+      type: Boolean,
       default: false,
     }
   },
