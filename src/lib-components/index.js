@@ -30,3 +30,4 @@ export { default as teNavbarItem } from './navbar/teNavbarItem.vue';
 export { default as teTable } from './teTable.vue';
 export { default as teFile } from './teFile.vue';
 export { default as teNotification } from './teNotification.vue';
+export { default as teIcon } from './teIcon.vue';

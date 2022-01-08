@@ -136,6 +136,11 @@ const router = new VueRouter({
           name: 'Notification',
           component: () => import('../views/Notification.vue')
         },
+        {
+          path: '/icons',
+          name: 'Icons',
+          component: () => import('../views/Icons.vue')
+        },
       ]
     },
   ]

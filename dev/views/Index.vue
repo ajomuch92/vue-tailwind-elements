@@ -94,6 +94,10 @@ export default {
           label: 'Toast',
           href: '/toast'
         },
+        {
+          label: 'Icons',
+          href: '/icons'
+        },
       ],
       Navigation: [
         {
