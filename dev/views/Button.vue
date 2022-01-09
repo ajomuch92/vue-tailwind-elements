@@ -112,6 +112,30 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Loading</h1>
+    <div class="flex space-x-2">
+      <te-button size="medium" loading>Button</te-button>
+      <te-button size="medium" type="light" loading>Button</te-button>
+    </div>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-button size="medium" loading>Button</te-button>
+          <te-button size="medium" type="light" loading>Button</te-button>
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg">Ripple</h1>
+    <div class="flex space-x-2">
+      <te-button size="medium" ripple>Button</te-button>
+    </div>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-button size="medium" loading>Button</te-button>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 

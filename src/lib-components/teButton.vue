@@ -8,19 +8,25 @@
         transition-all
         duration-150
         align-middle
+        disabled:opacity-75
       "
     :class="getClass"
     :disabled="disabled"
     type="button"
-    @click="$emit('click', $event)"
+    @click="clickHandler"
   >
+    <te-spinner  v-if="loading" :color="type=='light'? 'primary': 'light'" class="mx-1 align-sub" size="small"/>
     <slot name="default" />
+    <span v-if="showRipple&&ripple" :key="showRipple?-1:1" class="ripple" :style="styleRipple"/>
   </button>
 </template>
 
 <script>
+import teSpinner from './teSpinner.vue';
+
 export default {
   name: 'teButton',
+  components: { teSpinner },
   props: {
     type: {
       type: String,
@@ -63,7 +69,15 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
-    }
+    },
+    loading: {
+      type: Boolean,
+      default: false,
+    },
+    ripple: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     getClass() {
@@ -108,13 +122,59 @@ export default {
         'text-xs px-4 py-1 h-8': this.size === 'small',
         'text-sm px-6 py-2 h-10': this.size === 'medium',
         'text-base px-8 py-3 h-12': this.size === 'large',
-        'mr-1 mb-1': !this.marginLess
+        'mr-1 mb-1': !this.marginLess,
+        'cursor-not-allowed': this.disabled,
+        'pointer-events-none cursor-not-allowed': this.loading,
+        'relative overflow-hidden': this.ripple,
       }
+    }
+  },
+  data: () => ({
+    showRipple: false,
+    styleRipple: {}
+  }),
+  methods: {
+    clickHandler(event) {
+      if (this.ripple) {
+        this.setRipple(event);
+      }
+      this.$emit('click', event);
+    },
+    setRipple(event) {
+      const button = event.currentTarget;
+      const style = {};
+      const diameter = Math.max(button.clientWidth, button.clientHeight);
+      const radius = diameter / 3;
+      style.width = style.height = `${diameter}px`;
+      style.left = `${event.offsetX - radius}px`;
+      style.top = `${event.offsetY - radius}px`;
+      this.styleRipple = style;
+      this.showRipple = true;
+      setTimeout(() => {
+        this.showRipple = false;
+      }, 750)
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
+  button {
+    transition: background 400ms;
+  }
 
+  span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(1);
+    animation: ripple-effect 800ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  @keyframes ripple-effect {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
 </style>
