@@ -1,5 +1,6 @@
 <template>
   <button
+    ref="button"
     class="
         font-bold
         outline-none
@@ -142,7 +143,7 @@ export default {
       this.$emit('click', event);
     },
     setRipple(event) {
-      const button = event.currentTarget;
+      const button = this.$refs.button;
       const style = {};
       const diameter = Math.max(button.clientWidth, button.clientHeight);
       const radius = diameter / 2;
