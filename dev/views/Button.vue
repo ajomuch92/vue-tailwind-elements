@@ -132,7 +132,7 @@
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-button size="medium" loading>Button</te-button>
+          <te-button size="medium" ripple>Button</te-button>
         </script>
       </code>
     </pre>

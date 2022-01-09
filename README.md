@@ -1,6 +1,6 @@
 # Vue Tailwind Elements
-A library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind](https://tailwindcss.com/) for Vuejs. 
-The documentation and examples are being building [here](https://vue-tailwind-elements.netlify.app/). Best and new components and features are coming. Feel free to make a pull request.
+A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind](https://tailwindcss.com/) for Vuejs.
+The documentation and examples are being building [here](https://vue-tailwind-elements.netlify.app/). Currently, there are more than 30 components. Best and new components and features are coming. Feel free to make a pull request.
 
 # Instalation
 
