@@ -44,12 +44,28 @@
       </code>
     </pre>
     <h1 class="text-lg my-2">Floating</h1>
-    <p>When floating is applied, size are not available</p>
-    <te-input type="password" class="my-1" placeholder="Password" floating helper-text="Min 9 characters" />
+    <p>When floating is applied, size does not work very well</p>
+    <te-input type="password" class="my-1" placeholder="Password" floating helper-text="Min 9 characters"/>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
           <te-input type="password" class="my-1" placeholder="Password" floating helper-text="Min 9 characters" />
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg my-2">Icons</h1>
+    <te-input type="password" class="my-1" placeholder="Password" right-icon="key" helper-text="Required field" />
+    <te-input type="password" class="my-1" placeholder="Password" left-icon="key" />
+    <te-input class="my-1" placeholder="Search..." right-icon="search" right-icon-clickable @right-icon-click="()=>{}"/>
+    <p>*NOTE: Right or left icon could be clickable, applying the prop left-icon-clickable or right-icon-clickable, both emit an event(right-icon-click or left-icon-click)</p>
+    <te-input placeholder="Email" invalid helper-text="Invalid email address" floating right-icon="envelope"/>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-input type="password" placeholder="Password" right-icon="key" helper-text="Required field" />
+          <te-input type="password" placeholder="Password" left-icon="key" />
+          <te-input placeholder="Search..." right-icon="search" right-icon-clickable @right-icon-click="..."/>
+          <te-input placeholder="Email" invalid helper-text="Invalid email address" floating right-icon="envelope"/>
         </script>
       </code>
     </pre>
