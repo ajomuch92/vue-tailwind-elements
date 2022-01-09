@@ -1,6 +1,6 @@
 <template>
   <span class="dropdown relative" v-click-outside="outsideHandler">
-    <te-button class="dropdown-toggle mb-0" :type="type" :size="size" :outlined="outlined" @click="show=!show">
+    <te-button class="dropdown-toggle mb-0" :type="type" :size="size" :outlined="outlined" :ripple="ripple" @click="show=!show">
       <div class="flex">
         {{label}}
         <svg
@@ -93,7 +93,11 @@ export default {
     label: {
       type: String,
       default: '',
-    }
+    },
+    ripple: {
+      type: Boolean,
+      default: false,
+    },
   },
   data: () => ({
     show: false,
