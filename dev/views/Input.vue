@@ -54,6 +54,7 @@
       </code>
     </pre>
     <h1 class="text-lg my-2">Icons</h1>
+    <p>Using same icons from <a class="text-blue-500" href="https://icons.getbootstrap.com/" target="blank">Glyphicons</a></p>
     <te-input type="password" class="my-1" placeholder="Password" right-icon="key" helper-text="Required field" />
     <te-input type="password" class="my-1" placeholder="Password" left-icon="key" />
     <te-input class="my-1" placeholder="Search..." right-icon="search" right-icon-clickable @right-icon-click="()=>{}"/>

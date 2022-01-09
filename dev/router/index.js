@@ -141,6 +141,11 @@ const router = new VueRouter({
           name: 'Icons',
           component: () => import('../views/Icons.vue')
         },
+        {
+          path: '/rating',
+          name: 'Rating',
+          component: () => import('../views/Rating.vue')
+        },
       ]
     },
   ]

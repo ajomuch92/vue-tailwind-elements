@@ -98,6 +98,10 @@ export default {
           label: 'Icons',
           href: '/icons'
         },
+        {
+          label: 'Rating',
+          href: '/rating'
+        },
       ],
       Navigation: [
         {
