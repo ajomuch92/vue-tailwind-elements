@@ -895,7 +895,7 @@ var teSpinner = __vue_component__$X;var script$u = {
     setRipple: function setRipple(event) {
       var _this = this;
 
-      var button = event.currentTarget;
+      var button = this.$refs.button;
       var style = {};
       var diameter = Math.max(button.clientWidth, button.clientHeight);
       var radius = diameter / 2;
@@ -921,6 +921,7 @@ var __vue_render__$u = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('button', {
+    ref: "button",
     staticClass: "\n      font-bold\n      outline-none\n      focus:outline-none\n      ease-linear\n      transition-all\n      duration-150\n      align-middle\n      disabled:opacity-75\n    ",
     class: _vm.getClass,
     attrs: {
@@ -936,7 +937,7 @@ var __vue_render__$u = function __vue_render__() {
       "color": _vm.type == 'light' ? 'primary' : 'light',
       "size": "small"
     }
-  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-4035d739></span>" : "<!---->"))], 2);
+  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-21e85264></span>" : "<!---->"))], 2);
 };
 
 var __vue_staticRenderFns__$u = [];
@@ -944,8 +945,8 @@ var __vue_staticRenderFns__$u = [];
 
 var __vue_inject_styles__$u = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-4035d739_0", {
-    source: "span.ripple[data-v-4035d739]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-4035d739 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-4035d739{to{transform:scale(4);opacity:0}}",
+  inject("data-v-21e85264_0", {
+    source: "span.ripple[data-v-21e85264]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-21e85264 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-21e85264{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -953,10 +954,10 @@ var __vue_inject_styles__$u = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$u = "data-v-4035d739";
+var __vue_scope_id__$u = "data-v-21e85264";
 /* module identifier */
 
-var __vue_module_identifier__$u = "data-v-4035d739";
+var __vue_module_identifier__$u = "data-v-21e85264";
 /* functional template */
 
 var __vue_is_functional_template__$u = false;
