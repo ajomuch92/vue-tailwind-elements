@@ -19,7 +19,20 @@
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-toast title="Toast" subtitle="Subtitle" message="This is a toast" :color="color" :show-close-button="true" />
+          <te-toast title="Toast" subtitle="Subtitle" message="This is a toast" :color="color" :show-close-button="true" @close="..."/>
+        </script>
+      </code>
+    </pre>
+    <h1 class="text-lg my-1">Light</h1>
+    <div class="w-1/3 my-2">
+      <label class="w-1/3">Choose a type</label>
+      <te-select v-model="type" :options="types" />
+    </div>
+    <te-toast-light title="Toast" subtitle="Subtitle" :type="type" />
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-toast-light title="Toast" subtitle="Subtitle" :type="type" />
         </script>
       </code>
     </pre>
@@ -31,7 +44,9 @@ export default {
   name: 'Toast',
   data: () => ({
     colors: ['normal','primary', 'success', 'warning', 'danger'],
-    color: 'primary'
+    color: 'primary',
+    types: ['info', 'success', 'warning', 'danger'],
+    type: 'info'
   })
 }
 </script>

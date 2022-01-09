@@ -32,3 +32,4 @@ export { default as teFile } from './teFile.vue';
 export { default as teNotification } from './teNotification.vue';
 export { default as teIcon } from './teIcon.vue';
 export { default as teRating } from './teRating.vue';
+export { default as teToastLight } from './teToastLight.vue';
