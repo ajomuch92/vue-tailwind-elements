@@ -17,7 +17,7 @@
   >
     <te-spinner  v-if="loading" :color="type=='light'? 'primary': 'light'" class="mx-1 align-sub" size="small"/>
     <slot name="default" />
-    <span v-if="showRipple&&ripple" :key="showRipple?-1:1" class="ripple" :style="styleRipple"/>
+    <span v-if="showRipple&&ripple" class="ripple" :style="styleRipple"/>
   </button>
 </template>
 
@@ -131,7 +131,8 @@ export default {
   },
   data: () => ({
     showRipple: false,
-    styleRipple: {}
+    styleRipple: {},
+    ripples: [],
   }),
   methods: {
     clickHandler(event) {
@@ -144,7 +145,7 @@ export default {
       const button = event.currentTarget;
       const style = {};
       const diameter = Math.max(button.clientWidth, button.clientHeight);
-      const radius = diameter / 3;
+      const radius = diameter / 2;
       style.width = style.height = `${diameter}px`;
       style.left = `${event.offsetX - radius}px`;
       style.top = `${event.offsetY - radius}px`;
@@ -152,21 +153,17 @@ export default {
       this.showRipple = true;
       setTimeout(() => {
         this.showRipple = false;
-      }, 750)
+      }, 700)
     }
   }
 }
 </script>
 
 <style scoped>
-  button {
-    transition: background 400ms;
-  }
-
   span.ripple {
     position: absolute;
     border-radius: 50%;
-    transform: scale(1);
+    transform: scale(0);
     animation: ripple-effect 800ms linear;
     background-color: rgba(255, 255, 255, 0.7);
   }
