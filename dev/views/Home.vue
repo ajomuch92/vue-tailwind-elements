@@ -12,11 +12,10 @@
     </pre>
     <h1 class="text-lg my-2">Usage</h1>
     <p>Importing the styles, there is no need to install Tailwind and you can use everything on it</p>
-    <pre class="language-javascript">
+    <pre class="language-js">
       <code>
-        <script type="prism-javascript">
+        <script type="prism-js">
           //main.js
-          import 'vue-tailwind-elements/src/tailwind.min.css';
           import 'vue-tailwind-elements/src/tailwind-forms.min.css';
           import VueTailwindElements from 'vue-tailwind-elements';
 
