@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Select controls</h1>
     <h1 class="text-lg">Single</h1>
     <te-select v-model="value" :options="options1" placeholder="Select One"/>

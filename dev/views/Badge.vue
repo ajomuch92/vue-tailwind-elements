@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Badge</h1>
     <h1 class="text-lg">Normal</h1>
     <pre class="language-markup">

@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Button Group</h1>
     <te-button-group :quantity="3">
       <template slot="button-1">Button 1</template>

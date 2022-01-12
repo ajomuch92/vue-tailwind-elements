@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Tabs</h1>
     <h1 class="text-lg my-1">Normal</h1>
     <te-tabs v-model="selectedTab" :titles="['Home', 'Profile', 'Messages', {label: 'Contact', disabled: true}]">

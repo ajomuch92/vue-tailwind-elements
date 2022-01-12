@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Modal</h1>
     <te-button @click="visible=true">Launch Modal</te-button>
     <te-modal title="Modal title" :visible.sync="visible" :show-close-button="true">

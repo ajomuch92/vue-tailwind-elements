@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Date Picker</h1>
     <p>Emit a datetime value</p>
     <te-date-picker v-model="date1" :disabled="false" placeholder="Pick a date"/>

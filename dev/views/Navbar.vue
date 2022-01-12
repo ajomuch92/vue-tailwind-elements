@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Navbar</h1>
     This component is not responsive for now
     <h1 class="text-lg my-1">Normal</h1>

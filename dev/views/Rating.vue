@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Rating</h1>
     <p>For the name of the icons, for a better behavior please use the filled icons. For the colors, use a normal color string or hexadecimal string.</p>
     <h1 class="text-lg my-1">Normal</h1>

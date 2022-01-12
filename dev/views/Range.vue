@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Range</h1>
     <te-range v-model="value" :max="100" :step="2" :disabled="false"/>
     <p>Value {{value}}</p>

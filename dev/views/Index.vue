@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex">
-    <aside class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto">
+    <aside v-if="windowSizeType!='sm'" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto">
       <nav class="space-y-8 text-sm">
         <div v-for="(item, key) in items" :key="key" class="space-y-2">
           <h2
@@ -20,8 +20,31 @@
         </div>
       </nav>
     </aside>
-    <main class="container w-full sm:w-9/12 lg:w-10/12 px-4 sm:pr-10 lg:pr-4">
+    <te-offcanvas v-else v-model="showPanel">
+      <nav class="space-y-8 text-sm">
+        <div v-for="(item, key) in items" :key="key" class="space-y-2">
+          <h2
+            class="
+              text-sm
+              font-semibold
+              tracking-widest
+              uppercase
+              text-gray-600
+            "
+          >
+            {{key}}
+          </h2>
+          <div class="flex flex-col space-y-1">
+            <a v-for="(option, i) in item" :key="i" :href="option.href">{{option.label}}</a>
+          </div>
+        </div>
+      </nav>
+    </te-offcanvas>
+    <main class="w-full px-4 sm:pr-10 lg:pr-4">
       <router-view />
+      <te-button v-if="windowSizeType=='sm'" class="absolute right-0 top-7" @click="showPanel=!showPanel" only-text>
+        <te-icon name="list" />
+      </te-button>
     </main>
   </div>
 </template>
@@ -150,7 +173,8 @@ export default {
           href: '/select'
         },
       ]
-    }
+    },
+    showPanel: false,
   })
 }
 </script>

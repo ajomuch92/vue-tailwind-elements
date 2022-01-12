@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Pagination</h1>
     <h1 class="text-lg my-1">Normal</h1>
     <te-pagination :pages="10" :pages-to-show="4" :active-page.sync="activePage" />

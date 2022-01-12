@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Toast</h1>
     <h1 class="text-lg my-1">Normal</h1>
     <te-toast title="Toast" subtitle="Subtitle" message="This is a toast" />

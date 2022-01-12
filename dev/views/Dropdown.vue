@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Dropdown</h1>
     <h1 class="text-lg my-2">Normal</h1>
     <te-dropdown label="Dropdown">

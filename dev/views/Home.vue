@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Vue Tailwind Elements</h1>
     <p>This is a library of Vue components based on the components created for <a class="text-blue-500" href="https://tailwindcss.com/" target="blank">Tailwind</a> called <a class="text-blue-500" href="https://tailwind-elements.com/" target="blank">Tailwind Elements</a>.</p>
     <h1 class="text-lg my-2">Installation</h1>

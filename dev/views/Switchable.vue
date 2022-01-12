@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Switchable components</h1>
     <h1 class="text-lg">Checkbox</h1>
     <te-checkbox v-model="value1" label="Checkbox" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="container p-6">
+  <div class="p-6">
     <h1 class="text-3xl my-2">Text components</h1>
     <h1 class="text-lg my-2">Textarea</h1>
     <te-textarea v-model="textAreaValue" placeholder="Write your text" :rows="4" :disabled="false"/>
