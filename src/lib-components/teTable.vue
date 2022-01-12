@@ -29,7 +29,16 @@
         </template>
       </tbody>
     </table>
-    <te-pagination class="my-1" v-if="itemPerPage>0" :active-page.sync="activePage" :pages="pages" :pages-to-show="pages" :position="paginationAlign" />
+    <te-pagination
+      v-if="itemPerPage>0"
+      class="my-1"
+      :active-page.sync="activePage"
+      :pages="pages"
+      :pages-to-show="pages"
+      :position="paginationAlign"
+      :label-next="labelNext"
+      :label-prev="labelPrev"
+    />
   </div>
 </template>
 
@@ -105,7 +114,15 @@ export default {
       type: String,
       default: 'right',
       validator: (value) => ['left', 'center','right'].includes(value)
-    }
+    },
+    labelNext: {
+      type: String,
+      default: 'Next'
+    },
+    labelPrev: {
+      type: String,
+      default: 'Previous'
+    },
   },
   computed: {
     headerBackgroundClass() {

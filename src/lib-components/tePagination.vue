@@ -5,7 +5,7 @@
         <li class="page-item">
           <a
             class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
-            :class="{'pointer-events-none': currentPage==1, ...sizeClass}"
+            :class="{'pointer-events-none': currentPage==1||pages==0, ...sizeClass}"
             @click="currentPage--"
           >
             <span v-if="!showIcons">{{labelPrev}}</span>
@@ -29,7 +29,7 @@
         <li class="page-item">
           <a
             class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
-            :class="{'pointer-events-none': currentPage==pages, ...sizeClass}"
+            :class="{'pointer-events-none': currentPage==pages||pages==0, ...sizeClass}"
             @click="currentPage++"
           >
             <span v-if="!showIcons">{{labelNext}}</span>
