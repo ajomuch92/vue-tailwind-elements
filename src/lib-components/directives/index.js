@@ -1,1 +1,1 @@
-export { default as vOutside } from './v-outside';
+export { default as outside } from './v-outside';
