@@ -146,6 +146,11 @@ const router = new VueRouter({
           name: 'Rating',
           component: () => import('../views/Rating.vue')
         },
+        {
+          path: '/utilities',
+          name: 'Utilities',
+          component: () => import('../views/Utilities.vue')
+        },
       ]
     },
   ]

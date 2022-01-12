@@ -172,6 +172,12 @@ export default {
           label: 'Select',
           href: '/select'
         },
+      ],
+      Utilities: [
+        {
+          label: 'Directives/Mixins',
+          href: '/utilities'
+        },
       ]
     },
     showPanel: false,
