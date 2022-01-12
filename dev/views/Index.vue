@@ -27,8 +27,11 @@
 </template>
 
 <script>
+import { sizeMixin } from '../../src/lib-components/mixins/index';
+
 export default {
   name: 'Index',
+  mixins: [sizeMixin],
   data: () => ({
     items: {
       'Getting Started': [
