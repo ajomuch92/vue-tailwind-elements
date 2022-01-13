@@ -1,27 +1,30 @@
 <template>
   <div class="antialiased sans-serif w-44">
     <div class="relative">
-      <input
-        type="text"
-        readonly
-        v-model="datepickerValue"
-        @click="showDatepicker = !showDatepicker"
-        @keydown.esc="showDatepicker = false"
-        class="
-          w-full
-          pl-4
-          pr-10
-          py-3
-          leading-none
-          rounded-lg
-          focus:outline-none focus:shadow-outline
-          text-gray-600
-          font-medium
-          border-2
-        "
-        :placeholder="placeholder"
-        :disabled="disabled"
-      />
+      <slot name="trigger">
+        <input
+          type="text"
+          readonly
+          v-model="datepickerValue"
+          @click="showDatepicker = !showDatepicker"
+          @keydown.esc="showDatepicker = false"
+          class="
+            w-full
+            pl-4
+            pr-10
+            py-3
+            leading-none
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+            text-gray-600
+            font-medium
+            border-2
+            z-0
+          "
+          :placeholder="placeholder"
+          :disabled="disabled"
+        />
+      </slot>
 
       <div class="absolute top-0 right-0 px-3 py-2">
         <slot name="icon">
@@ -51,6 +54,7 @@
           absolute
           top-0
           left-0
+          z-50
         "
         style="width: 17rem"
         v-show="showDatepicker"
@@ -70,7 +74,7 @@
               class="bg-transparent text-lg font-normal text-gray-600 appearance-none outline-none"
               v-model="year"
             >
-              <option v-for="(_year, key) in years" :key="key" :value="_year">{{ _year }}</option>
+              <option v-for="($year, key) in years" :key="key" :value="$year">{{ $year }}</option>
             </select>
           </div>
           <div>
