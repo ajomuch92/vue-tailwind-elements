@@ -58,16 +58,20 @@
       >
         <div class="flex justify-between items-center mb-2">
           <div>
-            <span
-              class="text-lg font-bold text-gray-800"
+            <select
+              name="hours"
+              class="bg-transparent text-lg font-bold text-gray-800 appearance-none outline-none"
+              v-model="month"
             >
-              {{monthNames[month]}}
-            </span>
-            <span
-              class="ml-1 text-lg text-gray-600 font-normal"
+              <option v-for="(month, key) in monthNames" :key="key" :value="key">{{ month }}</option>
+            </select>
+            <select
+              name="hours"
+              class="bg-transparent text-lg font-normal text-gray-600 appearance-none outline-none"
+              v-model="year"
             >
-              {{year}}
-            </span>
+              <option v-for="(_year, key) in years" :key="key" :value="_year">{{ _year }}</option>
+            </select>
           </div>
           <div>
             <button
@@ -82,6 +86,7 @@
                 p-1
                 rounded-full
               "
+              :class="{'opacity-25 pointer-events-none': !isPreviousAllowed}"
               @click="deductMonth"
             >
               <svg
@@ -110,6 +115,7 @@
                 p-1
                 rounded-full
               "
+              :class="{'opacity-25 pointer-events-none': !isNextAllowed}"
               @click="addMonth"
             >
               <svg
@@ -151,7 +157,7 @@
                 border-transparent
                 text-sm
               "
-            ></div>
+            />
           </template>
           <template
             v-for="(date, dateIndex) in noOfDays"
@@ -169,7 +175,11 @@
                   ease-in-out
                   duration-100
                 "
-                :class="{'bg-blue-500 text-white': isToday(date), 'text-gray-700 hover:bg-blue-200': !isToday(date) }"
+                :class="{
+                  'bg-blue-500 text-white': isToday(date), 
+                  'text-gray-700 hover:bg-blue-200': !isToday(date), 
+                  'opacity-25 pointer-events-none': isNotAllowedDate(date) || isOutOfRange(date)
+                }"
               >
                 {{date}}
               </div>
@@ -222,24 +232,83 @@ export default {
     placeholder: {
       type: String,
       default: 'Select a date'
-    }
-  },
-  watch: {
-    value() {
-      this.initDate();
+    },
+    maxDate: {
+      type: Date,
+      default: null
+    },
+    minDate: {
+      type: Date,
+      default: null
+    },
+    notAllowedDates: {
+      type: Array,
+      default: () => [],
+      validator: (value) => value.length === 0 || value.every(r => r instanceof Date && r.getTime())
     }
   },
   data: () => ({
     datepickerValue: '',
     showDatepicker: false,
-    month: '',
-    year: '',
+    month: 0,
+    year: 0,
     noOfDays: [],
     blankdays: [],
   }),
+  watch: {
+    value() {
+      this.initDate();
+    },
+    month() {
+      this.getNoOfDays();
+    },
+    year(val) {
+      if (val !== 0) {
+        this.getNoOfDays();
+      }
+    }
+  },
   created() {
     this.initDate();
     this.getNoOfDays();
+  },
+  computed: {
+    years() {
+      let years = [];
+      if (this.year) {
+        const initYear = this.year - 100;
+        years = (new Array(110).fill().map((_, i) => initYear + i)).reverse();
+        if (this.minDate) {
+          years = years.filter(r => r >= this.minDate.getFullYear());
+        }
+        if (this.maxDate) {
+          years = years.filter(r => r <= this.maxDate.getFullYear());
+        }
+      }
+      return years;
+    },
+    isPreviousAllowed() {
+      if (this.minDate) {
+        const date = new Date(this.year, this.month, 1);
+        date.setDate(1);
+        date.setMonth(date.getMonth() - 1);
+        const lastDayOfPrevMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+        if (this.isOutOfRange(lastDayOfPrevMonth) || (this.isOutOfRange(date) && this.isOutOfRange(lastDayOfPrevMonth))) {
+          return false;
+        } 
+      }
+      return true;
+    },
+    isNextAllowed() {
+      if (this.maxDate) {
+        const date = new Date(this.year, this.month + 2, 0);
+        const lastDayCurrentMonth = new Date(this.year, this.month + 1, 0);
+        if (this.isOutOfRange(lastDayCurrentMonth) || (this.isOutOfRange(date) && this.isOutOfRange(lastDayCurrentMonth))) {
+          return false;
+        } 
+      }
+      return true;
+    }
   },
   methods: {
     initDate() {
@@ -254,6 +323,17 @@ export default {
       const d = new Date(this.year, this.month, date);
       const today = this.value || new Date();
       return today.toDateString() === d.toDateString();
+    },
+    isNotAllowedDate(date) {
+      const d = date instanceof Date && date.getTime()? date : new Date(this.year, this.month, date);
+      return this.notAllowedDates.map(r => r.getTime()).includes(d.getTime());
+    },
+    isOutOfRange(date) {
+      if (this.minDate || this.maxDate) {
+        const d = date instanceof Date && date.getTime()? date : new Date(this.year, this.month, date);;
+        return d < this.minDate || d > this.maxDate;
+      }
+      return false;
     },
     getDateValue(date) {
       const selectedDate = new Date(this.year, this.month, date);
