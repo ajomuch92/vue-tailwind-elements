@@ -1,5 +1,5 @@
 <template>
-  <ul class="bg-white rounded-lg w-96 text-gray-900" :class="{'border border-gray-200': !flush}">
+  <ul class="bg-white rounded-lg inline-block text-gray-900" :class="{'border border-gray-200': !flush}">
     <li 
       v-for="(item, key) in items"
       :key="key" 

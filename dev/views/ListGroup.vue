@@ -7,7 +7,10 @@
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-list-group :active-item.sync="selectedItem" :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable />
+          <te-list-group
+            :active-item.sync="selectedItem"
+            :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable
+          />
         </script>
       </code>
     </pre>
@@ -16,7 +19,11 @@
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-list-group :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" :clickable="false" flush />
+          <te-list-group
+            :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]"
+            :clickable="false"
+            flush
+          />
         </script>
       </code>
     </pre>
