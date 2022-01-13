@@ -2470,28 +2470,100 @@ var script$j = {
     placeholder: {
       type: String,
       default: 'Select a date'
+    },
+    maxDate: {
+      type: Date,
+      default: null
+    },
+    minDate: {
+      type: Date,
+      default: null
+    },
+    notAllowedDates: {
+      type: Array,
+      default: () => [],
+      validator: value => value.length === 0 || value.every(r => r instanceof Date && r.getTime())
     }
-  },
-  watch: {
-    value() {
-      this.initDate();
-    }
-
   },
   data: () => ({
     datepickerValue: '',
     showDatepicker: false,
-    month: '',
-    year: '',
+    month: 0,
+    year: 0,
     noOfDays: [],
     blankdays: []
   }),
+  watch: {
+    value() {
+      this.initDate();
+    },
+
+    month() {
+      this.getNoOfDays();
+    },
+
+    year(val) {
+      if (val !== 0) {
+        this.getNoOfDays();
+      }
+    }
+
+  },
 
   created() {
     this.initDate();
     this.getNoOfDays();
   },
 
+  computed: {
+    years() {
+      let years = [];
+
+      if (this.year) {
+        const initYear = this.year - 100;
+        years = new Array(110).fill().map((_, i) => initYear + i).reverse();
+
+        if (this.minDate) {
+          years = years.filter(r => r >= this.minDate.getFullYear());
+        }
+
+        if (this.maxDate) {
+          years = years.filter(r => r <= this.maxDate.getFullYear());
+        }
+      }
+
+      return years;
+    },
+
+    isPreviousAllowed() {
+      if (this.minDate) {
+        const date = new Date(this.year, this.month, 1);
+        date.setDate(1);
+        date.setMonth(date.getMonth() - 1);
+        const lastDayOfPrevMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+
+        if (this.isOutOfRange(lastDayOfPrevMonth) || this.isOutOfRange(date) && this.isOutOfRange(lastDayOfPrevMonth)) {
+          return false;
+        }
+      }
+
+      return true;
+    },
+
+    isNextAllowed() {
+      if (this.maxDate) {
+        const date = new Date(this.year, this.month + 2, 0);
+        const lastDayCurrentMonth = new Date(this.year, this.month + 1, 0);
+
+        if (this.isOutOfRange(lastDayCurrentMonth) || this.isOutOfRange(date) && this.isOutOfRange(lastDayCurrentMonth)) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+  },
   methods: {
     initDate() {
       const today = this.value || new Date();
@@ -2507,6 +2579,20 @@ var script$j = {
       const d = new Date(this.year, this.month, date);
       const today = this.value || new Date();
       return today.toDateString() === d.toDateString();
+    },
+
+    isNotAllowedDate(date) {
+      const d = date instanceof Date && date.getTime() ? date : new Date(this.year, this.month, date);
+      return this.notAllowedDates.map(r => r.getTime()).includes(d.getTime());
+    },
+
+    isOutOfRange(date) {
+      if (this.minDate || this.maxDate) {
+        const d = date instanceof Date && date.getTime() ? date : new Date(this.year, this.month, date);
+        return d < this.minDate || d > this.maxDate;
+      }
+
+      return false;
     },
 
     getDateValue(date) {
@@ -2649,12 +2735,69 @@ var __vue_render__$j = function () {
     }
   }, [_c('div', {
     staticClass: "flex justify-between items-center mb-2"
-  }, [_c('div', [_c('span', {
-    staticClass: "text-lg font-bold text-gray-800"
-  }, [_vm._v("\n            " + _vm._s(_vm.monthNames[_vm.month]) + "\n          ")]), _vm._v(" "), _c('span', {
-    staticClass: "ml-1 text-lg text-gray-600 font-normal"
-  }, [_vm._v("\n            " + _vm._s(_vm.year) + "\n          ")])]), _vm._v(" "), _c('div', [_c('button', {
+  }, [_c('div', [_c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.month,
+      expression: "month"
+    }],
+    staticClass: "bg-transparent text-lg font-bold text-gray-800 appearance-none outline-none",
+    attrs: {
+      "name": "hours"
+    },
+    on: {
+      "change": function ($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.month = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }
+    }
+  }, _vm._l(_vm.monthNames, function (month, key) {
+    return _c('option', {
+      key: key,
+      domProps: {
+        "value": key
+      }
+    }, [_vm._v(_vm._s(month))]);
+  }), 0), _vm._v(" "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.year,
+      expression: "year"
+    }],
+    staticClass: "bg-transparent text-lg font-normal text-gray-600 appearance-none outline-none",
+    attrs: {
+      "name": "hours"
+    },
+    on: {
+      "change": function ($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.year = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }
+    }
+  }, _vm._l(_vm.years, function (_year, key) {
+    return _c('option', {
+      key: key,
+      domProps: {
+        "value": _year
+      }
+    }, [_vm._v(_vm._s(_year))]);
+  }), 0)]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ",
+    class: {
+      'opacity-25 pointer-events-none': !_vm.isPreviousAllowed
+    },
     attrs: {
       "type": "button"
     },
@@ -2677,6 +2820,9 @@ var __vue_render__$j = function () {
     }
   })])]), _vm._v(" "), _c('button', {
     staticClass: "\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ",
+    class: {
+      'opacity-25 pointer-events-none': !_vm.isNextAllowed
+    },
     attrs: {
       "type": "button"
     },
@@ -2730,7 +2876,8 @@ var __vue_render__$j = function () {
       staticClass: "\n                cursor-pointer\n                text-center text-sm\n                leading-none\n                rounded-full\n                leading-loose\n                transition\n                ease-in-out\n                duration-100\n              ",
       class: {
         'bg-blue-500 text-white': _vm.isToday(date),
-        'text-gray-700 hover:bg-blue-200': !_vm.isToday(date)
+        'text-gray-700 hover:bg-blue-200': !_vm.isToday(date),
+        'opacity-25 pointer-events-none': _vm.isNotAllowedDate(date) || _vm.isOutOfRange(date)
       },
       on: {
         "click": function ($event) {

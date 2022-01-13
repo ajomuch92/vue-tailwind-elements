@@ -2341,26 +2341,107 @@ var script$j = {
     placeholder: {
       type: String,
       default: 'Select a date'
-    }
-  },
-  watch: {
-    value: function value() {
-      this.initDate();
+    },
+    maxDate: {
+      type: Date,
+      default: null
+    },
+    minDate: {
+      type: Date,
+      default: null
+    },
+    notAllowedDates: {
+      type: Array,
+      default: function _default() {
+        return [];
+      },
+      validator: function validator(value) {
+        return value.length === 0 || value.every(function (r) {
+          return r instanceof Date && r.getTime();
+        });
+      }
     }
   },
   data: function data() {
     return {
       datepickerValue: '',
       showDatepicker: false,
-      month: '',
-      year: '',
+      month: 0,
+      year: 0,
       noOfDays: [],
       blankdays: []
     };
   },
+  watch: {
+    value: function value() {
+      this.initDate();
+    },
+    month: function month() {
+      this.getNoOfDays();
+    },
+    year: function year(val) {
+      if (val !== 0) {
+        this.getNoOfDays();
+      }
+    }
+  },
   created: function created() {
     this.initDate();
     this.getNoOfDays();
+  },
+  computed: {
+    years: function years() {
+      var _this = this;
+
+      var years = [];
+
+      if (this.year) {
+        var initYear = this.year - 100;
+        years = new Array(110).fill().map(function (_, i) {
+          return initYear + i;
+        }).reverse();
+
+        if (this.minDate) {
+          years = years.filter(function (r) {
+            return r >= _this.minDate.getFullYear();
+          });
+        }
+
+        if (this.maxDate) {
+          years = years.filter(function (r) {
+            return r <= _this.maxDate.getFullYear();
+          });
+        }
+      }
+
+      return years;
+    },
+    isPreviousAllowed: function isPreviousAllowed() {
+      if (this.minDate) {
+        var date = new Date(this.year, this.month, 1);
+        date.setDate(1);
+        date.setMonth(date.getMonth() - 1);
+        var lastDayOfPrevMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+
+        if (this.isOutOfRange(lastDayOfPrevMonth) || this.isOutOfRange(date) && this.isOutOfRange(lastDayOfPrevMonth)) {
+          return false;
+        }
+      }
+
+      return true;
+    },
+    isNextAllowed: function isNextAllowed() {
+      if (this.maxDate) {
+        var date = new Date(this.year, this.month + 2, 0);
+        var lastDayCurrentMonth = new Date(this.year, this.month + 1, 0);
+
+        if (this.isOutOfRange(lastDayCurrentMonth) || this.isOutOfRange(date) && this.isOutOfRange(lastDayCurrentMonth)) {
+          return false;
+        }
+      }
+
+      return true;
+    }
   },
   methods: {
     initDate: function initDate() {
@@ -2376,6 +2457,20 @@ var script$j = {
       var d = new Date(this.year, this.month, date);
       var today = this.value || new Date();
       return today.toDateString() === d.toDateString();
+    },
+    isNotAllowedDate: function isNotAllowedDate(date) {
+      var d = date instanceof Date && date.getTime() ? date : new Date(this.year, this.month, date);
+      return this.notAllowedDates.map(function (r) {
+        return r.getTime();
+      }).includes(d.getTime());
+    },
+    isOutOfRange: function isOutOfRange(date) {
+      if (this.minDate || this.maxDate) {
+        var d = date instanceof Date && date.getTime() ? date : new Date(this.year, this.month, date);
+        return d < this.minDate || d > this.maxDate;
+      }
+
+      return false;
     },
     getDateValue: function getDateValue(date) {
       var selectedDate = new Date(this.year, this.month, date);
@@ -2468,16 +2563,79 @@ var __vue_render__$j = function __vue_render__() {
     staticStyle: {
       "width": "17rem"
     }
-  }, [_vm._ssrNode("<div class=\"flex justify-between items-center mb-2\"><div><span class=\"text-lg font-bold text-gray-800\">" + _vm._ssrEscape("\n            " + _vm._s(_vm.monthNames[_vm.month]) + "\n          ") + "</span> <span class=\"ml-1 text-lg text-gray-600 font-normal\">" + _vm._ssrEscape("\n            " + _vm._s(_vm.year) + "\n          ") + "</span></div> <div><button type=\"button\" class=\"\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            \"><svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"h-6 w-6 text-gray-500 inline-flex\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 19l-7-7 7-7\"></path></svg></button> <button type=\"button\" class=\"\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            \"><svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"h-6 w-6 text-gray-500 inline-flex\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\"></path></svg></button></div></div> <div class=\"flex flex-wrap mb-3 -mx-1\">" + _vm._ssrList(_vm.days, function (day, index) {
+  }, [_vm._ssrNode("<div class=\"flex justify-between items-center mb-2\">", "</div>", [_vm._ssrNode("<div>", "</div>", [_c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.month,
+      expression: "month"
+    }],
+    staticClass: "bg-transparent text-lg font-bold text-gray-800 appearance-none outline-none",
+    attrs: {
+      "name": "hours"
+    },
+    on: {
+      "change": function change($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.month = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }
+    }
+  }, _vm._l(_vm.monthNames, function (month, key) {
+    return _c('option', {
+      key: key,
+      domProps: {
+        "value": key
+      }
+    }, [_vm._v(_vm._s(month))]);
+  }), 0), _vm._ssrNode(" "), _c('select', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.year,
+      expression: "year"
+    }],
+    staticClass: "bg-transparent text-lg font-normal text-gray-600 appearance-none outline-none",
+    attrs: {
+      "name": "hours"
+    },
+    on: {
+      "change": function change($event) {
+        var $$selectedVal = Array.prototype.filter.call($event.target.options, function (o) {
+          return o.selected;
+        }).map(function (o) {
+          var val = "_value" in o ? o._value : o.value;
+          return val;
+        });
+        _vm.year = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
+      }
+    }
+  }, _vm._l(_vm.years, function (_year, key) {
+    return _c('option', {
+      key: key,
+      domProps: {
+        "value": _year
+      }
+    }, [_vm._v(_vm._s(_year))]);
+  }), 0)], 2), _vm._ssrNode(" <div><button type=\"button\"" + _vm._ssrClass("\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ", {
+    'opacity-25 pointer-events-none': !_vm.isPreviousAllowed
+  }) + "><svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"h-6 w-6 text-gray-500 inline-flex\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 19l-7-7 7-7\"></path></svg></button> <button type=\"button\"" + _vm._ssrClass("\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ", {
+    'opacity-25 pointer-events-none': !_vm.isNextAllowed
+  }) + "><svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"h-6 w-6 text-gray-500 inline-flex\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\"></path></svg></button></div>")], 2), _vm._ssrNode(" <div class=\"flex flex-wrap mb-3 -mx-1\">" + _vm._ssrList(_vm.days, function (day, index) {
     return "<div class=\"px-1\" style=\"width: 14.26%\"><div class=\"text-gray-800 font-medium text-center text-xs\">" + _vm._ssrEscape("\n              " + _vm._s(day) + "\n            ") + "</div></div>";
   }) + "</div> <div class=\"flex flex-wrap -mx-1\">" + _vm._ssrList(_vm.blankdays, function (blankday, key) {
     return "<div class=\"\n              text-center\n              border\n              p-1\n              border-transparent\n              text-sm\n            \" style=\"width: 14.28%\"></div>";
   }) + " " + _vm._ssrList(_vm.noOfDays, function (date, dateIndex) {
     return "<div class=\"px-1 mb-1\" style=\"width: 14.28%\"><div" + _vm._ssrClass("\n                cursor-pointer\n                text-center text-sm\n                leading-none\n                rounded-full\n                leading-loose\n                transition\n                ease-in-out\n                duration-100\n              ", {
       'bg-blue-500 text-white': _vm.isToday(date),
-      'text-gray-700 hover:bg-blue-200': !_vm.isToday(date)
+      'text-gray-700 hover:bg-blue-200': !_vm.isToday(date),
+      'opacity-25 pointer-events-none': _vm.isNotAllowedDate(date) || _vm.isOutOfRange(date)
     }) + ">" + _vm._ssrEscape("\n              " + _vm._s(date) + "\n            ") + "</div></div>";
-  }) + "</div>")])], 2)]);
+  }) + "</div>")], 2)], 2)]);
 };
 
 var __vue_staticRenderFns__$j = [];
@@ -2489,7 +2647,7 @@ var __vue_inject_styles__$j = undefined;
 var __vue_scope_id__$j = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$j = "data-v-39b9ffff";
+var __vue_module_identifier__$j = "data-v-ddb0553a";
 /* functional template */
 
 var __vue_is_functional_template__$j = false;
