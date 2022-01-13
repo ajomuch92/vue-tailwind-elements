@@ -2663,42 +2663,44 @@ var __vue_render__$j = function () {
     staticClass: "antialiased sans-serif w-44"
   }, [_c('div', {
     staticClass: "relative"
-  }, [_c('input', {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.datepickerValue,
-      expression: "datepickerValue"
-    }],
-    staticClass: "\n        w-full\n        pl-4\n        pr-10\n        py-3\n        leading-none\n        rounded-lg\n        focus:outline-none focus:shadow-outline\n        text-gray-600\n        font-medium\n        border-2\n      ",
-    attrs: {
-      "type": "text",
-      "readonly": "",
-      "placeholder": _vm.placeholder,
-      "disabled": _vm.disabled
-    },
-    domProps: {
-      "value": _vm.datepickerValue
-    },
-    on: {
-      "click": function ($event) {
-        _vm.showDatepicker = !_vm.showDatepicker;
+  }, [_vm._t("trigger", function () {
+    return [_c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: _vm.datepickerValue,
+        expression: "datepickerValue"
+      }],
+      staticClass: "\n          w-full\n          pl-4\n          pr-10\n          py-3\n          leading-none\n          rounded-lg\n          focus:outline-none focus:shadow-outline\n          text-gray-600\n          font-medium\n          border-2\n          z-0\n        ",
+      attrs: {
+        "type": "text",
+        "readonly": "",
+        "placeholder": _vm.placeholder,
+        "disabled": _vm.disabled
       },
-      "keydown": function ($event) {
-        if (!$event.type.indexOf('key') && _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])) {
-          return null;
-        }
-
-        _vm.showDatepicker = false;
+      domProps: {
+        "value": _vm.datepickerValue
       },
-      "input": function ($event) {
-        if ($event.target.composing) {
-          return;
-        }
+      on: {
+        "click": function ($event) {
+          _vm.showDatepicker = !_vm.showDatepicker;
+        },
+        "keydown": function ($event) {
+          if (!$event.type.indexOf('key') && _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])) {
+            return null;
+          }
 
-        _vm.datepickerValue = $event.target.value;
+          _vm.showDatepicker = false;
+        },
+        "input": function ($event) {
+          if ($event.target.composing) {
+            return;
+          }
+
+          _vm.datepickerValue = $event.target.value;
+        }
       }
-    }
+    })];
   }), _vm._v(" "), _c('div', {
     staticClass: "absolute top-0 right-0 px-3 py-2"
   }, [_vm._t("icon", function () {
@@ -2729,7 +2731,7 @@ var __vue_render__$j = function () {
       value: _vm.hideCalendar,
       expression: "hideCalendar"
     }],
-    staticClass: "\n        bg-white\n        mt-12\n        rounded-lg\n        shadow\n        p-4\n        absolute\n        top-0\n        left-0\n      ",
+    staticClass: "\n        bg-white\n        mt-12\n        rounded-lg\n        shadow\n        p-4\n        absolute\n        top-0\n        left-0\n        z-50\n      ",
     staticStyle: {
       "width": "17rem"
     }
@@ -2786,13 +2788,13 @@ var __vue_render__$j = function () {
         _vm.year = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
       }
     }
-  }, _vm._l(_vm.years, function (_year, key) {
+  }, _vm._l(_vm.years, function ($year, key) {
     return _c('option', {
       key: key,
       domProps: {
-        "value": _year
+        "value": $year
       }
-    }, [_vm._v(_vm._s(_year))]);
+    }, [_vm._v(_vm._s($year))]);
   }), 0)]), _vm._v(" "), _c('div', [_c('button', {
     staticClass: "\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ",
     class: {
@@ -2885,7 +2887,7 @@ var __vue_render__$j = function () {
         }
       }
     }, [_vm._v("\n              " + _vm._s(date) + "\n            ")])])];
-  })], 2)])])]);
+  })], 2)])], 2)]);
 };
 
 var __vue_staticRenderFns__$j = [];
@@ -3716,7 +3718,7 @@ var __vue_render__$e = function () {
   var _c = _vm._self._c || _h;
 
   return _c('ul', {
-    staticClass: "bg-white rounded-lg w-96 text-gray-900",
+    staticClass: "bg-white rounded-lg inline-block text-gray-900",
     class: {
       'border border-gray-200': !_vm.flush
     }

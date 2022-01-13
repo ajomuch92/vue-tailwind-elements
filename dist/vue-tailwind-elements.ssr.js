@@ -2531,7 +2531,45 @@ var __vue_render__$j = function __vue_render__() {
 
   return _c('div', {
     staticClass: "antialiased sans-serif w-44"
-  }, [_vm._ssrNode("<div class=\"relative\">", "</div>", [_vm._ssrNode("<input type=\"text\" readonly=\"readonly\"" + _vm._ssrAttr("placeholder", _vm.placeholder) + _vm._ssrAttr("disabled", _vm.disabled) + _vm._ssrAttr("value", _vm.datepickerValue) + " class=\"\n        w-full\n        pl-4\n        pr-10\n        py-3\n        leading-none\n        rounded-lg\n        focus:outline-none focus:shadow-outline\n        text-gray-600\n        font-medium\n        border-2\n      \"> "), _vm._ssrNode("<div class=\"absolute top-0 right-0 px-3 py-2\">", "</div>", [_vm._t("icon", function () {
+  }, [_vm._ssrNode("<div class=\"relative\">", "</div>", [_vm._t("trigger", function () {
+    return [_c('input', {
+      directives: [{
+        name: "model",
+        rawName: "v-model",
+        value: _vm.datepickerValue,
+        expression: "datepickerValue"
+      }],
+      staticClass: "\n          w-full\n          pl-4\n          pr-10\n          py-3\n          leading-none\n          rounded-lg\n          focus:outline-none focus:shadow-outline\n          text-gray-600\n          font-medium\n          border-2\n          z-0\n        ",
+      attrs: {
+        "type": "text",
+        "readonly": "",
+        "placeholder": _vm.placeholder,
+        "disabled": _vm.disabled
+      },
+      domProps: {
+        "value": _vm.datepickerValue
+      },
+      on: {
+        "click": function click($event) {
+          _vm.showDatepicker = !_vm.showDatepicker;
+        },
+        "keydown": function keydown($event) {
+          if (!$event.type.indexOf('key') && _vm._k($event.keyCode, "esc", 27, $event.key, ["Esc", "Escape"])) {
+            return null;
+          }
+
+          _vm.showDatepicker = false;
+        },
+        "input": function input($event) {
+          if ($event.target.composing) {
+            return;
+          }
+
+          _vm.datepickerValue = $event.target.value;
+        }
+      }
+    })];
+  }), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"absolute top-0 right-0 px-3 py-2\">", "</div>", [_vm._t("icon", function () {
     return [_c('svg', {
       staticClass: "h-6 w-6 text-gray-400",
       attrs: {
@@ -2559,7 +2597,7 @@ var __vue_render__$j = function __vue_render__() {
       value: _vm.hideCalendar,
       expression: "hideCalendar"
     }],
-    staticClass: "\n        bg-white\n        mt-12\n        rounded-lg\n        shadow\n        p-4\n        absolute\n        top-0\n        left-0\n      ",
+    staticClass: "\n        bg-white\n        mt-12\n        rounded-lg\n        shadow\n        p-4\n        absolute\n        top-0\n        left-0\n        z-50\n      ",
     staticStyle: {
       "width": "17rem"
     }
@@ -2614,13 +2652,13 @@ var __vue_render__$j = function __vue_render__() {
         _vm.year = $event.target.multiple ? $$selectedVal : $$selectedVal[0];
       }
     }
-  }, _vm._l(_vm.years, function (_year, key) {
+  }, _vm._l(_vm.years, function ($year, key) {
     return _c('option', {
       key: key,
       domProps: {
-        "value": _year
+        "value": $year
       }
-    }, [_vm._v(_vm._s(_year))]);
+    }, [_vm._v(_vm._s($year))]);
   }), 0)], 2), _vm._ssrNode(" <div><button type=\"button\"" + _vm._ssrClass("\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ", {
     'opacity-25 pointer-events-none': !_vm.isPreviousAllowed
   }) + "><svg fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"h-6 w-6 text-gray-500 inline-flex\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M15 19l-7-7 7-7\"></path></svg></button> <button type=\"button\"" + _vm._ssrClass("\n              transition\n              ease-in-out\n              duration-100\n              inline-flex\n              cursor-pointer\n              hover:bg-gray-200\n              p-1\n              rounded-full\n            ", {
@@ -2647,7 +2685,7 @@ var __vue_inject_styles__$j = undefined;
 var __vue_scope_id__$j = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$j = "data-v-ddb0553a";
+var __vue_module_identifier__$j = "data-v-c5e06c9c";
 /* functional template */
 
 var __vue_is_functional_template__$j = false;
@@ -3387,7 +3425,7 @@ var __vue_render__$e = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('ul', {
-    staticClass: "bg-white rounded-lg w-96 text-gray-900",
+    staticClass: "bg-white rounded-lg inline-block text-gray-900",
     class: {
       'border border-gray-200': !_vm.flush
     }
@@ -3413,7 +3451,7 @@ var __vue_inject_styles__$e = undefined;
 var __vue_scope_id__$e = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$e = "data-v-f1ff00ec";
+var __vue_module_identifier__$e = "data-v-08d8c5a0";
 /* functional template */
 
 var __vue_is_functional_template__$e = false;
