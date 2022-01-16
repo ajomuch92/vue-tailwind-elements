@@ -15,7 +15,9 @@
       }"
       @click="clickHandler(key)"
     >
-      {{item.label||item}}
+      <slot :name="item.name||`item-${key}`">
+        {{item.label||item}}
+      </slot>
     </li>
   </ul>
 </template>
