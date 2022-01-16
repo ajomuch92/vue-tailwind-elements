@@ -1,36 +1,40 @@
 <template>
-  <div class="accordion-container">
-    <div
-      class="
-        text-xl
-        font-medium
-        bg-white
-        duration-300
-        p-3
-        rounded-lg
-        flex
-        justify-between
-        cursor-pointer
-        items-center
-      "
-      :class="{'bg-gray-100 bg-opacity-50': open, 'hover:bg-gray-100 hover:bg-opacity-50': !open}"
-      role="alert"
-      @click="open=!open"
-    >
-      <slot name="title">
-        {{title}}
-      </slot>
-      <span>
-        <slot name="icon" v-bind:open="open"/>
-      </span>
-    </div>
-    <transition name="apear">
-      <div v-show="open" class="bg-gray-100 bg-opacity-50 p-3 pt-1 rounded-b-lg">
-        <slot name="default">
-          {{content}}
-        </slot>
+  <div class="accordion">
+    <div v-for="(item, key) in items" :key="key" class="accordion-item bg-white border border-gray-200">
+      <h2 class="accordion-header mb-0">
+        <button
+          class="
+            accordion-button
+            relative
+            flex
+            items-center
+            w-full
+            py-4
+            px-5
+            text-base text-gray-800 text-left
+            bg-white
+            border-0
+            rounded-none
+            transition
+            focus:outline-none
+          "
+          :class="{'collapsed': !itemsOpened.includes(key)}"
+          type="button"
+          @click="toggle(key)"
+        >
+          {{item}}
+        </button>
+      </h2>
+      <div
+        :ref="`collapse-${key}`"
+        :id="`collapse-${key}`"
+        class="accordion-collapse"
+      >
+        <div class="accordion-body py-4 px-5">
+          <slot :name="`content-${key+1}`" />
+        </div>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 
@@ -38,34 +42,34 @@
 export default {
   name: 'teAccordion',
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    content: {
-      type: String,
-      default: '',
+    items: {
+      type: Array,
+      default: () => []
     },
   },
   data: () => ({
-    open: true,
-  })
+    itemsOpened: [],
+  }),
+  methods: {
+    toggle(key) {
+      const ref = this.$refs[`collapse-${key}`][0]
+      if (!this.itemsOpened.includes(key)) {
+        ref.style.maxHeight = `${ref.scrollHeight}px`
+        this.itemsOpened.push(key);
+      } else {
+        ref.style.maxHeight = null;
+        const index = this.itemsOpened.indexOf(key)
+        this.itemsOpened.splice(index, 1);
+      }
+    },
+  }
 }
 </script>
 
 <style scoped>
-  .apear-enter-active {
-    animation: apear .25s;
-  }
-  .apear-leave-active {
-    animation: apear .25s reverse;
-  }
-  @keyframes apear {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  .accordion-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
 </style>

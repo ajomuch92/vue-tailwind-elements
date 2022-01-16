@@ -1,46 +1,35 @@
 <template>
   <div class="p-6">
     <h1 class="text-3xl my-2">Accordion</h1>
-    <h1 class="text-lg">Normal use</h1>
+    <h1 class="text-lg">Basic</h1>
+    <te-accordion :items="['Accordion #1', 'Accordion #2', 'Accordion #3']">
+      <template slot="content-1">
+        <p>Content 1</p>
+      </template>
+      <template slot="content-2">
+        <p>Content 2</p>
+      </template>
+      <template slot="content-3">
+        <p>Content 3</p>
+      </template>
+    </te-accordion>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-accordion title="Click to open" content="Lorem, ipsum dolor..."/>
-        </script>
-      </code>
-    </pre>
-    <te-accordion title="Click to open" content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis ipsam ipsa veniam, ratione incidunt dolores maiores nobis reprehenderit voluptas, quaerat delectus reiciendis corporis dolorum vero itaque unde ut corrupti tenetur?" />
-    <h1 class="text-lg mt-5">With Slots</h1>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-accordion>
-            <template slot="title">
-              <h1 class="text-2xl my-0">Title</h1>
+          <te-accordion :items="['Accordion #1', 'Accordion #2', 'Accordion #3']">
+            <template slot="content-1">
+              <p>Content 1</p>
             </template>
-            <template slot="default">
-              <h1 class="text-2xl">Content</h1>
+            <template slot="content-2">
+              <p>Content 2</p>
             </template>
-            <template #icon="{open}">
-              <span v-if="open">Open</span>
-              <span v-else>Close</span>
+            <template slot="content-3">
+              <p>Content 3</p>
             </template>
           </te-accordion>
         </script>
       </code>
     </pre>
-    <te-accordion>
-      <template slot="title">
-        <h1 class="text-2xl my-0">Title</h1>
-      </template>
-      <template slot="default">
-        <h1 class="text-2xl">Content</h1>
-      </template>
-      <template #icon="{open}">
-        <span v-if="open">Open</span>
-        <span v-else>Close</span>
-      </template>
-    </te-accordion>
   </div>
 </template>
 
