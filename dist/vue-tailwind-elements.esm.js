@@ -34,21 +34,36 @@
 //
 //
 //
+//
+//
+//
+//
 var script$z = {
   name: 'teAccordion',
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    content: {
-      type: String,
-      default: ''
+    items: {
+      type: Array,
+      default: () => []
     }
   },
   data: () => ({
-    open: true
-  })
+    itemsOpened: []
+  }),
+  methods: {
+    toggle(key) {
+      const ref = this.$refs[`collapse-${key}`][0];
+
+      if (!this.itemsOpened.includes(key)) {
+        ref.style.maxHeight = `${ref.scrollHeight}px`;
+        this.itemsOpened.push(key);
+      } else {
+        ref.style.maxHeight = null;
+        const index = this.itemsOpened.indexOf(key);
+        this.itemsOpened.splice(index, 1);
+      }
+    }
+
+  }
 };
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
@@ -191,40 +206,37 @@ var __vue_render__$z = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "accordion-container"
-  }, [_c('div', {
-    staticClass: "\n      text-xl\n      font-medium\n      bg-white\n      duration-300\n      p-3\n      rounded-lg\n      flex\n      justify-between\n      cursor-pointer\n      items-center\n    ",
-    class: {
-      'bg-gray-100 bg-opacity-50': _vm.open,
-      'hover:bg-gray-100 hover:bg-opacity-50': !_vm.open
-    },
-    attrs: {
-      "role": "alert"
-    },
-    on: {
-      "click": function ($event) {
-        _vm.open = !_vm.open;
+    staticClass: "accordion"
+  }, _vm._l(_vm.items, function (item, key) {
+    return _c('div', {
+      key: key,
+      staticClass: "accordion-item bg-white border border-gray-200"
+    }, [_c('h2', {
+      staticClass: "accordion-header mb-0"
+    }, [_c('button', {
+      staticClass: "\n          accordion-button\n          relative\n          flex\n          items-center\n          w-full\n          py-4\n          px-5\n          text-base text-gray-800 text-left\n          bg-white\n          border-0\n          rounded-none\n          transition\n          focus:outline-none\n        ",
+      class: {
+        'collapsed': !_vm.itemsOpened.includes(key)
+      },
+      attrs: {
+        "type": "button"
+      },
+      on: {
+        "click": function ($event) {
+          return _vm.toggle(key);
+        }
       }
-    }
-  }, [_vm._t("title", function () {
-    return [_vm._v("\n      " + _vm._s(_vm.title) + "\n    ")];
-  }), _vm._v(" "), _c('span', [_vm._t("icon", null, {
-    "open": _vm.open
-  })], 2)], 2), _vm._v(" "), _c('transition', {
-    attrs: {
-      "name": "apear"
-    }
-  }, [_c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: _vm.open,
-      expression: "open"
-    }],
-    staticClass: "bg-gray-100 bg-opacity-50 p-3 pt-1 rounded-b-lg"
-  }, [_vm._t("default", function () {
-    return [_vm._v("\n        " + _vm._s(_vm.content) + "\n      ")];
-  })], 2)])], 1);
+    }, [_vm._v("\n        " + _vm._s(item) + "\n      ")])]), _vm._v(" "), _c('div', {
+      ref: "collapse-" + key,
+      refInFor: true,
+      staticClass: "accordion-collapse",
+      attrs: {
+        "id": "collapse-" + key
+      }
+    }, [_c('div', {
+      staticClass: "accordion-body py-4 px-5"
+    }, [_vm._t("content-" + (key + 1))], 2)])]);
+  }), 0);
 };
 
 var __vue_staticRenderFns__$z = [];
@@ -232,8 +244,8 @@ var __vue_staticRenderFns__$z = [];
 
 const __vue_inject_styles__$z = function (inject) {
   if (!inject) return;
-  inject("data-v-0e812ed4_0", {
-    source: ".apear-enter-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s}.apear-leave-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s reverse}@keyframes apear-data-v-0e812ed4{0%{opacity:0}100%{opacity:1}}",
+  inject("data-v-c8e911d4_0", {
+    source: ".accordion-collapse[data-v-c8e911d4]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
     map: undefined,
     media: undefined
   });
@@ -241,7 +253,7 @@ const __vue_inject_styles__$z = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$z = "data-v-0e812ed4";
+const __vue_scope_id__$z = "data-v-c8e911d4";
 /* module identifier */
 
 const __vue_module_identifier__$z = undefined;
@@ -3658,6 +3670,8 @@ var __vue_component__$u = __vue_component__$t;
 //
 //
 //
+//
+//
 var script$e = {
   name: 'teListGroup',
   props: {
@@ -3740,7 +3754,9 @@ var __vue_render__$e = function () {
           return _vm.clickHandler(key);
         }
       }
-    }, [_vm._v("\n    " + _vm._s(item.label || item) + "\n  ")]);
+    }, [_vm._t(item.name || "item-" + key, function () {
+      return [_vm._v("\n      " + _vm._s(item.label || item) + "\n    ")];
+    })], 2);
   }), 0);
 };
 

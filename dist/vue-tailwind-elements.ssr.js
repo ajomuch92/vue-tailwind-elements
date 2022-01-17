@@ -253,22 +253,38 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
 //
 //
 //
+//
+//
+//
+//
 var script$z = {
   name: 'teAccordion',
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    content: {
-      type: String,
-      default: ''
+    items: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
     }
   },
   data: function data() {
     return {
-      open: true
+      itemsOpened: []
     };
+  },
+  methods: {
+    toggle: function toggle(key) {
+      var ref = this.$refs["collapse-".concat(key)][0];
+
+      if (!this.itemsOpened.includes(key)) {
+        ref.style.maxHeight = "".concat(ref.scrollHeight, "px");
+        this.itemsOpened.push(key);
+      } else {
+        ref.style.maxHeight = null;
+        var index = this.itemsOpened.indexOf(key);
+        this.itemsOpened.splice(index, 1);
+      }
+    }
   }
 };function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
     if (typeof shadowMode !== 'boolean') {
@@ -395,29 +411,12 @@ var __vue_render__$z = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "accordion-container"
-  }, [_vm._ssrNode("<div role=\"alert\"" + _vm._ssrClass("\n      text-xl\n      font-medium\n      bg-white\n      duration-300\n      p-3\n      rounded-lg\n      flex\n      justify-between\n      cursor-pointer\n      items-center\n    ", {
-    'bg-gray-100 bg-opacity-50': _vm.open,
-    'hover:bg-gray-100 hover:bg-opacity-50': !_vm.open
-  }) + " data-v-0e812ed4>", "</div>", [_vm._t("title", function () {
-    return [_vm._v("\n      " + _vm._s(_vm.title) + "\n    ")];
-  }), _vm._ssrNode(" "), _vm._ssrNode("<span data-v-0e812ed4>", "</span>", [_vm._t("icon", null, {
-    "open": _vm.open
-  })], 2)], 2), _vm._ssrNode(" "), _c('transition', {
-    attrs: {
-      "name": "apear"
-    }
-  }, [_c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: _vm.open,
-      expression: "open"
-    }],
-    staticClass: "bg-gray-100 bg-opacity-50 p-3 pt-1 rounded-b-lg"
-  }, [_vm._t("default", function () {
-    return [_vm._v("\n        " + _vm._s(_vm.content) + "\n      ")];
-  })], 2)])], 2);
+    staticClass: "accordion"
+  }, _vm._l(_vm.items, function (item, key) {
+    return _vm._ssrNode("<div class=\"accordion-item bg-white border border-gray-200\" data-v-c8e911d4>", "</div>", [_vm._ssrNode("<h2 class=\"accordion-header mb-0\" data-v-c8e911d4><button type=\"button\"" + _vm._ssrClass("\n          accordion-button\n          relative\n          flex\n          items-center\n          w-full\n          py-4\n          px-5\n          text-base text-gray-800 text-left\n          bg-white\n          border-0\n          rounded-none\n          transition\n          focus:outline-none\n        ", {
+      'collapsed': !_vm.itemsOpened.includes(key)
+    }) + " data-v-c8e911d4>" + _vm._ssrEscape("\n        " + _vm._s(item) + "\n      ") + "</button></h2> "), _vm._ssrNode("<div" + _vm._ssrAttr("id", "collapse-" + key) + " class=\"accordion-collapse\" data-v-c8e911d4>", "</div>", [_vm._ssrNode("<div class=\"accordion-body py-4 px-5\" data-v-c8e911d4>", "</div>", [_vm._t("content-" + (key + 1))], 2)])], 2);
+  }), 0);
 };
 
 var __vue_staticRenderFns__$z = [];
@@ -425,8 +424,8 @@ var __vue_staticRenderFns__$z = [];
 
 var __vue_inject_styles__$z = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-0e812ed4_0", {
-    source: ".apear-enter-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s}.apear-leave-active[data-v-0e812ed4]{animation:apear-data-v-0e812ed4 .25s reverse}@keyframes apear-data-v-0e812ed4{0%{opacity:0}100%{opacity:1}}",
+  inject("data-v-c8e911d4_0", {
+    source: ".accordion-collapse[data-v-c8e911d4]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
     map: undefined,
     media: undefined
   });
@@ -434,10 +433,10 @@ var __vue_inject_styles__$z = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$z = "data-v-0e812ed4";
+var __vue_scope_id__$z = "data-v-c8e911d4";
 /* module identifier */
 
-var __vue_module_identifier__$z = "data-v-0e812ed4";
+var __vue_module_identifier__$z = "data-v-c8e911d4";
 /* functional template */
 
 var __vue_is_functional_template__$z = false;
@@ -3370,6 +3369,8 @@ var __vue_component__$u = __vue_component__$t;//
 //
 //
 //
+//
+//
 var script$e = {
   name: 'teListGroup',
   props: {
@@ -3429,8 +3430,8 @@ var __vue_render__$e = function __vue_render__() {
     class: {
       'border border-gray-200': !_vm.flush
     }
-  }, [_vm._ssrNode(_vm._ssrList(_vm.items, function (item, key) {
-    return "<li" + _vm._ssrClass("px-6 py-2 w-full", {
+  }, _vm._l(_vm.items, function (item, key) {
+    return _vm._ssrNode("<li" + _vm._ssrClass("px-6 py-2 w-full", {
       'rounded-t-lg': key === 0,
       'rounded-b-lg': key === _vm.items.length - 1,
       'bg-blue-600 text-white': key === _vm.currentActiveItem,
@@ -3438,8 +3439,10 @@ var __vue_render__$e = function __vue_render__() {
       'cursor-pointer': _vm.clickable,
       'hover:bg-gray-100': _vm.clickable && key !== _vm.currentActiveItem,
       'border-b border-gray-200': key < _vm.items.length - 1
-    }) + ">" + _vm._ssrEscape("\n    " + _vm._s(item.label || item) + "\n  ") + "</li>";
-  }))]);
+    }) + ">", "</li>", [_vm._t(item.name || "item-" + key, function () {
+      return [_vm._v("\n      " + _vm._s(item.label || item) + "\n    ")];
+    })], 2);
+  }), 0);
 };
 
 var __vue_staticRenderFns__$e = [];
@@ -3451,7 +3454,7 @@ var __vue_inject_styles__$e = undefined;
 var __vue_scope_id__$e = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$e = "data-v-08d8c5a0";
+var __vue_module_identifier__$e = "data-v-73aaa240";
 /* functional template */
 
 var __vue_is_functional_template__$e = false;
