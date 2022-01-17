@@ -28,7 +28,7 @@
       </code>
     </pre>
     <h1 class="text-lg my-2">Templates</h1>
-    <te-list-group :active-item.sync="selectedItem" :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable>
+    <te-list-group :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable>
       <template slot="item-0">
         <div class="flex justify-between">
           <span>Home</span>
@@ -36,11 +36,10 @@
         </div>
       </template>
     </te-list-group>
-    <p>Active item {{selectedItem}}</p>
     <pre class="language-markup">
       <code>
         <script type="prism-html-markup">
-          <te-list-group :active-item.sync="selectedItem" 
+          <te-list-group 
             :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" 
             clickable
           >
