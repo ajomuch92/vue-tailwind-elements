@@ -10,7 +10,7 @@
       :class="{'rounded-lg shadow-xl': borderless}"
     />
     <div class="p-5">
-      <h5 class="text-xl font-semibold mb-2">{{title}}</h5>
+      <h5 v-if="title" class="text-xl font-semibold mb-2">{{title}}</h5>
       <slot name="default"></slot>
     </div>
     <div v-if="hasFooter" class="py-3 px-6 border-t border-gray-300 text-gray-600 text-center">
