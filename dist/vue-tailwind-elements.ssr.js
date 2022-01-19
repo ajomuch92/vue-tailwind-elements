@@ -1137,7 +1137,7 @@ var __vue_render__$t = function __vue_render__() {
     style: _vm.getWidth
   }, [_vm.hasHeader ? _vm._ssrNode("<div class=\"py-3 px-6 border-b border-gray-300 text-center\">", "</div>", [_vm._t("header")], 2) : _vm._e(), _vm._ssrNode(" " + (_vm.imgSrc ? "<img" + _vm._ssrAttr("src", _vm.imgSrc) + _vm._ssrClass("mb-4", {
     'rounded-lg shadow-xl': _vm.borderless
-  }) + ">" : "<!---->") + " "), _vm._ssrNode("<div class=\"p-5\">", "</div>", [_vm._ssrNode("<h5 class=\"text-xl font-semibold mb-2\">" + _vm._ssrEscape(_vm._s(_vm.title)) + "</h5> "), _vm._t("default")], 2), _vm._ssrNode(" "), _vm.hasFooter ? _vm._ssrNode("<div class=\"py-3 px-6 border-t border-gray-300 text-gray-600 text-center\">", "</div>", [_vm._t("footer")], 2) : _vm._e()], 2);
+  }) + ">" : "<!---->") + " "), _vm._ssrNode("<div class=\"p-5\">", "</div>", [_vm._ssrNode((_vm.title ? "<h5 class=\"text-xl font-semibold mb-2\">" + _vm._ssrEscape(_vm._s(_vm.title)) + "</h5>" : "<!---->") + " "), _vm._t("default")], 2), _vm._ssrNode(" "), _vm.hasFooter ? _vm._ssrNode("<div class=\"py-3 px-6 border-t border-gray-300 text-gray-600 text-center\">", "</div>", [_vm._t("footer")], 2) : _vm._e()], 2);
 };
 
 var __vue_staticRenderFns__$t = [];
@@ -1149,7 +1149,7 @@ var __vue_inject_styles__$t = undefined;
 var __vue_scope_id__$t = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$t = "data-v-3087b913";
+var __vue_module_identifier__$t = "data-v-59e33408";
 /* functional template */
 
 var __vue_is_functional_template__$t = false;

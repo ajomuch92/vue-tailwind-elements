@@ -992,9 +992,9 @@ var __vue_render__$t = function () {
     }
   }) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "p-5"
-  }, [_c('h5', {
+  }, [_vm.title ? _c('h5', {
     staticClass: "text-xl font-semibold mb-2"
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _vm._t("default")], 2), _vm._v(" "), _vm.hasFooter ? _c('div', {
+  }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), _vm._v(" "), _vm._t("default")], 2), _vm._v(" "), _vm.hasFooter ? _c('div', {
     staticClass: "py-3 px-6 border-t border-gray-300 text-gray-600 text-center"
   }, [_vm._t("footer")], 2) : _vm._e()]);
 };
