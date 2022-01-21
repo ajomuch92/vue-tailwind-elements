@@ -639,10 +639,6 @@ var script$v = {
       type: Boolean,
       default: false
     },
-    marginLess: {
-      type: Boolean,
-      default: false
-    },
     noRounded: {
       type: Boolean,
       default: false
@@ -703,7 +699,6 @@ var script$v = {
         'text-xs px-4 py-1 h-8': this.size === 'small',
         'text-sm px-6 py-2 h-10': this.size === 'medium',
         'text-base px-8 py-3 h-12': this.size === 'large',
-        'mr-1 mb-1': !this.marginLess,
         'cursor-not-allowed': this.disabled,
         'pointer-events-none cursor-not-allowed': this.loading,
         'relative overflow-hidden': this.ripple
@@ -782,8 +777,8 @@ var __vue_staticRenderFns__$v = [];
 
 const __vue_inject_styles__$v = function (inject) {
   if (!inject) return;
-  inject("data-v-21e85264_0", {
-    source: "span.ripple[data-v-21e85264]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-21e85264 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-21e85264{to{transform:scale(4);opacity:0}}",
+  inject("data-v-d6586600_0", {
+    source: "span.ripple[data-v-d6586600]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-d6586600 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-d6586600{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -791,7 +786,7 @@ const __vue_inject_styles__$v = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$v = "data-v-21e85264";
+const __vue_scope_id__$v = "data-v-d6586600";
 /* module identifier */
 
 const __vue_module_identifier__$v = undefined;
@@ -861,8 +856,7 @@ var __vue_render__$u = function () {
         "type": _vm.type,
         "size": _vm.size,
         "outlined": _vm.outlined,
-        "no-rounded": "",
-        "margin-less": ""
+        "no-rounded": ""
       },
       on: {
         "click": function ($event) {

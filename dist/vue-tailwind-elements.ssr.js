@@ -811,10 +811,6 @@ var teSpinner = __vue_component__$Z;var script$v = {
       type: Boolean,
       default: false
     },
-    marginLess: {
-      type: Boolean,
-      default: false
-    },
     noRounded: {
       type: Boolean,
       default: false
@@ -873,7 +869,7 @@ var teSpinner = __vue_component__$Z;var script$v = {
         'shadow': this.shadowed,
         'hover:shadow-md': this.shadowed && this.size === 'small',
         'hover:shadow-lg': this.shadowed && this.size === 'medium'
-      }, _defineProperty(_ref, "hover:shadow-lg", this.shadowed && this.size === 'large'), _defineProperty(_ref, 'text-xs px-4 py-1 h-8', this.size === 'small'), _defineProperty(_ref, 'text-sm px-6 py-2 h-10', this.size === 'medium'), _defineProperty(_ref, 'text-base px-8 py-3 h-12', this.size === 'large'), _defineProperty(_ref, 'mr-1 mb-1', !this.marginLess), _defineProperty(_ref, 'cursor-not-allowed', this.disabled), _defineProperty(_ref, 'pointer-events-none cursor-not-allowed', this.loading), _defineProperty(_ref, 'relative overflow-hidden', this.ripple), _ref;
+      }, _defineProperty(_ref, "hover:shadow-lg", this.shadowed && this.size === 'large'), _defineProperty(_ref, 'text-xs px-4 py-1 h-8', this.size === 'small'), _defineProperty(_ref, 'text-sm px-6 py-2 h-10', this.size === 'medium'), _defineProperty(_ref, 'text-base px-8 py-3 h-12', this.size === 'large'), _defineProperty(_ref, 'cursor-not-allowed', this.disabled), _defineProperty(_ref, 'pointer-events-none cursor-not-allowed', this.loading), _defineProperty(_ref, 'relative overflow-hidden', this.ripple), _ref;
     }
   },
   data: function data() {
@@ -936,7 +932,7 @@ var __vue_render__$v = function __vue_render__() {
       "color": _vm.type == 'light' ? 'primary' : 'light',
       "size": "small"
     }
-  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-21e85264></span>" : "<!---->"))], 2);
+  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-d6586600></span>" : "<!---->"))], 2);
 };
 
 var __vue_staticRenderFns__$v = [];
@@ -944,8 +940,8 @@ var __vue_staticRenderFns__$v = [];
 
 var __vue_inject_styles__$v = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-21e85264_0", {
-    source: "span.ripple[data-v-21e85264]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-21e85264 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-21e85264{to{transform:scale(4);opacity:0}}",
+  inject("data-v-d6586600_0", {
+    source: "span.ripple[data-v-d6586600]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-d6586600 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-d6586600{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -953,10 +949,10 @@ var __vue_inject_styles__$v = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$v = "data-v-21e85264";
+var __vue_scope_id__$v = "data-v-d6586600";
 /* module identifier */
 
-var __vue_module_identifier__$v = "data-v-21e85264";
+var __vue_module_identifier__$v = "data-v-d6586600";
 /* functional template */
 
 var __vue_is_functional_template__$v = false;
@@ -1021,8 +1017,7 @@ var __vue_render__$u = function __vue_render__() {
         "type": _vm.type,
         "size": _vm.size,
         "outlined": _vm.outlined,
-        "no-rounded": "",
-        "margin-less": ""
+        "no-rounded": ""
       },
       on: {
         "click": function click($event) {
@@ -1047,7 +1042,7 @@ var __vue_inject_styles__$u = undefined;
 var __vue_scope_id__$u = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$u = "data-v-43b586de";
+var __vue_module_identifier__$u = "data-v-75c46d45";
 /* functional template */
 
 var __vue_is_functional_template__$u = false;
