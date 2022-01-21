@@ -7,7 +7,6 @@
       :size="size"
       :outlined="outlined"
       no-rounded
-      margin-less
       :class="{'rounded-l': n===1, 'rounded-r': n===quantity}"
       @click="$emit('click', {index: n, event: $event})"
     >

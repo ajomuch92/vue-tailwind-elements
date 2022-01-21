@@ -59,10 +59,6 @@ export default {
       type: Boolean,
       default: false,
     },
-    marginLess: {
-      type: Boolean,
-      default: false,
-    },
     noRounded: {
       type: Boolean,
       default: false,
@@ -123,7 +119,6 @@ export default {
         'text-xs px-4 py-1 h-8': this.size === 'small',
         'text-sm px-6 py-2 h-10': this.size === 'medium',
         'text-base px-8 py-3 h-12': this.size === 'large',
-        'mr-1 mb-1': !this.marginLess,
         'cursor-not-allowed': this.disabled,
         'pointer-events-none cursor-not-allowed': this.loading,
         'relative overflow-hidden': this.ripple,
