@@ -5152,7 +5152,7 @@ var script$5 = {
     },
 
     getCellValue(item, header) {
-      return item[header.field] ?? item[header];
+      return Object.keys(item).includes(header.field) ? item[header.field] : item[header];
     }
 
   }

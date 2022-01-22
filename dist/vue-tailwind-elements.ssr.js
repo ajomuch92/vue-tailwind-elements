@@ -4630,9 +4630,7 @@ var script$5 = {
       return true;
     },
     getCellValue: function getCellValue(item, header) {
-      var _item$header$field;
-
-      return (_item$header$field = item[header.field]) !== null && _item$header$field !== void 0 ? _item$header$field : item[header];
+      return Object.keys(item).includes(header.field) ? item[header.field] : item[header];
     }
   }
 };/* script */
@@ -4707,7 +4705,7 @@ var __vue_inject_styles__$5 = undefined;
 var __vue_scope_id__$5 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$5 = "data-v-68bbad34";
+var __vue_module_identifier__$5 = "data-v-6879b4d7";
 /* functional template */
 
 var __vue_is_functional_template__$5 = false;
