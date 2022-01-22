@@ -4628,6 +4628,11 @@ var script$5 = {
       }
 
       return true;
+    },
+    getCellValue: function getCellValue(item, header) {
+      var _item$header$field;
+
+      return (_item$header$field = item[header.field]) !== null && _item$header$field !== void 0 ? _item$header$field : item[header];
     }
   }
 };/* script */
@@ -4665,9 +4670,9 @@ var __vue_render__$5 = function __vue_render__() {
       return _vm._ssrNode("<td" + _vm._ssrClass("text-sm text-gray-900 font-medium px-6 whitespace-nowrap", Object.assign({}, _vm.paddingClass, {
         'border-r': _vm.bordered
       })) + ">", "</td>", [_vm._t(header.field || header, function () {
-        return [_vm._v("\n              " + _vm._s(item[header.field] || item[header]) + "\n            ")];
+        return [_vm._v("\n              " + _vm._s(_vm.getCellValue(item, header)) + "\n            ")];
       }, {
-        "value": item[header.field] || item[header]
+        "value": _vm.getCellValue(item, header)
       })], 2);
     })], 2);
   }) : _vm._ssrNode("<tr><td" + _vm._ssrAttr("colspan", _vm.headers.length) + _vm._ssrClass("text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center", Object.assign({}, _vm.paddingClass, {
@@ -4702,7 +4707,7 @@ var __vue_inject_styles__$5 = undefined;
 var __vue_scope_id__$5 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$5 = "data-v-58cb392a";
+var __vue_module_identifier__$5 = "data-v-68bbad34";
 /* functional template */
 
 var __vue_is_functional_template__$5 = false;

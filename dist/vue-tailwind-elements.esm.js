@@ -5149,6 +5149,10 @@ var script$5 = {
       }
 
       return true;
+    },
+
+    getCellValue(item, header) {
+      return item[header.field] ?? item[header];
     }
 
   }
@@ -5215,9 +5219,9 @@ var __vue_render__$5 = function () {
           'border-r': _vm.bordered
         })
       }, [_vm._t(header.field || header, function () {
-        return [_vm._v("\n              " + _vm._s(item[header.field] || item[header]) + "\n            ")];
+        return [_vm._v("\n              " + _vm._s(_vm.getCellValue(item, header)) + "\n            ")];
       }, {
-        "value": item[header.field] || item[header]
+        "value": _vm.getCellValue(item, header)
       })], 2);
     })], 2);
   }) : [_c('tr', [_c('td', {
