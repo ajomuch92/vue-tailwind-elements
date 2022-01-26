@@ -177,6 +177,23 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-1">Subheading</h1>
+    <te-table :items="[...items, ...items]" :headers="headers" has-subheading :item-per-page="3" show-row-num>
+      <template #subheading>
+        <th class="text-center border-t border-b" colspan="4">Subheading</th>
+      </template>
+    </te-table>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-table :items="[...items, ...items]" :headers="headers" has-subheading :item-per-page="3" show-row-num>
+            <template #subheading>
+              <th class="text-center border-t border-b" colspan="4">Subheading</th>
+            </template>
+          </te-table>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 

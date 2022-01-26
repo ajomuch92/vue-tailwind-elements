@@ -10,6 +10,9 @@
         </tr>
       </thead>
       <tbody>
+        <tr v-if="hasSubheading">
+          <slot name="subheading" />
+        </tr>
         <template v-if="filteredItems.length">
           <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)" v-show="rowVisibility(key+1)">
             <td v-if="showRowNum">{{key+1}}</td>
@@ -97,6 +100,10 @@ export default {
     noDataLabel: {
       type: String,
       default: 'No Data',
+    },
+    hasSubheading: {
+      type: Boolean,
+      default: false,
     },
     showRowNum: {
       type: Boolean,
