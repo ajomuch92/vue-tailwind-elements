@@ -5220,8 +5220,10 @@ var __vue_render__$5 = function () {
         })
       }, [_vm._t(header.field || header, function () {
         return [_vm._v("\n              " + _vm._s(_vm.getCellValue(item, header)) + "\n            ")];
-      }, {
-        "value": _vm.getCellValue(item, header)
+      }, null, {
+        value: _vm.getCellValue(item, header),
+        row: item,
+        index: key
       })], 2);
     })], 2);
   }) : [_c('tr', [_c('td', {
