@@ -170,7 +170,7 @@
       <code>
         <script type="prism-html-markup">
           <te-table :items="items" :headers="headers" show-row-num :item-per-page="3">
-            <template v-slot:handle="{value}">
+            <template v-slot:handle="{value, row, index}">
               <te-badge type="info" :text="value" />
             </template>
           </te-table>
