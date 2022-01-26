@@ -4539,6 +4539,10 @@ var script$5 = {
       type: String,
       default: 'No Data'
     },
+    hasSubheading: {
+      type: Boolean,
+      default: false
+    },
     showRowNum: {
       type: Boolean,
       default: false
@@ -4661,7 +4665,7 @@ var __vue_render__$5 = function __vue_render__() {
     return "<th scope=\"col\"" + _vm._ssrClass("text-sm font-medium px-6", Object.assign({}, {
       'text-left': !_vm.centered
     }, _vm.headerCellClass, _vm.paddingClass)) + ">" + _vm._ssrEscape("\n          " + _vm._s(header.label || header) + "\n        ") + "</th>";
-  }) + "</tr></thead> "), _vm._ssrNode("<tbody>", "</tbody>", [_vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
+  }) + "</tr></thead> "), _vm._ssrNode("<tbody>", "</tbody>", [_vm.hasSubheading ? _vm._ssrNode("<tr>", "</tr>", [_vm._t("subheading")], 2) : _vm._e(), _vm._ssrNode(" "), _vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
     return _vm._ssrNode("<tr" + _vm._ssrClass(null, _vm.rowClass(key)) + _vm._ssrStyle(null, null, {
       display: _vm.rowVisibility(key + 1) ? '' : 'none'
     }) + ">", "</tr>", [_vm._ssrNode((_vm.showRowNum ? "<td>" + _vm._ssrEscape(_vm._s(key + 1)) + "</td>" : "<!---->") + " "), _vm._l(_vm.headers, function (header, index) {
@@ -4707,7 +4711,7 @@ var __vue_inject_styles__$5 = undefined;
 var __vue_scope_id__$5 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$5 = "data-v-03e8328f";
+var __vue_module_identifier__$5 = "data-v-de13d5ca";
 /* functional template */
 
 var __vue_is_functional_template__$5 = false;

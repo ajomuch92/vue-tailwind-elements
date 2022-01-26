@@ -5062,6 +5062,10 @@ var script$5 = {
       type: String,
       default: 'No Data'
     },
+    hasSubheading: {
+      type: Boolean,
+      default: false
+    },
     showRowNum: {
       type: Boolean,
       default: false
@@ -5201,7 +5205,7 @@ var __vue_render__$5 = function () {
         "scope": "col"
       }
     }, [_vm._v("\n          " + _vm._s(header.label || header) + "\n        ")]);
-  })], 2)]), _vm._v(" "), _c('tbody', [_vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
+  })], 2)]), _vm._v(" "), _c('tbody', [_vm.hasSubheading ? _c('tr', [_vm._t("subheading")], 2) : _vm._e(), _vm._v(" "), _vm.filteredItems.length ? _vm._l(_vm.filteredItems, function (item, key) {
     return _c('tr', {
       directives: [{
         name: "show",
