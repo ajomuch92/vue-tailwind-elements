@@ -194,6 +194,21 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-1">Loading</h1>
+    <te-switch v-model="loading" label="Loading" />
+    <te-table :items="items" :headers="headers" :loading="loading">
+    </te-table>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-table :items="[...items, ...items]" :headers="headers" has-subheading :item-per-page="3" show-row-num>
+            <template #subheading>
+              <th class="text-center border-t border-b" colspan="4">Subheading</th>
+            </template>
+          </te-table>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
@@ -232,7 +247,8 @@ export default {
         handle: '@larwil'
       },
     ],
-    search: ''
+    search: '',
+    loading: false,
   })
 }
 </script>
