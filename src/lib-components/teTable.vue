@@ -1,5 +1,5 @@
 <template>
-  <div class="table-container min-w-full" :class="{'overflow-x-auto': responsive, 'overflow-hidden': !responsive}">
+  <div class="table-container min-w-full" :class="{'overflow-x-auto': responsive, 'overflow-hidden': !responsive, 'relative': loading}">
     <table class="min-w-full" :class="{'text-center': centered, 'border': bordered}">
       <thead :class="{'border-b': !borderless, ...headerBackgroundClass}">
         <tr>
@@ -32,6 +32,9 @@
         </template>
       </tbody>
     </table>
+    <div v-if="loading" class="h-full w-full bg-gray-50 rounded opacity-70 flex justify-center items-center absolute top-0 left-0 z-50">
+      <te-spinner size="large" />
+    </div>
     <te-pagination
       v-if="itemPerPage>0"
       class="my-1"
@@ -47,10 +50,11 @@
 
 <script>
 import tePagination from './tePagination.vue';
+import TeSpinner from './teSpinner.vue';
 
 export default {
   name: 'teTable',
-  components: { tePagination },
+  components: { tePagination, TeSpinner },
   props: {
     items: {
       type: Array,
@@ -130,6 +134,10 @@ export default {
       type: String,
       default: 'Previous'
     },
+    loading: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     headerBackgroundClass() {
