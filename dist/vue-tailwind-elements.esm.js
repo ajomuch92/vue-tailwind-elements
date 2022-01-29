@@ -699,7 +699,7 @@ var script$v = {
         'text-xs px-4 py-1 h-8': this.size === 'small',
         'text-sm px-6 py-2 h-10': this.size === 'medium',
         'text-base px-8 py-3 h-12': this.size === 'large',
-        'cursor-not-allowed': this.disabled,
+        'cursor-not-allowed opacity-50': this.disabled,
         'pointer-events-none cursor-not-allowed': this.loading,
         'relative overflow-hidden': this.ripple
       };
@@ -777,8 +777,8 @@ var __vue_staticRenderFns__$v = [];
 
 const __vue_inject_styles__$v = function (inject) {
   if (!inject) return;
-  inject("data-v-d6586600_0", {
-    source: "span.ripple[data-v-d6586600]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-d6586600 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-d6586600{to{transform:scale(4);opacity:0}}",
+  inject("data-v-4854aa93_0", {
+    source: "span.ripple[data-v-4854aa93]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-4854aa93 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-4854aa93{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -786,7 +786,7 @@ const __vue_inject_styles__$v = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$v = "data-v-d6586600";
+const __vue_scope_id__$v = "data-v-4854aa93";
 /* module identifier */
 
 const __vue_module_identifier__$v = undefined;
@@ -828,6 +828,10 @@ var script$u = {
     outlined: {
       type: Boolean,
       default: false
+    },
+    disabled: {
+      type: Array,
+      default: () => []
     }
   }
 };
@@ -856,7 +860,8 @@ var __vue_render__$u = function () {
         "type": _vm.type,
         "size": _vm.size,
         "outlined": _vm.outlined,
-        "no-rounded": ""
+        "no-rounded": "",
+        "disabled": _vm.disabled[n - 1] || false
       },
       on: {
         "click": function ($event) {
@@ -1301,7 +1306,7 @@ var script$q = {
   props: {
     idInput: {
       type: String,
-      default: () => URL.createObjectURL(new Blob([])).substring(31)
+      default: () => new Date().getTime().toString(16)
     },
     value: {
       type: [String, Number],
@@ -2024,7 +2029,7 @@ var script$k = {
     },
     id: {
       type: String,
-      default: () => URL.createObjectURL(new Blob([])).substring(31)
+      default: () => new Date().getTime().toString(16)
     },
     type: {
       type: String,
@@ -2330,8 +2335,8 @@ var __vue_staticRenderFns__$k = [];
 
 const __vue_inject_styles__$k = function (inject) {
   if (!inject) return;
-  inject("data-v-51cf2baa_0", {
-    source: ".form-control.invalid[data-v-51cf2baa]{box-shadow:none!important}.translate-y-1\\/2[data-v-51cf2baa]{transform:translateY(-50%)}",
+  inject("data-v-5add6e46_0", {
+    source: ".form-control.invalid[data-v-5add6e46]{box-shadow:none!important}.translate-y-1\\/2[data-v-5add6e46]{transform:translateY(-50%)}",
     map: undefined,
     media: undefined
   });
@@ -2339,7 +2344,7 @@ const __vue_inject_styles__$k = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$k = "data-v-51cf2baa";
+const __vue_scope_id__$k = "data-v-5add6e46";
 /* module identifier */
 
 const __vue_module_identifier__$k = undefined;
@@ -4185,6 +4190,9 @@ var __vue_component__$m = __vue_component__$l;
 //
 //
 //
+//
+//
+//
 var script$a = {
   name: 'teStepper',
   props: {
@@ -4192,6 +4200,10 @@ var script$a = {
       type: Array,
       required: true,
       validator: value => value.length > 0 && value.length <= 12
+    },
+    disabled: {
+      type: Array,
+      default: () => []
     },
     activeStep: {
       type: Number,
@@ -4276,15 +4288,18 @@ var __vue_render__$a = function () {
       staticClass: "border-t-4 pt-4",
       class: key <= _vm.currentValue ? _vm.borderClass : 'border-gray-200'
     }, [_c('p', {
-      staticClass: "uppercase font-bold cursor-pointer",
-      class: key <= _vm.currentValue ? _vm.textColorClass : 'text-gray-400',
+      staticClass: "uppercase font-bold",
+      class: [key <= _vm.currentValue ? _vm.textColorClass : 'text-gray-400', _vm.disabled[key] ? 'cursor-not-allowed pointer-events-none' : 'cursor-pointer'],
       on: {
         "click": function ($event) {
           _vm.currentValue = key;
         }
       }
     }, [_vm._v("\n      " + _vm._s(_vm.labelStep) + " " + _vm._s(key + 1) + "\n    ")]), _vm._v(" "), _c('p', {
-      staticClass: "font-semibold"
+      staticClass: "font-semibold",
+      class: {
+        'opacity-50': _vm.disabled[key] || false
+      }
     }, [_vm._v(_vm._s(step))])]);
   }), 0);
 };

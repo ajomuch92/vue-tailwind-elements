@@ -869,7 +869,7 @@ var TeSpinner = __vue_component__$Z;var script$v = {
         'shadow': this.shadowed,
         'hover:shadow-md': this.shadowed && this.size === 'small',
         'hover:shadow-lg': this.shadowed && this.size === 'medium'
-      }, _defineProperty(_ref, "hover:shadow-lg", this.shadowed && this.size === 'large'), _defineProperty(_ref, 'text-xs px-4 py-1 h-8', this.size === 'small'), _defineProperty(_ref, 'text-sm px-6 py-2 h-10', this.size === 'medium'), _defineProperty(_ref, 'text-base px-8 py-3 h-12', this.size === 'large'), _defineProperty(_ref, 'cursor-not-allowed', this.disabled), _defineProperty(_ref, 'pointer-events-none cursor-not-allowed', this.loading), _defineProperty(_ref, 'relative overflow-hidden', this.ripple), _ref;
+      }, _defineProperty(_ref, "hover:shadow-lg", this.shadowed && this.size === 'large'), _defineProperty(_ref, 'text-xs px-4 py-1 h-8', this.size === 'small'), _defineProperty(_ref, 'text-sm px-6 py-2 h-10', this.size === 'medium'), _defineProperty(_ref, 'text-base px-8 py-3 h-12', this.size === 'large'), _defineProperty(_ref, 'cursor-not-allowed opacity-50', this.disabled), _defineProperty(_ref, 'pointer-events-none cursor-not-allowed', this.loading), _defineProperty(_ref, 'relative overflow-hidden', this.ripple), _ref;
     }
   },
   data: function data() {
@@ -932,7 +932,7 @@ var __vue_render__$v = function __vue_render__() {
       "color": _vm.type == 'light' ? 'primary' : 'light',
       "size": "small"
     }
-  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-d6586600></span>" : "<!---->"))], 2);
+  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-4854aa93></span>" : "<!---->"))], 2);
 };
 
 var __vue_staticRenderFns__$v = [];
@@ -940,8 +940,8 @@ var __vue_staticRenderFns__$v = [];
 
 var __vue_inject_styles__$v = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-d6586600_0", {
-    source: "span.ripple[data-v-d6586600]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-d6586600 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-d6586600{to{transform:scale(4);opacity:0}}",
+  inject("data-v-4854aa93_0", {
+    source: "span.ripple[data-v-4854aa93]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-4854aa93 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-4854aa93{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -949,10 +949,10 @@ var __vue_inject_styles__$v = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$v = "data-v-d6586600";
+var __vue_scope_id__$v = "data-v-4854aa93";
 /* module identifier */
 
-var __vue_module_identifier__$v = "data-v-d6586600";
+var __vue_module_identifier__$v = "data-v-4854aa93";
 /* functional template */
 
 var __vue_is_functional_template__$v = false;
@@ -991,6 +991,12 @@ var script$u = {
     outlined: {
       type: Boolean,
       default: false
+    },
+    disabled: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
     }
   }
 };/* script */
@@ -1017,7 +1023,8 @@ var __vue_render__$u = function __vue_render__() {
         "type": _vm.type,
         "size": _vm.size,
         "outlined": _vm.outlined,
-        "no-rounded": ""
+        "no-rounded": "",
+        "disabled": _vm.disabled[n - 1] || false
       },
       on: {
         "click": function click($event) {
@@ -1042,7 +1049,7 @@ var __vue_inject_styles__$u = undefined;
 var __vue_scope_id__$u = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$u = "data-v-75c46d45";
+var __vue_module_identifier__$u = "data-v-29b10670";
 /* functional template */
 
 var __vue_is_functional_template__$u = false;
@@ -1354,7 +1361,7 @@ var script$q = {
     idInput: {
       type: String,
       default: function _default() {
-        return URL.createObjectURL(new Blob([])).substring(31);
+        return new Date().getTime().toString(16);
       }
     },
     value: {
@@ -1413,7 +1420,7 @@ var __vue_inject_styles__$q = undefined;
 var __vue_scope_id__$q = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$q = "data-v-4e525c6d";
+var __vue_module_identifier__$q = "data-v-bd80500a";
 /* functional template */
 
 var __vue_is_functional_template__$q = false;
@@ -1998,7 +2005,7 @@ var teIcon = __vue_component__$F;var script$k = {
     id: {
       type: String,
       default: function _default() {
-        return URL.createObjectURL(new Blob([])).substring(31);
+        return new Date().getTime().toString(16);
       }
     },
     type: {
@@ -2155,7 +2162,7 @@ var __vue_render__$k = function __vue_render__() {
     staticClass: "input-container"
   }, [_vm._ssrNode("<div" + _vm._ssrClass("relative", {
     'form-floating': _vm.floating
-  }) + " data-v-51cf2baa>", "</div>", [_vm._ssrNode((_vm.validProps.type === 'checkbox' ? "<input type=\"checkbox\"" + _vm._ssrAttr("checked", Array.isArray(_vm.currentValue) ? _vm._i(_vm.currentValue, null) > -1 : _vm.currentValue) + _vm._ssrAttrs(_vm.validProps) + _vm._ssrClass("\n        form-control\n        block\n        w-full\n        font-normal\n        text-gray-700\n        bg-white bg-clip-padding\n        border border-solid border-gray-300\n        rounded\n        transition\n        ease-in-out\n        m-0\n        focus:bg-white focus:outline-none\n      ", [_vm.sizeClass].concat(_vm.disabledClass, _vm.invalidadClass, _vm.paddingForIcons)) + " data-v-51cf2baa>" : _vm.validProps.type === 'radio' ? "<input type=\"radio\"" + _vm._ssrAttr("checked", _vm._q(_vm.currentValue, null)) + _vm._ssrAttrs(_vm.validProps) + _vm._ssrClass("\n        form-control\n        block\n        w-full\n        font-normal\n        text-gray-700\n        bg-white bg-clip-padding\n        border border-solid border-gray-300\n        rounded\n        transition\n        ease-in-out\n        m-0\n        focus:bg-white focus:outline-none\n      ", [_vm.sizeClass].concat(_vm.disabledClass, _vm.invalidadClass, _vm.paddingForIcons)) + " data-v-51cf2baa>" : "<input" + _vm._ssrAttr("type", _vm.validProps.type) + _vm._ssrAttr("value", _vm.currentValue) + _vm._ssrAttrs(_vm.validProps) + _vm._ssrClass("\n        form-control\n        block\n        w-full\n        font-normal\n        text-gray-700\n        bg-white bg-clip-padding\n        border border-solid border-gray-300\n        rounded\n        transition\n        ease-in-out\n        m-0\n        focus:bg-white focus:outline-none\n      ", [_vm.sizeClass].concat(_vm.disabledClass, _vm.invalidadClass, _vm.paddingForIcons)) + " data-v-51cf2baa>") + " "), _vm.rightIcon && _vm.type != 'number' ? _c('te-icon', {
+  }) + " data-v-5add6e46>", "</div>", [_vm._ssrNode((_vm.validProps.type === 'checkbox' ? "<input type=\"checkbox\"" + _vm._ssrAttr("checked", Array.isArray(_vm.currentValue) ? _vm._i(_vm.currentValue, null) > -1 : _vm.currentValue) + _vm._ssrAttrs(_vm.validProps) + _vm._ssrClass("\n        form-control\n        block\n        w-full\n        font-normal\n        text-gray-700\n        bg-white bg-clip-padding\n        border border-solid border-gray-300\n        rounded\n        transition\n        ease-in-out\n        m-0\n        focus:bg-white focus:outline-none\n      ", [_vm.sizeClass].concat(_vm.disabledClass, _vm.invalidadClass, _vm.paddingForIcons)) + " data-v-5add6e46>" : _vm.validProps.type === 'radio' ? "<input type=\"radio\"" + _vm._ssrAttr("checked", _vm._q(_vm.currentValue, null)) + _vm._ssrAttrs(_vm.validProps) + _vm._ssrClass("\n        form-control\n        block\n        w-full\n        font-normal\n        text-gray-700\n        bg-white bg-clip-padding\n        border border-solid border-gray-300\n        rounded\n        transition\n        ease-in-out\n        m-0\n        focus:bg-white focus:outline-none\n      ", [_vm.sizeClass].concat(_vm.disabledClass, _vm.invalidadClass, _vm.paddingForIcons)) + " data-v-5add6e46>" : "<input" + _vm._ssrAttr("type", _vm.validProps.type) + _vm._ssrAttr("value", _vm.currentValue) + _vm._ssrAttrs(_vm.validProps) + _vm._ssrClass("\n        form-control\n        block\n        w-full\n        font-normal\n        text-gray-700\n        bg-white bg-clip-padding\n        border border-solid border-gray-300\n        rounded\n        transition\n        ease-in-out\n        m-0\n        focus:bg-white focus:outline-none\n      ", [_vm.sizeClass].concat(_vm.disabledClass, _vm.invalidadClass, _vm.paddingForIcons)) + " data-v-5add6e46>") + " "), _vm.rightIcon && _vm.type != 'number' ? _c('te-icon', {
     staticClass: "text-2xl text-gray-400 absolute right-2 top-1/2 translate-y-1/2",
     class: {
       'cursor-pointer hover:text-gray-500': _vm.rightIconClickable
@@ -2181,10 +2188,10 @@ var __vue_render__$k = function __vue_render__() {
         _vm.leftIconClickable ? _vm.$emit('right-icon-click', $event) : function () {};
       }
     }
-  }) : _vm._e(), _vm._ssrNode(" " + (_vm.floating ? "<label class=\"text-gray-700\" data-v-51cf2baa>" + _vm._ssrEscape(_vm._s(_vm.placeholder)) + "</label>" : "<!---->"))], 2), _vm._ssrNode(" " + (_vm.helperText ? "<div" + _vm._ssrClass("text-sm mt-1", {
+  }) : _vm._e(), _vm._ssrNode(" " + (_vm.floating ? "<label class=\"text-gray-700\" data-v-5add6e46>" + _vm._ssrEscape(_vm._s(_vm.placeholder)) + "</label>" : "<!---->"))], 2), _vm._ssrNode(" " + (_vm.helperText ? "<div" + _vm._ssrClass("text-sm mt-1", {
     'text-red-500': _vm.invalid,
     'text-gray-700': !_vm.invalid
-  }) + " data-v-51cf2baa>" + _vm._ssrEscape(_vm._s(_vm.helperText)) + "</div>" : "<!---->"))], 2);
+  }) + " data-v-5add6e46>" + _vm._ssrEscape(_vm._s(_vm.helperText)) + "</div>" : "<!---->"))], 2);
 };
 
 var __vue_staticRenderFns__$k = [];
@@ -2192,8 +2199,8 @@ var __vue_staticRenderFns__$k = [];
 
 var __vue_inject_styles__$k = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-51cf2baa_0", {
-    source: ".form-control.invalid[data-v-51cf2baa]{box-shadow:none!important}.translate-y-1\\/2[data-v-51cf2baa]{transform:translateY(-50%)}",
+  inject("data-v-5add6e46_0", {
+    source: ".form-control.invalid[data-v-5add6e46]{box-shadow:none!important}.translate-y-1\\/2[data-v-5add6e46]{transform:translateY(-50%)}",
     map: undefined,
     media: undefined
   });
@@ -2201,10 +2208,10 @@ var __vue_inject_styles__$k = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$k = "data-v-51cf2baa";
+var __vue_scope_id__$k = "data-v-5add6e46";
 /* module identifier */
 
-var __vue_module_identifier__$k = "data-v-51cf2baa";
+var __vue_module_identifier__$k = "data-v-5add6e46";
 /* functional template */
 
 var __vue_is_functional_template__$k = false;
@@ -3846,6 +3853,9 @@ var __vue_component__$m = __vue_component__$l;//
 //
 //
 //
+//
+//
+//
 var script$a = {
   name: 'teStepper',
   props: {
@@ -3854,6 +3864,12 @@ var script$a = {
       required: true,
       validator: function validator(value) {
         return value.length > 0 && value.length <= 12;
+      }
+    },
+    disabled: {
+      type: Array,
+      default: function _default() {
+        return [];
       }
     },
     activeStep: {
@@ -3930,7 +3946,9 @@ var __vue_render__$a = function __vue_render__() {
     staticClass: "grid gap-4 w-3/4 m-auto",
     class: "grid-cols-" + _vm.steps.length
   }, [_vm._ssrNode(_vm._ssrList(_vm.steps, function (step, key) {
-    return "<div" + _vm._ssrClass("border-t-4 pt-4", key <= _vm.currentValue ? _vm.borderClass : 'border-gray-200') + "><p" + _vm._ssrClass("uppercase font-bold cursor-pointer", key <= _vm.currentValue ? _vm.textColorClass : 'text-gray-400') + ">" + _vm._ssrEscape("\n      " + _vm._s(_vm.labelStep) + " " + _vm._s(key + 1) + "\n    ") + "</p> <p class=\"font-semibold\">" + _vm._ssrEscape(_vm._s(step)) + "</p></div>";
+    return "<div" + _vm._ssrClass("border-t-4 pt-4", key <= _vm.currentValue ? _vm.borderClass : 'border-gray-200') + "><p" + _vm._ssrClass("uppercase font-bold", [key <= _vm.currentValue ? _vm.textColorClass : 'text-gray-400', _vm.disabled[key] ? 'cursor-not-allowed pointer-events-none' : 'cursor-pointer']) + ">" + _vm._ssrEscape("\n      " + _vm._s(_vm.labelStep) + " " + _vm._s(key + 1) + "\n    ") + "</p> <p" + _vm._ssrClass("font-semibold", {
+      'opacity-50': _vm.disabled[key] || false
+    }) + ">" + _vm._ssrEscape(_vm._s(step)) + "</p></div>";
   }))]);
 };
 
@@ -3943,7 +3961,7 @@ var __vue_inject_styles__$a = undefined;
 var __vue_scope_id__$a = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$a = "data-v-e7d13086";
+var __vue_module_identifier__$a = "data-v-4d893a32";
 /* functional template */
 
 var __vue_is_functional_template__$a = false;
