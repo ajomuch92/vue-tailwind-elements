@@ -8,6 +8,7 @@
       :outlined="outlined"
       no-rounded
       :class="{'rounded-l': n===1, 'rounded-r': n===quantity}"
+      :disabled="disabled[n-1]||false"
       @click="$emit('click', {index: n, event: $event})"
     >
       <slot :name="`button-${n}`" v-bind:index="n" />
@@ -16,7 +17,8 @@
 </template>
 
 <script>
-import teButton from './teButton.vue'
+import teButton from './teButton.vue';
+
 export default {
   name: 'teButtonGroup',
   components: { teButton },
@@ -38,7 +40,11 @@ export default {
     outlined: {
       type: Boolean,
       default: false,
-    }
+    },
+    disabled: {
+      type: Array,
+      default: () => []
+    },
   }
 }
 </script>

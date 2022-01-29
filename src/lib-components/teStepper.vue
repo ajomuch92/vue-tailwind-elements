@@ -1,14 +1,17 @@
 <template>
   <div class="grid gap-4 w-3/4 m-auto" :class="`grid-cols-${steps.length}`">
-    <div v-for="(step, key) in steps" :key="key" class="border-t-4 pt-4" :class="key<=currentValue?borderClass:'border-gray-200'">
+    <div v-for="(step, key) in steps"
+      :key="key" class="border-t-4 pt-4"
+      :class="key<=currentValue?borderClass:'border-gray-200'"
+    >
       <p
-        class="uppercase font-bold cursor-pointer"
-        :class="key<=currentValue?textColorClass:'text-gray-400'"
+        class="uppercase font-bold"
+        :class="[key<=currentValue?textColorClass:'text-gray-400', disabled[key]? 'cursor-not-allowed pointer-events-none': 'cursor-pointer']"
         @click="currentValue=key"
       >
         {{labelStep}} {{key+1}}
       </p>
-      <p class="font-semibold">{{step}}</p>
+      <p class="font-semibold" :class="{'opacity-50': disabled[key]||false}">{{step}}</p>
     </div>
   </div>
 </template>
@@ -21,6 +24,10 @@ export default {
       type: Array,
       required: true,
       validator: (value) => value.length > 0 && value.length <= 12
+    },
+    disabled: {
+      type: Array,
+      default: () => []
     },
     activeStep: {
       type: Number,
