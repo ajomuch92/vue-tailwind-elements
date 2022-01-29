@@ -600,13 +600,13 @@ const __vue_component__$Z = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__$w
 }, __vue_inject_styles__$w, __vue_script__$w, __vue_scope_id__$w, __vue_is_functional_template__$w, __vue_module_identifier__$w, false, undefined, undefined, undefined);
 
-var teSpinner = __vue_component__$Z;
+var TeSpinner = __vue_component__$Z;
 
 //
 var script$v = {
   name: 'teButton',
   components: {
-    teSpinner
+    teSpinner: TeSpinner
   },
   props: {
     type: {
@@ -5010,7 +5010,8 @@ var __vue_component__$d = __vue_component__$c;
 var script$5 = {
   name: 'teTable',
   components: {
-    tePagination
+    tePagination,
+    TeSpinner
   },
   props: {
     items: {
@@ -5090,6 +5091,10 @@ var script$5 = {
     labelPrev: {
       type: String,
       default: 'Previous'
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -5177,7 +5182,8 @@ var __vue_render__$5 = function () {
     staticClass: "table-container min-w-full",
     class: {
       'overflow-x-auto': _vm.responsive,
-      'overflow-hidden': !_vm.responsive
+      'overflow-hidden': !_vm.responsive,
+      'relative': _vm.loading
     }
   }, [_c('table', {
     staticClass: "min-w-full",
@@ -5238,7 +5244,13 @@ var __vue_render__$5 = function () {
     attrs: {
       "colspan": _vm.headers.length
     }
-  }, [_vm._v("\n            " + _vm._s(_vm.noDataLabel) + "\n          ")])])]], 2)]), _vm._v(" "), _vm.itemPerPage > 0 ? _c('te-pagination', {
+  }, [_vm._v("\n            " + _vm._s(_vm.noDataLabel) + "\n          ")])])]], 2)]), _vm._v(" "), _vm.loading ? _c('div', {
+    staticClass: "h-full w-full bg-gray-50 rounded opacity-70 flex justify-center items-center absolute top-0 left-0 z-50"
+  }, [_c('te-spinner', {
+    attrs: {
+      "size": "large"
+    }
+  })], 1) : _vm._e(), _vm._v(" "), _vm.itemPerPage > 0 ? _c('te-pagination', {
     staticClass: "my-1",
     attrs: {
       "active-page": _vm.activePage,
@@ -6109,7 +6121,7 @@ var components = /*#__PURE__*/Object.freeze({
   teDropdown: __vue_component__$q,
   teDropdownItem: __vue_component__$o,
   teModal: __vue_component__$m,
-  teSpinner: teSpinner,
+  teSpinner: TeSpinner,
   teStepper: __vue_component__$k,
   teToast: __vue_component__$i,
   tePagination: tePagination,
@@ -6142,4 +6154,4 @@ const install = function installVueTailwindElements(Vue) {
   });
 }; // Create module definition for Vue.use()
 
-export { install as default, clickOutside$1 as outside, __vue_component__$13 as teAccordion, __vue_component__$11 as teAlert, __vue_component__$$ as teBadge, __vue_component__$J as teBreadcrumb, teButton, __vue_component__$X as teButtonGroup, __vue_component__$V as teCard, __vue_component__$T as teCheckbox, __vue_component__$C as teDatePicker, __vue_component__$q as teDropdown, __vue_component__$o as teDropdownItem, __vue_component__$9 as teFile, teIcon, __vue_component__$E as teInput, __vue_component__$s as teListGroup, __vue_component__$m as teModal, __vue_component__$L as teMultipleSelect, __vue_component__$f as teNavbar, __vue_component__$d as teNavbarItem, __vue_component__$7 as teNotification, __vue_component__$1 as teOffcanvas, tePagination, __vue_component__$w as teProgress, __vue_component__$P as teRadio, __vue_component__$y as teRange, __vue_component__$5 as teRating, __vue_component__$N as teSelect, teSpinner, __vue_component__$k as teStepper, __vue_component__$R as teSwitch, __vue_component__$b as teTable, __vue_component__$u as teTabs, __vue_component__$H as teTextarea, __vue_component__$A as teTimePicker, __vue_component__$i as teToast, __vue_component__$3 as teToastLight };
+export { install as default, clickOutside$1 as outside, __vue_component__$13 as teAccordion, __vue_component__$11 as teAlert, __vue_component__$$ as teBadge, __vue_component__$J as teBreadcrumb, teButton, __vue_component__$X as teButtonGroup, __vue_component__$V as teCard, __vue_component__$T as teCheckbox, __vue_component__$C as teDatePicker, __vue_component__$q as teDropdown, __vue_component__$o as teDropdownItem, __vue_component__$9 as teFile, teIcon, __vue_component__$E as teInput, __vue_component__$s as teListGroup, __vue_component__$m as teModal, __vue_component__$L as teMultipleSelect, __vue_component__$f as teNavbar, __vue_component__$d as teNavbarItem, __vue_component__$7 as teNotification, __vue_component__$1 as teOffcanvas, tePagination, __vue_component__$w as teProgress, __vue_component__$P as teRadio, __vue_component__$y as teRange, __vue_component__$5 as teRating, __vue_component__$N as teSelect, TeSpinner as teSpinner, __vue_component__$k as teStepper, __vue_component__$R as teSwitch, __vue_component__$b as teTable, __vue_component__$u as teTabs, __vue_component__$H as teTextarea, __vue_component__$A as teTimePicker, __vue_component__$i as teToast, __vue_component__$3 as teToastLight };

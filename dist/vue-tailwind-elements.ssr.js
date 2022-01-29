@@ -771,10 +771,10 @@ var __vue_component__$Z = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__$w
 }, __vue_inject_styles__$w, __vue_script__$w, __vue_scope_id__$w, __vue_is_functional_template__$w, __vue_module_identifier__$w, false, undefined, undefined, undefined);
 
-var teSpinner = __vue_component__$Z;var script$v = {
+var TeSpinner = __vue_component__$Z;var script$v = {
   name: 'teButton',
   components: {
-    teSpinner: teSpinner
+    teSpinner: TeSpinner
   },
   props: {
     type: {
@@ -4485,7 +4485,8 @@ var __vue_component__$d = __vue_component__$c;//
 var script$5 = {
   name: 'teTable',
   components: {
-    tePagination: tePagination
+    tePagination: tePagination,
+    TeSpinner: TeSpinner
   },
   props: {
     items: {
@@ -4569,6 +4570,10 @@ var script$5 = {
     labelPrev: {
       type: String,
       default: 'Previous'
+    },
+    loading: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -4652,7 +4657,8 @@ var __vue_render__$5 = function __vue_render__() {
     staticClass: "table-container min-w-full",
     class: {
       'overflow-x-auto': _vm.responsive,
-      'overflow-hidden': !_vm.responsive
+      'overflow-hidden': !_vm.responsive,
+      'relative': _vm.loading
     }
   }, [_vm._ssrNode("<table" + _vm._ssrClass("min-w-full", {
     'text-center': _vm.centered,
@@ -4681,7 +4687,11 @@ var __vue_render__$5 = function __vue_render__() {
     })], 2);
   }) : _vm._ssrNode("<tr><td" + _vm._ssrAttr("colspan", _vm.headers.length) + _vm._ssrClass("text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center", Object.assign({}, _vm.paddingClass, {
     'border-r': _vm.bordered
-  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>")], 2)], 2), _vm._ssrNode(" "), _vm.itemPerPage > 0 ? _c('te-pagination', {
+  })) + ">" + _vm._ssrEscape("\n            " + _vm._s(_vm.noDataLabel) + "\n          ") + "</td></tr>")], 2)], 2), _vm._ssrNode(" "), _vm.loading ? _vm._ssrNode("<div class=\"h-full w-full bg-gray-50 rounded opacity-70 flex justify-center items-center absolute top-0 left-0 z-50\">", "</div>", [_c('te-spinner', {
+    attrs: {
+      "size": "large"
+    }
+  })], 1) : _vm._e(), _vm._ssrNode(" "), _vm.itemPerPage > 0 ? _c('te-pagination', {
     staticClass: "my-1",
     attrs: {
       "active-page": _vm.activePage,
@@ -4711,7 +4721,7 @@ var __vue_inject_styles__$5 = undefined;
 var __vue_scope_id__$5 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$5 = "data-v-de13d5ca";
+var __vue_module_identifier__$5 = "data-v-ccd8acd8";
 /* functional template */
 
 var __vue_is_functional_template__$5 = false;
@@ -5469,7 +5479,7 @@ var __vue_component__ = /*#__PURE__*/normalizeComponent({
   staticRenderFns: __vue_staticRenderFns__
 }, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
 
-var __vue_component__$1 = __vue_component__;var components$1=/*#__PURE__*/Object.freeze({__proto__:null,teAccordion:__vue_component__$13,teAlert:__vue_component__$11,teBadge:__vue_component__$$,teButton:teButton,teButtonGroup:__vue_component__$X,teCard:__vue_component__$V,teCheckbox:__vue_component__$T,teSwitch:__vue_component__$R,teRadio:__vue_component__$P,teSelect:__vue_component__$N,teMultipleSelect:__vue_component__$L,teBreadcrumb:__vue_component__$J,teTextarea:__vue_component__$H,teInput:__vue_component__$E,teDatePicker:__vue_component__$C,teTimePicker:__vue_component__$A,teRange:__vue_component__$y,teProgress:__vue_component__$w,teTabs:__vue_component__$u,teListGroup:__vue_component__$s,teDropdown:__vue_component__$q,teDropdownItem:__vue_component__$o,teModal:__vue_component__$m,teSpinner:teSpinner,teStepper:__vue_component__$k,teToast:__vue_component__$i,tePagination:tePagination,teNavbar:__vue_component__$f,teNavbarItem:__vue_component__$d,teTable:__vue_component__$b,teFile:__vue_component__$9,teNotification:__vue_component__$7,teIcon:teIcon,teRating:__vue_component__$5,teToastLight:__vue_component__$3,teOffcanvas:__vue_component__$1});var directives=/*#__PURE__*/Object.freeze({__proto__:null,outside:clickOutside$1});var install = function installVueTailwindElements(Vue) {
+var __vue_component__$1 = __vue_component__;var components$1=/*#__PURE__*/Object.freeze({__proto__:null,teAccordion:__vue_component__$13,teAlert:__vue_component__$11,teBadge:__vue_component__$$,teButton:teButton,teButtonGroup:__vue_component__$X,teCard:__vue_component__$V,teCheckbox:__vue_component__$T,teSwitch:__vue_component__$R,teRadio:__vue_component__$P,teSelect:__vue_component__$N,teMultipleSelect:__vue_component__$L,teBreadcrumb:__vue_component__$J,teTextarea:__vue_component__$H,teInput:__vue_component__$E,teDatePicker:__vue_component__$C,teTimePicker:__vue_component__$A,teRange:__vue_component__$y,teProgress:__vue_component__$w,teTabs:__vue_component__$u,teListGroup:__vue_component__$s,teDropdown:__vue_component__$q,teDropdownItem:__vue_component__$o,teModal:__vue_component__$m,teSpinner:TeSpinner,teStepper:__vue_component__$k,teToast:__vue_component__$i,tePagination:tePagination,teNavbar:__vue_component__$f,teNavbarItem:__vue_component__$d,teTable:__vue_component__$b,teFile:__vue_component__$9,teNotification:__vue_component__$7,teIcon:teIcon,teRating:__vue_component__$5,teToastLight:__vue_component__$3,teOffcanvas:__vue_component__$1});var directives=/*#__PURE__*/Object.freeze({__proto__:null,outside:clickOutside$1});var install = function installVueTailwindElements(Vue) {
   Object.entries(components$1).forEach(function (_ref) {
     var _ref2 = _slicedToArray(_ref, 2),
         componentName = _ref2[0],
@@ -5485,7 +5495,7 @@ var __vue_component__$1 = __vue_component__;var components$1=/*#__PURE__*/Object
     Vue.directive(directiveName, directive);
   });
 }; // Create module definition for Vue.use()
-var components=/*#__PURE__*/Object.freeze({__proto__:null,'default':install,teAccordion:__vue_component__$13,teAlert:__vue_component__$11,teBadge:__vue_component__$$,teButton:teButton,teButtonGroup:__vue_component__$X,teCard:__vue_component__$V,teCheckbox:__vue_component__$T,teSwitch:__vue_component__$R,teRadio:__vue_component__$P,teSelect:__vue_component__$N,teMultipleSelect:__vue_component__$L,teBreadcrumb:__vue_component__$J,teTextarea:__vue_component__$H,teInput:__vue_component__$E,teDatePicker:__vue_component__$C,teTimePicker:__vue_component__$A,teRange:__vue_component__$y,teProgress:__vue_component__$w,teTabs:__vue_component__$u,teListGroup:__vue_component__$s,teDropdown:__vue_component__$q,teDropdownItem:__vue_component__$o,teModal:__vue_component__$m,teSpinner:teSpinner,teStepper:__vue_component__$k,teToast:__vue_component__$i,tePagination:tePagination,teNavbar:__vue_component__$f,teNavbarItem:__vue_component__$d,teTable:__vue_component__$b,teFile:__vue_component__$9,teNotification:__vue_component__$7,teIcon:teIcon,teRating:__vue_component__$5,teToastLight:__vue_component__$3,teOffcanvas:__vue_component__$1,outside:clickOutside$1});// only expose one global var, with component exports exposed as properties of
+var components=/*#__PURE__*/Object.freeze({__proto__:null,'default':install,teAccordion:__vue_component__$13,teAlert:__vue_component__$11,teBadge:__vue_component__$$,teButton:teButton,teButtonGroup:__vue_component__$X,teCard:__vue_component__$V,teCheckbox:__vue_component__$T,teSwitch:__vue_component__$R,teRadio:__vue_component__$P,teSelect:__vue_component__$N,teMultipleSelect:__vue_component__$L,teBreadcrumb:__vue_component__$J,teTextarea:__vue_component__$H,teInput:__vue_component__$E,teDatePicker:__vue_component__$C,teTimePicker:__vue_component__$A,teRange:__vue_component__$y,teProgress:__vue_component__$w,teTabs:__vue_component__$u,teListGroup:__vue_component__$s,teDropdown:__vue_component__$q,teDropdownItem:__vue_component__$o,teModal:__vue_component__$m,teSpinner:TeSpinner,teStepper:__vue_component__$k,teToast:__vue_component__$i,tePagination:tePagination,teNavbar:__vue_component__$f,teNavbarItem:__vue_component__$d,teTable:__vue_component__$b,teFile:__vue_component__$9,teNotification:__vue_component__$7,teIcon:teIcon,teRating:__vue_component__$5,teToastLight:__vue_component__$3,teOffcanvas:__vue_component__$1,outside:clickOutside$1});// only expose one global var, with component exports exposed as properties of
 // that global var (eg. plugin.component)
 
 Object.entries(components).forEach(function (_ref) {
