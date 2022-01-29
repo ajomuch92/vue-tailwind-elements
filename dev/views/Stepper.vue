@@ -14,6 +14,8 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-3xl my-2">Disable steps</h1>
+    <te-stepper :steps="['Job details', 'Application form', 'Preview', 'Result']" :disabled="[false, true, false, false]" />
   </div>
 </template>
 
