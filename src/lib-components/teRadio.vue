@@ -15,7 +15,7 @@ export default {
   props: {
     idInput: {
       type: String,
-      default: () => URL.createObjectURL(new Blob([])).substring(31)
+      default: () => (new Date()).getTime().toString(16)
     },
     value: {
       type: [String, Number],
