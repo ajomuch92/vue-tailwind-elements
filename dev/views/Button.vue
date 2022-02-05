@@ -10,6 +10,21 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Types</h1>
+    <div class="flex space-x-2">
+      <te-button button-type="button">Button</te-button>
+      <te-button button-type="submit">Submit</te-button>
+      <te-button button-type="reset">Reset</te-button>
+    </div>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-button button-type="button">Button</te-button>
+          <te-button button-type="submit">Submit</te-button>
+          <te-button button-type="reset">Reset</te-button>
+        </script>
+      </code>
+    </pre>
     <h1 class="text-lg">Sizes</h1>
     <div class="flex space-x-2">
       <te-button size="small">Button</te-button>
