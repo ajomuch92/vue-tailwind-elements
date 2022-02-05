@@ -3,7 +3,7 @@ A light library of components based on [Tailwind Elements](https://tailwind-elem
 The documentation and examples are being building [here](https://vue-tailwind-elements.netlify.app/). Currently, there are more than 30 components. Best and new components and features are coming. Feel free to make a pull request.
 
 ### New Features 💥
-* Sizes, centered and no header and no footer for modal
+* Sizes, centered and no header/no footer for modal
 * Flush on accordion
 * Types of button for its components
 
@@ -26,7 +26,7 @@ Vue.use(VueTailwindElements);
 ...
 ```
 
-Nuxt:
+** Nuxt: **
 Put the last configuration into a plugin file and the use it into the nuxt.config.js file like this:
 
 ```javascript
@@ -35,6 +35,8 @@ Put the last configuration into a plugin file and the use it into the nuxt.confi
     '~/plugins/vue-tailwind-elements.js'
   ],
 ...
+
+```
 
 ## Author
 
