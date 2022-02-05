@@ -257,6 +257,16 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$z = {
   name: 'teAccordion',
   props: {
@@ -265,6 +275,10 @@ var script$z = {
       default: function _default() {
         return [];
       }
+    },
+    flush: {
+      type: Boolean,
+      default: false
     }
   },
   data: function data() {
@@ -411,11 +425,20 @@ var __vue_render__$z = function __vue_render__() {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "accordion"
+    staticClass: "accordion",
+    class: {
+      'accordion-flush': _vm.flush
+    }
   }, _vm._l(_vm.items, function (item, key) {
-    return _vm._ssrNode("<div class=\"accordion-item bg-white border border-gray-200\" data-v-c8e911d4>", "</div>", [_vm._ssrNode("<h2 class=\"accordion-header mb-0\" data-v-c8e911d4><button type=\"button\"" + _vm._ssrClass("\n          accordion-button\n          relative\n          flex\n          items-center\n          w-full\n          py-4\n          px-5\n          text-base text-gray-800 text-left\n          bg-white\n          border-0\n          rounded-none\n          transition\n          focus:outline-none\n        ", {
+    return _vm._ssrNode("<div" + _vm._ssrClass("accordion-item bg-white border border-gray-200", {
+      'border-l-0 border-r-0 rounded-none': _vm.flush,
+      'border-t-0': _vm.flush && key === 0,
+      'border-b-0': _vm.flush && key === _vm.items.length - 1
+    }) + " data-v-0ade1b63>", "</div>", [_vm._ssrNode("<h2 class=\"accordion-header mb-0\" data-v-0ade1b63><button type=\"button\"" + _vm._ssrClass("\n          accordion-button\n          relative\n          flex\n          items-center\n          w-full\n          py-4\n          px-5\n          text-base text-gray-800 text-left\n          bg-white\n          border-0\n          rounded-none\n          transition\n          focus:outline-none\n        ", {
       'collapsed': !_vm.itemsOpened.includes(key)
-    }) + " data-v-c8e911d4>" + _vm._ssrEscape("\n        " + _vm._s(item) + "\n      ") + "</button></h2> "), _vm._ssrNode("<div" + _vm._ssrAttr("id", "collapse-" + key) + " class=\"accordion-collapse\" data-v-c8e911d4>", "</div>", [_vm._ssrNode("<div class=\"accordion-body py-4 px-5\" data-v-c8e911d4>", "</div>", [_vm._t("content-" + (key + 1))], 2)])], 2);
+    }) + " data-v-0ade1b63>" + _vm._ssrEscape("\n        " + _vm._s(item) + "\n      ") + "</button></h2> "), _vm._ssrNode("<div" + _vm._ssrAttr("id", "collapse-" + key) + _vm._ssrClass("accordion-collapse", {
+      'border-0': _vm.flush
+    }) + " data-v-0ade1b63>", "</div>", [_vm._ssrNode("<div class=\"accordion-body py-4 px-5\" data-v-0ade1b63>", "</div>", [_vm._t("content-" + (key + 1))], 2)])], 2);
   }), 0);
 };
 
@@ -424,8 +447,8 @@ var __vue_staticRenderFns__$z = [];
 
 var __vue_inject_styles__$z = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-c8e911d4_0", {
-    source: ".accordion-collapse[data-v-c8e911d4]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
+  inject("data-v-0ade1b63_0", {
+    source: ".accordion-collapse[data-v-0ade1b63]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
     map: undefined,
     media: undefined
   });
@@ -433,10 +456,10 @@ var __vue_inject_styles__$z = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$z = "data-v-c8e911d4";
+var __vue_scope_id__$z = "data-v-0ade1b63";
 /* module identifier */
 
-var __vue_module_identifier__$z = "data-v-c8e911d4";
+var __vue_module_identifier__$z = "data-v-0ade1b63";
 /* functional template */
 
 var __vue_is_functional_template__$z = false;
@@ -784,6 +807,13 @@ var TeSpinner = __vue_component__$Z;var script$v = {
         return ['normal', 'primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value);
       }
     },
+    buttonType: {
+      type: String,
+      default: 'button',
+      validator: function validator(value) {
+        return ['button', 'reset', 'submit'].includes(value);
+      }
+    },
     size: {
       type: String,
       default: 'medium',
@@ -921,7 +951,7 @@ var __vue_render__$v = function __vue_render__() {
     class: _vm.getClass,
     attrs: {
       "disabled": _vm.disabled,
-      "type": "button"
+      "type": _vm.buttonType
     },
     on: {
       "click": _vm.clickHandler
@@ -932,7 +962,7 @@ var __vue_render__$v = function __vue_render__() {
       "color": _vm.type == 'light' ? 'primary' : 'light',
       "size": "small"
     }
-  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-4854aa93></span>" : "<!---->"))], 2);
+  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-096b4f7f></span>" : "<!---->"))], 2);
 };
 
 var __vue_staticRenderFns__$v = [];
@@ -940,8 +970,8 @@ var __vue_staticRenderFns__$v = [];
 
 var __vue_inject_styles__$v = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-4854aa93_0", {
-    source: "span.ripple[data-v-4854aa93]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-4854aa93 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-4854aa93{to{transform:scale(4);opacity:0}}",
+  inject("data-v-096b4f7f_0", {
+    source: "span.ripple[data-v-096b4f7f]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-096b4f7f .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-096b4f7f{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -949,10 +979,10 @@ var __vue_inject_styles__$v = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$v = "data-v-4854aa93";
+var __vue_scope_id__$v = "data-v-096b4f7f";
 /* module identifier */
 
-var __vue_module_identifier__$v = "data-v-4854aa93";
+var __vue_module_identifier__$v = "data-v-096b4f7f";
 /* functional template */
 
 var __vue_is_functional_template__$v = false;
@@ -3736,12 +3766,44 @@ var script$b = {
     showCloseButton: {
       type: Boolean,
       default: true
+    },
+    hideHeader: {
+      type: Boolean,
+      default: false
+    },
+    hideFooter: {
+      type: Boolean,
+      default: false
+    },
+    scrollable: {
+      type: Boolean,
+      default: false
+    },
+    centered: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      type: String,
+      default: '',
+      validator: function validator(value) {
+        return ['', 'xl', 'lg', 'sm'].includes(value);
+      }
     }
   },
   data: function data() {
     return {
       backdrop: undefined
     };
+  },
+  computed: {
+    sizeClass: function sizeClass() {
+      if (this.size.length) {
+        return _defineProperty({}, "modal-".concat(this.size), true);
+      }
+
+      return {};
+    }
   },
   watch: {
     visible: function visible(val) {
@@ -3783,10 +3845,14 @@ var __vue_render__$b = function __vue_render__() {
       "aria-hidden": "true"
     }
   }, [_c('div', {
-    staticClass: "modal-dialog relative w-auto pointer-events-none"
+    staticClass: "modal-dialog relative w-auto pointer-events-none",
+    class: Object.assign({}, {
+      'modal-dialog-scrollable': _vm.scrollable,
+      'modal-dialog-centered': _vm.centered
+    }, _vm.sizeClass)
   }, [_c('div', {
     staticClass: "modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current"
-  }, [_c('div', {
+  }, [!_vm.hideHeader ? _c('div', {
     staticClass: "modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md"
   }, [_vm._t("header", function () {
     return [_c('h5', {
@@ -3803,11 +3869,11 @@ var __vue_render__$b = function __vue_render__() {
         return _vm.$emit('update:visible', false);
       }
     }
-  }) : _vm._e()], 2), _vm._v(" "), _c('div', {
+  }) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "modal-body relative p-4"
-  }, [_vm._t("default")], 2), _vm._v(" "), _c('div', {
+  }, [_vm._t("default")], 2), _vm._v(" "), !_vm.hideFooter ? _c('div', {
     staticClass: "modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"
-  }, [_vm._t("footer")], 2)])])])]);
+  }, [_vm._t("footer")], 2) : _vm._e()])])])]);
 };
 
 var __vue_staticRenderFns__$b = [];
@@ -3815,8 +3881,8 @@ var __vue_staticRenderFns__$b = [];
 
 var __vue_inject_styles__$b = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-4d65c231_0", {
-    source: ".fade-enter-active[data-v-4d65c231],.fade-leave-active[data-v-4d65c231]{transition:all .25s}.fade-enter[data-v-4d65c231],.fade-leave-to[data-v-4d65c231]{transform:translateY(-50px);opacity:0}",
+  inject("data-v-2a73e93f_0", {
+    source: ".fade-enter-active[data-v-2a73e93f],.fade-leave-active[data-v-2a73e93f]{transition:all .25s}.fade-enter[data-v-2a73e93f],.fade-leave-to[data-v-2a73e93f]{transform:translateY(-50px);opacity:0}",
     map: undefined,
     media: undefined
   });
@@ -3824,10 +3890,10 @@ var __vue_inject_styles__$b = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$b = "data-v-4d65c231";
+var __vue_scope_id__$b = "data-v-2a73e93f";
 /* module identifier */
 
-var __vue_module_identifier__$b = "data-v-4d65c231";
+var __vue_module_identifier__$b = "data-v-2a73e93f";
 /* functional template */
 
 var __vue_is_functional_template__$b = false;

@@ -38,12 +38,26 @@
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$z = {
   name: 'teAccordion',
   props: {
     items: {
       type: Array,
       default: () => []
+    },
+    flush: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
@@ -206,11 +220,19 @@ var __vue_render__$z = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "accordion"
+    staticClass: "accordion",
+    class: {
+      'accordion-flush': _vm.flush
+    }
   }, _vm._l(_vm.items, function (item, key) {
     return _c('div', {
       key: key,
-      staticClass: "accordion-item bg-white border border-gray-200"
+      staticClass: "accordion-item bg-white border border-gray-200",
+      class: {
+        'border-l-0 border-r-0 rounded-none': _vm.flush,
+        'border-t-0': _vm.flush && key === 0,
+        'border-b-0': _vm.flush && key === _vm.items.length - 1
+      }
     }, [_c('h2', {
       staticClass: "accordion-header mb-0"
     }, [_c('button', {
@@ -230,6 +252,9 @@ var __vue_render__$z = function () {
       ref: "collapse-" + key,
       refInFor: true,
       staticClass: "accordion-collapse",
+      class: {
+        'border-0': _vm.flush
+      },
       attrs: {
         "id": "collapse-" + key
       }
@@ -244,8 +269,8 @@ var __vue_staticRenderFns__$z = [];
 
 const __vue_inject_styles__$z = function (inject) {
   if (!inject) return;
-  inject("data-v-c8e911d4_0", {
-    source: ".accordion-collapse[data-v-c8e911d4]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
+  inject("data-v-0ade1b63_0", {
+    source: ".accordion-collapse[data-v-0ade1b63]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
     map: undefined,
     media: undefined
   });
@@ -253,7 +278,7 @@ const __vue_inject_styles__$z = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$z = "data-v-c8e911d4";
+const __vue_scope_id__$z = "data-v-0ade1b63";
 /* module identifier */
 
 const __vue_module_identifier__$z = undefined;
@@ -614,6 +639,11 @@ var script$v = {
       default: 'primary',
       validator: value => ['normal', 'primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
     },
+    buttonType: {
+      type: String,
+      default: 'button',
+      validator: value => ['button', 'reset', 'submit'].includes(value)
+    },
     size: {
       type: String,
       default: 'medium',
@@ -755,7 +785,7 @@ var __vue_render__$v = function () {
     class: _vm.getClass,
     attrs: {
       "disabled": _vm.disabled,
-      "type": "button"
+      "type": _vm.buttonType
     },
     on: {
       "click": _vm.clickHandler
@@ -777,8 +807,8 @@ var __vue_staticRenderFns__$v = [];
 
 const __vue_inject_styles__$v = function (inject) {
   if (!inject) return;
-  inject("data-v-4854aa93_0", {
-    source: "span.ripple[data-v-4854aa93]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-4854aa93 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-4854aa93{to{transform:scale(4);opacity:0}}",
+  inject("data-v-096b4f7f_0", {
+    source: "span.ripple[data-v-096b4f7f]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-096b4f7f .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-096b4f7f{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -786,7 +816,7 @@ const __vue_inject_styles__$v = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$v = "data-v-4854aa93";
+const __vue_scope_id__$v = "data-v-096b4f7f";
 /* module identifier */
 
 const __vue_module_identifier__$v = undefined;
@@ -4068,11 +4098,44 @@ var script$b = {
     showCloseButton: {
       type: Boolean,
       default: true
+    },
+    hideHeader: {
+      type: Boolean,
+      default: false
+    },
+    hideFooter: {
+      type: Boolean,
+      default: false
+    },
+    scrollable: {
+      type: Boolean,
+      default: false
+    },
+    centered: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      type: String,
+      default: '',
+      validator: value => ['', 'xl', 'lg', 'sm'].includes(value)
     }
   },
   data: () => ({
     backdrop: undefined
   }),
+  computed: {
+    sizeClass() {
+      if (this.size.length) {
+        return {
+          [`modal-${this.size}`]: true
+        };
+      }
+
+      return {};
+    }
+
+  },
   watch: {
     visible(val) {
       if (val) {
@@ -4116,10 +4179,14 @@ var __vue_render__$b = function () {
       "aria-hidden": "true"
     }
   }, [_c('div', {
-    staticClass: "modal-dialog relative w-auto pointer-events-none"
+    staticClass: "modal-dialog relative w-auto pointer-events-none",
+    class: Object.assign({}, {
+      'modal-dialog-scrollable': _vm.scrollable,
+      'modal-dialog-centered': _vm.centered
+    }, _vm.sizeClass)
   }, [_c('div', {
     staticClass: "modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current"
-  }, [_c('div', {
+  }, [!_vm.hideHeader ? _c('div', {
     staticClass: "modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md"
   }, [_vm._t("header", function () {
     return [_c('h5', {
@@ -4136,11 +4203,11 @@ var __vue_render__$b = function () {
         return _vm.$emit('update:visible', false);
       }
     }
-  }) : _vm._e()], 2), _vm._v(" "), _c('div', {
+  }) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "modal-body relative p-4"
-  }, [_vm._t("default")], 2), _vm._v(" "), _c('div', {
+  }, [_vm._t("default")], 2), _vm._v(" "), !_vm.hideFooter ? _c('div', {
     staticClass: "modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"
-  }, [_vm._t("footer")], 2)])])])]);
+  }, [_vm._t("footer")], 2) : _vm._e()])])])]);
 };
 
 var __vue_staticRenderFns__$b = [];
@@ -4148,8 +4215,8 @@ var __vue_staticRenderFns__$b = [];
 
 const __vue_inject_styles__$b = function (inject) {
   if (!inject) return;
-  inject("data-v-4d65c231_0", {
-    source: ".fade-enter-active[data-v-4d65c231],.fade-leave-active[data-v-4d65c231]{transition:all .25s}.fade-enter[data-v-4d65c231],.fade-leave-to[data-v-4d65c231]{transform:translateY(-50px);opacity:0}",
+  inject("data-v-2a73e93f_0", {
+    source: ".fade-enter-active[data-v-2a73e93f],.fade-leave-active[data-v-2a73e93f]{transition:all .25s}.fade-enter[data-v-2a73e93f],.fade-leave-to[data-v-2a73e93f]{transform:translateY(-50px);opacity:0}",
     map: undefined,
     media: undefined
   });
@@ -4157,7 +4224,7 @@ const __vue_inject_styles__$b = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$b = "data-v-4d65c231";
+const __vue_scope_id__$b = "data-v-2a73e93f";
 /* module identifier */
 
 const __vue_module_identifier__$b = undefined;
