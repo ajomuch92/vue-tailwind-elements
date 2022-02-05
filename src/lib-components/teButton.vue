@@ -13,7 +13,7 @@
       "
     :class="getClass"
     :disabled="disabled"
-    type="button"
+    :type="buttonType"
     @click="clickHandler"
   >
     <te-spinner  v-if="loading" :color="type=='light'? 'primary': 'light'" class="mx-1 align-sub" size="small"/>
@@ -33,6 +33,11 @@ export default {
       type: String,
       default: 'primary',
       validator: (value) => ['normal','primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
+    },
+    buttonType: {
+      type: String,
+      default: 'button',
+      validator: (value) => ['button','reset', 'submit'].includes(value)
     },
     size: {
       type: String,
