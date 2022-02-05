@@ -26,7 +26,7 @@ Vue.use(VueTailwindElements);
 ...
 ```
 
-** Nuxt: **
+## Nuxt:
 Put the last configuration into a plugin file and the use it into the nuxt.config.js file like this:
 
 ```javascript
