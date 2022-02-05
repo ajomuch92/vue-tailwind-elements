@@ -1,9 +1,9 @@
 <template>
   <transition name="fade">
     <div v-show="visible" class="modal fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog relative w-auto pointer-events-none">
+      <div class="modal-dialog relative w-auto pointer-events-none" :class="{'modal-dialog-scrollable': scrollable, 'modal-dialog-centered': centered, ...sizeClass}">
         <div class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
-          <div class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
+          <div v-if="!hideHeader" class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
             <slot name="header">
               <h5 class="text-xl font-medium leading-normal text-gray-800">{{title}}</h5>
             </slot>
@@ -18,7 +18,7 @@
           <div class="modal-body relative p-4">
             <slot name="default" />
           </div>
-          <div class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+          <div v-if="!hideFooter"  class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
             <slot name="footer" />
           </div>
         </div>
@@ -42,11 +42,42 @@ export default {
     showCloseButton: {
       type: Boolean,
       default: true
+    },
+    hideHeader: {
+      type: Boolean,
+      default: false,
+    },
+    hideFooter: {
+      type: Boolean,
+      default: false,
+    },
+    scrollable: {
+      type: Boolean,
+      default: false,
+    },
+    centered: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      default: '',
+      validator: (value) => ['', 'xl', 'lg', 'sm'].includes(value)
     }
   },
   data: () => ({
     backdrop: undefined
   }),
+  computed: {
+    sizeClass() {
+      if (this.size.length) {
+        return {
+          [`modal-${this.size}`]: true
+        }
+      }
+      return {};
+    }
+  },
   watch: {
     visible(val) {
       if (val) {
