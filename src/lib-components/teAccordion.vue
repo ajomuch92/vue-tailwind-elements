@@ -1,6 +1,15 @@
 <template>
-  <div class="accordion">
-    <div v-for="(item, key) in items" :key="key" class="accordion-item bg-white border border-gray-200">
+  <div class="accordion" :class="{'accordion-flush': flush }">
+    <div 
+      v-for="(item, key) in items"
+      :key="key" 
+      class="accordion-item bg-white border border-gray-200"
+      :class="{
+        'border-l-0 border-r-0 rounded-none': flush,
+        'border-t-0': flush && key === 0,
+        'border-b-0': flush && key === items.length - 1,
+      }"
+    >
       <h2 class="accordion-header mb-0">
         <button
           class="
@@ -29,6 +38,7 @@
         :ref="`collapse-${key}`"
         :id="`collapse-${key}`"
         class="accordion-collapse"
+        :class="{'border-0': flush}"
       >
         <div class="accordion-body py-4 px-5">
           <slot :name="`content-${key+1}`" />
@@ -46,6 +56,10 @@ export default {
       type: Array,
       default: () => []
     },
+    flush: {
+      type: Boolean,
+      default: false,
+    }
   },
   data: () => ({
     itemsOpened: [],
