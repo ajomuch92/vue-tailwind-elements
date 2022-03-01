@@ -3993,7 +3993,7 @@ var script$a = {
       this.$emit('update:activeStep', val);
       this.$emit('page-changed', val);
     },
-    value: function value(val) {
+    activeStep: function activeStep(val) {
       this.currentValue = val;
     }
   }
@@ -4027,7 +4027,7 @@ var __vue_inject_styles__$a = undefined;
 var __vue_scope_id__$a = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$a = "data-v-4d893a32";
+var __vue_module_identifier__$a = "data-v-2f02cb24";
 /* functional template */
 
 var __vue_is_functional_template__$a = false;

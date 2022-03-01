@@ -4328,7 +4328,7 @@ var script$a = {
       this.$emit('page-changed', val);
     },
 
-    value(val) {
+    activeStep(val) {
       this.currentValue = val;
     }
 
