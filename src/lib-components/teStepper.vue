@@ -80,7 +80,7 @@ export default {
       this.$emit('update:activeStep', val);
       this.$emit('page-changed', val);
     },
-    value(val) {
+    activeStep(val) {
       this.currentValue = val;
     }
   }
