@@ -12,11 +12,17 @@
               type="button"
               class="btn-close box-content w-4 h-4 p-1 text-black border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline" 
               aria-label="Close"
-              @click="$emit('update:visible', false)"
+              @click="close()"
             />
           </div>
           <div class="modal-body relative p-4">
-            <slot name="default" />
+            <component
+              v-if="component"
+              :is="component"
+              v-bind="props"
+              v-on="events"
+            />
+            <slot v-else name="default" />
           </div>
           <div v-if="!hideFooter"  class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
             <slot name="footer" />
@@ -63,7 +69,10 @@ export default {
       type: String,
       default: '',
       validator: (value) => ['', 'xl', 'lg', 'sm'].includes(value)
-    }
+    },
+    component: [Object, Function, String],
+    events: [Object],
+    props: [Object],
   },
   data: () => ({
     backdropVisible: false,
@@ -100,12 +109,28 @@ export default {
         }, 100)
       }
     },
-    }
+  },
+  methods: {
+    close() {
+      this.$emit('close')
+      this.$emit('update:visible', false);
+      if (this.component) {
+        this.contentVisible = false;
+        setTimeout(() => {
+          this.$destroy();
+          this.$el.parentNode.removeChild(this.$el);
+        }, 500);
+      }
+    },
   }
 }
 </script>
 
 <style scoped>
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+  }
+
   .fade-enter-active, .fade-leave-active {
     transition: all .25s;
   }
