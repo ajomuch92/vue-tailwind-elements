@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full flex">
-    <aside v-if="windowSizeType!='sm'" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto">
+  <div class="w-full flex flex-wrap">
+    <aside v-if="windowSizeType!='sm'" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto sticky h-screen">
       <nav class="space-y-8 text-sm">
         <div v-for="(item, key) in items" :key="key" class="space-y-2">
           <h2
@@ -40,7 +40,7 @@
         </div>
       </nav>
     </te-offcanvas>
-    <main class="w-full px-4 sm:pr-10 lg:pr-4">
+    <main class="w-full px-4 sm:w-9/12 lg:w-10/12 sm:pr-10 lg:pr-4 overflow-y-auto sticky h-screen">
       <router-view />
       <te-button v-if="windowSizeType=='sm'" class="absolute right-0 top-7" @click="showPanel=!showPanel" only-text>
         <te-icon name="list" />
