@@ -66,10 +66,55 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Launch Modal(Programmatically)</h1>
+    <te-button @click="showModal">Launch</te-button>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <section class="bg-white">
+            <h1>{{title}}</h1>
+            <te-button @click="$emit('custom', $event)">Emit Event</te-button>
+            <te-button @click="$parent.close()">Close</te-button>
+          </section>
+        </script>
+      </code>
+    </pre>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-js">
+          import TestModal from '../components/ModalTest.vue';
+
+          ...
+
+          methods: {
+            showModal() {
+              this.$showModal({
+                parent: this,
+                component: TestModal,
+                scrollable: false,
+                centered: true,
+                size: 'sm',
+                props: {
+                  title: 'Hello World'
+                },
+                events: {
+                  'custom': (e) => {
+                    console.log(e);
+                    alert('Event emitted')
+                  }
+                }
+              });
+            }
+          }
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
 <script>
+import TestModal from '../components/ModalTest.vue';
+
 export default {
   name: 'Modal',
   data: () => ({
@@ -77,8 +122,26 @@ export default {
     visible2: false,
     visible3: false,
     visible4: false,
-    size: ''
+    size: '',
+    title: '{{title}}'
   }),
+  methods: {
+    showModal() {
+      this.$showModal({
+        parent: this,
+        component: TestModal,
+        props: {
+          title: 'Hello World'
+        },
+        events: {
+          'custom': (e) => {
+            console.log(e);
+            alert('Event emitted')
+          }
+        }
+      });
+    }
+  }
 }
 </script>
 
