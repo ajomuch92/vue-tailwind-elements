@@ -2,6 +2,7 @@
 // Import vue components
 import * as components from '@/lib-components/index';
 import * as directives from '@/lib-components/directives/index';
+import showModal from './lib-components/modalProgrammatically';
 
 // install function executed by Vue.use()
 const install = function installVueTailwindElements(Vue) {
@@ -12,6 +13,8 @@ const install = function installVueTailwindElements(Vue) {
   Object.entries(directives).forEach(([directiveName, directive]) => {
     Vue.directive(directiveName, directive);
   });
+
+  Vue.prototype.$showModal = showModal;
 };
 
 // Create module definition for Vue.use()
