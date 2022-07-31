@@ -3,6 +3,7 @@ A light library of components based on [Tailwind Elements](https://tailwind-elem
 The documentation and examples are being building [here](https://vue-tailwind-elements.netlify.app/). Currently, there are more than 30 components. Best and new components and features are coming. Feel free to make a pull request.
 
 ### New Features 💥
+* Global method to show loading, toasts and modals ($showLoading, $showToast, $showModal)
 * Sizes, centered and no header/no footer for modal
 * Flush on accordion
 * Types of button for its components
