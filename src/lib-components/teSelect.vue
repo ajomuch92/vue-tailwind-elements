@@ -2,7 +2,6 @@
   <select class="form-select
     appearance-none
     block
-    w-full
     font-normal
     text-gray-700
     bg-white bg-clip-padding bg-no-repeat
@@ -86,6 +85,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .form-select {
+    min-width: 150px;
+  }
 </style>

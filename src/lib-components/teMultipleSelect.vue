@@ -1,5 +1,5 @@
 <template>
-  <select v-model="currentValue" class="form-multiselect block w-full my-1" multiple :disabled="disabled">
+  <select v-model="currentValue" class="form-multiselect block my-1 min-w-fit" multiple :disabled="disabled">
     <option v-for="(option, key) in options" :key="key" :value="option[valueField]||option">
         {{option[displayField]||option}}
       </option>
@@ -61,5 +61,6 @@ export default {
     padding-left: 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
+    min-width: 150px;
   }
 </style>
