@@ -49,12 +49,46 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg my-2">Show a spinner globally</h1>
+    <te-button @click="showLoading">Show Loading</te-button>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-js">
+          showLoading() {
+            const loading = this.$showLoading({
+              text: 'Loading...',
+              size: 'large',
+              type: 'normal', // 'growing'
+              timeout: undefined, // number
+              color: 'primary' //normal, primary, secondary, success, warning, danger, pink, purple, light, dark
+            });
+            setTimeout(() => {
+              loading.close(); // you can close it manually or after a timeout
+            }, 1500);
+          }
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Spinner'
+  name: 'Spinner',
+  methods: {
+    showLoading() {
+      const loading = this.$showLoading({
+        text: 'Loading...',
+        size: 'large',
+        type: 'normal', // 'growing'
+        timeout: undefined, // number
+        color: 'purple'
+      });
+      setTimeout(() => {
+        loading.close();
+      }, 1500);
+    }
+  }
 }
 </script>
 
