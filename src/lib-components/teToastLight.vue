@@ -2,8 +2,8 @@
   <div
     class="
       flex
-      w-full
-      max-w-sm
+      w-96
+      max-w-full
       mx-auto
       overflow-hidden
       bg-white
