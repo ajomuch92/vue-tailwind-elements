@@ -3,6 +3,7 @@
 import * as components from '@/lib-components/index';
 import * as directives from '@/lib-components/directives/index';
 import showModal from './lib-components/modalProgrammatically';
+import showLoading from './lib-components/loading';
 
 // install function executed by Vue.use()
 const install = function installVueTailwindElements(Vue) {
@@ -15,6 +16,7 @@ const install = function installVueTailwindElements(Vue) {
   });
 
   Vue.prototype.$showModal = showModal;
+  Vue.prototype.$showLoading = showLoading;
 };
 
 // Create module definition for Vue.use()
