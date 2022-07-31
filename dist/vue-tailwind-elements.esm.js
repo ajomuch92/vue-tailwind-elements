@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 //
 //
 //
@@ -48,7 +50,7 @@
 //
 //
 //
-var script$z = {
+var script$B = {
   name: 'teAccordion',
   props: {
     items: {
@@ -209,10 +211,10 @@ function addStyle(id, css) {
 }
 
 /* script */
-const __vue_script__$z = script$z;
+const __vue_script__$B = script$B;
 /* template */
 
-var __vue_render__$z = function () {
+var __vue_render__$B = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -264,10 +266,10 @@ var __vue_render__$z = function () {
   }), 0);
 };
 
-var __vue_staticRenderFns__$z = [];
+var __vue_staticRenderFns__$B = [];
 /* style */
 
-const __vue_inject_styles__$z = function (inject) {
+const __vue_inject_styles__$B = function (inject) {
   if (!inject) return;
   inject("data-v-0ade1b63_0", {
     source: ".accordion-collapse[data-v-0ade1b63]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
@@ -278,23 +280,23 @@ const __vue_inject_styles__$z = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$z = "data-v-0ade1b63";
+const __vue_scope_id__$B = "data-v-0ade1b63";
 /* module identifier */
 
-const __vue_module_identifier__$z = undefined;
+const __vue_module_identifier__$B = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$z = false;
+const __vue_is_functional_template__$B = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$12 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$z,
-  staticRenderFns: __vue_staticRenderFns__$z
-}, __vue_inject_styles__$z, __vue_script__$z, __vue_scope_id__$z, __vue_is_functional_template__$z, __vue_module_identifier__$z, false, createInjector, undefined, undefined);
+const __vue_component__$11 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$B,
+  staticRenderFns: __vue_staticRenderFns__$B
+}, __vue_inject_styles__$B, __vue_script__$B, __vue_scope_id__$B, __vue_is_functional_template__$B, __vue_module_identifier__$B, false, createInjector, undefined, undefined);
 
-var __vue_component__$13 = __vue_component__$12;
+var __vue_component__$12 = __vue_component__$11;
 
 //
 //
@@ -315,7 +317,7 @@ var __vue_component__$13 = __vue_component__$12;
 //
 //
 //
-var script$y = {
+var script$A = {
   name: 'teAlert',
   props: {
     text: {
@@ -354,10 +356,10 @@ var script$y = {
 };
 
 /* script */
-const __vue_script__$y = script$y;
+const __vue_script__$A = script$A;
 /* template */
 
-var __vue_render__$y = function () {
+var __vue_render__$A = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -372,31 +374,31 @@ var __vue_render__$y = function () {
   })], 2);
 };
 
-var __vue_staticRenderFns__$y = [];
+var __vue_staticRenderFns__$A = [];
 /* style */
 
-const __vue_inject_styles__$y = undefined;
+const __vue_inject_styles__$A = undefined;
 /* scoped */
 
-const __vue_scope_id__$y = undefined;
+const __vue_scope_id__$A = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$y = undefined;
+const __vue_module_identifier__$A = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$y = false;
+const __vue_is_functional_template__$A = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$10 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$y,
-  staticRenderFns: __vue_staticRenderFns__$y
-}, __vue_inject_styles__$y, __vue_script__$y, __vue_scope_id__$y, __vue_is_functional_template__$y, __vue_module_identifier__$y, false, undefined, undefined, undefined);
+const __vue_component__$$ = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$A,
+  staticRenderFns: __vue_staticRenderFns__$A
+}, __vue_inject_styles__$A, __vue_script__$A, __vue_scope_id__$A, __vue_is_functional_template__$A, __vue_module_identifier__$A, false, undefined, undefined, undefined);
 
-var __vue_component__$11 = __vue_component__$10;
+var __vue_component__$10 = __vue_component__$$;
 
 //
 //
@@ -410,7 +412,7 @@ var __vue_component__$11 = __vue_component__$10;
 //
 //
 //
-var script$x = {
+var script$z = {
   name: 'teBadge',
   props: {
     text: {
@@ -478,10 +480,10 @@ var script$x = {
 };
 
 /* script */
-const __vue_script__$x = script$x;
+const __vue_script__$z = script$z;
 /* template */
 
-var __vue_render__$x = function () {
+var __vue_render__$z = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -494,31 +496,31 @@ var __vue_render__$x = function () {
   }, [_vm._v("\n  " + _vm._s(_vm.text) + "\n")]);
 };
 
-var __vue_staticRenderFns__$x = [];
+var __vue_staticRenderFns__$z = [];
 /* style */
 
-const __vue_inject_styles__$x = undefined;
+const __vue_inject_styles__$z = undefined;
 /* scoped */
 
-const __vue_scope_id__$x = undefined;
+const __vue_scope_id__$z = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$x = undefined;
+const __vue_module_identifier__$z = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$x = false;
+const __vue_is_functional_template__$z = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$_ = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$x,
-  staticRenderFns: __vue_staticRenderFns__$x
-}, __vue_inject_styles__$x, __vue_script__$x, __vue_scope_id__$x, __vue_is_functional_template__$x, __vue_module_identifier__$x, false, undefined, undefined, undefined);
+const __vue_component__$Z = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$z,
+  staticRenderFns: __vue_staticRenderFns__$z
+}, __vue_inject_styles__$z, __vue_script__$z, __vue_scope_id__$z, __vue_is_functional_template__$z, __vue_module_identifier__$z, false, undefined, undefined, undefined);
 
-var __vue_component__$$ = __vue_component__$_;
+var __vue_component__$_ = __vue_component__$Z;
 
 //
 //
@@ -526,7 +528,7 @@ var __vue_component__$$ = __vue_component__$_;
 //
 //
 //
-var script$w = {
+var script$y = {
   name: 'teSpinner',
   props: {
     type: {
@@ -580,10 +582,10 @@ var script$w = {
 };
 
 /* script */
-const __vue_script__$w = script$w;
+const __vue_script__$y = script$y;
 /* template */
 
-var __vue_render__$w = function () {
+var __vue_render__$y = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -601,37 +603,37 @@ var __vue_render__$w = function () {
   }, [_vm._v("Loading...")])]);
 };
 
-var __vue_staticRenderFns__$w = [];
+var __vue_staticRenderFns__$y = [];
 /* style */
 
-const __vue_inject_styles__$w = undefined;
+const __vue_inject_styles__$y = undefined;
 /* scoped */
 
-const __vue_scope_id__$w = undefined;
+const __vue_scope_id__$y = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$w = undefined;
+const __vue_module_identifier__$y = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$w = false;
+const __vue_is_functional_template__$y = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$Z = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$w,
-  staticRenderFns: __vue_staticRenderFns__$w
-}, __vue_inject_styles__$w, __vue_script__$w, __vue_scope_id__$w, __vue_is_functional_template__$w, __vue_module_identifier__$w, false, undefined, undefined, undefined);
+const __vue_component__$Y = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$y,
+  staticRenderFns: __vue_staticRenderFns__$y
+}, __vue_inject_styles__$y, __vue_script__$y, __vue_scope_id__$y, __vue_is_functional_template__$y, __vue_module_identifier__$y, false, undefined, undefined, undefined);
 
-var TeSpinner = __vue_component__$Z;
+var teSpinner = __vue_component__$Y;
 
 //
-var script$v = {
+var script$x = {
   name: 'teButton',
   components: {
-    teSpinner: TeSpinner
+    teSpinner
   },
   props: {
     type: {
@@ -769,10 +771,10 @@ var script$v = {
 };
 
 /* script */
-const __vue_script__$v = script$v;
+const __vue_script__$x = script$x;
 /* template */
 
-var __vue_render__$v = function () {
+var __vue_render__$x = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -802,10 +804,10 @@ var __vue_render__$v = function () {
   }) : _vm._e()], 2);
 };
 
-var __vue_staticRenderFns__$v = [];
+var __vue_staticRenderFns__$x = [];
 /* style */
 
-const __vue_inject_styles__$v = function (inject) {
+const __vue_inject_styles__$x = function (inject) {
   if (!inject) return;
   inject("data-v-096b4f7f_0", {
     source: "span.ripple[data-v-096b4f7f]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-096b4f7f .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-096b4f7f{to{transform:scale(4);opacity:0}}",
@@ -816,26 +818,26 @@ const __vue_inject_styles__$v = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$v = "data-v-096b4f7f";
+const __vue_scope_id__$x = "data-v-096b4f7f";
 /* module identifier */
 
-const __vue_module_identifier__$v = undefined;
+const __vue_module_identifier__$x = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$v = false;
+const __vue_is_functional_template__$x = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$Y = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$v,
-  staticRenderFns: __vue_staticRenderFns__$v
-}, __vue_inject_styles__$v, __vue_script__$v, __vue_scope_id__$v, __vue_is_functional_template__$v, __vue_module_identifier__$v, false, createInjector, undefined, undefined);
+const __vue_component__$X = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$x,
+  staticRenderFns: __vue_staticRenderFns__$x
+}, __vue_inject_styles__$x, __vue_script__$x, __vue_scope_id__$x, __vue_is_functional_template__$x, __vue_module_identifier__$x, false, createInjector, undefined, undefined);
 
-var teButton = __vue_component__$Y;
+var teButton = __vue_component__$X;
 
 //
-var script$u = {
+var script$w = {
   name: 'teButtonGroup',
   components: {
     teButton
@@ -867,10 +869,10 @@ var script$u = {
 };
 
 /* script */
-const __vue_script__$u = script$u;
+const __vue_script__$w = script$w;
 /* template */
 
-var __vue_render__$u = function () {
+var __vue_render__$w = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -907,31 +909,31 @@ var __vue_render__$u = function () {
   }), 1);
 };
 
-var __vue_staticRenderFns__$u = [];
+var __vue_staticRenderFns__$w = [];
 /* style */
 
-const __vue_inject_styles__$u = undefined;
+const __vue_inject_styles__$w = undefined;
 /* scoped */
 
-const __vue_scope_id__$u = undefined;
+const __vue_scope_id__$w = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$u = undefined;
+const __vue_module_identifier__$w = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$u = false;
+const __vue_is_functional_template__$w = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$W = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$u,
-  staticRenderFns: __vue_staticRenderFns__$u
-}, __vue_inject_styles__$u, __vue_script__$u, __vue_scope_id__$u, __vue_is_functional_template__$u, __vue_module_identifier__$u, false, undefined, undefined, undefined);
+const __vue_component__$V = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$w,
+  staticRenderFns: __vue_staticRenderFns__$w
+}, __vue_inject_styles__$w, __vue_script__$w, __vue_scope_id__$w, __vue_is_functional_template__$w, __vue_module_identifier__$w, false, undefined, undefined, undefined);
 
-var __vue_component__$X = __vue_component__$W;
+var __vue_component__$W = __vue_component__$V;
 
 //
 //
@@ -954,7 +956,7 @@ var __vue_component__$X = __vue_component__$W;
 //
 //
 //
-var script$t = {
+var script$v = {
   name: 'teCard',
   props: {
     imgSrc: {
@@ -993,10 +995,10 @@ var script$t = {
 };
 
 /* script */
-const __vue_script__$t = script$t;
+const __vue_script__$v = script$v;
 /* template */
 
-var __vue_render__$t = function () {
+var __vue_render__$v = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1028,31 +1030,31 @@ var __vue_render__$t = function () {
   }, [_vm._t("footer")], 2) : _vm._e()]);
 };
 
-var __vue_staticRenderFns__$t = [];
+var __vue_staticRenderFns__$v = [];
 /* style */
 
-const __vue_inject_styles__$t = undefined;
+const __vue_inject_styles__$v = undefined;
 /* scoped */
 
-const __vue_scope_id__$t = undefined;
+const __vue_scope_id__$v = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$t = undefined;
+const __vue_module_identifier__$v = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$t = false;
+const __vue_is_functional_template__$v = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$U = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$t,
-  staticRenderFns: __vue_staticRenderFns__$t
-}, __vue_inject_styles__$t, __vue_script__$t, __vue_scope_id__$t, __vue_is_functional_template__$t, __vue_module_identifier__$t, false, undefined, undefined, undefined);
+const __vue_component__$T = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$v,
+  staticRenderFns: __vue_staticRenderFns__$v
+}, __vue_inject_styles__$v, __vue_script__$v, __vue_scope_id__$v, __vue_is_functional_template__$v, __vue_module_identifier__$v, false, undefined, undefined, undefined);
 
-var __vue_component__$V = __vue_component__$U;
+var __vue_component__$U = __vue_component__$T;
 
 //
 //
@@ -1065,7 +1067,7 @@ var __vue_component__$V = __vue_component__$U;
 //
 //
 //
-var script$s = {
+var script$u = {
   name: 'teCheckbox',
   props: {
     value: {
@@ -1102,10 +1104,10 @@ var script$s = {
 };
 
 /* script */
-const __vue_script__$s = script$s;
+const __vue_script__$u = script$u;
 /* template */
 
-var __vue_render__$s = function () {
+var __vue_render__$u = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1161,31 +1163,31 @@ var __vue_render__$s = function () {
   })], 2)]);
 };
 
-var __vue_staticRenderFns__$s = [];
+var __vue_staticRenderFns__$u = [];
 /* style */
 
-const __vue_inject_styles__$s = undefined;
+const __vue_inject_styles__$u = undefined;
 /* scoped */
 
-const __vue_scope_id__$s = undefined;
+const __vue_scope_id__$u = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$s = undefined;
+const __vue_module_identifier__$u = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$s = false;
+const __vue_is_functional_template__$u = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$S = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$s,
-  staticRenderFns: __vue_staticRenderFns__$s
-}, __vue_inject_styles__$s, __vue_script__$s, __vue_scope_id__$s, __vue_is_functional_template__$s, __vue_module_identifier__$s, false, undefined, undefined, undefined);
+const __vue_component__$R = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$u,
+  staticRenderFns: __vue_staticRenderFns__$u
+}, __vue_inject_styles__$u, __vue_script__$u, __vue_scope_id__$u, __vue_is_functional_template__$u, __vue_module_identifier__$u, false, undefined, undefined, undefined);
 
-var __vue_component__$T = __vue_component__$S;
+var __vue_component__$S = __vue_component__$R;
 
 //
 //
@@ -1198,7 +1200,7 @@ var __vue_component__$T = __vue_component__$S;
 //
 //
 //
-var script$r = {
+var script$t = {
   name: 'teSwitch',
   props: {
     value: {
@@ -1235,10 +1237,10 @@ var script$r = {
 };
 
 /* script */
-const __vue_script__$r = script$r;
+const __vue_script__$t = script$t;
 /* template */
 
-var __vue_render__$r = function () {
+var __vue_render__$t = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1294,31 +1296,31 @@ var __vue_render__$r = function () {
   })], 2)]);
 };
 
-var __vue_staticRenderFns__$r = [];
+var __vue_staticRenderFns__$t = [];
 /* style */
 
-const __vue_inject_styles__$r = undefined;
+const __vue_inject_styles__$t = undefined;
 /* scoped */
 
-const __vue_scope_id__$r = undefined;
+const __vue_scope_id__$t = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$r = undefined;
+const __vue_module_identifier__$t = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$r = false;
+const __vue_is_functional_template__$t = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$Q = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$r,
-  staticRenderFns: __vue_staticRenderFns__$r
-}, __vue_inject_styles__$r, __vue_script__$r, __vue_scope_id__$r, __vue_is_functional_template__$r, __vue_module_identifier__$r, false, undefined, undefined, undefined);
+const __vue_component__$P = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$t,
+  staticRenderFns: __vue_staticRenderFns__$t
+}, __vue_inject_styles__$t, __vue_script__$t, __vue_scope_id__$t, __vue_is_functional_template__$t, __vue_module_identifier__$t, false, undefined, undefined, undefined);
 
-var __vue_component__$R = __vue_component__$Q;
+var __vue_component__$Q = __vue_component__$P;
 
 //
 //
@@ -1331,7 +1333,7 @@ var __vue_component__$R = __vue_component__$Q;
 //
 //
 //
-var script$q = {
+var script$s = {
   name: 'teRadio',
   props: {
     idInput: {
@@ -1372,10 +1374,10 @@ var script$q = {
 };
 
 /* script */
-const __vue_script__$q = script$q;
+const __vue_script__$s = script$s;
 /* template */
 
-var __vue_render__$q = function () {
+var __vue_render__$s = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1416,31 +1418,31 @@ var __vue_render__$q = function () {
   })], 2)]);
 };
 
-var __vue_staticRenderFns__$q = [];
+var __vue_staticRenderFns__$s = [];
 /* style */
 
-const __vue_inject_styles__$q = undefined;
+const __vue_inject_styles__$s = undefined;
 /* scoped */
 
-const __vue_scope_id__$q = undefined;
+const __vue_scope_id__$s = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$q = undefined;
+const __vue_module_identifier__$s = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$q = false;
+const __vue_is_functional_template__$s = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$O = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$q,
-  staticRenderFns: __vue_staticRenderFns__$q
-}, __vue_inject_styles__$q, __vue_script__$q, __vue_scope_id__$q, __vue_is_functional_template__$q, __vue_module_identifier__$q, false, undefined, undefined, undefined);
+const __vue_component__$N = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$s,
+  staticRenderFns: __vue_staticRenderFns__$s
+}, __vue_inject_styles__$s, __vue_script__$s, __vue_scope_id__$s, __vue_is_functional_template__$s, __vue_module_identifier__$s, false, undefined, undefined, undefined);
 
-var __vue_component__$P = __vue_component__$O;
+var __vue_component__$O = __vue_component__$N;
 
 //
 //
@@ -1469,8 +1471,7 @@ var __vue_component__$P = __vue_component__$O;
 //
 //
 //
-//
-var script$p = {
+var script$r = {
   name: 'teSelect',
   props: {
     value: {
@@ -1534,10 +1535,10 @@ var script$p = {
 };
 
 /* script */
-const __vue_script__$p = script$p;
+const __vue_script__$r = script$r;
 /* template */
 
-var __vue_render__$p = function () {
+var __vue_render__$r = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1551,7 +1552,7 @@ var __vue_render__$p = function () {
       value: _vm.currentValue,
       expression: "currentValue"
     }],
-    staticClass: "form-select\n  appearance-none\n  block\n  w-full\n  font-normal\n  text-gray-700\n  bg-white bg-clip-padding bg-no-repeat\n  border border-solid border-gray-300\n  rounded\n  transition\n  ease-in-out\n  m-0\n  focus:text-gray-700\n  focus:bg-white\n  focus:border-blue-600\n  focus:outline-none",
+    staticClass: "form-select\n  appearance-none\n  block\n  font-normal\n  text-gray-700\n  bg-white bg-clip-padding bg-no-repeat\n  border border-solid border-gray-300\n  rounded\n  transition\n  ease-in-out\n  m-0\n  focus:text-gray-700\n  focus:bg-white\n  focus:border-blue-600\n  focus:outline-none",
     class: _vm.sizeClass,
     attrs: {
       "disabled": _vm.disabled
@@ -1583,31 +1584,37 @@ var __vue_render__$p = function () {
   })], 2);
 };
 
-var __vue_staticRenderFns__$p = [];
+var __vue_staticRenderFns__$r = [];
 /* style */
 
-const __vue_inject_styles__$p = undefined;
+const __vue_inject_styles__$r = function (inject) {
+  if (!inject) return;
+  inject("data-v-0444a6c2_0", {
+    source: ".form-select[data-v-0444a6c2]{min-width:150px}",
+    map: undefined,
+    media: undefined
+  });
+};
 /* scoped */
 
-const __vue_scope_id__$p = undefined;
+
+const __vue_scope_id__$r = "data-v-0444a6c2";
 /* module identifier */
 
-const __vue_module_identifier__$p = undefined;
+const __vue_module_identifier__$r = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$p = false;
-/* style inject */
-
+const __vue_is_functional_template__$r = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$M = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$p,
-  staticRenderFns: __vue_staticRenderFns__$p
-}, __vue_inject_styles__$p, __vue_script__$p, __vue_scope_id__$p, __vue_is_functional_template__$p, __vue_module_identifier__$p, false, undefined, undefined, undefined);
+const __vue_component__$L = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$r,
+  staticRenderFns: __vue_staticRenderFns__$r
+}, __vue_inject_styles__$r, __vue_script__$r, __vue_scope_id__$r, __vue_is_functional_template__$r, __vue_module_identifier__$r, false, createInjector, undefined, undefined);
 
-var __vue_component__$N = __vue_component__$M;
+var __vue_component__$M = __vue_component__$L;
 
 //
 //
@@ -1617,7 +1624,7 @@ var __vue_component__$N = __vue_component__$M;
 //
 //
 //
-var script$o = {
+var script$q = {
   name: 'teMultipleSelect',
   props: {
     value: {
@@ -1662,10 +1669,10 @@ var script$o = {
 };
 
 /* script */
-const __vue_script__$o = script$o;
+const __vue_script__$q = script$q;
 /* template */
 
-var __vue_render__$o = function () {
+var __vue_render__$q = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1679,7 +1686,7 @@ var __vue_render__$o = function () {
       value: _vm.currentValue,
       expression: "currentValue"
     }],
-    staticClass: "form-multiselect block w-full my-1",
+    staticClass: "form-multiselect block my-1 min-w-fit",
     attrs: {
       "multiple": "",
       "disabled": _vm.disabled
@@ -1705,13 +1712,13 @@ var __vue_render__$o = function () {
   }), 0);
 };
 
-var __vue_staticRenderFns__$o = [];
+var __vue_staticRenderFns__$q = [];
 /* style */
 
-const __vue_inject_styles__$o = function (inject) {
+const __vue_inject_styles__$q = function (inject) {
   if (!inject) return;
-  inject("data-v-145af42a_0", {
-    source: ".form-multiselect[data-v-145af42a]{appearance:none;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem;padding-top:.5rem;padding-right:.75rem;padding-bottom:.5rem;padding-left:.75rem;font-size:1rem;line-height:1.5}",
+  inject("data-v-7cd4c472_0", {
+    source: ".form-multiselect[data-v-7cd4c472]{appearance:none;background-color:#fff;border-color:#e2e8f0;border-width:1px;border-radius:.25rem;padding-top:.5rem;padding-right:.75rem;padding-bottom:.5rem;padding-left:.75rem;font-size:1rem;line-height:1.5;min-width:150px}",
     map: undefined,
     media: undefined
   });
@@ -1719,23 +1726,23 @@ const __vue_inject_styles__$o = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$o = "data-v-145af42a";
+const __vue_scope_id__$q = "data-v-7cd4c472";
 /* module identifier */
 
-const __vue_module_identifier__$o = undefined;
+const __vue_module_identifier__$q = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$o = false;
+const __vue_is_functional_template__$q = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$K = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$o,
-  staticRenderFns: __vue_staticRenderFns__$o
-}, __vue_inject_styles__$o, __vue_script__$o, __vue_scope_id__$o, __vue_is_functional_template__$o, __vue_module_identifier__$o, false, createInjector, undefined, undefined);
+const __vue_component__$J = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$q,
+  staticRenderFns: __vue_staticRenderFns__$q
+}, __vue_inject_styles__$q, __vue_script__$q, __vue_scope_id__$q, __vue_is_functional_template__$q, __vue_module_identifier__$q, false, createInjector, undefined, undefined);
 
-var __vue_component__$L = __vue_component__$K;
+var __vue_component__$K = __vue_component__$J;
 
 //
 //
@@ -1751,7 +1758,7 @@ var __vue_component__$L = __vue_component__$K;
 //
 //
 //
-var script$n = {
+var script$p = {
   name: 'teBreadcrumb',
   props: {
     options: {
@@ -1766,10 +1773,10 @@ var script$n = {
 };
 
 /* script */
-const __vue_script__$n = script$n;
+const __vue_script__$p = script$p;
 /* template */
 
-var __vue_render__$n = function () {
+var __vue_render__$p = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1799,31 +1806,31 @@ var __vue_render__$n = function () {
   })], 2)]);
 };
 
-var __vue_staticRenderFns__$n = [];
+var __vue_staticRenderFns__$p = [];
 /* style */
 
-const __vue_inject_styles__$n = undefined;
+const __vue_inject_styles__$p = undefined;
 /* scoped */
 
-const __vue_scope_id__$n = undefined;
+const __vue_scope_id__$p = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$n = undefined;
+const __vue_module_identifier__$p = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$n = false;
+const __vue_is_functional_template__$p = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$I = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$n,
-  staticRenderFns: __vue_staticRenderFns__$n
-}, __vue_inject_styles__$n, __vue_script__$n, __vue_scope_id__$n, __vue_is_functional_template__$n, __vue_module_identifier__$n, false, undefined, undefined, undefined);
+const __vue_component__$H = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$p,
+  staticRenderFns: __vue_staticRenderFns__$p
+}, __vue_inject_styles__$p, __vue_script__$p, __vue_scope_id__$p, __vue_is_functional_template__$p, __vue_module_identifier__$p, false, undefined, undefined, undefined);
 
-var __vue_component__$J = __vue_component__$I;
+var __vue_component__$I = __vue_component__$H;
 
 var EventMixin = {
   methods: {
@@ -1859,7 +1866,7 @@ var EventMixin = {
 };
 
 //
-var script$m = {
+var script$o = {
   name: 'teTextarea',
   mixins: [EventMixin],
   props: {
@@ -1905,10 +1912,10 @@ var script$m = {
 };
 
 /* script */
-const __vue_script__$m = script$m;
+const __vue_script__$o = script$o;
 /* template */
 
-var __vue_render__$m = function () {
+var __vue_render__$o = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -1950,37 +1957,37 @@ var __vue_render__$m = function () {
   });
 };
 
-var __vue_staticRenderFns__$m = [];
+var __vue_staticRenderFns__$o = [];
 /* style */
 
-const __vue_inject_styles__$m = undefined;
+const __vue_inject_styles__$o = undefined;
 /* scoped */
 
-const __vue_scope_id__$m = undefined;
+const __vue_scope_id__$o = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$m = undefined;
+const __vue_module_identifier__$o = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$m = false;
+const __vue_is_functional_template__$o = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$G = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$m,
-  staticRenderFns: __vue_staticRenderFns__$m
-}, __vue_inject_styles__$m, __vue_script__$m, __vue_scope_id__$m, __vue_is_functional_template__$m, __vue_module_identifier__$m, false, undefined, undefined, undefined);
+const __vue_component__$F = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$o,
+  staticRenderFns: __vue_staticRenderFns__$o
+}, __vue_inject_styles__$o, __vue_script__$o, __vue_scope_id__$o, __vue_is_functional_template__$o, __vue_module_identifier__$o, false, undefined, undefined, undefined);
 
-var __vue_component__$H = __vue_component__$G;
+var __vue_component__$G = __vue_component__$F;
 
 //
 //
 //
 //
-var script$l = {
+var script$n = {
   name: 'teIcon',
   props: {
     name: {
@@ -2003,10 +2010,10 @@ var script$l = {
 };
 
 /* script */
-const __vue_script__$l = script$l;
+const __vue_script__$n = script$n;
 /* template */
 
-var __vue_render__$l = function () {
+var __vue_render__$n = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -2019,34 +2026,34 @@ var __vue_render__$l = function () {
   });
 };
 
-var __vue_staticRenderFns__$l = [];
+var __vue_staticRenderFns__$n = [];
 /* style */
 
-const __vue_inject_styles__$l = undefined;
+const __vue_inject_styles__$n = undefined;
 /* scoped */
 
-const __vue_scope_id__$l = undefined;
+const __vue_scope_id__$n = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$l = undefined;
+const __vue_module_identifier__$n = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$l = false;
+const __vue_is_functional_template__$n = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$F = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$l,
-  staticRenderFns: __vue_staticRenderFns__$l
-}, __vue_inject_styles__$l, __vue_script__$l, __vue_scope_id__$l, __vue_is_functional_template__$l, __vue_module_identifier__$l, false, undefined, undefined, undefined);
+const __vue_component__$E = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$n,
+  staticRenderFns: __vue_staticRenderFns__$n
+}, __vue_inject_styles__$n, __vue_script__$n, __vue_scope_id__$n, __vue_is_functional_template__$n, __vue_module_identifier__$n, false, undefined, undefined, undefined);
 
-var teIcon = __vue_component__$F;
+var teIcon = __vue_component__$E;
 
 //
-var script$k = {
+var script$m = {
   name: 'teInput',
   components: {
     teIcon
@@ -2208,10 +2215,10 @@ var script$k = {
 };
 
 /* script */
-const __vue_script__$k = script$k;
+const __vue_script__$m = script$m;
 /* template */
 
-var __vue_render__$k = function () {
+var __vue_render__$m = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -2360,10 +2367,10 @@ var __vue_render__$k = function () {
   }, [_vm._v(_vm._s(_vm.helperText))]) : _vm._e()]);
 };
 
-var __vue_staticRenderFns__$k = [];
+var __vue_staticRenderFns__$m = [];
 /* style */
 
-const __vue_inject_styles__$k = function (inject) {
+const __vue_inject_styles__$m = function (inject) {
   if (!inject) return;
   inject("data-v-5add6e46_0", {
     source: ".form-control.invalid[data-v-5add6e46]{box-shadow:none!important}.translate-y-1\\/2[data-v-5add6e46]{transform:translateY(-50%)}",
@@ -2374,23 +2381,23 @@ const __vue_inject_styles__$k = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$k = "data-v-5add6e46";
+const __vue_scope_id__$m = "data-v-5add6e46";
 /* module identifier */
 
-const __vue_module_identifier__$k = undefined;
+const __vue_module_identifier__$m = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$k = false;
+const __vue_is_functional_template__$m = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$D = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$k,
-  staticRenderFns: __vue_staticRenderFns__$k
-}, __vue_inject_styles__$k, __vue_script__$k, __vue_scope_id__$k, __vue_is_functional_template__$k, __vue_module_identifier__$k, false, createInjector, undefined, undefined);
+const __vue_component__$C = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$m,
+  staticRenderFns: __vue_staticRenderFns__$m
+}, __vue_inject_styles__$m, __vue_script__$m, __vue_scope_id__$m, __vue_is_functional_template__$m, __vue_module_identifier__$m, false, createInjector, undefined, undefined);
 
-var __vue_component__$E = __vue_component__$D;
+var __vue_component__$D = __vue_component__$C;
 
 const events = ['click'];
 
@@ -2486,7 +2493,7 @@ const clickOutside = {
 var clickOutside$1 = clickOutside;
 
 //
-var script$j = {
+var script$l = {
   name: 'teDatePicker',
   directives: {
     'click-outside': clickOutside$1
@@ -2690,10 +2697,10 @@ var script$j = {
 };
 
 /* script */
-const __vue_script__$j = script$j;
+const __vue_script__$l = script$l;
 /* template */
 
-var __vue_render__$j = function () {
+var __vue_render__$l = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -2931,31 +2938,31 @@ var __vue_render__$j = function () {
   })], 2)])], 2)]);
 };
 
-var __vue_staticRenderFns__$j = [];
+var __vue_staticRenderFns__$l = [];
 /* style */
 
-const __vue_inject_styles__$j = undefined;
+const __vue_inject_styles__$l = undefined;
 /* scoped */
 
-const __vue_scope_id__$j = undefined;
+const __vue_scope_id__$l = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$j = undefined;
+const __vue_module_identifier__$l = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$j = false;
+const __vue_is_functional_template__$l = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$B = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$j,
-  staticRenderFns: __vue_staticRenderFns__$j
-}, __vue_inject_styles__$j, __vue_script__$j, __vue_scope_id__$j, __vue_is_functional_template__$j, __vue_module_identifier__$j, false, undefined, undefined, undefined);
+const __vue_component__$A = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$l,
+  staticRenderFns: __vue_staticRenderFns__$l
+}, __vue_inject_styles__$l, __vue_script__$l, __vue_scope_id__$l, __vue_is_functional_template__$l, __vue_module_identifier__$l, false, undefined, undefined, undefined);
 
-var __vue_component__$C = __vue_component__$B;
+var __vue_component__$B = __vue_component__$A;
 
 //
 //
@@ -2996,7 +3003,7 @@ var __vue_component__$C = __vue_component__$B;
 //
 //
 //
-var script$i = {
+var script$k = {
   name: 'teTimePicker',
   props: {
     value: {
@@ -3081,10 +3088,10 @@ var script$i = {
 };
 
 /* script */
-const __vue_script__$i = script$i;
+const __vue_script__$k = script$k;
 /* template */
 
-var __vue_render__$i = function () {
+var __vue_render__$k = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -3224,31 +3231,31 @@ var __vue_render__$i = function () {
   }, [_vm._v("PM")])]) : _vm._e()])]);
 };
 
-var __vue_staticRenderFns__$i = [];
+var __vue_staticRenderFns__$k = [];
 /* style */
 
-const __vue_inject_styles__$i = undefined;
+const __vue_inject_styles__$k = undefined;
 /* scoped */
 
-const __vue_scope_id__$i = undefined;
+const __vue_scope_id__$k = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$i = undefined;
+const __vue_module_identifier__$k = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$i = false;
+const __vue_is_functional_template__$k = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$z = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$i,
-  staticRenderFns: __vue_staticRenderFns__$i
-}, __vue_inject_styles__$i, __vue_script__$i, __vue_scope_id__$i, __vue_is_functional_template__$i, __vue_module_identifier__$i, false, undefined, undefined, undefined);
+const __vue_component__$y = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$k,
+  staticRenderFns: __vue_staticRenderFns__$k
+}, __vue_inject_styles__$k, __vue_script__$k, __vue_scope_id__$k, __vue_is_functional_template__$k, __vue_module_identifier__$k, false, undefined, undefined, undefined);
 
-var __vue_component__$A = __vue_component__$z;
+var __vue_component__$z = __vue_component__$y;
 
 //
 //
@@ -3270,7 +3277,7 @@ var __vue_component__$A = __vue_component__$z;
 //
 //
 //
-var script$h = {
+var script$j = {
   name: 'teRange',
   props: {
     value: {
@@ -3315,10 +3322,10 @@ var script$h = {
 };
 
 /* script */
-const __vue_script__$h = script$h;
+const __vue_script__$j = script$j;
 /* template */
 
-var __vue_render__$h = function () {
+var __vue_render__$j = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -3357,31 +3364,31 @@ var __vue_render__$h = function () {
   });
 };
 
-var __vue_staticRenderFns__$h = [];
+var __vue_staticRenderFns__$j = [];
 /* style */
 
-const __vue_inject_styles__$h = undefined;
+const __vue_inject_styles__$j = undefined;
 /* scoped */
 
-const __vue_scope_id__$h = undefined;
+const __vue_scope_id__$j = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$h = undefined;
+const __vue_module_identifier__$j = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$h = false;
+const __vue_is_functional_template__$j = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$x = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$h,
-  staticRenderFns: __vue_staticRenderFns__$h
-}, __vue_inject_styles__$h, __vue_script__$h, __vue_scope_id__$h, __vue_is_functional_template__$h, __vue_module_identifier__$h, false, undefined, undefined, undefined);
+const __vue_component__$w = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$j,
+  staticRenderFns: __vue_staticRenderFns__$j
+}, __vue_inject_styles__$j, __vue_script__$j, __vue_scope_id__$j, __vue_is_functional_template__$j, __vue_module_identifier__$j, false, undefined, undefined, undefined);
 
-var __vue_component__$y = __vue_component__$x;
+var __vue_component__$x = __vue_component__$w;
 
 //
 //
@@ -3391,7 +3398,7 @@ var __vue_component__$y = __vue_component__$x;
 //
 //
 //
-var script$g = {
+var script$i = {
   name: 'teProgress',
   props: {
     value: {
@@ -3441,10 +3448,10 @@ var script$g = {
 };
 
 /* script */
-const __vue_script__$g = script$g;
+const __vue_script__$i = script$i;
 /* template */
 
-var __vue_render__$g = function () {
+var __vue_render__$i = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -3461,31 +3468,31 @@ var __vue_render__$g = function () {
   }, [_vm._v("\n    " + _vm._s(_vm.showValue && _vm.size === 'large' && _vm.value > 0 ? _vm.value + "%" : '') + "\n  ")])]);
 };
 
-var __vue_staticRenderFns__$g = [];
+var __vue_staticRenderFns__$i = [];
 /* style */
 
-const __vue_inject_styles__$g = undefined;
+const __vue_inject_styles__$i = undefined;
 /* scoped */
 
-const __vue_scope_id__$g = undefined;
+const __vue_scope_id__$i = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$g = undefined;
+const __vue_module_identifier__$i = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$g = false;
+const __vue_is_functional_template__$i = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$v = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$g,
-  staticRenderFns: __vue_staticRenderFns__$g
-}, __vue_inject_styles__$g, __vue_script__$g, __vue_scope_id__$g, __vue_is_functional_template__$g, __vue_module_identifier__$g, false, undefined, undefined, undefined);
+const __vue_component__$u = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$i,
+  staticRenderFns: __vue_staticRenderFns__$i
+}, __vue_inject_styles__$i, __vue_script__$i, __vue_scope_id__$i, __vue_is_functional_template__$i, __vue_module_identifier__$i, false, undefined, undefined, undefined);
 
-var __vue_component__$w = __vue_component__$v;
+var __vue_component__$v = __vue_component__$u;
 
 //
 //
@@ -3527,7 +3534,7 @@ var __vue_component__$w = __vue_component__$v;
 //
 //
 //
-var script$f = {
+var script$h = {
   name: 'teTabs',
   props: {
     value: {
@@ -3582,10 +3589,10 @@ var script$f = {
 };
 
 /* script */
-const __vue_script__$f = script$f;
+const __vue_script__$h = script$h;
 /* template */
 
-var __vue_render__$f = function () {
+var __vue_render__$h = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -3651,31 +3658,31 @@ var __vue_render__$f = function () {
   }), 0)]);
 };
 
-var __vue_staticRenderFns__$f = [];
+var __vue_staticRenderFns__$h = [];
 /* style */
 
-const __vue_inject_styles__$f = undefined;
+const __vue_inject_styles__$h = undefined;
 /* scoped */
 
-const __vue_scope_id__$f = undefined;
+const __vue_scope_id__$h = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$f = undefined;
+const __vue_module_identifier__$h = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$f = false;
+const __vue_is_functional_template__$h = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$t = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$f,
-  staticRenderFns: __vue_staticRenderFns__$f
-}, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);
+const __vue_component__$s = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$h,
+  staticRenderFns: __vue_staticRenderFns__$h
+}, __vue_inject_styles__$h, __vue_script__$h, __vue_scope_id__$h, __vue_is_functional_template__$h, __vue_module_identifier__$h, false, undefined, undefined, undefined);
 
-var __vue_component__$u = __vue_component__$t;
+var __vue_component__$t = __vue_component__$s;
 
 //
 //
@@ -3701,7 +3708,7 @@ var __vue_component__$u = __vue_component__$t;
 //
 //
 //
-var script$e = {
+var script$g = {
   name: 'teListGroup',
   props: {
     items: {
@@ -3750,10 +3757,10 @@ var script$e = {
 };
 
 /* script */
-const __vue_script__$e = script$e;
+const __vue_script__$g = script$g;
 /* template */
 
-var __vue_render__$e = function () {
+var __vue_render__$g = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -3789,34 +3796,34 @@ var __vue_render__$e = function () {
   }), 0);
 };
 
-var __vue_staticRenderFns__$e = [];
+var __vue_staticRenderFns__$g = [];
 /* style */
 
-const __vue_inject_styles__$e = undefined;
+const __vue_inject_styles__$g = undefined;
 /* scoped */
 
-const __vue_scope_id__$e = undefined;
+const __vue_scope_id__$g = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$e = undefined;
+const __vue_module_identifier__$g = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$e = false;
+const __vue_is_functional_template__$g = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$r = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$e,
-  staticRenderFns: __vue_staticRenderFns__$e
-}, __vue_inject_styles__$e, __vue_script__$e, __vue_scope_id__$e, __vue_is_functional_template__$e, __vue_module_identifier__$e, false, undefined, undefined, undefined);
+const __vue_component__$q = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$g,
+  staticRenderFns: __vue_staticRenderFns__$g
+}, __vue_inject_styles__$g, __vue_script__$g, __vue_scope_id__$g, __vue_is_functional_template__$g, __vue_module_identifier__$g, false, undefined, undefined, undefined);
 
-var __vue_component__$s = __vue_component__$r;
+var __vue_component__$r = __vue_component__$q;
 
 //
-var script$d = {
+var script$f = {
   name: 'teDropdown',
   components: {
     teButton
@@ -3868,10 +3875,10 @@ var script$d = {
 };
 
 /* script */
-const __vue_script__$d = script$d;
+const __vue_script__$f = script$f;
 /* template */
 
-var __vue_render__$d = function () {
+var __vue_render__$f = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -3944,31 +3951,31 @@ var __vue_render__$d = function () {
   }, [_vm._t("default")], 2)], 1);
 };
 
-var __vue_staticRenderFns__$d = [];
+var __vue_staticRenderFns__$f = [];
 /* style */
 
-const __vue_inject_styles__$d = undefined;
+const __vue_inject_styles__$f = undefined;
 /* scoped */
 
-const __vue_scope_id__$d = undefined;
+const __vue_scope_id__$f = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$d = undefined;
+const __vue_module_identifier__$f = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$d = false;
+const __vue_is_functional_template__$f = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$p = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$d,
-  staticRenderFns: __vue_staticRenderFns__$d
-}, __vue_inject_styles__$d, __vue_script__$d, __vue_scope_id__$d, __vue_is_functional_template__$d, __vue_module_identifier__$d, false, undefined, undefined, undefined);
+const __vue_component__$o = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$f,
+  staticRenderFns: __vue_staticRenderFns__$f
+}, __vue_inject_styles__$f, __vue_script__$f, __vue_scope_id__$f, __vue_is_functional_template__$f, __vue_module_identifier__$f, false, undefined, undefined, undefined);
 
-var __vue_component__$q = __vue_component__$p;
+var __vue_component__$p = __vue_component__$o;
 
 //
 //
@@ -3994,7 +4001,7 @@ var __vue_component__$q = __vue_component__$p;
 //
 //
 //
-var script$c = {
+var script$e = {
   name: 'teDropdownItem',
   props: {
     disabled: {
@@ -4005,10 +4012,10 @@ var script$c = {
 };
 
 /* script */
-const __vue_script__$c = script$c;
+const __vue_script__$e = script$e;
 /* template */
 
-var __vue_render__$c = function () {
+var __vue_render__$e = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -4029,31 +4036,31 @@ var __vue_render__$c = function () {
   }, [_vm._t("default")], 2)]);
 };
 
-var __vue_staticRenderFns__$c = [];
+var __vue_staticRenderFns__$e = [];
 /* style */
 
-const __vue_inject_styles__$c = undefined;
+const __vue_inject_styles__$e = undefined;
 /* scoped */
 
-const __vue_scope_id__$c = undefined;
+const __vue_scope_id__$e = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$c = undefined;
+const __vue_module_identifier__$e = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$c = false;
+const __vue_is_functional_template__$e = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$n = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$c,
-  staticRenderFns: __vue_staticRenderFns__$c
-}, __vue_inject_styles__$c, __vue_script__$c, __vue_scope_id__$c, __vue_is_functional_template__$c, __vue_module_identifier__$c, false, undefined, undefined, undefined);
+const __vue_component__$m = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$e,
+  staticRenderFns: __vue_staticRenderFns__$e
+}, __vue_inject_styles__$e, __vue_script__$e, __vue_scope_id__$e, __vue_is_functional_template__$e, __vue_module_identifier__$e, false, undefined, undefined, undefined);
 
-var __vue_component__$o = __vue_component__$n;
+var __vue_component__$n = __vue_component__$m;
 
 //
 //
@@ -4084,7 +4091,13 @@ var __vue_component__$o = __vue_component__$n;
 //
 //
 //
-var script$b = {
+//
+//
+//
+//
+//
+//
+var script$d = {
   name: 'teModal',
   props: {
     title: {
@@ -4119,10 +4132,14 @@ var script$b = {
       type: String,
       default: '',
       validator: value => ['', 'xl', 'lg', 'sm'].includes(value)
-    }
+    },
+    component: [Object, Function, String],
+    events: [Object],
+    props: [Object]
   },
   data: () => ({
-    backdrop: undefined
+    backdropVisible: false,
+    contentVisible: false
   }),
   computed: {
     sizeClass() {
@@ -4139,12 +4156,38 @@ var script$b = {
   watch: {
     visible(val) {
       if (val) {
-        this.backdrop = document.createElement('div');
-        this.backdrop.className = 'modal-backdrop fade show';
-        document.body.appendChild(this.backdrop);
+        this.backdropVisible = true;
+        setTimeout(() => {
+          this.contentVisible = true;
+        }, 100);
       } else {
-        document.body.removeChild(this.backdrop);
-        this.backdrop = undefined;
+        this.contentVisible = false;
+        setTimeout(() => {
+          this.backdropVisible = false;
+        }, 100);
+      }
+    },
+
+    backdropVisible(val) {
+      if (val) {
+        setTimeout(() => {
+          this.contentVisible = true;
+        }, 100);
+      }
+    }
+
+  },
+  methods: {
+    close() {
+      this.$emit('close');
+      this.$emit('update:visible', false);
+
+      if (this.component) {
+        this.contentVisible = false;
+        setTimeout(() => {
+          this.$destroy();
+          this.$el.parentNode.removeChild(this.$el);
+        }, 500);
       }
     }
 
@@ -4152,17 +4195,29 @@ var script$b = {
 };
 
 /* script */
-const __vue_script__$b = script$b;
+const __vue_script__$d = script$d;
 /* template */
 
-var __vue_render__$b = function () {
+var __vue_render__$d = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
 
   var _c = _vm._self._c || _h;
 
-  return _c('transition', {
+  return _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.backdropVisible,
+      expression: "backdropVisible"
+    }],
+    staticClass: "modal fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto modal-backdrop",
+    attrs: {
+      "tabindex": "-1",
+      "aria-hidden": "true"
+    }
+  }, [_c('transition', {
     attrs: {
       "name": "fade"
     }
@@ -4170,15 +4225,9 @@ var __vue_render__$b = function () {
     directives: [{
       name: "show",
       rawName: "v-show",
-      value: _vm.visible,
-      expression: "visible"
+      value: _vm.contentVisible,
+      expression: "contentVisible"
     }],
-    staticClass: "modal fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto",
-    attrs: {
-      "tabindex": "-1",
-      "aria-hidden": "true"
-    }
-  }, [_c('div', {
     staticClass: "modal-dialog relative w-auto pointer-events-none",
     class: Object.assign({}, {
       'modal-dialog-scrollable': _vm.scrollable,
@@ -4200,23 +4249,25 @@ var __vue_render__$b = function () {
     },
     on: {
       "click": function ($event) {
-        return _vm.$emit('update:visible', false);
+        return _vm.close();
       }
     }
   }) : _vm._e()], 2) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "modal-body relative p-4"
-  }, [_vm._t("default")], 2), _vm._v(" "), !_vm.hideFooter ? _c('div', {
+  }, [_vm.component ? _c(_vm.component, _vm._g(_vm._b({
+    tag: "component"
+  }, 'component', _vm.props, false), _vm.events)) : _vm._t("default")], 2), _vm._v(" "), !_vm.hideFooter ? _c('div', {
     staticClass: "modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md"
-  }, [_vm._t("footer")], 2) : _vm._e()])])])]);
+  }, [_vm._t("footer")], 2) : _vm._e()])])])], 1);
 };
 
-var __vue_staticRenderFns__$b = [];
+var __vue_staticRenderFns__$d = [];
 /* style */
 
-const __vue_inject_styles__$b = function (inject) {
+const __vue_inject_styles__$d = function (inject) {
   if (!inject) return;
-  inject("data-v-2a73e93f_0", {
-    source: ".fade-enter-active[data-v-2a73e93f],.fade-leave-active[data-v-2a73e93f]{transition:all .25s}.fade-enter[data-v-2a73e93f],.fade-leave-to[data-v-2a73e93f]{transform:translateY(-50px);opacity:0}",
+  inject("data-v-4cb4998d_0", {
+    source: ".modal-backdrop[data-v-4cb4998d]{background-color:rgba(0,0,0,.5)!important}.fade-enter-active[data-v-4cb4998d],.fade-leave-active[data-v-4cb4998d]{transition:all .25s}.fade-enter[data-v-4cb4998d],.fade-leave-to[data-v-4cb4998d]{transform:translateY(-50px);opacity:0}",
     map: undefined,
     media: undefined
   });
@@ -4224,23 +4275,23 @@ const __vue_inject_styles__$b = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$b = "data-v-2a73e93f";
+const __vue_scope_id__$d = "data-v-4cb4998d";
 /* module identifier */
 
-const __vue_module_identifier__$b = undefined;
+const __vue_module_identifier__$d = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$b = false;
+const __vue_is_functional_template__$d = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
 const __vue_component__$l = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$b,
-  staticRenderFns: __vue_staticRenderFns__$b
-}, __vue_inject_styles__$b, __vue_script__$b, __vue_scope_id__$b, __vue_is_functional_template__$b, __vue_module_identifier__$b, false, createInjector, undefined, undefined);
+  render: __vue_render__$d,
+  staticRenderFns: __vue_staticRenderFns__$d
+}, __vue_inject_styles__$d, __vue_script__$d, __vue_scope_id__$d, __vue_is_functional_template__$d, __vue_module_identifier__$d, false, createInjector, undefined, undefined);
 
-var __vue_component__$m = __vue_component__$l;
+var TeModal = __vue_component__$l;
 
 //
 //
@@ -4260,7 +4311,7 @@ var __vue_component__$m = __vue_component__$l;
 //
 //
 //
-var script$a = {
+var script$c = {
   name: 'teStepper',
   props: {
     steps: {
@@ -4336,10 +4387,10 @@ var script$a = {
 };
 
 /* script */
-const __vue_script__$a = script$a;
+const __vue_script__$c = script$c;
 /* template */
 
-var __vue_render__$a = function () {
+var __vue_render__$c = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -4371,19 +4422,19 @@ var __vue_render__$a = function () {
   }), 0);
 };
 
-var __vue_staticRenderFns__$a = [];
+var __vue_staticRenderFns__$c = [];
 /* style */
 
-const __vue_inject_styles__$a = undefined;
+const __vue_inject_styles__$c = undefined;
 /* scoped */
 
-const __vue_scope_id__$a = undefined;
+const __vue_scope_id__$c = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$a = undefined;
+const __vue_module_identifier__$c = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$a = false;
+const __vue_is_functional_template__$c = false;
 /* style inject */
 
 /* style inject SSR */
@@ -4391,9 +4442,9 @@ const __vue_is_functional_template__$a = false;
 /* style inject shadow dom */
 
 const __vue_component__$j = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$a,
-  staticRenderFns: __vue_staticRenderFns__$a
-}, __vue_inject_styles__$a, __vue_script__$a, __vue_scope_id__$a, __vue_is_functional_template__$a, __vue_module_identifier__$a, false, undefined, undefined, undefined);
+  render: __vue_render__$c,
+  staticRenderFns: __vue_staticRenderFns__$c
+}, __vue_inject_styles__$c, __vue_script__$c, __vue_scope_id__$c, __vue_is_functional_template__$c, __vue_module_identifier__$c, false, undefined, undefined, undefined);
 
 var __vue_component__$k = __vue_component__$j;
 
@@ -4428,7 +4479,7 @@ var __vue_component__$k = __vue_component__$j;
 //
 //
 //
-var script$9 = {
+var script$b = {
   name: 'teToast',
   props: {
     title: {
@@ -4492,10 +4543,10 @@ var script$9 = {
 };
 
 /* script */
-const __vue_script__$9 = script$9;
+const __vue_script__$b = script$b;
 /* template */
 
-var __vue_render__$9 = function () {
+var __vue_render__$b = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -4605,31 +4656,31 @@ var __vue_render__$9 = function () {
   })], 2)]);
 };
 
-var __vue_staticRenderFns__$9 = [];
+var __vue_staticRenderFns__$b = [];
 /* style */
 
-const __vue_inject_styles__$9 = undefined;
+const __vue_inject_styles__$b = undefined;
 /* scoped */
 
-const __vue_scope_id__$9 = undefined;
+const __vue_scope_id__$b = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$9 = undefined;
+const __vue_module_identifier__$b = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$9 = false;
+const __vue_is_functional_template__$b = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$h = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$9,
-  staticRenderFns: __vue_staticRenderFns__$9
-}, __vue_inject_styles__$9, __vue_script__$9, __vue_scope_id__$9, __vue_is_functional_template__$9, __vue_module_identifier__$9, false, undefined, undefined, undefined);
+const __vue_component__$i = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$b,
+  staticRenderFns: __vue_staticRenderFns__$b
+}, __vue_inject_styles__$b, __vue_script__$b, __vue_scope_id__$b, __vue_is_functional_template__$b, __vue_module_identifier__$b, false, undefined, undefined, undefined);
 
-var __vue_component__$i = __vue_component__$h;
+var teToast = __vue_component__$i;
 
 //
 //
@@ -4674,7 +4725,7 @@ var __vue_component__$i = __vue_component__$h;
 //
 //
 //
-var script$8 = {
+var script$a = {
   name: 'tePagination',
   props: {
     pages: {
@@ -4805,10 +4856,10 @@ var script$8 = {
 };
 
 /* script */
-const __vue_script__$8 = script$8;
+const __vue_script__$a = script$a;
 /* template */
 
-var __vue_render__$8 = function () {
+var __vue_render__$a = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -4872,31 +4923,31 @@ var __vue_render__$8 = function () {
   }, [_vm._v("»")])])])], 2)])]);
 };
 
-var __vue_staticRenderFns__$8 = [];
+var __vue_staticRenderFns__$a = [];
 /* style */
 
-const __vue_inject_styles__$8 = undefined;
+const __vue_inject_styles__$a = undefined;
 /* scoped */
 
-const __vue_scope_id__$8 = undefined;
+const __vue_scope_id__$a = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$8 = undefined;
+const __vue_module_identifier__$a = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$8 = false;
+const __vue_is_functional_template__$a = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$g = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$8,
-  staticRenderFns: __vue_staticRenderFns__$8
-}, __vue_inject_styles__$8, __vue_script__$8, __vue_scope_id__$8, __vue_is_functional_template__$8, __vue_module_identifier__$8, false, undefined, undefined, undefined);
+const __vue_component__$h = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$a,
+  staticRenderFns: __vue_staticRenderFns__$a
+}, __vue_inject_styles__$a, __vue_script__$a, __vue_scope_id__$a, __vue_is_functional_template__$a, __vue_module_identifier__$a, false, undefined, undefined, undefined);
 
-var tePagination = __vue_component__$g;
+var tePagination = __vue_component__$h;
 
 //
 //
@@ -4939,7 +4990,7 @@ var tePagination = __vue_component__$g;
 //
 //
 //
-var script$7 = {
+var script$9 = {
   name: 'teNavbar',
   props: {
     hrefHeader: {
@@ -4954,10 +5005,10 @@ var script$7 = {
 };
 
 /* script */
-const __vue_script__$7 = script$7;
+const __vue_script__$9 = script$9;
 /* template */
 
-var __vue_render__$7 = function () {
+var __vue_render__$9 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -4983,31 +5034,31 @@ var __vue_render__$7 = function () {
   }, [_vm._t("right")], 2)]);
 };
 
-var __vue_staticRenderFns__$7 = [];
+var __vue_staticRenderFns__$9 = [];
 /* style */
 
-const __vue_inject_styles__$7 = undefined;
+const __vue_inject_styles__$9 = undefined;
 /* scoped */
 
-const __vue_scope_id__$7 = undefined;
+const __vue_scope_id__$9 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$7 = undefined;
+const __vue_module_identifier__$9 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$7 = false;
+const __vue_is_functional_template__$9 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$e = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$7,
-  staticRenderFns: __vue_staticRenderFns__$7
-}, __vue_inject_styles__$7, __vue_script__$7, __vue_scope_id__$7, __vue_is_functional_template__$7, __vue_module_identifier__$7, false, undefined, undefined, undefined);
+const __vue_component__$f = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$9,
+  staticRenderFns: __vue_staticRenderFns__$9
+}, __vue_inject_styles__$9, __vue_script__$9, __vue_scope_id__$9, __vue_is_functional_template__$9, __vue_module_identifier__$9, false, undefined, undefined, undefined);
 
-var __vue_component__$f = __vue_component__$e;
+var __vue_component__$g = __vue_component__$f;
 
 //
 //
@@ -5017,7 +5068,7 @@ var __vue_component__$f = __vue_component__$e;
 //
 //
 //
-var script$6 = {
+var script$8 = {
   name: 'teNavbarItem',
   props: {
     href: {
@@ -5041,10 +5092,10 @@ var script$6 = {
 };
 
 /* script */
-const __vue_script__$6 = script$6;
+const __vue_script__$8 = script$8;
 /* template */
 
-var __vue_render__$6 = function () {
+var __vue_render__$8 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -5062,38 +5113,38 @@ var __vue_render__$6 = function () {
   }, [_vm._t("default")], 2)]);
 };
 
-var __vue_staticRenderFns__$6 = [];
+var __vue_staticRenderFns__$8 = [];
 /* style */
 
-const __vue_inject_styles__$6 = undefined;
+const __vue_inject_styles__$8 = undefined;
 /* scoped */
 
-const __vue_scope_id__$6 = undefined;
+const __vue_scope_id__$8 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$6 = undefined;
+const __vue_module_identifier__$8 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$6 = false;
+const __vue_is_functional_template__$8 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$c = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$6,
-  staticRenderFns: __vue_staticRenderFns__$6
-}, __vue_inject_styles__$6, __vue_script__$6, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, undefined, undefined, undefined);
+const __vue_component__$d = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$8,
+  staticRenderFns: __vue_staticRenderFns__$8
+}, __vue_inject_styles__$8, __vue_script__$8, __vue_scope_id__$8, __vue_is_functional_template__$8, __vue_module_identifier__$8, false, undefined, undefined, undefined);
 
-var __vue_component__$d = __vue_component__$c;
+var __vue_component__$e = __vue_component__$d;
 
 //
-var script$5 = {
+var script$7 = {
   name: 'teTable',
   components: {
     tePagination,
-    TeSpinner
+    TeSpinner: teSpinner
   },
   props: {
     items: {
@@ -5250,10 +5301,10 @@ var script$5 = {
 };
 
 /* script */
-const __vue_script__$5 = script$5;
+const __vue_script__$7 = script$7;
 /* template */
 
-var __vue_render__$5 = function () {
+var __vue_render__$7 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -5353,31 +5404,31 @@ var __vue_render__$5 = function () {
   }) : _vm._e()], 1);
 };
 
-var __vue_staticRenderFns__$5 = [];
+var __vue_staticRenderFns__$7 = [];
 /* style */
 
-const __vue_inject_styles__$5 = undefined;
+const __vue_inject_styles__$7 = undefined;
 /* scoped */
 
-const __vue_scope_id__$5 = undefined;
+const __vue_scope_id__$7 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$5 = undefined;
+const __vue_module_identifier__$7 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$5 = false;
+const __vue_is_functional_template__$7 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$a = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$5,
-  staticRenderFns: __vue_staticRenderFns__$5
-}, __vue_inject_styles__$5, __vue_script__$5, __vue_scope_id__$5, __vue_is_functional_template__$5, __vue_module_identifier__$5, false, undefined, undefined, undefined);
+const __vue_component__$b = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$7,
+  staticRenderFns: __vue_staticRenderFns__$7
+}, __vue_inject_styles__$7, __vue_script__$7, __vue_scope_id__$7, __vue_is_functional_template__$7, __vue_module_identifier__$7, false, undefined, undefined, undefined);
 
-var __vue_component__$b = __vue_component__$a;
+var __vue_component__$c = __vue_component__$b;
 
 //
 //
@@ -5401,7 +5452,7 @@ var __vue_component__$b = __vue_component__$a;
 //
 //
 //
-var script$4 = {
+var script$6 = {
   name: 'teFile',
   props: {
     value: {
@@ -5471,10 +5522,10 @@ var script$4 = {
 };
 
 /* script */
-const __vue_script__$4 = script$4;
+const __vue_script__$6 = script$6;
 /* template */
 
-var __vue_render__$4 = function () {
+var __vue_render__$6 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -5496,31 +5547,31 @@ var __vue_render__$4 = function () {
   });
 };
 
-var __vue_staticRenderFns__$4 = [];
+var __vue_staticRenderFns__$6 = [];
 /* style */
 
-const __vue_inject_styles__$4 = undefined;
+const __vue_inject_styles__$6 = undefined;
 /* scoped */
 
-const __vue_scope_id__$4 = undefined;
+const __vue_scope_id__$6 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$4 = undefined;
+const __vue_module_identifier__$6 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$4 = false;
+const __vue_is_functional_template__$6 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$8 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$4,
-  staticRenderFns: __vue_staticRenderFns__$4
-}, __vue_inject_styles__$4, __vue_script__$4, __vue_scope_id__$4, __vue_is_functional_template__$4, __vue_module_identifier__$4, false, undefined, undefined, undefined);
+const __vue_component__$9 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$6,
+  staticRenderFns: __vue_staticRenderFns__$6
+}, __vue_inject_styles__$6, __vue_script__$6, __vue_scope_id__$6, __vue_is_functional_template__$6, __vue_module_identifier__$6, false, undefined, undefined, undefined);
 
-var __vue_component__$9 = __vue_component__$8;
+var __vue_component__$a = __vue_component__$9;
 
 //
 //
@@ -5549,7 +5600,7 @@ var __vue_component__$9 = __vue_component__$8;
 //
 //
 //
-var script$3 = {
+var script$5 = {
   name: 'teNotification',
   props: {
     text: {
@@ -5606,10 +5657,10 @@ var script$3 = {
 };
 
 /* script */
-const __vue_script__$3 = script$3;
+const __vue_script__$5 = script$5;
 /* template */
 
-var __vue_render__$3 = function () {
+var __vue_render__$5 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -5633,10 +5684,10 @@ var __vue_render__$3 = function () {
   }, [_vm._v("\n    " + _vm._s(_vm.text) + "\n  ")]), _vm._v(" "), _vm._t("default")], 2);
 };
 
-var __vue_staticRenderFns__$3 = [];
+var __vue_staticRenderFns__$5 = [];
 /* style */
 
-const __vue_inject_styles__$3 = function (inject) {
+const __vue_inject_styles__$5 = function (inject) {
   if (!inject) return;
   inject("data-v-420a79ae_0", {
     source: ".w-fit[data-v-420a79ae]{width:-moz-fit-content;width:fit-content}",
@@ -5647,26 +5698,26 @@ const __vue_inject_styles__$3 = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$3 = "data-v-420a79ae";
+const __vue_scope_id__$5 = "data-v-420a79ae";
 /* module identifier */
 
-const __vue_module_identifier__$3 = undefined;
+const __vue_module_identifier__$5 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$3 = false;
+const __vue_is_functional_template__$5 = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$6 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$3,
-  staticRenderFns: __vue_staticRenderFns__$3
-}, __vue_inject_styles__$3, __vue_script__$3, __vue_scope_id__$3, __vue_is_functional_template__$3, __vue_module_identifier__$3, false, createInjector, undefined, undefined);
+const __vue_component__$7 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$5,
+  staticRenderFns: __vue_staticRenderFns__$5
+}, __vue_inject_styles__$5, __vue_script__$5, __vue_scope_id__$5, __vue_is_functional_template__$5, __vue_module_identifier__$5, false, createInjector, undefined, undefined);
 
-var __vue_component__$7 = __vue_component__$6;
+var __vue_component__$8 = __vue_component__$7;
 
 //
-var script$2 = {
+var script$4 = {
   name: 'teRating',
   components: {
     teIcon
@@ -5743,10 +5794,10 @@ var script$2 = {
 };
 
 /* script */
-const __vue_script__$2 = script$2;
+const __vue_script__$4 = script$4;
 /* template */
 
-var __vue_render__$2 = function () {
+var __vue_render__$4 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -5809,10 +5860,10 @@ var __vue_render__$2 = function () {
   })], 2);
 };
 
-var __vue_staticRenderFns__$2 = [];
+var __vue_staticRenderFns__$4 = [];
 /* style */
 
-const __vue_inject_styles__$2 = function (inject) {
+const __vue_inject_styles__$4 = function (inject) {
   if (!inject) return;
   inject("data-v-59f92ef4_0", {
     source: ".icon-half[data-v-59f92ef4]{position:absolute;cursor:pointer;top:0;left:0;width:50%;height:-moz-available;height:-webkit-fill-available;background-color:transparent}",
@@ -5823,23 +5874,23 @@ const __vue_inject_styles__$2 = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$2 = "data-v-59f92ef4";
+const __vue_scope_id__$4 = "data-v-59f92ef4";
 /* module identifier */
 
-const __vue_module_identifier__$2 = undefined;
+const __vue_module_identifier__$4 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$2 = false;
+const __vue_is_functional_template__$4 = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$4 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$2,
-  staticRenderFns: __vue_staticRenderFns__$2
-}, __vue_inject_styles__$2, __vue_script__$2, __vue_scope_id__$2, __vue_is_functional_template__$2, __vue_module_identifier__$2, false, createInjector, undefined, undefined);
+const __vue_component__$5 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$4,
+  staticRenderFns: __vue_staticRenderFns__$4
+}, __vue_inject_styles__$4, __vue_script__$4, __vue_scope_id__$4, __vue_is_functional_template__$4, __vue_module_identifier__$4, false, createInjector, undefined, undefined);
 
-var __vue_component__$5 = __vue_component__$4;
+var __vue_component__$6 = __vue_component__$5;
 
 //
 //
@@ -5908,7 +5959,7 @@ var __vue_component__$5 = __vue_component__$4;
 //
 //
 //
-var script$1 = {
+var script$3 = {
   name: 'teToastLight',
   props: {
     title: {
@@ -5948,10 +5999,10 @@ var script$1 = {
 };
 
 /* script */
-const __vue_script__$1 = script$1;
+const __vue_script__$3 = script$3;
 /* template */
 
-var __vue_render__$1 = function () {
+var __vue_render__$3 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -5959,7 +6010,7 @@ var __vue_render__$1 = function () {
   var _c = _vm._self._c || _h;
 
   return _c('div', {
-    staticClass: "\n    flex\n    w-full\n    max-w-sm\n    mx-auto\n    overflow-hidden\n    bg-white\n    rounded-lg\n    shadow-md\n    dark:bg-gray-800\n  "
+    staticClass: "\n    flex\n    w-96\n    max-w-full\n    mx-auto\n    overflow-hidden\n    bg-white\n    rounded-lg\n    shadow-md\n    dark:bg-gray-800\n  "
   }, [_c('div', {
     staticClass: "flex items-center justify-center w-12",
     class: _vm.backgroundColorClass
@@ -6015,31 +6066,31 @@ var __vue_render__$1 = function () {
   }, [_vm._v("\n        " + _vm._s(_vm.subtitle) + "\n      ")])])])]);
 };
 
-var __vue_staticRenderFns__$1 = [];
+var __vue_staticRenderFns__$3 = [];
 /* style */
 
-const __vue_inject_styles__$1 = undefined;
+const __vue_inject_styles__$3 = undefined;
 /* scoped */
 
-const __vue_scope_id__$1 = undefined;
+const __vue_scope_id__$3 = undefined;
 /* module identifier */
 
-const __vue_module_identifier__$1 = undefined;
+const __vue_module_identifier__$3 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__$1 = false;
+const __vue_is_functional_template__$3 = false;
 /* style inject */
 
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__$2 = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__$1,
-  staticRenderFns: __vue_staticRenderFns__$1
-}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, undefined, undefined, undefined);
+const __vue_component__$4 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$3,
+  staticRenderFns: __vue_staticRenderFns__$3
+}, __vue_inject_styles__$3, __vue_script__$3, __vue_scope_id__$3, __vue_is_functional_template__$3, __vue_module_identifier__$3, false, undefined, undefined, undefined);
 
-var __vue_component__$3 = __vue_component__$2;
+var TeToastLight = __vue_component__$4;
 
 //
 //
@@ -6057,7 +6108,7 @@ var __vue_component__$3 = __vue_component__$2;
 //
 //
 //
-var script = {
+var script$2 = {
   name: 'teOffcanvas',
   props: {
     value: {
@@ -6115,10 +6166,10 @@ var script = {
 };
 
 /* script */
-const __vue_script__ = script;
+const __vue_script__$2 = script$2;
 /* template */
 
-var __vue_render__ = function () {
+var __vue_render__$2 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
@@ -6152,21 +6203,360 @@ var __vue_render__ = function () {
   }, [_vm._t("default")], 2)]);
 };
 
+var __vue_staticRenderFns__$2 = [];
+/* style */
+
+const __vue_inject_styles__$2 = undefined;
+/* scoped */
+
+const __vue_scope_id__$2 = undefined;
+/* module identifier */
+
+const __vue_module_identifier__$2 = undefined;
+/* functional template */
+
+const __vue_is_functional_template__$2 = false;
+/* style inject */
+
+/* style inject SSR */
+
+/* style inject shadow dom */
+
+const __vue_component__$2 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$2,
+  staticRenderFns: __vue_staticRenderFns__$2
+}, __vue_inject_styles__$2, __vue_script__$2, __vue_scope_id__$2, __vue_is_functional_template__$2, __vue_module_identifier__$2, false, undefined, undefined, undefined);
+
+var __vue_component__$3 = __vue_component__$2;
+
+var components = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  teAccordion: __vue_component__$12,
+  teAlert: __vue_component__$10,
+  teBadge: __vue_component__$_,
+  teButton: teButton,
+  teButtonGroup: __vue_component__$W,
+  teCard: __vue_component__$U,
+  teCheckbox: __vue_component__$S,
+  teSwitch: __vue_component__$Q,
+  teRadio: __vue_component__$O,
+  teSelect: __vue_component__$M,
+  teMultipleSelect: __vue_component__$K,
+  teBreadcrumb: __vue_component__$I,
+  teTextarea: __vue_component__$G,
+  teInput: __vue_component__$D,
+  teDatePicker: __vue_component__$B,
+  teTimePicker: __vue_component__$z,
+  teRange: __vue_component__$x,
+  teProgress: __vue_component__$v,
+  teTabs: __vue_component__$t,
+  teListGroup: __vue_component__$r,
+  teDropdown: __vue_component__$p,
+  teDropdownItem: __vue_component__$n,
+  teModal: TeModal,
+  teSpinner: teSpinner,
+  teStepper: __vue_component__$k,
+  teToast: teToast,
+  tePagination: tePagination,
+  teNavbar: __vue_component__$g,
+  teNavbarItem: __vue_component__$e,
+  teTable: __vue_component__$c,
+  teFile: __vue_component__$a,
+  teNotification: __vue_component__$8,
+  teIcon: teIcon,
+  teRating: __vue_component__$6,
+  teToastLight: TeToastLight,
+  teOffcanvas: __vue_component__$3
+});
+
+var directives = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  outside: clickOutside$1
+});
+
+const showModal = options => {
+  const {
+    parent,
+    props,
+    events,
+    component,
+    scrollable,
+    centered,
+    size
+  } = options;
+  if (!component || !parent) return;
+  const ModalClass = Vue.extend(TeModal);
+  const modalInstance = new ModalClass({
+    parent,
+    propsData: {
+      centered: centered || true,
+      visible: true,
+      hideHeader: true,
+      hideFooter: true,
+      scrollable,
+      size,
+      title: '',
+      component,
+      events,
+      props
+    }
+  });
+  modalInstance.$mount();
+  modalInstance.$data.backdropVisible = true;
+  parent.$el.appendChild(modalInstance.$el);
+};
+
+var showModal$1 = showModal;
+
+//
+var script$1 = {
+  name: 'teLoading',
+  components: {
+    teSpinner
+  },
+  props: {
+    type: {
+      type: String,
+      default: 'normal',
+      validator: value => ['normal', 'growing'].includes(value)
+    },
+    size: {
+      type: String,
+      default: 'medium',
+      validator: value => ['small', 'medium', 'large'].includes(value)
+    },
+    color: {
+      type: String,
+      default: 'primary',
+      validator: value => ['normal', 'primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
+    },
+    text: {
+      type: String
+    }
+  },
+  methods: {
+    close() {
+      setTimeout(() => {
+        this.$destroy();
+        this.$el.parentNode.removeChild(this.$el);
+      }, 500);
+    }
+
+  }
+};
+
+/* script */
+const __vue_script__$1 = script$1;
+/* template */
+
+var __vue_render__$1 = function () {
+  var _vm = this;
+
+  var _h = _vm.$createElement;
+
+  var _c = _vm._self._c || _h;
+
+  return _c('div', {
+    staticClass: "backdrop absolute top-0 left-0 flex flex-col justify-center items-center h-screen w-full"
+  }, [_c('te-spinner', {
+    attrs: {
+      "type": _vm.type,
+      "size": _vm.size,
+      "color": _vm.color
+    }
+  }), _vm._v(" "), _c('label', [_vm._v(_vm._s(_vm.text))])], 1);
+};
+
+var __vue_staticRenderFns__$1 = [];
+/* style */
+
+const __vue_inject_styles__$1 = function (inject) {
+  if (!inject) return;
+  inject("data-v-5f477cb6_0", {
+    source: ".backdrop[data-v-5f477cb6]{background-color:rgba(0,0,0,.25)}",
+    map: undefined,
+    media: undefined
+  });
+};
+/* scoped */
+
+
+const __vue_scope_id__$1 = "data-v-5f477cb6";
+/* module identifier */
+
+const __vue_module_identifier__$1 = undefined;
+/* functional template */
+
+const __vue_is_functional_template__$1 = false;
+/* style inject SSR */
+
+/* style inject shadow dom */
+
+const __vue_component__$1 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$1,
+  staticRenderFns: __vue_staticRenderFns__$1
+}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, createInjector, undefined, undefined);
+
+var TeLoading = __vue_component__$1;
+
+const showLoading = options => {
+  const {
+    type,
+    size = 'large',
+    color,
+    timeout,
+    text
+  } = options || {};
+  const LoadingClass = Vue.extend(TeLoading);
+  const loadingInstance = new LoadingClass({
+    propsData: {
+      type,
+      size,
+      color,
+      text
+    }
+  });
+  loadingInstance.$mount();
+  document.querySelector('body').appendChild(loadingInstance.$el);
+
+  if (timeout) {
+    setTimeout(() => {
+      loadingInstance.close();
+    }, timeout);
+  }
+
+  return loadingInstance;
+};
+
+var showLoading$1 = showLoading;
+
+//
+var script = {
+  name: 'TeToastHandler',
+  components: {
+    teToast,
+    TeToastLight
+  },
+  props: {
+    position: {
+      type: String,
+      default: 'bottom',
+      validator: val => ['bottom', 'top'].includes(val)
+    },
+    align: {
+      type: String,
+      default: 'center',
+      validator: val => ['right', 'center', 'left'].includes(val)
+    },
+    type: {
+      type: String,
+      default: 'normal',
+      validator: val => ['normal', 'light'].includes(val)
+    },
+    toast: {
+      type: Object,
+      default: () => ({})
+    }
+  },
+  data: () => ({
+    visible: false
+  }),
+  computed: {
+    toastClass() {
+      const classes = [];
+
+      if (this.position === 'bottom') {
+        classes.push('bottom-0');
+      } else if (this.position === 'top') {
+        classes.push('top-0');
+      }
+
+      if (this.align === 'center') {
+        classes.push('left-1/2 transform -translate-x-1/2');
+      } else if (this.align === 'left') {
+        classes.push('left-0');
+      } else if (this.align === 'right') {
+        classes.push('right-0');
+      }
+
+      classes.push(`justify-${this.align}`);
+      return classes;
+    }
+
+  },
+
+  mounted() {
+    setTimeout(() => {
+      this.visible = true;
+    }, 50);
+  },
+
+  methods: {
+    close() {
+      this.$emit('close');
+      setTimeout(() => {
+        this.$destroy();
+        this.$el.parentNode.removeChild(this.$el);
+      }, 500);
+    }
+
+  }
+};
+
+/* script */
+const __vue_script__ = script;
+/* template */
+
+var __vue_render__ = function () {
+  var _vm = this;
+
+  var _h = _vm.$createElement;
+
+  var _c = _vm._self._c || _h;
+
+  return _c('transition', {
+    attrs: {
+      "name": "fade"
+    }
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: _vm.visible,
+      expression: "visible"
+    }],
+    staticClass: "fixed py-4 px-3",
+    class: _vm.toastClass
+  }, [_vm.type === 'normal' ? _c('te-toast', _vm._b({
+    on: {
+      "close": function ($event) {
+        return _vm.close();
+      }
+    }
+  }, 'te-toast', _vm.toast, false)) : _c('te-toast-light', _vm._b({}, 'te-toast-light', _vm.toast, false))], 1)]);
+};
+
 var __vue_staticRenderFns__ = [];
 /* style */
 
-const __vue_inject_styles__ = undefined;
+const __vue_inject_styles__ = function (inject) {
+  if (!inject) return;
+  inject("data-v-1fe9abba_0", {
+    source: ".fade-enter-active[data-v-1fe9abba],.fade-leave-active[data-v-1fe9abba]{transition:opacity .5s}.fade-enter[data-v-1fe9abba],.fade-leave-to[data-v-1fe9abba]{opacity:0}",
+    map: undefined,
+    media: undefined
+  });
+};
 /* scoped */
 
-const __vue_scope_id__ = undefined;
+
+const __vue_scope_id__ = "data-v-1fe9abba";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;
 /* functional template */
 
 const __vue_is_functional_template__ = false;
-/* style inject */
-
 /* style inject SSR */
 
 /* style inject shadow dom */
@@ -6174,54 +6564,41 @@ const __vue_is_functional_template__ = false;
 const __vue_component__ = /*#__PURE__*/normalizeComponent({
   render: __vue_render__,
   staticRenderFns: __vue_staticRenderFns__
-}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
+}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, createInjector, undefined, undefined);
 
-var __vue_component__$1 = __vue_component__;
+var TeToastHandler = __vue_component__;
 
-var components = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  teAccordion: __vue_component__$13,
-  teAlert: __vue_component__$11,
-  teBadge: __vue_component__$$,
-  teButton: teButton,
-  teButtonGroup: __vue_component__$X,
-  teCard: __vue_component__$V,
-  teCheckbox: __vue_component__$T,
-  teSwitch: __vue_component__$R,
-  teRadio: __vue_component__$P,
-  teSelect: __vue_component__$N,
-  teMultipleSelect: __vue_component__$L,
-  teBreadcrumb: __vue_component__$J,
-  teTextarea: __vue_component__$H,
-  teInput: __vue_component__$E,
-  teDatePicker: __vue_component__$C,
-  teTimePicker: __vue_component__$A,
-  teRange: __vue_component__$y,
-  teProgress: __vue_component__$w,
-  teTabs: __vue_component__$u,
-  teListGroup: __vue_component__$s,
-  teDropdown: __vue_component__$q,
-  teDropdownItem: __vue_component__$o,
-  teModal: __vue_component__$m,
-  teSpinner: TeSpinner,
-  teStepper: __vue_component__$k,
-  teToast: __vue_component__$i,
-  tePagination: tePagination,
-  teNavbar: __vue_component__$f,
-  teNavbarItem: __vue_component__$d,
-  teTable: __vue_component__$b,
-  teFile: __vue_component__$9,
-  teNotification: __vue_component__$7,
-  teIcon: teIcon,
-  teRating: __vue_component__$5,
-  teToastLight: __vue_component__$3,
-  teOffcanvas: __vue_component__$1
-});
+const showToast = options => {
+  const {
+    type,
+    position,
+    align,
+    timeout,
+    toast
+  } = options || {};
+  if (!toast) return;
+  const ToastClass = Vue.extend(TeToastHandler);
+  const instance = new ToastClass({
+    propsData: {
+      position,
+      align,
+      type,
+      toast
+    }
+  });
+  instance.$mount();
+  document.querySelector('body').appendChild(instance.$el);
 
-var directives = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  outside: clickOutside$1
-});
+  if (timeout) {
+    setTimeout(() => {
+      instance.close();
+    }, timeout);
+  }
+
+  return instance;
+};
+
+var showToast$1 = showToast;
 
 // Import vue components
 
@@ -6234,6 +6611,9 @@ const install = function installVueTailwindElements(Vue) {
     let [directiveName, directive] = _ref2;
     Vue.directive(directiveName, directive);
   });
+  Vue.prototype.$showModal = showModal$1;
+  Vue.prototype.$showLoading = showLoading$1;
+  Vue.prototype.$showToast = showToast$1;
 }; // Create module definition for Vue.use()
 
-export { install as default, clickOutside$1 as outside, __vue_component__$13 as teAccordion, __vue_component__$11 as teAlert, __vue_component__$$ as teBadge, __vue_component__$J as teBreadcrumb, teButton, __vue_component__$X as teButtonGroup, __vue_component__$V as teCard, __vue_component__$T as teCheckbox, __vue_component__$C as teDatePicker, __vue_component__$q as teDropdown, __vue_component__$o as teDropdownItem, __vue_component__$9 as teFile, teIcon, __vue_component__$E as teInput, __vue_component__$s as teListGroup, __vue_component__$m as teModal, __vue_component__$L as teMultipleSelect, __vue_component__$f as teNavbar, __vue_component__$d as teNavbarItem, __vue_component__$7 as teNotification, __vue_component__$1 as teOffcanvas, tePagination, __vue_component__$w as teProgress, __vue_component__$P as teRadio, __vue_component__$y as teRange, __vue_component__$5 as teRating, __vue_component__$N as teSelect, TeSpinner as teSpinner, __vue_component__$k as teStepper, __vue_component__$R as teSwitch, __vue_component__$b as teTable, __vue_component__$u as teTabs, __vue_component__$H as teTextarea, __vue_component__$A as teTimePicker, __vue_component__$i as teToast, __vue_component__$3 as teToastLight };
+export { install as default, clickOutside$1 as outside, __vue_component__$12 as teAccordion, __vue_component__$10 as teAlert, __vue_component__$_ as teBadge, __vue_component__$I as teBreadcrumb, teButton, __vue_component__$W as teButtonGroup, __vue_component__$U as teCard, __vue_component__$S as teCheckbox, __vue_component__$B as teDatePicker, __vue_component__$p as teDropdown, __vue_component__$n as teDropdownItem, __vue_component__$a as teFile, teIcon, __vue_component__$D as teInput, __vue_component__$r as teListGroup, TeModal as teModal, __vue_component__$K as teMultipleSelect, __vue_component__$g as teNavbar, __vue_component__$e as teNavbarItem, __vue_component__$8 as teNotification, __vue_component__$3 as teOffcanvas, tePagination, __vue_component__$v as teProgress, __vue_component__$O as teRadio, __vue_component__$x as teRange, __vue_component__$6 as teRating, __vue_component__$M as teSelect, teSpinner, __vue_component__$k as teStepper, __vue_component__$Q as teSwitch, __vue_component__$c as teTable, __vue_component__$t as teTabs, __vue_component__$G as teTextarea, __vue_component__$z as teTimePicker, teToast, TeToastLight as teToastLight };
