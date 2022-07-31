@@ -41,7 +41,9 @@ Put the last configuration into a plugin file and the use it into the nuxt.confi
 
 ## Author
 
-This library is created by [Aarón Montes](https://ajomuch92.site/ "Aarón Montes").
+This library is created by [Aarón Montes](https://ajomuch92.site/ "Aarón Montes"). 
+**Support me to improve and maintain this library**
+<a href="https://www.buymeacoffee.com/ajomuch92" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 ## License
 MIT
