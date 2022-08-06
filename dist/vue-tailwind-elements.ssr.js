@@ -4567,6 +4567,13 @@ var script$8 = {
     dark: {
       type: Boolean,
       default: false
+    },
+    tag: {
+      type: String,
+      default: 'a',
+      validator: function validator(val) {
+        return ['a', 'router-link'].includes(val);
+      }
     }
   },
   computed: {
@@ -4575,6 +4582,9 @@ var script$8 = {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
         'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark
       };
+    },
+    bindProps: function bindProps() {
+      return _defineProperty({}, this.tag === 'a' ? 'href' : 'to', this.href);
     }
   }
 };/* script */
@@ -4590,7 +4600,11 @@ var __vue_render__$8 = function __vue_render__() {
 
   return _c('li', {
     staticClass: "nav-item p-2"
-  }, [_vm._ssrNode("<a" + _vm._ssrAttr("href", _vm.href) + _vm._ssrClass("nav-link p-0", _vm.activeClass) + ">", "</a>", [_vm._t("default")], 2)]);
+  }, [_c(_vm.tag, _vm._b({
+    tag: "component",
+    staticClass: "nav-link p-0",
+    class: _vm.activeClass
+  }, 'component', _vm.bindProps, false), [_vm._t("default")], 2)], 1);
 };
 
 var __vue_staticRenderFns__$8 = [];
@@ -4602,7 +4616,7 @@ var __vue_inject_styles__$8 = undefined;
 var __vue_scope_id__$8 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$8 = "data-v-4c5ec14d";
+var __vue_module_identifier__$8 = "data-v-fcd72726";
 /* functional template */
 
 var __vue_is_functional_template__$8 = false;

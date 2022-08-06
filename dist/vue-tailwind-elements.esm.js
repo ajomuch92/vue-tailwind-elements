@@ -5078,6 +5078,11 @@ var script$8 = {
     dark: {
       type: Boolean,
       default: false
+    },
+    tag: {
+      type: String,
+      default: 'a',
+      validator: val => ['a', 'router-link'].includes(val)
     }
   },
   computed: {
@@ -5085,6 +5090,12 @@ var script$8 = {
       return {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
         'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark
+      };
+    },
+
+    bindProps() {
+      return {
+        [this.tag === 'a' ? 'href' : 'to']: this.href
       };
     }
 
@@ -5104,13 +5115,11 @@ var __vue_render__$8 = function () {
 
   return _c('li', {
     staticClass: "nav-item p-2"
-  }, [_c('a', {
+  }, [_c(_vm.tag, _vm._b({
+    tag: "component",
     staticClass: "nav-link p-0",
-    class: _vm.activeClass,
-    attrs: {
-      "href": _vm.href
-    }
-  }, [_vm._t("default")], 2)]);
+    class: _vm.activeClass
+  }, 'component', _vm.bindProps, false), [_vm._t("default")], 2)], 1);
 };
 
 var __vue_staticRenderFns__$8 = [];
