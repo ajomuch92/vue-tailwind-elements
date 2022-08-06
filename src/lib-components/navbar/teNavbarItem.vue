@@ -33,7 +33,7 @@ export default {
       return {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
         'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark,
-        'disabled': this.disabled,
+        'disabled cursor-not-allowed': this.disabled,
       }
     },
     bindProps() {
