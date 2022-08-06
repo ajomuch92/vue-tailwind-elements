@@ -113,6 +113,32 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Custom width</h1>
+    <h1 class="text-md">You can pass a fixed amount of pixels or a percentage</h1>
+    <te-card title="Title" width="500px">
+      <p class="mb-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sequi
+        tenetur, voluptatibus harum consequuntur alias quaerat excepturi
+        temporibus nisi commodi, ex, ratione quae soluta! Saepe alias dolores
+        dolorem assumenda totam?
+      </p>
+      <te-button>Button</te-button>
+    </te-card>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-card title="Title" width="500px">
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sequi
+              tenetur, voluptatibus harum consequuntur alias quaerat excepturi
+              temporibus nisi commodi, ex, ratione quae soluta! Saepe alias dolores
+              dolorem assumenda totam?
+            </p>
+            <te-button>Button</te-button>
+          </te-card>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 
