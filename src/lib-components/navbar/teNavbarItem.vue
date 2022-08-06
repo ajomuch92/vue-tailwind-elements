@@ -1,8 +1,8 @@
 <template>
   <li class="nav-item p-2">
-    <a class="nav-link p-0" :class="activeClass" :href="href">
+    <component :is="tag" class="nav-link p-0" :class="activeClass" v-bind="bindProps">
       <slot name="default" />
-    </a>
+    </component>
   </li>
 </template>
 
@@ -17,6 +17,11 @@ export default {
     dark: {
       type: Boolean,
       default: false,
+    },
+    tag: {
+      type: String,
+      default: 'a',
+      validator: (val) => ['a', 'router-link'].includes(val),
     }
   },
   computed: {
@@ -25,6 +30,9 @@ export default {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
         'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark
       }
+    },
+    bindProps() {
+      return { [this.tag === 'a' ? 'href' : 'to']: this.href }
     }
   }
 }
