@@ -5,6 +5,7 @@ The documentation and examples are being building [here](https://vue-tailwind-el
 ### New Features 💥
 * Global method to show loading, toasts and modals ($showLoading, $showToast, $showModal)
 * Adding tag for navbar item (a or router-link)
+* Fixing multiple bugs
 # Instalation
 
 1. Set up the Tailwind configuration files. Follow this [link](https://tailwindcss.com/docs/installation/using-postcss) to do it.
