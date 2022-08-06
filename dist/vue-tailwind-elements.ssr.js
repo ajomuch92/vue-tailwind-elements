@@ -4784,7 +4784,7 @@ var script$7 = {
       return this.items;
     },
     pages: function pages() {
-      return this.filteredItems.length / this.itemPerPage;
+      return Math.ceil(this.filteredItems.length / this.itemPerPage);
     }
   },
   data: function data() {
@@ -4893,7 +4893,7 @@ var __vue_inject_styles__$7 = undefined;
 var __vue_scope_id__$7 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$7 = "data-v-86e1b4f0";
+var __vue_module_identifier__$7 = "data-v-4fafe58e";
 /* functional template */
 
 var __vue_is_functional_template__$7 = false;
