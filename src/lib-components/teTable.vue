@@ -163,7 +163,7 @@ export default {
       if (this.search) {
         const items = this.items.filter(r => {
           const values = Object.values(r);
-          return values.some(v => v.toString().toLowerCase().includes(this.search.toLowerCase()))
+          return values.some(v => v?.toString().toLowerCase().includes(this.search.toLowerCase()) || false)
         });
         return items;
       }
