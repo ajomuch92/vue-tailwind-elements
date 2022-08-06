@@ -5743,7 +5743,7 @@ var __vue_render__$1 = function __vue_render__() {
       "size": _vm.size,
       "color": _vm.color
     }
-  }), _vm._ssrNode(" <label data-v-5f477cb6>" + _vm._ssrEscape(_vm._s(_vm.text)) + "</label>")], 2);
+  }), _vm._ssrNode(" <label data-v-5ae354fa>" + _vm._ssrEscape(_vm._s(_vm.text)) + "</label>")], 2);
 };
 
 var __vue_staticRenderFns__$1 = [];
@@ -5751,8 +5751,8 @@ var __vue_staticRenderFns__$1 = [];
 
 var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-5f477cb6_0", {
-    source: ".backdrop[data-v-5f477cb6]{background-color:rgba(0,0,0,.25)}",
+  inject("data-v-5ae354fa_0", {
+    source: ".backdrop[data-v-5ae354fa]{background-color:rgba(0,0,0,.25);z-index:9999}",
     map: undefined,
     media: undefined
   });
@@ -5760,10 +5760,10 @@ var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$1 = "data-v-5f477cb6";
+var __vue_scope_id__$1 = "data-v-5ae354fa";
 /* module identifier */
 
-var __vue_module_identifier__$1 = "data-v-5f477cb6";
+var __vue_module_identifier__$1 = "data-v-5ae354fa";
 /* functional template */
 
 var __vue_is_functional_template__$1 = false;
@@ -5924,8 +5924,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-1fe9abba_0", {
-    source: ".fade-enter-active[data-v-1fe9abba],.fade-leave-active[data-v-1fe9abba]{transition:opacity .5s}.fade-enter[data-v-1fe9abba],.fade-leave-to[data-v-1fe9abba]{opacity:0}",
+  inject("data-v-5fc4ae62_0", {
+    source: ".fade-enter-active[data-v-5fc4ae62],.fade-leave-active[data-v-5fc4ae62]{transition:opacity .5s}.fade-enter[data-v-5fc4ae62],.fade-leave-to[data-v-5fc4ae62]{opacity:0}div.fixed[data-v-5fc4ae62]{z-index:9999}",
     map: undefined,
     media: undefined
   });
@@ -5933,10 +5933,10 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-1fe9abba";
+var __vue_scope_id__ = "data-v-5fc4ae62";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-1fe9abba";
+var __vue_module_identifier__ = "data-v-5fc4ae62";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
