@@ -45,5 +45,6 @@ export default {
 <style scoped>
   .backdrop {
     background-color: rgba(0, 0, 0, 0.25);
+    z-index: 9999;
   }
 </style>

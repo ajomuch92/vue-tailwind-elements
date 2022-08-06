@@ -82,4 +82,8 @@ export default {
   .fade-enter, .fade-leave-to {
     opacity: 0;
   }
+
+  div.fixed {
+    z-index: 9999;
+  }
 </style>
