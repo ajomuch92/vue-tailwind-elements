@@ -18,6 +18,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
     tag: {
       type: String,
       default: 'a',
@@ -28,7 +32,8 @@ export default {
     activeClass() {
       return {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
-        'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark
+        'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark,
+        'disabled': this.disabled,
       }
     },
     bindProps() {
