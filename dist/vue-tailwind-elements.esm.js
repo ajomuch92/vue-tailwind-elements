@@ -4990,6 +4990,23 @@ var tePagination = __vue_component__$h;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$9 = {
   name: 'teNavbar',
   props: {
@@ -5020,7 +5037,33 @@ var __vue_render__$9 = function () {
     class: [!_vm.dark ? 'bg-gray-100' : 'bg-gray-900']
   }, [_c('div', {
     staticClass: "container-fluid w-full flex flex-wrap items-center justify-between px-6"
-  }, [_c('div', {
+  }, [_c('button', {
+    staticClass: "\n        navbar-toggler\n        text-gray-500\n        border-0\n        hover:shadow-none hover:no-underline\n        py-2\n        px-2.5\n        bg-transparent\n        focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline\n      ",
+    attrs: {
+      "type": "button"
+    },
+    on: {
+      "click": function ($event) {
+        return _vm.$emit('toggle-click', $event);
+      }
+    }
+  }, [_c('svg', {
+    staticClass: "w-6",
+    attrs: {
+      "aria-hidden": "true",
+      "focusable": "false",
+      "data-prefix": "fas",
+      "data-icon": "bars",
+      "role": "img",
+      "xmlns": "http://www.w3.org/2000/svg",
+      "viewBox": "0 0 448 512"
+    }
+  }, [_c('path', {
+    attrs: {
+      "fill": "currentColor",
+      "d": "M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+    }
+  })])]), _vm._v(" "), _c('div', {
     staticClass: "collapse navbar-collapse flex-grow items-center"
   }, [_c('a', {
     staticClass: "\n          flex\n          items-center\n          text-gray-900\n          hover:text-gray-900\n          focus:text-gray-900\n          mt-2\n          lg:mt-0\n          mr-1\n        ",
@@ -5029,9 +5072,9 @@ var __vue_render__$9 = function () {
     }
   }, [_vm._t("brand")], 2), _vm._v(" "), _c('ul', {
     staticClass: "navbar-nav flex flex-col pl-0 list-style-none mr-auto"
-  }, [_vm._t("default")], 2)])]), _vm._v(" "), _c('div', {
+  }, [_vm._t("default")], 2)]), _vm._v(" "), _c('div', {
     staticClass: "flex items-center relative"
-  }, [_vm._t("right")], 2)]);
+  }, [_vm._t("right")], 2)])]);
 };
 
 var __vue_staticRenderFns__$9 = [];
@@ -5079,6 +5122,10 @@ var script$8 = {
       type: Boolean,
       default: false
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     tag: {
       type: String,
       default: 'a',
@@ -5089,7 +5136,8 @@ var script$8 = {
     activeClass() {
       return {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
-        'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark
+        'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark,
+        'disabled cursor-not-allowed': this.disabled
       };
     },
 

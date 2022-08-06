@@ -4496,6 +4496,23 @@ var tePagination = __vue_component__$h;//
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var script$9 = {
   name: 'teNavbar',
   props: {
@@ -4522,7 +4539,7 @@ var __vue_render__$9 = function __vue_render__() {
   return _c('nav', {
     staticClass: "\n  relative\n  w-full\n  flex flex-wrap\n  items-center\n  justify-between\n  py-4\n  bg-gray-100\n  shadow-lg\n  navbar navbar-expand-lg navbar-light\n  ",
     class: [!_vm.dark ? 'bg-gray-100' : 'bg-gray-900']
-  }, [_vm._ssrNode("<div class=\"container-fluid w-full flex flex-wrap items-center justify-between px-6\">", "</div>", [_vm._ssrNode("<div class=\"collapse navbar-collapse flex-grow items-center\">", "</div>", [_vm._ssrNode("<a" + _vm._ssrAttr("href", _vm.hrefHeader) + " class=\"\n          flex\n          items-center\n          text-gray-900\n          hover:text-gray-900\n          focus:text-gray-900\n          mt-2\n          lg:mt-0\n          mr-1\n        \">", "</a>", [_vm._t("brand")], 2), _vm._ssrNode(" "), _vm._ssrNode("<ul class=\"navbar-nav flex flex-col pl-0 list-style-none mr-auto\">", "</ul>", [_vm._t("default")], 2)], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"flex items-center relative\">", "</div>", [_vm._t("right")], 2)], 2);
+  }, [_vm._ssrNode("<div class=\"container-fluid w-full flex flex-wrap items-center justify-between px-6\">", "</div>", [_vm._ssrNode("<button type=\"button\" class=\"\n        navbar-toggler\n        text-gray-500\n        border-0\n        hover:shadow-none hover:no-underline\n        py-2\n        px-2.5\n        bg-transparent\n        focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline\n      \"><svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"bars\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\" class=\"w-6\"><path fill=\"currentColor\" d=\"M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z\"></path></svg></button> "), _vm._ssrNode("<div class=\"collapse navbar-collapse flex-grow items-center\">", "</div>", [_vm._ssrNode("<a" + _vm._ssrAttr("href", _vm.hrefHeader) + " class=\"\n          flex\n          items-center\n          text-gray-900\n          hover:text-gray-900\n          focus:text-gray-900\n          mt-2\n          lg:mt-0\n          mr-1\n        \">", "</a>", [_vm._t("brand")], 2), _vm._ssrNode(" "), _vm._ssrNode("<ul class=\"navbar-nav flex flex-col pl-0 list-style-none mr-auto\">", "</ul>", [_vm._t("default")], 2)], 2), _vm._ssrNode(" "), _vm._ssrNode("<div class=\"flex items-center relative\">", "</div>", [_vm._t("right")], 2)], 2)]);
 };
 
 var __vue_staticRenderFns__$9 = [];
@@ -4534,7 +4551,7 @@ var __vue_inject_styles__$9 = undefined;
 var __vue_scope_id__$9 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$9 = "data-v-0a646e80";
+var __vue_module_identifier__$9 = "data-v-80b0f146";
 /* functional template */
 
 var __vue_is_functional_template__$9 = false;
@@ -4568,6 +4585,10 @@ var script$8 = {
       type: Boolean,
       default: false
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     tag: {
       type: String,
       default: 'a',
@@ -4580,7 +4601,8 @@ var script$8 = {
     activeClass: function activeClass() {
       return {
         'text-gray-500 hover:text-gray-700 focus:text-gray-700': !this.dark,
-        'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark
+        'text-white opacity-60 hover:opacity-80 focus:opacity-80': this.dark,
+        'disabled cursor-not-allowed': this.disabled
       };
     },
     bindProps: function bindProps() {
@@ -4616,7 +4638,7 @@ var __vue_inject_styles__$8 = undefined;
 var __vue_scope_id__$8 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$8 = "data-v-fcd72726";
+var __vue_module_identifier__$8 = "data-v-2eaea01b";
 /* functional template */
 
 var __vue_is_functional_template__$8 = false;
