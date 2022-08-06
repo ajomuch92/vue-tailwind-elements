@@ -170,7 +170,7 @@ export default {
       return this.items;
     },
     pages() {
-      return this.filteredItems.length / this.itemPerPage
+      return Math.ceil(this.filteredItems.length / this.itemPerPage);
     }
   },
   data: () => ({
