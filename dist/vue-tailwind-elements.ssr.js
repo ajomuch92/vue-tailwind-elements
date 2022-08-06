@@ -4775,7 +4775,7 @@ var script$7 = {
         var items = this.items.filter(function (r) {
           var values = Object.values(r);
           return values.some(function (v) {
-            return v.toString().toLowerCase().includes(_this.search.toLowerCase());
+            return (v === null || v === void 0 ? void 0 : v.toString().toLowerCase().includes(_this.search.toLowerCase())) || false;
           });
         });
         return items;
@@ -4893,7 +4893,7 @@ var __vue_inject_styles__$7 = undefined;
 var __vue_scope_id__$7 = undefined;
 /* module identifier */
 
-var __vue_module_identifier__$7 = "data-v-ccd8acd8";
+var __vue_module_identifier__$7 = "data-v-86e1b4f0";
 /* functional template */
 
 var __vue_is_functional_template__$7 = false;
