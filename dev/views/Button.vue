@@ -151,6 +151,39 @@
         </script>
       </code>
     </pre>
+    <h1 class="text-lg">Icon</h1>
+    <div class="flex space-x-2">
+      <te-button size="medium" icon rounded>
+        <te-icon name="wallet" />
+      </te-button>
+      <te-button size="medium" icon>
+        <te-icon name="wallet" />
+      </te-button>
+      <te-button size="medium" icon type="light">
+        <te-icon name="wallet" />
+      </te-button>
+      <te-button size="medium" icon only-text>
+        <te-icon name="wallet" />
+      </te-button>
+    </div>
+    <pre class="language-markup">
+      <code>
+        <script type="prism-html-markup">
+          <te-button size="medium" icon rounded>
+            <te-icon name="wallet" />
+          </te-button>
+          <te-button size="medium" icon>
+            <te-icon name="wallet" />
+          </te-button>
+          <te-button size="medium" icon type="light">
+            <te-icon name="wallet" />
+          </te-button>
+          <te-button size="medium" icon only-text>
+            <te-icon name="wallet" />
+          </te-button>
+        </script>
+      </code>
+    </pre>
   </div>
 </template>
 

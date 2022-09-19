@@ -80,6 +80,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    icon: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     getClass() {
@@ -121,12 +125,18 @@ export default {
         'hover:shadow-md': this.shadowed && this.size === 'small',
         'hover:shadow-lg': this.shadowed && this.size === 'medium',
         'hover:shadow-lg': this.shadowed && this.size === 'large',
-        'text-xs px-4 py-1 h-8': this.size === 'small',
-        'text-sm px-6 py-2 h-10': this.size === 'medium',
-        'text-base px-8 py-3 h-12': this.size === 'large',
+        'text-xs py-1 h-8': this.size === 'small',
+        'text-sm py-2 h-10': this.size === 'medium',
+        'text-base py-3 h-12': this.size === 'large',
         'cursor-not-allowed opacity-50': this.disabled,
         'pointer-events-none cursor-not-allowed': this.loading,
         'relative overflow-hidden': this.ripple,
+        'px-4': this.size === 'small' && !this.icon,
+        'px-6': this.size === 'medium' && !this.icon,
+        'px-8': this.size === 'large' && !this.icon,
+        'px-1 w-8': this.size === 'small' && this.icon,
+        'px-2 w-10': this.size === 'medium' && this.icon,
+        'px-3 w-12': this.size === 'large' && this.icon,
       }
     }
   },
