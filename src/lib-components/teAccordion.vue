@@ -31,7 +31,9 @@
           type="button"
           @click="toggle(key)"
         >
-          {{item}}
+          <slot v-bind:title="item" :name="`header-${key+1}`">
+            {{item}}
+          </slot>
         </button>
       </h2>
       <div
@@ -64,6 +66,9 @@ export default {
   data: () => ({
     itemsOpened: [],
   }),
+  mounted() {
+    console.log(this.$slots);
+  },
   methods: {
     toggle(key) {
       const ref = this.$refs[`collapse-${key}`][0]
