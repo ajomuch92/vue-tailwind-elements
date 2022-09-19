@@ -50,6 +50,8 @@ import Vue from 'vue';
 //
 //
 //
+//
+//
 var script$B = {
   name: 'teAccordion',
   props: {
@@ -65,6 +67,11 @@ var script$B = {
   data: () => ({
     itemsOpened: []
   }),
+
+  mounted() {
+    console.log(this.$slots);
+  },
+
   methods: {
     toggle(key) {
       const ref = this.$refs[`collapse-${key}`][0];
@@ -250,7 +257,11 @@ var __vue_render__$B = function () {
           return _vm.toggle(key);
         }
       }
-    }, [_vm._v("\n        " + _vm._s(item) + "\n      ")])]), _vm._v(" "), _c('div', {
+    }, [_vm._t("header-" + (key + 1), function () {
+      return [_vm._v("\n          " + _vm._s(item) + "\n        ")];
+    }, {
+      "title": item
+    })], 2)]), _vm._v(" "), _c('div', {
       ref: "collapse-" + key,
       refInFor: true,
       staticClass: "accordion-collapse",
@@ -271,8 +282,8 @@ var __vue_staticRenderFns__$B = [];
 
 const __vue_inject_styles__$B = function (inject) {
   if (!inject) return;
-  inject("data-v-0ade1b63_0", {
-    source: ".accordion-collapse[data-v-0ade1b63]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
+  inject("data-v-9b7779fe_0", {
+    source: ".accordion-collapse[data-v-9b7779fe]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
     map: undefined,
     media: undefined
   });
@@ -280,7 +291,7 @@ const __vue_inject_styles__$B = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$B = "data-v-0ade1b63";
+const __vue_scope_id__$B = "data-v-9b7779fe";
 /* module identifier */
 
 const __vue_module_identifier__$B = undefined;
@@ -686,6 +697,10 @@ var script$x = {
     ripple: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -728,12 +743,18 @@ var script$x = {
         'hover:shadow-md': this.shadowed && this.size === 'small',
         'hover:shadow-lg': this.shadowed && this.size === 'medium',
         'hover:shadow-lg': this.shadowed && this.size === 'large',
-        'text-xs px-4 py-1 h-8': this.size === 'small',
-        'text-sm px-6 py-2 h-10': this.size === 'medium',
-        'text-base px-8 py-3 h-12': this.size === 'large',
+        'text-xs py-1 h-8': this.size === 'small',
+        'text-sm py-2 h-10': this.size === 'medium',
+        'text-base py-3 h-12': this.size === 'large',
         'cursor-not-allowed opacity-50': this.disabled,
         'pointer-events-none cursor-not-allowed': this.loading,
-        'relative overflow-hidden': this.ripple
+        'relative overflow-hidden': this.ripple,
+        'px-4': this.size === 'small' && !this.icon,
+        'px-6': this.size === 'medium' && !this.icon,
+        'px-8': this.size === 'large' && !this.icon,
+        'px-1 w-8': this.size === 'small' && this.icon,
+        'px-2 w-10': this.size === 'medium' && this.icon,
+        'px-3 w-12': this.size === 'large' && this.icon
       };
     }
 
@@ -809,8 +830,8 @@ var __vue_staticRenderFns__$x = [];
 
 const __vue_inject_styles__$x = function (inject) {
   if (!inject) return;
-  inject("data-v-096b4f7f_0", {
-    source: "span.ripple[data-v-096b4f7f]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-096b4f7f .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-096b4f7f{to{transform:scale(4);opacity:0}}",
+  inject("data-v-13e72232_0", {
+    source: "span.ripple[data-v-13e72232]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-13e72232 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-13e72232{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -818,7 +839,7 @@ const __vue_inject_styles__$x = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__$x = "data-v-096b4f7f";
+const __vue_scope_id__$x = "data-v-13e72232";
 /* module identifier */
 
 const __vue_module_identifier__$x = undefined;

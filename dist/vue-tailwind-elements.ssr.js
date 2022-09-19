@@ -267,6 +267,8 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
 //
 //
 //
+//
+//
 var script$B = {
   name: 'teAccordion',
   props: {
@@ -285,6 +287,9 @@ var script$B = {
     return {
       itemsOpened: []
     };
+  },
+  mounted: function mounted() {
+    console.log(this.$slots);
   },
   methods: {
     toggle: function toggle(key) {
@@ -434,11 +439,15 @@ var __vue_render__$B = function __vue_render__() {
       'border-l-0 border-r-0 rounded-none': _vm.flush,
       'border-t-0': _vm.flush && key === 0,
       'border-b-0': _vm.flush && key === _vm.items.length - 1
-    }) + " data-v-0ade1b63>", "</div>", [_vm._ssrNode("<h2 class=\"accordion-header mb-0\" data-v-0ade1b63><button type=\"button\"" + _vm._ssrClass("\n          accordion-button\n          relative\n          flex\n          items-center\n          w-full\n          py-4\n          px-5\n          text-base text-gray-800 text-left\n          bg-white\n          border-0\n          rounded-none\n          transition\n          focus:outline-none\n        ", {
+    }) + " data-v-9b7779fe>", "</div>", [_vm._ssrNode("<h2 class=\"accordion-header mb-0\" data-v-9b7779fe>", "</h2>", [_vm._ssrNode("<button type=\"button\"" + _vm._ssrClass("\n          accordion-button\n          relative\n          flex\n          items-center\n          w-full\n          py-4\n          px-5\n          text-base text-gray-800 text-left\n          bg-white\n          border-0\n          rounded-none\n          transition\n          focus:outline-none\n        ", {
       'collapsed': !_vm.itemsOpened.includes(key)
-    }) + " data-v-0ade1b63>" + _vm._ssrEscape("\n        " + _vm._s(item) + "\n      ") + "</button></h2> "), _vm._ssrNode("<div" + _vm._ssrAttr("id", "collapse-" + key) + _vm._ssrClass("accordion-collapse", {
+    }) + " data-v-9b7779fe>", "</button>", [_vm._t("header-" + (key + 1), function () {
+      return [_vm._v("\n          " + _vm._s(item) + "\n        ")];
+    }, {
+      "title": item
+    })], 2)]), _vm._ssrNode(" "), _vm._ssrNode("<div" + _vm._ssrAttr("id", "collapse-" + key) + _vm._ssrClass("accordion-collapse", {
       'border-0': _vm.flush
-    }) + " data-v-0ade1b63>", "</div>", [_vm._ssrNode("<div class=\"accordion-body py-4 px-5\" data-v-0ade1b63>", "</div>", [_vm._t("content-" + (key + 1))], 2)])], 2);
+    }) + " data-v-9b7779fe>", "</div>", [_vm._ssrNode("<div class=\"accordion-body py-4 px-5\" data-v-9b7779fe>", "</div>", [_vm._t("content-" + (key + 1))], 2)])], 2);
   }), 0);
 };
 
@@ -447,8 +456,8 @@ var __vue_staticRenderFns__$B = [];
 
 var __vue_inject_styles__$B = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-0ade1b63_0", {
-    source: ".accordion-collapse[data-v-0ade1b63]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
+  inject("data-v-9b7779fe_0", {
+    source: ".accordion-collapse[data-v-9b7779fe]{max-height:0;overflow:hidden;transition:max-height .2s ease-out}",
     map: undefined,
     media: undefined
   });
@@ -456,10 +465,10 @@ var __vue_inject_styles__$B = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$B = "data-v-0ade1b63";
+var __vue_scope_id__$B = "data-v-9b7779fe";
 /* module identifier */
 
-var __vue_module_identifier__$B = "data-v-0ade1b63";
+var __vue_module_identifier__$B = "data-v-9b7779fe";
 /* functional template */
 
 var __vue_is_functional_template__$B = false;
@@ -856,6 +865,10 @@ var teSpinner = __vue_component__$Y;var script$x = {
     ripple: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -899,7 +912,7 @@ var teSpinner = __vue_component__$Y;var script$x = {
         'shadow': this.shadowed,
         'hover:shadow-md': this.shadowed && this.size === 'small',
         'hover:shadow-lg': this.shadowed && this.size === 'medium'
-      }, _defineProperty(_ref, "hover:shadow-lg", this.shadowed && this.size === 'large'), _defineProperty(_ref, 'text-xs px-4 py-1 h-8', this.size === 'small'), _defineProperty(_ref, 'text-sm px-6 py-2 h-10', this.size === 'medium'), _defineProperty(_ref, 'text-base px-8 py-3 h-12', this.size === 'large'), _defineProperty(_ref, 'cursor-not-allowed opacity-50', this.disabled), _defineProperty(_ref, 'pointer-events-none cursor-not-allowed', this.loading), _defineProperty(_ref, 'relative overflow-hidden', this.ripple), _ref;
+      }, _defineProperty(_ref, "hover:shadow-lg", this.shadowed && this.size === 'large'), _defineProperty(_ref, 'text-xs py-1 h-8', this.size === 'small'), _defineProperty(_ref, 'text-sm py-2 h-10', this.size === 'medium'), _defineProperty(_ref, 'text-base py-3 h-12', this.size === 'large'), _defineProperty(_ref, 'cursor-not-allowed opacity-50', this.disabled), _defineProperty(_ref, 'pointer-events-none cursor-not-allowed', this.loading), _defineProperty(_ref, 'relative overflow-hidden', this.ripple), _defineProperty(_ref, 'px-4', this.size === 'small' && !this.icon), _defineProperty(_ref, 'px-6', this.size === 'medium' && !this.icon), _defineProperty(_ref, 'px-8', this.size === 'large' && !this.icon), _defineProperty(_ref, 'px-1 w-8', this.size === 'small' && this.icon), _defineProperty(_ref, 'px-2 w-10', this.size === 'medium' && this.icon), _defineProperty(_ref, 'px-3 w-12', this.size === 'large' && this.icon), _ref;
     }
   },
   data: function data() {
@@ -962,7 +975,7 @@ var __vue_render__$x = function __vue_render__() {
       "color": _vm.type == 'light' ? 'primary' : 'light',
       "size": "small"
     }
-  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-096b4f7f></span>" : "<!---->"))], 2);
+  }) : _vm._e(), _vm._ssrNode(" "), _vm._t("default"), _vm._ssrNode(" " + (_vm.showRipple && _vm.ripple ? "<span class=\"ripple\"" + _vm._ssrStyle(null, _vm.styleRipple, null) + " data-v-13e72232></span>" : "<!---->"))], 2);
 };
 
 var __vue_staticRenderFns__$x = [];
@@ -970,8 +983,8 @@ var __vue_staticRenderFns__$x = [];
 
 var __vue_inject_styles__$x = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-096b4f7f_0", {
-    source: "span.ripple[data-v-096b4f7f]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-096b4f7f .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-096b4f7f{to{transform:scale(4);opacity:0}}",
+  inject("data-v-13e72232_0", {
+    source: "span.ripple[data-v-13e72232]{position:absolute;border-radius:50%;transform:scale(0);animation:ripple-effect-data-v-13e72232 .8s linear;background-color:rgba(255,255,255,.7)}@keyframes ripple-effect-data-v-13e72232{to{transform:scale(4);opacity:0}}",
     map: undefined,
     media: undefined
   });
@@ -979,10 +992,10 @@ var __vue_inject_styles__$x = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__$x = "data-v-096b4f7f";
+var __vue_scope_id__$x = "data-v-13e72232";
 /* module identifier */
 
-var __vue_module_identifier__$x = "data-v-096b4f7f";
+var __vue_module_identifier__$x = "data-v-13e72232";
 /* functional template */
 
 var __vue_is_functional_template__$x = false;
