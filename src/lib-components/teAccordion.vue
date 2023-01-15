@@ -66,9 +66,6 @@ export default {
   data: () => ({
     itemsOpened: [],
   }),
-  mounted() {
-    console.log(this.$slots);
-  },
   methods: {
     toggle(key) {
       const ref = this.$refs[`collapse-${key}`][0]

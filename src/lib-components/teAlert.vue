@@ -1,7 +1,6 @@
 <template>
   <div class="
     my-3
-    block
     text-sm text-left
     h-12
     flex
