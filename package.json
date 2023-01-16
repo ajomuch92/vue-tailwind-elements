@@ -33,7 +33,8 @@
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "vetur": "node -r esm src/vetur/index.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -47,6 +48,8 @@
     "@vue/cli-service": "^4.5.13",
     "autoprefixer": "^9.8.8",
     "cross-env": "^7.0.3",
+    "esm": "^3.2.25",
+    "kebab-case": "^1.0.2",
     "minimist": "^1.2.5",
     "postcss": "^7.0.39",
     "prismjs": "^1.25.0",
@@ -59,6 +62,10 @@
     "vue-prism": "^1.0.5",
     "vue-router": "^3.5.3",
     "vue-template-compiler": "^2.6.14"
+  },
+  "vetur": {
+    "tags": "src/vetur/tags.json",
+    "attributes": "src/vetur/attributes.json"
   },
   "peerDependencies": {
     "vue": "^2.6.14"

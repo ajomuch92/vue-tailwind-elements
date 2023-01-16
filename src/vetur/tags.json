@@ -1,0 +1,395 @@
+{
+  "te-accordion": {
+    "attributes": [
+      "items",
+      "flush"
+    ],
+    "description": "te-accordion component",
+    "subtags": []
+  },
+  "te-alert": {
+    "attributes": [
+      "text",
+      "type",
+      "solid"
+    ],
+    "description": "te-alert component",
+    "subtags": []
+  },
+  "te-badge": {
+    "attributes": [
+      "text",
+      "type",
+      "size",
+      "solid",
+      "rounded",
+      "outlined"
+    ],
+    "description": "te-badge component",
+    "subtags": []
+  },
+  "te-breadcrumb": {
+    "attributes": [
+      "options",
+      "separator"
+    ],
+    "description": "te-breadcrumb component",
+    "subtags": []
+  },
+  "te-button": {
+    "attributes": [
+      "type",
+      "buttonType",
+      "size",
+      "rounded",
+      "outlined",
+      "shadowed",
+      "uppercased",
+      "onlyText",
+      "noRounded",
+      "disabled",
+      "loading",
+      "ripple",
+      "icon"
+    ],
+    "description": "te-button component",
+    "subtags": []
+  },
+  "te-button-group": {
+    "attributes": [
+      "quantity",
+      "type",
+      "size",
+      "outlined",
+      "disabled"
+    ],
+    "description": "te-button-group component",
+    "subtags": []
+  },
+  "te-card": {
+    "attributes": [
+      "imgSrc",
+      "width",
+      "hasHeader",
+      "hasFooter",
+      "borderless",
+      "title"
+    ],
+    "description": "te-card component",
+    "subtags": []
+  },
+  "te-checkbox": {
+    "attributes": [
+      "value",
+      "label",
+      "disabled"
+    ],
+    "description": "te-checkbox component",
+    "subtags": []
+  },
+  "te-date-picker": {
+    "attributes": [
+      "value",
+      "monthNames",
+      "days",
+      "disabled",
+      "placeholder",
+      "maxDate",
+      "minDate",
+      "notAllowedDates"
+    ],
+    "description": "te-date-picker component",
+    "subtags": []
+  },
+  "te-file": {
+    "attributes": [
+      "value",
+      "accept",
+      "disabled",
+      "multiple",
+      "size"
+    ],
+    "description": "te-file component",
+    "subtags": []
+  },
+  "te-icon": {
+    "attributes": [
+      "name"
+    ],
+    "description": "te-icon component",
+    "subtags": []
+  },
+  "te-input": {
+    "attributes": [
+      "value",
+      "id",
+      "type",
+      "disabled",
+      "form",
+      "max",
+      "maxlength",
+      "min",
+      "minlength",
+      "name",
+      "pattern",
+      "placeholder",
+      "readonly",
+      "step",
+      "invalid",
+      "size",
+      "helperText",
+      "floating",
+      "rightIcon",
+      "rightIconClickable",
+      "leftIcon",
+      "leftIconClickable"
+    ],
+    "description": "te-input component",
+    "subtags": []
+  },
+  "te-list-group": {
+    "attributes": [
+      "items",
+      "clickable",
+      "activeItem",
+      "flush"
+    ],
+    "description": "te-list-group component",
+    "subtags": []
+  },
+  "te-loading": {
+    "attributes": [
+      "type",
+      "size",
+      "color",
+      "text"
+    ],
+    "description": "te-loading component",
+    "subtags": []
+  },
+  "te-modal": {
+    "attributes": [
+      "title",
+      "visible",
+      "showCloseButton",
+      "hideHeader",
+      "hideFooter",
+      "scrollable",
+      "centered",
+      "size",
+      "component"
+    ],
+    "description": "te-modal component",
+    "subtags": []
+  },
+  "te-multiple-select": {
+    "attributes": [
+      "value",
+      "options",
+      "displayField",
+      "valueField",
+      "disabled"
+    ],
+    "description": "te-multiple-select component",
+    "subtags": []
+  },
+  "te-notification": {
+    "attributes": [
+      "text",
+      "position",
+      "color",
+      "hide"
+    ],
+    "description": "te-notification component",
+    "subtags": []
+  },
+  "te-offcanvas": {
+    "attributes": [
+      "value",
+      "title",
+      "position"
+    ],
+    "description": "te-offcanvas component",
+    "subtags": []
+  },
+  "te-pagination": {
+    "attributes": [
+      "pages",
+      "activePage",
+      "pagesToShow",
+      "showIcons",
+      "rounded",
+      "size",
+      "position",
+      "labelNext",
+      "labelPrev"
+    ],
+    "description": "te-pagination component",
+    "subtags": []
+  },
+  "te-progress": {
+    "attributes": [
+      "value",
+      "size",
+      "showValue",
+      "type"
+    ],
+    "description": "te-progress component",
+    "subtags": []
+  },
+  "te-radio": {
+    "attributes": [
+      "idInput",
+      "value",
+      "label",
+      "nativeValue"
+    ],
+    "description": "te-radio component",
+    "subtags": []
+  },
+  "te-range": {
+    "attributes": [
+      "value",
+      "min",
+      "max",
+      "step",
+      "disabled"
+    ],
+    "description": "te-range component",
+    "subtags": []
+  },
+  "te-rating": {
+    "attributes": [
+      "value",
+      "quantity",
+      "icon",
+      "iconSizeClass",
+      "spacing",
+      "disabled",
+      "color",
+      "hasHalfValues",
+      "clearable"
+    ],
+    "description": "te-rating component",
+    "subtags": []
+  },
+  "te-select": {
+    "attributes": [
+      "value",
+      "options",
+      "displayField",
+      "valueField",
+      "placeholder",
+      "size",
+      "disabled"
+    ],
+    "description": "te-select component",
+    "subtags": []
+  },
+  "te-spinner": {
+    "attributes": [
+      "type",
+      "size",
+      "color"
+    ],
+    "description": "te-spinner component",
+    "subtags": []
+  },
+  "te-stepper": {
+    "attributes": [
+      "steps",
+      "disabled",
+      "activeStep",
+      "labelStep",
+      "color"
+    ],
+    "description": "te-stepper component",
+    "subtags": []
+  },
+  "te-switch": {
+    "attributes": [
+      "value",
+      "label",
+      "disabled"
+    ],
+    "description": "te-switch component",
+    "subtags": []
+  },
+  "te-table": {
+    "attributes": [
+      "items",
+      "headers",
+      "striped",
+      "hoverable",
+      "bordered",
+      "centered",
+      "borderless",
+      "compact",
+      "responsive",
+      "headerType",
+      "search",
+      "noDataLabel",
+      "hasSubheading",
+      "showRowNum",
+      "rowNumLabel",
+      "itemPerPage",
+      "paginationAlign",
+      "labelNext",
+      "labelPrev",
+      "loading"
+    ],
+    "description": "te-table component",
+    "subtags": []
+  },
+  "te-tabs": {
+    "attributes": [
+      "value",
+      "titles",
+      "filled",
+      "vertical",
+      "pills"
+    ],
+    "description": "te-tabs component",
+    "subtags": []
+  },
+  "te-textarea": {
+    "attributes": [
+      "value",
+      "placeholder",
+      "disabled",
+      "rows",
+      "cols"
+    ],
+    "description": "te-textarea component",
+    "subtags": []
+  },
+  "te-time-picker": {
+    "attributes": [
+      "value",
+      "ampm",
+      "disabled"
+    ],
+    "description": "te-time-picker component",
+    "subtags": []
+  },
+  "te-toast": {
+    "attributes": [
+      "title",
+      "subtitle",
+      "message",
+      "showCloseButton",
+      "color"
+    ],
+    "description": "te-toast component",
+    "subtags": []
+  },
+  "te-toast-light": {
+    "attributes": [
+      "title",
+      "subtitle",
+      "type"
+    ],
+    "description": "te-toast-light component",
+    "subtags": []
+  }
+}
