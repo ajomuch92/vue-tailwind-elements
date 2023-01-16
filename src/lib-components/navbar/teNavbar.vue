@@ -15,14 +15,14 @@
     <div class="container-fluid w-full flex flex-wrap items-center justify-between px-6">
       <button class="
           navbar-toggler
-          text-gray-500
           border-0
           hover:shadow-none hover:no-underline
           py-2
           px-2.5
           bg-transparent
           focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline
-        " type="button" @click="$emit('toggle-click', $event)">
+          flex items-center
+        " :class="{'text-gray-500': !dark, 'white-text': dark}" type="button" @click="$emit('toggle-click', $event)">
           <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars"
             class="w-6" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
             <path fill="currentColor"
