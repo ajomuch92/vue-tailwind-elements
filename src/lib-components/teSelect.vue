@@ -16,9 +16,10 @@
     focus:outline-none"
     :class="sizeClass"
     :disabled="disabled"
+    :multiple="multiple"
     v-model="currentValue"
   >
-      <option v-if="placeholder" value="" selected hidden>{{placeholder}}</option>
+      <option v-if="placeholder&&!multiple" value="" selected hidden>{{placeholder}}</option>
       <option v-for="(option, key) in options" :key="key" :value="option[valueField]||option">
         {{option[displayField]||option}}
       </option>
@@ -30,7 +31,7 @@ export default {
   name: 'teSelect',
   props: {
     value: {
-      type: [String, Number, Array],
+      type: [String, Number, Array, Object],
       default: null,
     },
     options: {
@@ -57,13 +58,17 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    multiple: {
+      type: Boolean,
+      default: false,
     }
   },
   data: () => ({
     currentValue: '',
   }),
   created() {
-    this.currentValue = this.value || '';
+    this.currentValue = this.value || undefined;
   },
   computed: {
     sizeClass() {

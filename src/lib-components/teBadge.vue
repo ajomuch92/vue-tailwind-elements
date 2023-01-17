@@ -6,7 +6,9 @@
     "
     :class="getClass"
   >
-    {{text}}
+    <slot name="default">
+      {{text}}
+    </slot>
   </span>
 </template>
 

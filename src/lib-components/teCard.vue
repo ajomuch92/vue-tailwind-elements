@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden" :class="{'shadow-md rounded-md': !borderless}" :style="getWidth">
+  <div class="overflow-hidden" :class="{'shadow-md rounded-md': !shadowless}" :style="getWidth">
     <div v-if="hasHeader" class="py-3 px-6 border-b border-gray-300 text-center">
       <slot name="header" />
     </div>
@@ -7,10 +7,12 @@
       v-if="imgSrc"
       :src="imgSrc"
       class="mb-4"
-      :class="{'rounded-lg shadow-xl': borderless}"
+      :class="{'rounded-lg shadow-xl': shadowless}"
     />
     <div class="p-5">
-      <h5 v-if="title" class="text-xl font-semibold mb-2">{{title}}</h5>
+      <h5 v-if="title" class="text-xl font-semibold mb-2">
+        <slot name="title">{{ title }}</slot>
+      </h5>
       <slot name="default"></slot>
     </div>
     <div v-if="hasFooter" class="py-3 px-6 border-t border-gray-300 text-gray-600 text-center">
@@ -39,7 +41,7 @@ export default {
       type: Boolean,
       default: false
     },
-    borderless: {
+    shadowless: {
       type: Boolean,
       default: false
     },

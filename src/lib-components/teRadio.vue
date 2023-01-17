@@ -15,7 +15,7 @@ export default {
   props: {
     idInput: {
       type: String,
-      default: () => (new Date()).getTime().toString(16)
+      default: () => crypto.randomUUID()
     },
     value: {
       type: [String, Number],
