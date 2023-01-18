@@ -2,8 +2,7 @@ import Vue from 'vue';
 import Dev from './serve.vue';
 import VueTailwindElements from '@/entry.esm';
 import VuePrism from 'vue-prism';
-
-// import '../src/tailwind.min.css';
+import 'tw-elements';
 import './index.css';
 import '../src/tailwind-forms.min.css';
 import './styles/styles.css';
