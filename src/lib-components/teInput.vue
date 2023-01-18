@@ -62,7 +62,7 @@ export default {
     },
     id: {
       type: String,
-      default: () => (new Date()).getTime().toString(16)
+      default: () => crypto.randomUUID()
     },
     type: {
       type: String,
