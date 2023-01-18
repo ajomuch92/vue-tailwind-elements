@@ -11,15 +11,15 @@ The documentation and examples are being building [here](https://vue-tailwind-el
 
 1. Set up the Tailwind configuration files. Follow this [link](https://tailwindcss.com/docs/installation/using-postcss) to do it.
 
-2. Install from NPM:  
+2. Install from NPM (both libraries):  
 ```bash
-npm install --save vue-tailwind-elements
+npm install tw-elements vue-tailwind-elements
 ```
 Import in your main.js (or index.js) file and install it:
 
 ```javascript
 ...
-import 'vue-tailwind-elements/src/tailwind-forms.min.css';
+import 'tw-elements';
 import VueTailwindElements from 'vue-tailwind-elements';
 
 Vue.use(VueTailwindElements);
