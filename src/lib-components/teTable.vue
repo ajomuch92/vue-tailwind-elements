@@ -25,8 +25,10 @@
         </template>
         <template v-else>
           <tr>
-            <td class="text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center" :class="{...paddingClass, 'border-r': bordered}" :colspan="headers.length">
-              {{noDataLabel}}
+            <td class="text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center" :class="[{...paddingClass, 'border-r': bordered}, header.cellClass]" :colspan="headers.length">
+              <slot name="no-data">
+                {{noDataLabel}}
+              </slot>
             </td>
           </tr>
         </template>
@@ -90,7 +92,7 @@ export default {
     },
     responsive: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     headerType: {
       type: String,
