@@ -52,7 +52,7 @@ export default {
     color: {
       type: String,
       default: 'normal',
-      validator: (value) => ['normal','primary', 'success', 'warning', 'danger'].includes(value)
+      validator: (value) => ['normal', 'primary', 'success', 'warning', 'danger'].includes(value)
     }
   },
   computed: {

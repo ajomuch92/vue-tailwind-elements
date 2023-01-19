@@ -4,7 +4,7 @@
       <ul class="flex list-style-none">
         <li class="page-item">
           <a
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
+            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
             :class="{'pointer-events-none': currentPage==1||pages==0, ...sizeClass}"
             @click="currentPage--"
           >
@@ -14,7 +14,7 @@
         </li>
         <li v-for="page in displayedPages" :key="page" class="page-item">
           <a
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 rounded focus:shadow-none cursor-pointer"
+            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 focus:shadow-none cursor-pointer"
             :class="{
               'bg-blue-500 text-white': page===currentPage, 
               'text-gray-800 hover:text-gray-800 hover:bg-gray-200': page!==currentPage,
@@ -28,7 +28,7 @@
         </li>
         <li class="page-item">
           <a
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 rounded text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
+            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
             :class="{'pointer-events-none': currentPage==pages||pages==0, ...sizeClass}"
             @click="currentPage++"
           >
@@ -69,12 +69,12 @@ export default {
     size: {
       type: String,
       default: 'medium',
-      validator: (value) => ['small', 'medium','large'].includes(value)
+      validator: (value) => ['small', 'medium', 'large'].includes(value)
     },
     position: {
       type: String,
       default: 'center',
-      validator: (value) => ['left', 'center','right'].includes(value)
+      validator: (value) => ['left', 'center', 'right'].includes(value)
     },
     labelNext: {
       type: String,

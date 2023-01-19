@@ -21,7 +21,7 @@ export default {
     color: {
       type: String,
       default: 'primary',
-      validator: (value) => ['normal','primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
+      validator: (value) => ['normal', 'primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'light', 'dark'].includes(value)
     },
   },
   computed: {
