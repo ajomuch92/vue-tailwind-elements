@@ -1,598 +1,526 @@
 {
   "te-accordion/items": {
-    "description": "",
-    "type": "Array"
+    "description": "Array with the title for accordion component. Slots correspond to `content-{key}` with key beginning on zero",
+    "type": "Array<string>"
   },
   "te-accordion/flush": {
-    "description": "",
+    "description": "Indicates when to show the border line. By default false",
     "type": "Boolean"
   },
   "te-alert/text": {
-    "description": "",
+    "description": "Main message for alert. It will be replaced by slot default",
     "type": "String"
   },
   "te-alert/type": {
-    "description": "",
-    "type": "String"
+    "description": "Alert type",
+    "type": "String => 'normal'|'primary'|'success'|'info'|'warning'|'danger'"
   },
   "te-alert/solid": {
-    "description": "",
+    "description": "Indicates when to use a solid background color. By default is false",
     "type": "Boolean"
   },
   "te-badge/text": {
-    "description": "",
+    "description": "Text to show into the badge",
     "type": "String"
   },
   "te-badge/type": {
-    "description": "",
-    "type": "String"
+    "description": "Badge type. By default, normal",
+    "type": "String => 'normal'|'primary'|'success'|'info'|'warning'|'danger'|'pink'|'purple'"
   },
   "te-badge/size": {
-    "description": "",
-    "type": "String"
+    "description": "Badge size. By default, small",
+    "type": "String => 'small'|'large'"
   },
   "te-badge/solid": {
-    "description": "",
+    "description": "Indicates when to use a solid background color. By default is false",
     "type": "Boolean"
   },
   "te-badge/rounded": {
-    "description": "",
+    "description": "Indicates when is full rounded. By default is false",
     "type": "Boolean"
   },
   "te-badge/outlined": {
-    "description": "",
+    "description": "Indicates when badge only has a colored border. By default is false",
     "type": "Boolean"
   },
-  "te-breadcrumb/options": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-breadcrumb/separator": {
-    "description": "",
-    "type": "String"
-  },
   "te-button/type": {
-    "description": "",
-    "type": "String"
+    "description": "Button type. By default, primary.",
+    "type": "String => 'normal'|'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'light'|'dark'"
   },
   "te-button/buttonType": {
-    "description": "",
-    "type": "String"
+    "description": "Native button behaviour. By default, button",
+    "type": "String => 'button'|'reset'|'submit'"
   },
   "te-button/size": {
-    "description": "",
-    "type": "String"
+    "description": "Button size. By default medium",
+    "type": "String => 'small'|'medium'|'large'"
   },
   "te-button/rounded": {
-    "description": "",
+    "description": "Indicates when is full rounded. By default is false",
     "type": "Boolean"
   },
   "te-button/outlined": {
-    "description": "",
+    "description": "Indicates when button only has a colored border. By default is false",
     "type": "Boolean"
   },
   "te-button/shadowed": {
-    "description": "",
+    "description": "Indicates when button has a small shadow around it. By default is false",
     "type": "Boolean"
   },
   "te-button/uppercased": {
-    "description": "",
+    "description": "Indicates when button text is all UPPERCASED. By default is false",
     "type": "Boolean"
   },
   "te-button/onlyText": {
-    "description": "",
+    "description": "Indicates when button will only show the text without any other element. By default is false",
     "type": "Boolean"
   },
   "te-button/noRounded": {
-    "description": "",
+    "description": "Indicates when button has a small rounded corner. By default is false",
     "type": "Boolean"
   },
   "te-button/disabled": {
-    "description": "",
+    "description": "Indicates when button is disabled. By default is false",
     "type": "Boolean"
   },
   "te-button/loading": {
-    "description": "",
+    "description": "Indicates the loading state for button. By default is false",
     "type": "Boolean"
   },
   "te-button/ripple": {
-    "description": "",
+    "description": "Indicates when to show the ripple effect on the button. By default is false",
     "type": "Boolean"
   },
   "te-button/icon": {
-    "description": "",
+    "description": "Indicates when button is to show only an icon. By default is false",
     "type": "Boolean"
   },
   "te-button-group/quantity": {
-    "description": "",
+    "description": "The number of buttons to show. By default 1",
     "type": "Number"
   },
   "te-button-group/type": {
-    "description": "",
-    "type": "String"
+    "description": "Button type. By default, primary.",
+    "type": "String => 'normal'|'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'light'|'dark'"
   },
   "te-button-group/size": {
-    "description": "",
-    "type": "String"
+    "description": "Button size. By default medium",
+    "type": "String => 'small'|'medium'|'large'"
   },
   "te-button-group/outlined": {
-    "description": "",
+    "description": "Indicates when buttons only will have a colored border. By default is false",
     "type": "Boolean"
   },
   "te-button-group/disabled": {
-    "description": "",
-    "type": "Array"
+    "description": "This array corresponds to disability to each button according with its index",
+    "type": "Array<boolean>"
   },
   "te-card/imgSrc": {
-    "description": "",
+    "description": "Source to show into the main card image.",
     "type": "String"
   },
   "te-card/width": {
-    "description": "",
-    "type": "String"
+    "description": "Indicates the card width. By default 350px",
+    "type": "String|Number"
   },
   "te-card/hasHeader": {
-    "description": "",
+    "description": "Indicate when card has header. By default false",
     "type": "Boolean"
   },
   "te-card/hasFooter": {
-    "description": "",
-    "type": "Boolean"
+    "description": "Indicate when card has footer. By default false",
+    "type": "B "
   },
-  "te-card/borderless": {
-    "description": "",
+  "te-card/shadowless": {
+    "description": "Indicate when card will have a shadow around it. By default is false.",
     "type": "Boolean"
   },
   "te-card/title": {
-    "description": "",
+    "description": "String for card title.",
     "type": "String"
   },
   "te-checkbox/value": {
-    "description": "",
+    "description": "Prop to use with v-model directive",
     "type": "Boolean"
   },
   "te-checkbox/label": {
-    "description": "",
+    "description": "Text for checkbox label",
     "type": "String"
   },
   "te-checkbox/disabled": {
-    "description": "",
+    "description": "Indicates when checkbox is disabled. By default is false",
     "type": "Boolean"
   },
-  "te-date-picker/value": {
-    "description": "",
-    "type": "Date"
-  },
-  "te-date-picker/monthNames": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-date-picker/days": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-date-picker/disabled": {
-    "description": "",
+  "te-switch/value": {
+    "description": "Prop to use with v-model directive",
     "type": "Boolean"
   },
-  "te-date-picker/placeholder": {
-    "description": "",
+  "te-switch/label": {
+    "description": "Text for switch label",
     "type": "String"
   },
-  "te-date-picker/maxDate": {
-    "description": "",
-    "type": "Date"
-  },
-  "te-date-picker/minDate": {
-    "description": "",
-    "type": "Date"
-  },
-  "te-date-picker/notAllowedDates": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-file/value": {
-    "description": "",
-    "type": "String"
-  },
-  "te-file/accept": {
-    "description": "",
-    "type": "String"
-  },
-  "te-file/disabled": {
-    "description": "",
+  "te-switch/disabled": {
+    "description": "Indicates when switch is disabled. By default is false",
     "type": "Boolean"
-  },
-  "te-file/multiple": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-file/size": {
-    "description": "",
-    "type": "String"
-  },
-  "te-icon/name": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/value": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/id": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/type": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/disabled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-input/form": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/max": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/maxlength": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/min": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/minlength": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/name": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/pattern": {
-    "description": "",
-    "type": "RegExp"
-  },
-  "te-input/placeholder": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/readonly": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-input/step": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/invalid": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-input/size": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/helperText": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/floating": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-input/rightIcon": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/rightIconClickable": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-input/leftIcon": {
-    "description": "",
-    "type": "String"
-  },
-  "te-input/leftIconClickable": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-list-group/items": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-list-group/clickable": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-list-group/activeItem": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-list-group/flush": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-loading/type": {
-    "description": "",
-    "type": "String"
-  },
-  "te-loading/size": {
-    "description": "",
-    "type": "String"
-  },
-  "te-loading/color": {
-    "description": "",
-    "type": "String"
-  },
-  "te-loading/text": {
-    "description": "",
-    "type": "String"
-  },
-  "te-modal/title": {
-    "description": "",
-    "type": "String"
-  },
-  "te-modal/visible": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-modal/showCloseButton": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-modal/hideHeader": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-modal/hideFooter": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-modal/scrollable": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-modal/centered": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-modal/size": {
-    "description": "",
-    "type": "String"
-  },
-  "te-modal/component": {
-    "description": "",
-    "type": "onent:Object"
-  },
-  "te-multiple-select/value": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-multiple-select/options": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-multiple-select/displayField": {
-    "description": "",
-    "type": "String"
-  },
-  "te-multiple-select/valueField": {
-    "description": "",
-    "type": "String"
-  },
-  "te-multiple-select/disabled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-notification/text": {
-    "description": "",
-    "type": "String"
-  },
-  "te-notification/position": {
-    "description": "",
-    "type": "String"
-  },
-  "te-notification/color": {
-    "description": "",
-    "type": "String"
-  },
-  "te-notification/hide": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-offcanvas/value": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-offcanvas/title": {
-    "description": "",
-    "type": "String"
-  },
-  "te-offcanvas/position": {
-    "description": "",
-    "type": "String"
-  },
-  "te-pagination/pages": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-pagination/activePage": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-pagination/pagesToShow": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-pagination/showIcons": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-pagination/rounded": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-pagination/size": {
-    "description": "",
-    "type": "String"
-  },
-  "te-pagination/position": {
-    "description": "",
-    "type": "String"
-  },
-  "te-pagination/labelNext": {
-    "description": "",
-    "type": "String"
-  },
-  "te-pagination/labelPrev": {
-    "description": "",
-    "type": "String"
-  },
-  "te-progress/value": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-progress/size": {
-    "description": "",
-    "type": "String"
-  },
-  "te-progress/showValue": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-progress/type": {
-    "description": "",
-    "type": "String"
   },
   "te-radio/idInput": {
-    "description": "",
+    "description": "String to indicate the id for radio input. By default is an UUID",
     "type": "String"
   },
   "te-radio/value": {
-    "description": "",
+    "description": "Prop to use with v-model directive",
     "type": "String"
   },
   "te-radio/label": {
-    "description": "",
+    "description": "Text for radio label",
     "type": "String"
   },
   "te-radio/nativeValue": {
-    "description": "",
-    "type": "String"
-  },
-  "te-range/value": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-range/min": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-range/max": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-range/step": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-range/disabled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-rating/value": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-rating/quantity": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-rating/icon": {
-    "description": "",
-    "type": "String"
-  },
-  "te-rating/iconSizeClass": {
-    "description": "",
-    "type": "String"
-  },
-  "te-rating/spacing": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-rating/disabled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-rating/color": {
-    "description": "",
-    "type": "String"
-  },
-  "te-rating/hasHalfValues": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-rating/clearable": {
-    "description": "",
-    "type": "Boolean"
+    "description": "Value to set into radio input.",
+    "type": "String|Number"
   },
   "te-select/value": {
-    "description": "",
+    "description": "Prop to use with v-model directive",
     "type": "String"
   },
   "te-select/options": {
-    "description": "",
-    "type": "Array"
+    "description": "Options to show into the select input",
+    "type": "Array<object>"
   },
   "te-select/displayField": {
-    "description": "",
+    "description": "Field name to show in select options. By default is `label`",
     "type": "String"
   },
   "te-select/valueField": {
-    "description": "",
+    "description": "Field name to use with v-model directive. By default is `id`",
     "type": "String"
   },
   "te-select/placeholder": {
-    "description": "",
+    "description": "Text to show as placeholder",
     "type": "String"
   },
   "te-select/size": {
-    "description": "",
-    "type": "String"
+    "description": "Select input size. By default is `medium`",
+    "type": "String => 'small'|'medium'|'large'"
   },
   "te-select/disabled": {
-    "description": "",
+    "description": "Indicates when input is disabled. By default is false",
     "type": "Boolean"
   },
-  "te-spinner/type": {
-    "description": "",
+  "te-breadcrumb/options": {
+    "description": "Array of object with options to show on breadcrumb",
+    "type": "Array<Object({label, href|to})>"
+  },
+  "te-breadcrumb/separator": {
+    "description": "Character used as separator. By default is `/`",
+    "type": "String => '/'|'\\'|'>'"
+  },
+  "te-breadcrumb/linkTag": {
+    "description": "Name of the link tag. By default is `a`",
+    "type": "String => 'a'|'router-link'"
+  },
+  "te-textarea/value": {
+    "description": "Prop to use with v-model directive",
     "type": "String"
+  },
+  "te-textarea/placeholder": {
+    "description": "Text used as textarea placeholder",
+    "type": "String"
+  },
+  "te-textarea/disabled": {
+    "description": "Indicates when textarea is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-textarea/rows": {
+    "description": "Number to set the textarea rows. By default is 3",
+    "type": "Number"
+  },
+  "te-textarea/cols": {
+    "description": "Number to set the textarea columns. By default is null",
+    "type": "Number"
+  },
+  "te-input/value": {
+    "description": "Prop to use with v-model directive",
+    "type": "String"
+  },
+  "te-input/id": {
+    "description": "String to indicate the id for radio input. By default is an UUID",
+    "type": "String"
+  },
+  "te-input/type": {
+    "description": "Value to set the input type. By default is text",
+    "type": "String => 'text'|'number'|'email'|'search'|'password'|'tel'|'url'"
+  },
+  "te-input/disabled": {
+    "description": "Indicates when input is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-input/form": {
+    "description": "Form name if it belongs to one",
+    "type": "String"
+  },
+  "te-input/max": {
+    "description": "Max value for the input",
+    "type": "String|Number"
+  },
+  "te-input/maxlength": {
+    "description": "Max length value for the input",
+    "type": "String|Number"
+  },
+  "te-input/min": {
+    "description": "Min value for the input",
+    "type": "String|Number"
+  },
+  "te-input/minlength": {
+    "description": "Max length value for the input",
+    "type": "String|Number"
+  },
+  "te-input/name": {
+    "description": "Name for the input",
+    "type": "String"
+  },
+  "te-input/pattern": {
+    "description": "Regular expression to apply on the input",
+    "type": "RegExp"
+  },
+  "te-input/placeholder": {
+    "description": "Text used as input placeholder",
+    "type": "String"
+  },
+  "te-input/readonly": {
+    "description": "Indicates when input is readonly. By default is false",
+    "type": "Boolean"
+  },
+  "te-input/step": {
+    "description": "Indicates the step for numeric inputs.",
+    "type": "String|Number"
+  },
+  "te-input/invalid": {
+    "description": "Indicates when input is invalid. By default is false",
+    "type": "Boolean"
+  },
+  "te-input/size": {
+    "description": "Input size. By default is `medium`",
+    "type": "String => 'small'|'medium'|'large'"
+  },
+  "te-input/helperText": {
+    "description": "Text to use as helper or hint text. Shown below the input",
+    "type": "String"
+  },
+  "te-input/floating": {
+    "description": "Indicates when placeholder is floating. Size is not applied when floating is used.",
+    "type": "Boolean"
+  },
+  "te-input/rightIcon": {
+    "description": "Indicates the name of the icon used on the right side",
+    "type": "String"
+  },
+  "te-input/rightIconClickable": {
+    "description": "Indicate if right icon is clickable emitting `right-icon-click` event. By default is false.",
+    "type": "Boolean"
+  },
+  "te-input/leftIcon": {
+    "description": "Indicates the name of the icon used on the left side.",
+    "type": "String"
+  },
+  "te-input/leftIconClickable": {
+    "description": "Indicate if right icon is clickable emitting `left-icon-click` event. By default is false.",
+    "type": "Boolean"
+  },
+  "te-date-picker/value": {
+    "description": "Prop to use with v-model directive",
+    "type": "Date"
+  },
+  "te-date-picker/monthNames": {
+    "description": "Array with the name of the months. By default is the name of months in English",
+    "type": "Array<string>"
+  },
+  "te-date-picker/days": {
+    "description": "Array with the name of the days. By default is the name of days in English",
+    "type": "Array<string>"
+  },
+  "te-date-picker/disabled": {
+    "description": "Indicates when input is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-date-picker/placeholder": {
+    "description": "Indicate the input placeholder",
+    "type": "String"
+  },
+  "te-date-picker/maxDate": {
+    "description": "Indicate the max selectable date on the input",
+    "type": "Date"
+  },
+  "te-date-picker/minDate": {
+    "description": "Indicate the min selectable date on the input",
+    "type": "Date"
+  },
+  "te-date-picker/notAllowedDates": {
+    "description": "Array to disable some dates from input.",
+    "type": "Array<Date>"
+  },
+  "te-time-picker/value": {
+    "description": "Prop to use with v-model directive. This is a timestamp value",
+    "type": "Number"
+  },
+  "te-time-picker/ampm": {
+    "description": "Indicates when to show the option for AM/PM. By default is true",
+    "type": "Boolean"
+  },
+  "te-time-picker/disabled": {
+    "description": "Indicates when input is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-range/value": {
+    "description": "Prop to use with v-model directive",
+    "type": "Number"
+  },
+  "te-range/min": {
+    "description": "Min value for the input. By default is 0",
+    "type": "Number"
+  },
+  "te-range/max": {
+    "description": "Max value for the input. By default is 5",
+    "type": "Number"
+  },
+  "te-range/step": {
+    "description": "The amount to advance from one value to another. By default is 1.",
+    "type": "Number"
+  },
+  "te-range/disabled": {
+    "description": "Indicates when input is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-progress/value": {
+    "description": "Prop to use with v-model directive",
+    "type": "Number"
+  },
+  "te-progress/size": {
+    "description": "Value to indicate the progress size. By default is medium",
+    "type": "String => 'small'|'medium'|'large'"
+  },
+  "te-progress/showValue": {
+    "description": "Value to indicate when to show the current step value. By default is false.",
+    "type": "Boolean"
+  },
+  "te-progress/type": {
+    "description": "Progress type",
+    "type": "String => 'primary'|'success'|'warning'|'danger'"
+  },
+  "te-tabs/value": {
+    "description": "Prop to use with v-model directive. This values indicates the current selected tab beginning on 0",
+    "type": "Number"
+  },
+  "te-tabs/titles": {
+    "description": "An array with the titles for the tabs",
+    "type": "Array<string>"
+  },
+  "te-tabs/filled": {
+    "description": "Boolean value to indicate when tabs are solid colored",
+    "type": "Boolean"
+  },
+  "te-tabs/vertical": {
+    "description": "Boolean value to indicate when tabs are vertical",
+    "type": "Boolean"
+  },
+  "te-tabs/pills": {
+    "description": "Boolean value to indicate when show pills instead of tabs",
+    "type": "Boolean"
+  },
+  "te-list-group/items": {
+    "description": "An array with items to show into the list. You have slots like this: `item-{key}` with key beginning at 0 or the name field",
+    "type": "Array<Object({label, name})>"
+  },
+  "te-list-group/clickable": {
+    "description": "Boolean value to indicate when list is clickable",
+    "type": "Boolean"
+  },
+  "te-list-group/activeItem": {
+    "description": "Value to indicate the active item",
+    "type": "Number"
+  },
+  "te-list-group/flush": {
+    "description": "Indicates when to show the border line. By default false",
+    "type": "Boolean"
+  },
+  "te-dropdown/type": {
+    "description": "Indicate the dropdown type",
+    "type": "String => 'normal'|'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'light'|'dark'"
+  },
+  "te-dropdown/size": {
+    "description": "Value to indicate the dropdown size. By default is medium",
+    "type": "String => 'small'|'medium'|'large'"
+  },
+  "te-dropdown/outlined": {
+    "description": "Value to indicate when dropdown trigger only has a border",
+    "type": "Boolean"
+  },
+  "te-dropdown/label": {
+    "description": "Text to show as dropdown label",
+    "type": "String"
+  },
+  "te-dropdown/ripple": {
+    "description": "Indicates when to show the ripple effect on the dropdown trigger. By default is false",
+    "type": "Boolean"
+  },
+  "te-dropdown-item/disabled": {
+    "description": "Indicates when dropdown is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-modal/title": {
+    "description": "Text to show as modal  title",
+    "type": "String"
+  },
+  "te-modal/visible": {
+    "description": "Boolean value to show modal. By default is false.",
+    "type": "Boolean"
+  },
+  "te-modal/showCloseButton": {
+    "description": "Boolean value to show the close button. By default is true.",
+    "type": "Boolean"
+  },
+  "te-modal/hideHeader": {
+    "description": "Boolean value to show the modal header. By default is true.",
+    "type": "Boolean"
+  },
+  "te-modal/hideFooter": {
+    "description": "Boolean value to show the modal footer. By default is true.",
+    "type": "Boolean"
+  },
+  "te-modal/scrollable": {
+    "description": "Boolean value to indicate when modal is scrollable. By default is false.",
+    "type": "Boolean"
+  },
+  "te-modal/centered": {
+    "description": "Boolean value to indicate when modal is centered on screen. By default is false.",
+    "type": "Boolean"
+  },
+  "te-modal/size": {
+    "description": "Value to indicate the modal size",
+    "type": "String => 'xl'|'lg'|'sm'"
+  },
+  "te-spinner/type": {
+    "description": "Spinner type",
+    "type": "String => 'normal'|'growing'"
   },
   "te-spinner/size": {
-    "description": "",
-    "type": "String"
+    "description": "Value to indicate the spinner size. By default medium",
+    "type": "String => 'small'|'medium'|'large'"
   },
   "te-spinner/color": {
-    "description": "",
-    "type": "String"
+    "description": "Value to indicate the color size",
+    "type": "String => 'normal'|'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'light'|'dark'"
   },
   "te-stepper/steps": {
-    "description": "",
-    "type": "Array"
+    "description": "Array containing the title used on the component",
+    "type": "Array<string>"
   },
   "te-stepper/disabled": {
-    "description": "",
-    "type": "Array"
+    "description": "Indicate what steps are disabled",
+    "type": "Array<boolean>"
   },
   "te-stepper/activeStep": {
-    "description": "",
+    "description": "Indicate what step is current active. You can use .sync modifier",
     "type": "Number"
   },
   "te-stepper/labelStep": {
@@ -600,183 +528,271 @@
     "type": "String"
   },
   "te-stepper/color": {
-    "description": "",
-    "type": "String"
-  },
-  "te-switch/value": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-switch/label": {
-    "description": "",
-    "type": "String"
-  },
-  "te-switch/disabled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/items": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-table/headers": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-table/striped": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/hoverable": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/bordered": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/centered": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/borderless": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/compact": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/responsive": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/headerType": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/search": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/noDataLabel": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/hasSubheading": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/showRowNum": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-table/rowNumLabel": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/itemPerPage": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-table/paginationAlign": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/labelNext": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/labelPrev": {
-    "description": "",
-    "type": "String"
-  },
-  "te-table/loading": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-tabs/value": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-tabs/titles": {
-    "description": "",
-    "type": "Array"
-  },
-  "te-tabs/filled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-tabs/vertical": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-tabs/pills": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-textarea/value": {
-    "description": "",
-    "type": "String"
-  },
-  "te-textarea/placeholder": {
-    "description": "",
-    "type": "String"
-  },
-  "te-textarea/disabled": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-textarea/rows": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-textarea/cols": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-time-picker/value": {
-    "description": "",
-    "type": "Number"
-  },
-  "te-time-picker/ampm": {
-    "description": "",
-    "type": "Boolean"
-  },
-  "te-time-picker/disabled": {
-    "description": "",
-    "type": "Boolean"
+    "description": "Indicate the stepper color. By default is primary",
+    "type": "String => 'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'dark'"
   },
   "te-toast/title": {
-    "description": "",
+    "description": "Text to use as toast title",
     "type": "String"
   },
   "te-toast/subtitle": {
-    "description": "",
+    "description": "Text to use as toast subtitle",
     "type": "String"
   },
   "te-toast/message": {
-    "description": "",
+    "description": "Text to use as secondary text",
     "type": "String"
   },
   "te-toast/showCloseButton": {
-    "description": "",
+    "description": "Value to indicate when to show the close button. By default is true.",
     "type": "Boolean"
   },
   "te-toast/color": {
-    "description": "",
+    "description": "Value to set the toast background color",
+    "type": "String => 'normal'|'primary'|'success'|'warning'|'danger'"
+  },
+  "te-pagination/pages": {
+    "description": "The number of pages to show on pagination component. By default is 3",
+    "type": "Number"
+  },
+  "te-pagination/activePage": {
+    "description": "The positive number of the actived page. You can use .sync modifier. By default is 1",
+    "type": "Number"
+  },
+  "te-pagination/pagesToShow": {
+    "description": "Number of pages to show on the pagination component. By default is 3.",
+    "type": "Number"
+  },
+  "te-pagination/showIcons": {
+    "description": "Value to show the icon on next and prev buttons. By default is false.",
+    "type": "Boolean"
+  },
+  "te-pagination/rounded": {
+    "description": "Value to set the pagination buttons rounded. By default is false.",
+    "type": "Boolean => 'small'|'medium'|'large'"
+  },
+  "te-pagination/size": {
+    "description": "Value to set the pagination buttons size. By default is medium",
     "type": "String"
   },
+  "te-pagination/position": {
+    "description": "Value to set pagination alignment. By default is center",
+    "type": "String => 'left'|'center'|'right'"
+  },
+  "te-pagination/labelNext": {
+    "description": "Text to show on next button. By default is `Next`",
+    "type": "String"
+  },
+  "te-pagination/labelPrev": {
+    "description": "Text to show on prev button. By default is `Prev`",
+    "type": "String"
+  },
+  "te-navbar/hrefHeader": {
+    "description": "String to indicate the path when clicking on navbar logo. This is used for a and router-link tags. By default is `#`",
+    "type": "String"
+  },
+  "te-navbar/dark": {
+    "description": "Boolean value to indicate when nav header is dark. By default is false.",
+    "type": "Boolean"
+  },
+  "te-navbar/headerTag": {
+    "description": "Tag used for header link tag. By default is a.",
+    "type": "String"
+  },
+  "te-navbar-item/href": {
+    "description": "String used as path. This is used for a and router-link tags. By default is `#`",
+    "type": "String"
+  },
+  "te-navbar-item/dark": {
+    "description": "Boolean value to indicate when nav header item is dark. By default is false.",
+    "type": "Boolean"
+  },
+  "te-navbar-item/disabled": {
+    "description": "Boolean value to indicate when input is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-navbar-item/tag": {
+    "description": "Tag used for header link tag. By default is a.",
+    "type": "String"
+  },
+  "te-table/items": {
+    "description": "Array of object to  show into the table",
+    "type": "Array<object>"
+  },
+  "te-table/headers": {
+    "description": "Array of object with the columns to show into the table",
+    "type": "Array<Object({label, field, cellClass})>"
+  },
+  "te-table/striped": {
+    "description": "Boolean value to indicate when table is striped. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/hoverable": {
+    "description": "Boolean value to indicate when table has a row hover effect. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/bordered": {
+    "description": "Boolean value to indicate when table has border around it. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/centered": {
+    "description": "Boolean value to indicate when table headers are centered. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/borderless": {
+    "description": "Boolean value to indicate when table does not have borders. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/compact": {
+    "description": "Boolean value to indicate when table has smaller rows. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/responsive": {
+    "description": "Boolean value to indicate when table will show a scroll on small devices. By default is true.",
+    "type": "Boolean"
+  },
+  "te-table/headerType": {
+    "description": "String to indicate the header background color. By default is `normal`",
+    "type": "String => 'normal'|'light'|'dark'"
+  },
+  "te-table/search": {
+    "description": "String to search on shown items on the table",
+    "type": "String"
+  },
+  "te-table/noDataLabel": {
+    "description": "Text to show when there is no coincidence when searching. You can override this value using no-data slots. By default is `No data`",
+    "type": "String"
+  },
+  "te-table/hasSubheading": {
+    "description": "Indicate when table has a subheader before the items. By default false.",
+    "type": "Boolean"
+  },
+  "te-table/showRowNum": {
+    "description": "Boolean value to indicate when table will show the row numbers. By default is false.",
+    "type": "Boolean"
+  },
+  "te-table/rowNumLabel": {
+    "description": "String to show on the row numbers column when prop is true. By default is `#`",
+    "type": "String"
+  },
+  "te-table/itemPerPage": {
+    "description": "Number of pages to show on the pagination component. By default is 3.",
+    "type": "Number"
+  },
+  "te-table/paginationAlign": {
+    "description": "Value to set pagination alignment. By default is center",
+    "type": "String => 'left'|'center'|'right'"
+  },
+  "te-table/labelNext": {
+    "description": "Text to show on next button. By default is `Next`",
+    "type": "String"
+  },
+  "te-table/labelPrev": {
+    "description": "Text to show on prev button. By default is `Prev`",
+    "type": "String"
+  },
+  "te-table/loading": {
+    "description": "Boolean value to indicate when data on table is being loaded. By default is false",
+    "type": "Boolean"
+  },
+  "te-file/value": {
+    "description": "Prop to use with v-model directive (base64 string passed or array of base64 string)",
+    "type": "String|Array"
+  },
+  "te-file/accept": {
+    "description": "String with the files' extensions on the input",
+    "type": "String"
+  },
+  "te-file/disabled": {
+    "description": "Indicates when input is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-file/multiple": {
+    "description": "Indicates when input accept select multiple files.",
+    "type": "Boolean"
+  },
+  "te-file/size": {
+    "description": "Value to set input size. By default medium",
+    "type": "String => 'small'|'medium'|'large'"
+  },
+  "te-notification/text": {
+    "description": "Text used as notification main text",
+    "type": "String"
+  },
+  "te-notification/position": {
+    "description": "String to set the notification position. By default is top-right",
+    "type": "String => 'top-left'|'top-right'|'bottom-left'|'bottom-right'"
+  },
+  "te-notification/color": {
+    "description": "String to indicate the notification color. By default is primary",
+    "type": "String => 'normal'|'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'light'|'dark'"
+  },
+  "te-notification/hide": {
+    "description": "Value to indicate when to hide the notification. By default is false.",
+    "type": "Boolean"
+  },
+  "te-icon/name": {
+    "description": "Name of the icon to use on the component. Only compatible with Glyphicons or Bootstrap Icons.",
+    "type": "String"
+  },
+  "te-rating/value": {
+    "description": "Prop to use with v-model directive",
+    "type": "Number"
+  },
+  "te-rating/quantity": {
+    "description": "Number of icons to show into rating input.",
+    "type": "Number"
+  },
+  "te-rating/icon": {
+    "description": "The name to use as icon. By default is `star-fill`",
+    "type": "String"
+  },
+  "te-rating/iconSizeClass": {
+    "description": "String to set class(es) for the icon span.",
+    "type": "String"
+  },
+  "te-rating/spacing": {
+    "description": "Value to set the spacing between icons. By defaul is 1",
+    "type": "Number[1-6]"
+  },
+  "te-rating/disabled": {
+    "description": "Indicates when rating is disabled. By default is false",
+    "type": "Boolean"
+  },
+  "te-rating/color": {
+    "description": "String value to use as icon color. You can use a string, hex or rgb(a) value. By default is yellow",
+    "type": "String"
+  },
+  "te-rating/hasHalfValues": {
+    "description": "Boolean value to indicate when input has half scores. By default is false.",
+    "type": "Boolean"
+  },
+  "te-rating/clearable": {
+    "description": "Boolean value to indicate when input is clearable. By default is false",
+    "type": "Boolean"
+  },
   "te-toast-light/title": {
-    "description": "",
+    "description": "Text to use as toast title",
     "type": "String"
   },
   "te-toast-light/subtitle": {
-    "description": "",
+    "description": "Text to use as toast subtitle",
     "type": "String"
   },
   "te-toast-light/type": {
-    "description": "",
+    "description": "Tost type. By default is info.",
+    "type": "String => 'info'|'success'|'warning'|'danger'"
+  },
+  "te-offcanvas/value": {
+    "description": "Prop to use with v-model directive. This prop indicates when to show or hide the drawer",
+    "type": "Boolean"
+  },
+  "te-offcanvas/title": {
+    "description": "String to show as drawer title",
     "type": "String"
+  },
+  "te-offcanvas/position": {
+    "description": "Position for the offcanvas",
+    "type": "String => 'right'|'left'"
   }
 }

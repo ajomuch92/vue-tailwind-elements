@@ -4,7 +4,7 @@
       "items",
       "flush"
     ],
-    "description": "te-accordion component",
+    "description": "te-accordion component. Slots `content-${key}` with key beginning at 1",
     "subtags": []
   },
   "te-alert": {
@@ -13,7 +13,7 @@
       "type",
       "solid"
     ],
-    "description": "te-alert component",
+    "description": "te-alert component. Slot default only.",
     "subtags": []
   },
   "te-badge": {
@@ -25,34 +25,29 @@
       "rounded",
       "outlined"
     ],
-    "description": "te-badge component",
-    "subtags": []
-  },
-  "te-breadcrumb": {
-    "attributes": [
-      "options",
-      "separator"
-    ],
-    "description": "te-breadcrumb component",
+    "description": "te-badge component. Slot default only.",
     "subtags": []
   },
   "te-button": {
     "attributes": [
       "type",
       "buttonType",
+      "button-type",
       "size",
       "rounded",
       "outlined",
       "shadowed",
       "uppercased",
       "onlyText",
+      "only-text",
       "noRounded",
+      "no-rounded",
       "disabled",
       "loading",
       "ripple",
       "icon"
     ],
-    "description": "te-button component",
+    "description": "te-button component. Slot default only.",
     "subtags": []
   },
   "te-button-group": {
@@ -69,13 +64,16 @@
   "te-card": {
     "attributes": [
       "imgSrc",
+      "img-src",
       "width",
       "hasHeader",
+      "has-header",
       "hasFooter",
+      "has-footer",
       "borderless",
       "title"
     ],
-    "description": "te-card component",
+    "description": "te-card component. Slots header, footer, title, default.",
     "subtags": []
   },
   "te-checkbox": {
@@ -84,39 +82,62 @@
       "label",
       "disabled"
     ],
-    "description": "te-checkbox component",
+    "description": "te-checkbox component. Slot default only.",
     "subtags": []
   },
-  "te-date-picker": {
+  "te-switch": {
     "attributes": [
       "value",
-      "monthNames",
-      "days",
-      "disabled",
+      "label",
+      "disabled"
+    ],
+    "description": "te-switch component. Slot default only.",
+    "subtags": []
+  },
+  "te-radio": {
+    "attributes": [
+      "idInput",
+      "id-input",
+      "value",
+      "label",
+      "nativeValue",
+      "native-value"
+    ],
+    "description": "te-radio component. Slot default only.",
+    "subtags": []
+  },
+  "te-select": {
+    "attributes": [
+      "value",
+      "options",
+      "displayField",
+      "display-field",
+      "valueField",
+      "value-field",
       "placeholder",
-      "maxDate",
-      "minDate",
-      "notAllowedDates"
+      "size",
+      "disabled"
     ],
-    "description": "te-date-picker component",
+    "description": "te-select component",
     "subtags": []
   },
-  "te-file": {
+  "te-breadcrumb": {
+    "attributes": [
+      "options",
+      "separator"
+    ],
+    "description": "te-breadcrumb component",
+    "subtags": []
+  },
+  "te-textarea": {
     "attributes": [
       "value",
-      "accept",
+      "placeholder",
       "disabled",
-      "multiple",
-      "size"
+      "rows",
+      "cols"
     ],
-    "description": "te-file component",
-    "subtags": []
-  },
-  "te-icon": {
-    "attributes": [
-      "name"
-    ],
-    "description": "te-icon component",
+    "description": "te-textarea component",
     "subtags": []
   },
   "te-input": {
@@ -138,113 +159,45 @@
       "invalid",
       "size",
       "helperText",
+      "helper-text",
       "floating",
       "rightIcon",
+      "right-icon",
       "rightIconClickable",
+      "right-icon-clickable",
       "leftIcon",
-      "leftIconClickable"
+      "left-icon",
+      "leftIconClickable",
+      "left-icon-clickable"
     ],
     "description": "te-input component",
     "subtags": []
   },
-  "te-list-group": {
-    "attributes": [
-      "items",
-      "clickable",
-      "activeItem",
-      "flush"
-    ],
-    "description": "te-list-group component",
-    "subtags": []
-  },
-  "te-loading": {
-    "attributes": [
-      "type",
-      "size",
-      "color",
-      "text"
-    ],
-    "description": "te-loading component",
-    "subtags": []
-  },
-  "te-modal": {
-    "attributes": [
-      "title",
-      "visible",
-      "showCloseButton",
-      "hideHeader",
-      "hideFooter",
-      "scrollable",
-      "centered",
-      "size",
-      "component"
-    ],
-    "description": "te-modal component",
-    "subtags": []
-  },
-  "te-multiple-select": {
+  "te-date-picker": {
     "attributes": [
       "value",
-      "options",
-      "displayField",
-      "valueField",
+      "monthNames",
+      "month-names",
+      "days",
+      "disabled",
+      "placeholder",
+      "maxDate",
+      "max-date",
+      "minDate",
+      "min-date",
+      "notAllowedDates",
+      "not-allowed-dates"
+    ],
+    "description": "te-date-picker component",
+    "subtags": []
+  },
+  "te-time-picker": {
+    "attributes": [
+      "value",
+      "ampm",
       "disabled"
     ],
-    "description": "te-multiple-select component",
-    "subtags": []
-  },
-  "te-notification": {
-    "attributes": [
-      "text",
-      "position",
-      "color",
-      "hide"
-    ],
-    "description": "te-notification component",
-    "subtags": []
-  },
-  "te-offcanvas": {
-    "attributes": [
-      "value",
-      "title",
-      "position"
-    ],
-    "description": "te-offcanvas component",
-    "subtags": []
-  },
-  "te-pagination": {
-    "attributes": [
-      "pages",
-      "activePage",
-      "pagesToShow",
-      "showIcons",
-      "rounded",
-      "size",
-      "position",
-      "labelNext",
-      "labelPrev"
-    ],
-    "description": "te-pagination component",
-    "subtags": []
-  },
-  "te-progress": {
-    "attributes": [
-      "value",
-      "size",
-      "showValue",
-      "type"
-    ],
-    "description": "te-progress component",
-    "subtags": []
-  },
-  "te-radio": {
-    "attributes": [
-      "idInput",
-      "value",
-      "label",
-      "nativeValue"
-    ],
-    "description": "te-radio component",
+    "description": "te-time-picker component",
     "subtags": []
   },
   "te-range": {
@@ -258,32 +211,73 @@
     "description": "te-range component",
     "subtags": []
   },
-  "te-rating": {
+  "te-progress": {
     "attributes": [
       "value",
-      "quantity",
-      "icon",
-      "iconSizeClass",
-      "spacing",
-      "disabled",
-      "color",
-      "hasHalfValues",
-      "clearable"
+      "size",
+      "showValue",
+      "show-value",
+      "type"
     ],
-    "description": "te-rating component",
+    "description": "te-progress component",
     "subtags": []
   },
-  "te-select": {
+  "te-tabs": {
     "attributes": [
       "value",
-      "options",
-      "displayField",
-      "valueField",
-      "placeholder",
+      "titles",
+      "filled",
+      "vertical",
+      "pills"
+    ],
+    "description": "te-tabs component. Slots are `tab-{key}` with key beginning on 1",
+    "subtags": []
+  },
+  "te-list-group": {
+    "attributes": [
+      "items",
+      "clickable",
+      "activeItem",
+      "active-item",
+      "flush"
+    ],
+    "description": "te-list-group component",
+    "subtags": []
+  },
+  "te-dropdown": {
+    "attributes": [
+      "type",
       "size",
+      "outlined",
+      "label",
+      "ripple"
+    ],
+    "description": "te-dropdown component",
+    "subtags": []
+  },
+  "te-dropdown-item": {
+    "attributes": [
       "disabled"
     ],
-    "description": "te-select component",
+    "description": "te-dropdown-item component",
+    "subtags": []
+  },
+  "te-modal": {
+    "attributes": [
+      "title",
+      "visible",
+      "showCloseButton",
+      "show-close-button",
+      "hideHeader",
+      "hide-header",
+      "hideFooter",
+      "hide-footer",
+      "scrollable",
+      "centered",
+      "size",
+      "component"
+    ],
+    "description": "te-modal component. Available slots: header, footer, default.",
     "subtags": []
   },
   "te-spinner": {
@@ -300,19 +294,63 @@
       "steps",
       "disabled",
       "activeStep",
+      "active-step",
       "labelStep",
+      "label-step",
       "color"
     ],
     "description": "te-stepper component",
     "subtags": []
   },
-  "te-switch": {
+  "te-toast": {
     "attributes": [
-      "value",
-      "label",
-      "disabled"
+      "title",
+      "subtitle",
+      "message",
+      "showCloseButton",
+      "show-close-button",
+      "color"
     ],
-    "description": "te-switch component",
+    "description": "te-toast component",
+    "subtags": []
+  },
+  "te-pagination": {
+    "attributes": [
+      "pages",
+      "activePage",
+      "active-page",
+      "pagesToShow",
+      "pages-to-show",
+      "showIcons",
+      "show-icons",
+      "rounded",
+      "size",
+      "position",
+      "labelNext",
+      "label-next",
+      "labelPrev",
+      "label-prev"
+    ],
+    "description": "te-pagination component",
+    "subtags": []
+  },
+  "te-navbar": {
+    "attributes": [
+      "hrefHeader",
+      "href-header",
+      "dark"
+    ],
+    "description": "te-navbar component. Available slots: mobile-tile, default and right",
+    "subtags": []
+  },
+  "te-navbar-item": {
+    "attributes": [
+      "href",
+      "dark",
+      "disabled",
+      "tag"
+    ],
+    "description": "te-navbar-item component",
     "subtags": []
   },
   "te-table": {
@@ -327,60 +365,72 @@
       "compact",
       "responsive",
       "headerType",
+      "header-type",
       "search",
       "noDataLabel",
+      "no-data-label",
       "hasSubheading",
+      "has-subheading",
       "showRowNum",
+      "show-row-num",
       "rowNumLabel",
+      "row-num-label",
       "itemPerPage",
+      "item-per-page",
       "paginationAlign",
+      "pagination-align",
       "labelNext",
+      "label-next",
       "labelPrev",
+      "label-prev",
       "loading"
     ],
-    "description": "te-table component",
+    "description": "te-table component. Available slots: subheading, column-name, no-data",
     "subtags": []
   },
-  "te-tabs": {
+  "te-file": {
     "attributes": [
       "value",
-      "titles",
-      "filled",
-      "vertical",
-      "pills"
-    ],
-    "description": "te-tabs component",
-    "subtags": []
-  },
-  "te-textarea": {
-    "attributes": [
-      "value",
-      "placeholder",
+      "accept",
       "disabled",
-      "rows",
-      "cols"
+      "multiple",
+      "size"
     ],
-    "description": "te-textarea component",
+    "description": "te-file component",
     "subtags": []
   },
-  "te-time-picker": {
+  "te-notification": {
+    "attributes": [
+      "text",
+      "position",
+      "color",
+      "hide"
+    ],
+    "description": "te-notification component",
+    "subtags": []
+  },
+  "te-icon": {
+    "attributes": [
+      "name"
+    ],
+    "description": "te-icon component",
+    "subtags": []
+  },
+  "te-rating": {
     "attributes": [
       "value",
-      "ampm",
-      "disabled"
+      "quantity",
+      "icon",
+      "iconSizeClass",
+      "icon-size-class",
+      "spacing",
+      "disabled",
+      "color",
+      "hasHalfValues",
+      "has-half-values",
+      "clearable"
     ],
-    "description": "te-time-picker component",
-    "subtags": []
-  },
-  "te-toast": {
-    "attributes": [
-      "title",
-      "subtitle",
-      "message",
-      "showCloseButton",
-      "color"
-    ],
-    "description": "te-toast component",
+    "description": "te-rating component",
     "subtags": []
   },
   "te-toast-light": {
@@ -390,6 +440,15 @@
       "type"
     ],
     "description": "te-toast-light component",
+    "subtags": []
+  },
+  "te-offcanvas": {
+    "attributes": [
+      "value",
+      "title",
+      "position"
+    ],
+    "description": "te-offcanvas component",
     "subtags": []
   }
 }
