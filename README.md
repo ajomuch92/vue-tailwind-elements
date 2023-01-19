@@ -3,10 +3,11 @@ A light library of components based on [Tailwind Elements](https://tailwind-elem
 The documentation and examples are being building [here](https://vue-tailwind-elements.netlify.app/). Currently, there are more than 30 components. Best and new components and features are coming. Feel free to make a pull request.
 
 ### New Features 💥
+* Adding help files
+* Adding more slots and props to some components
+* Changing way to install the library
 * Global method to show loading, toasts and modals ($showLoading, $showToast, $showModal)
-* Adding tag for navbar item (a or router-link)
-* Adding a slot for header on TeAccordion component
-* Adding a prop for icon on button component
+
 # Instalation
 
 1. Set up the Tailwind configuration files. Follow this [link](https://tailwindcss.com/docs/installation/using-postcss) to do it.
