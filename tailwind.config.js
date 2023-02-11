@@ -1,8 +1,9 @@
 module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './dev/**/*.{vue,js,ts,jsx,tsx}'],
-  content: [],
+  content: ['./index.html', './src/**/*.{vue,js,ts}', './dev/**/*.{vue,js,ts}'],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }
