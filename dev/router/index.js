@@ -151,6 +151,11 @@ const router = new VueRouter({
           name: 'Utilities',
           component: () => import('../views/Utilities.vue')
         },
+        {
+          path: '/chips',
+          name: 'Chips',
+          component: () => import('../views/Chips.vue')
+        },
       ]
     },
   ]
