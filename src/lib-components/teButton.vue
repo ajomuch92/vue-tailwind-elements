@@ -8,7 +8,9 @@
         ease-linear
         transition-all
         duration-150
-        align-middle
+        flex
+        items-center
+        justify-center
         disabled:opacity-75
       "
     :class="getClass"

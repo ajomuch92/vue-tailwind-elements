@@ -1,16 +1,15 @@
 <template>
   <span class="
-    px-4
     py-2
     rounded-full
     font-semibold
     text-sm
     flex
-    align-center
+    items-center
     w-max"
-    :class="[colorClass, sizeClass]"
+    :class="[colorClass, sizeClass, imgUrl ? 'pr-4': 'px-4']"
   >
-    <img v-if="imgUrl" class="rounded-full w-9 h-9 max-w-none" :src="imgUrl" :class="[sizeClass, widthImgClass]" />
+    <img v-if="imgUrl" class="rounded-full max-w-none mr-2" :src="imgUrl" :class="[sizeClass, widthImgClass]" />
     <slot />
     <button v-if="closable" class="bg-transparent hover focus:outline-none">
       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
