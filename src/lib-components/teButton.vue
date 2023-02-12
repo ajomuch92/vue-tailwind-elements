@@ -8,9 +8,6 @@
         ease-linear
         transition-all
         duration-150
-        flex
-        items-center
-        justify-center
         disabled:opacity-75
       "
     :class="getClass"
@@ -86,6 +83,9 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  created() {
+    console.log(this.$parent);
   },
   computed: {
     getClass() {
