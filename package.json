@@ -30,7 +30,7 @@
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "prebuild": "rimraf ./dist",
-    "build-prod": "vue-cli-service build dev/",
+    "build-prod": "vue-cli-service build dev/serve.js --dest dist-docs",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js && mkdirp ./dist/vetur && ncp ./src/vetur/attributes.json ./dist/vetur/attributes.json && ncp ./src/vetur/tags.json ./dist/vetur/tags.json",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
