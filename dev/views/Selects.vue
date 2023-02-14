@@ -4,38 +4,22 @@
     <h1 class="text-lg">Single</h1>
     <te-select v-model="value" :options="options1" placeholder="Select One"/>
     <p>{{value}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-select v-model="value" :options="options1" placeholder="Select One"/>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[0]" />
     <te-select v-model="valueSingle" :options="options2" placeholder="Select One" value-field="id" display-field="label"/>
     <p>{{valueSingle}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-select v-model="valueSingle" :options="options2" placeholder="Select One" value-field="id" display-field="label"/>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[1]" />
     <te-multiple-select v-model="valueMultiple" :options="options3"/>
     <p class="pb-8">{{valueMultiple}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-multiple-select v-model="valueMultiple" :options="options3"/>
-        </script>
-      </code>
-    </pre>
-
+    <code-view :code="code[2]" />
   </div>
 </template>
 
 <script>
+import CodeView from '../components/CodeView.vue';
+
 export default {
   name: 'Selects',
+  components: { CodeView },
   data: () => ({
     valueSingle: '',
     value: '',
@@ -63,7 +47,12 @@ export default {
         label: 'Oceania'
       },
     ],
-    options3: ['Volvo', 'Saab', 'Mercedes', 'Audi']
+    options3: ['Volvo', 'Saab', 'Mercedes', 'Audi'],
+    code: [
+      '<te-select v-model="value" :options="options1" placeholder="Select One"/>',
+      '<te-select v-model="valueSingle" :options="options2" placeholder="Select One" value-field="id" display-field="label"/>',
+      '<te-multiple-select v-model="valueMultiple" :options="options3"/>',
+    ]
   })
 }
 </script>

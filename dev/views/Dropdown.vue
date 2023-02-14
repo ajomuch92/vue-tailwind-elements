@@ -8,18 +8,7 @@
       <te-dropdown-item>Item 3</te-dropdown-item>
       <te-dropdown-item disabled>Disabled item</te-dropdown-item>
     </te-dropdown>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-dropdown label="Dropdown">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-            <te-dropdown-item disabled>Disabled item</te-dropdown-item>
-          </te-dropdown>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[0]" />
     <h1 class="text-lg my-2">Size</h1>
     <te-dropdown label="Small" size="small">
       <te-dropdown-item>Item 1</te-dropdown-item>
@@ -36,27 +25,7 @@
       <te-dropdown-item>Item 2</te-dropdown-item>
       <te-dropdown-item>Item 3</te-dropdown-item>
     </te-dropdown>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-dropdown label="Small" size="small">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Medium" size="medium">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Large" size="large">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[1]" />
     <h1 class="text-lg my-2">Types</h1>
     <te-dropdown label="Normal" type="normal">
       <te-dropdown-item>Item 1</te-dropdown-item>
@@ -108,68 +77,96 @@
       <te-dropdown-item>Item 2</te-dropdown-item>
       <te-dropdown-item>Item 3</te-dropdown-item>
     </te-dropdown>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-dropdown label="Normal" type="normal">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Primary" type="primary">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Secondary" type="secondary">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Success" type="success">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Warning" type="warning">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Danger" type="danger">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Pink" type="pink">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Purple" type="purple">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Light" type="light">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-          <te-dropdown label="Dark" type="dark">
-            <te-dropdown-item>Item 1</te-dropdown-item>
-            <te-dropdown-item>Item 2</te-dropdown-item>
-            <te-dropdown-item>Item 3</te-dropdown-item>
-          </te-dropdown>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[2]" />
   </div>
 </template>
 
 <script>
+import CodeView from '../components/CodeView.vue'
 export default {
-  name: 'Dropdown'
+  components: { CodeView },
+  name: 'Dropdown',
+  data: () => ({
+    code: [
+      `
+      <te-dropdown label="Dropdown">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+        <te-dropdown-item disabled>Disabled item</te-dropdown-item>
+      </te-dropdown>
+      `,
+      `
+      <te-dropdown label="Small" size="small">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Medium" size="medium">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Large" size="large">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      `,
+      `
+      <te-dropdown label="Normal" type="normal">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Primary" type="primary">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Secondary" type="secondary">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Success" type="success">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Warning" type="warning">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Danger" type="danger">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Pink" type="pink">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Purple" type="purple">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Light" type="light">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      <te-dropdown label="Dark" type="dark">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      `
+    ]
+  })
 }
 </script>
 

@@ -3,7 +3,7 @@
     <code>
       {{ code }}
     </code>
-    <te-button class="absolute top-5 right-5" icon @click="copy">
+    <te-button class="absolute top-5 right-5 flex justify-center items-center" icon @click="copy">
       <te-icon name="clipboard"/>
     </te-button>
   </pre>

@@ -89,6 +89,10 @@ export default {
           href: '/card'
         },
         {
+          label: 'Chips',
+          href: '/chips'
+        },
+        {
           label: 'Dropdown',
           href: '/dropdown'
         },

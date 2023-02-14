@@ -4,29 +4,10 @@
     <h1 class="text-lg my-2">Normal</h1>
     <te-list-group :active-item.sync="selectedItem" :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable />
     <p>Active item {{selectedItem}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-list-group
-            :active-item.sync="selectedItem"
-            :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable
-          />
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[0]" />
     <h1 class="text-lg my-2">Flush</h1>
     <te-list-group :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" :clickable="false" flush />
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-list-group
-            :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]"
-            :clickable="false"
-            flush
-          />
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[1]" />
     <h1 class="text-lg my-2">Templates</h1>
     <te-list-group :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable>
       <template slot="item-0">
@@ -36,31 +17,46 @@
         </div>
       </template>
     </te-list-group>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-list-group 
-            :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" 
-            clickable
-          >
-            <template slot="item-0">
-              <div class="flex justify-between">
-                <span>Home</span>
-                <te-icon name="house"/>
-              </div>
-            </template>
-          </te-list-group>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[2]" />
   </div>
 </template>
 
 <script>
+import CodeView from '../components/CodeView.vue';
+
 export default {
   name: 'ListGroup',
+  components: { CodeView },
   data: () => ({
     selectedItem: null,
+    code: [
+      `
+      <te-list-group
+        :active-item.sync="selectedItem"
+        :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" clickable
+      />
+      `,
+      `
+      <te-list-group
+        :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]"
+        :clickable="false"
+        flush
+      />
+      `,
+      `
+      <te-list-group 
+        :items="['First Item', 'Second Item', 'Third Item', {label: 'Disabled Item', disabled: true}]" 
+        clickable
+      >
+        <template slot="item-0">
+          <div class="flex justify-between">
+            <span>Home</span>
+            <te-icon name="house"/>
+          </div>
+        </template>
+      </te-list-group>
+      `,
+    ],
   }),
 }
 </script>
