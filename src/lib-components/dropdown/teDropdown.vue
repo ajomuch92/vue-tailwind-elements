@@ -1,6 +1,9 @@
 <template>
   <span class="dropdown relative" v-click-outside="outsideHandler">
-    <te-button class="dropdown-toggle mb-0" :type="type" :size="size" :outlined="outlined" :ripple="ripple" @click="show=!show">
+    <button v-if="$slots.trigger" class="trigger" @click="show=!show">
+      <slot name="trigger"/>
+    </button>
+    <te-button v-else class="dropdown-toggle mb-0" :type="type" :size="size" :outlined="outlined" :ripple="ripple" @click="show=!show">
       <div class="flex">
         {{label}}
         <svg
@@ -44,7 +47,6 @@
         absolute
         bg-white
         text-base
-        z-50
         float-left
         py-2
         list-none
@@ -115,6 +117,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .trigger {
+    all: unset;
+  }
 </style>
