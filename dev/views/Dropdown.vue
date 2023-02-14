@@ -78,6 +78,18 @@
       <te-dropdown-item>Item 3</te-dropdown-item>
     </te-dropdown>
     <code-view :code="code[2]" />
+    <h1 class="text-lg my-2">Custom Trigger Slot</h1>
+    <te-dropdown label="Dark" type="dark">
+      <template #trigger>
+        <span class="bg-red-50 px-2 py-1 cursor-pointer rounded-sm">
+          Custom active
+        </span>
+      </template>
+      <te-dropdown-item>Item 1</te-dropdown-item>
+      <te-dropdown-item>Item 2</te-dropdown-item>
+      <te-dropdown-item>Item 3</te-dropdown-item>
+    </te-dropdown>
+    <code-view :code="code[3]" />
   </div>
 </template>
 
@@ -160,6 +172,18 @@ export default {
         <te-dropdown-item>Item 3</te-dropdown-item>
       </te-dropdown>
       <te-dropdown label="Dark" type="dark">
+        <te-dropdown-item>Item 1</te-dropdown-item>
+        <te-dropdown-item>Item 2</te-dropdown-item>
+        <te-dropdown-item>Item 3</te-dropdown-item>
+      </te-dropdown>
+      `,
+      `
+      <te-dropdown label="Dark" type="dark">
+        <template #trigger>
+          <span class="bg-red-50 px-2 py-1 cursor-pointer rounded-sm">
+            Custom active
+          </span>
+        </template>
         <te-dropdown-item>Item 1</te-dropdown-item>
         <te-dropdown-item>Item 2</te-dropdown-item>
         <te-dropdown-item>Item 3</te-dropdown-item>
