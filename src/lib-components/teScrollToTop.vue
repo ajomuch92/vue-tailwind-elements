@@ -2,7 +2,7 @@
   <button
     v-show="show"
     type="button"
-    class="p-3 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5 fixed"
+    class="z-50 p-3 font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out bottom-5 right-5 fixed"
     @click="backToTop"
   >
     <svg
@@ -25,22 +25,34 @@
 <script>
 export default {
   name: 'TeScrollToTop',
+  props: {
+    parent: {
+      type: String,
+      default: undefined,
+    }
+  },
   data: () => ({
     show: false,
+    element: undefined,
   }),
   mounted() {
-    document.addEventListener('scroll', this.scrollFunction);
+    this.element = this.parent ? document.querySelector(this.parent) : document;
+    if (this.element) {
+      this.element.addEventListener('scroll', this.scrollFunction);
+    }
   },
   beforeDestroy() {
-    document.removeEventListener('scroll', this.scrollFunction);
+    if (this.element) {
+      this.element.removeEventListener('scroll', this.scrollFunction);
+    }
   },
   methods: {
     backToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      this.element.scroll({ top: 0, behavior: 'smooth' });
     },
     scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      const element = this.element ?? document.body ?? document.documentElement;
+      if (element.scrollTop > 20 || element.scrollTop > 20) {
         this.show = true;
       } else {
         this.show = false;
