@@ -60,9 +60,11 @@
     <code-view :code="code[15]" />
     <h1 class="text-lg my-1">Loading</h1>
     <te-switch v-model="loading" label="Loading" />
-    <te-table :items="items" :headers="headers" :loading="loading">
-    </te-table>
+    <te-table :items="items" :headers="headers" :loading="loading" />
     <code-view :code="code[16]" />
+    <h1 class="text-lg my-1">Backend Pagination</h1>
+    <te-table :items="posts" :headers="postHeaders" :total="47" :loading="loadingPost" :item-per-page="5" backend-pagination @page-changed="getPosts" />
+    <code-view :code="code[17]" />
   </div>
 </template>
 
@@ -103,6 +105,26 @@ export default {
         handle: '@larwil'
       },
     ],
+    postHeaders: [
+      {
+        label: 'ID',
+        field: 'id',
+      },
+      {
+        label: 'Name',
+        field: 'name',
+      },
+      {
+        label: 'Email',
+        field: 'email',
+      },
+      {
+        label: 'Content',
+        field: 'body',
+      },
+    ],
+    posts: [],
+    loadingPost: false,
     search: '',
     loading: false,
     code:[
@@ -196,9 +218,25 @@ export default {
       `,
       `
       <te-switch v-model="loading" label="Loading" />
+      `,
       `
+      <te-table :items="posts" :headers="postHeaders" :total="47" :loading="loadingPost" :item-per-page="5" backend-pagination @page-changed="getPosts" />
+      `,
     ]
-  })
+  }),
+  created() {
+    this.getPosts();
+  },
+  methods: {
+    async getPosts(page) {
+      this.loadingPost = true;
+      const response = await fetch(`https://jsonplaceholder.typicode.com/comments?postId=${page||1}`)
+      const result = await response.json();
+      console.log(result);
+      this.posts = result;
+      this.loadingPost = false;
+    }
+  }
 }
 </script>
 
