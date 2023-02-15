@@ -84,9 +84,6 @@ export default {
       default: false,
     },
   },
-  created() {
-    console.log(this.$parent);
-  },
   computed: {
     getClass() {
       return {
