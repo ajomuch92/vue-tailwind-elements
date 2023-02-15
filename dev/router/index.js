@@ -156,6 +156,11 @@ const router = new VueRouter({
           name: 'Chips',
           component: () => import('../views/Chips.vue')
         },
+        {
+          path: '/back-to-top',
+          name: 'BackToTop',
+          component: () => import('../views/BackToTop.vue')
+        },
       ]
     },
   ]
