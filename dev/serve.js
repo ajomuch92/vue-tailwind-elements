@@ -5,8 +5,9 @@ import VuePrism from 'vue-prism';
 import './index.css';
 import './styles/styles.css';
 import 'prismjs/themes/prism.css';
+import icons from './icons';
 
-Vue.use(VueTailwindElements);
+Vue.use(VueTailwindElements, { customIcons: icons });
 Vue.use(VuePrism)
 
 

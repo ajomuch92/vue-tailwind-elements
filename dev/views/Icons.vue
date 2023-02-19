@@ -51,6 +51,18 @@
     <te-icon social name="whatsapp"/>
     <te-icon social name="twitch"/>
     <code-view :code="code[5]" />
+    <h1 class="text-lg my-2">Custom Icons</h1>
+    <te-icon class="text-2xl text-red-600" name="home" family="metro"/>
+    <te-icon class="text-2xl text-blue-500" name="add" family="metro"/>
+    <te-icon class="text-2xl" name="arrowDropUp" family="metro"/>
+    <p>Define your custom icons</p>
+    <code-view :code="code[6]" lang="js" />
+    <p>Put into your installation</p>
+    <code-view :code="code[7]" lang="js" />
+    <p>And use them</p>
+    <code-view :code="code[8]" />
+    <p>Don't forget import your CSS needed to show the icons.</p>
+    <code-view :code="code[9]" lang="css" />
   </div>
 </template>
 
@@ -100,12 +112,33 @@ export default {
       <te-icon social name="reddit"/>
       <te-icon social name="whatsapp"/>
       <te-icon social name="twitch"/>
+      `,
       `
+      export default {
+        metro: { // name of the icon family
+          prefix: 'mif-', // prefix used by the family. You can leave it empty
+          icons: { // Object with the <key, value> of icons
+            home: 'home',
+            add: 'add',
+            arrowDropUp: 'arrow-drop-up'
+          }
+        }
+      }
+      `,
+      `
+      Vue.use(VueTailwindElements, { customIcons: icons });
+      `,
+      `
+      <te-icon class="text-2xl text-red-600" name="home" family="metro"/>
+      <te-icon class="text-2xl text-blue-500" name="add" family="metro"/>
+      <te-icon class="text-2xl" name="arrowDropUp" family="metro"/>
+      `,
+      `@import url('https://cdn.korzh.com/metroui/v4/css/metro-icons.min.css');`
     ]
   })
 }
 </script>
 
-<style>
-
+<style scoped>
+  @import url('https://cdn.korzh.com/metroui/v4/css/metro-icons.min.css');
 </style>
