@@ -35,8 +35,27 @@ Put the last configuration into a plugin file and the use it into the nuxt.confi
 ```javascript
 ...
   plugins: [
-    '~/plugins/vue-tailwind-elements.js'
+    { src: '~/plugins/vue-tailwind-elements.js', mode: 'client' }
   ],
+...
+
+```
+
+And add this line to your tailwind.config.js file::
+
+```javascript
+...
+  module.exports = {
+    content: [
+      './node_modules/vue-tailwind-elements/**/*.{js,ts,vue}'
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [
+      require('tw-elements/dist/plugin')
+    ],
+  }
 ...
 
 ```
