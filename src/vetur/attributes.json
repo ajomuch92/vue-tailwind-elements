@@ -823,6 +823,14 @@
     "description": "Prop to use with v-model directive. This indicate the current active step on the carousel",
     "type": "Number"
   },
+  "te-carousel/loop": {
+    "description": "Value to show automatically one by one the carousel slides. By default is false.",
+    "type": "Boolean"
+  },
+  "te-carousel/interval": {
+    "description": "Number of ms to show automatically one by one the carousel slides. By default is 1500.",
+    "type": "Number"
+  },
   "te-carousel-item/imgUrl": {
     "description": "String to set the image url",
     "type": "String"
