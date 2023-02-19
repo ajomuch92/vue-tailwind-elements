@@ -450,5 +450,42 @@
     ],
     "description": "te-offcanvas component",
     "subtags": []
+  },
+  "te-chip": {
+    "attributes": [
+      "type",
+      "size",
+      "closable",
+      "img"
+    ],
+    "description": "te-chip component",
+    "subtags": []
+  },
+  "te-scroll-to-top": {
+    "attributes": [
+      "parent"
+    ],
+    "description": "te-scroll-to-top component",
+    "subtags": []
+  },
+  "te-carousel": {
+    "attributes": [
+      "showIndicators",
+      "showArrows",
+      "dark",
+      "fade",
+      "value"
+    ],
+    "description": "te-carousel component",
+    "subtags": []
+  },
+  "te-carousel-item": {
+    "attributes": [
+      "imgUrl",
+      "alt",
+      "title"
+    ],
+    "description": "te-carousel-item component",
+    "subtags": []
   }
 }
