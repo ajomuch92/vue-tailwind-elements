@@ -51,7 +51,7 @@ export default {
       this.element.scroll({ top: 0, behavior: 'smooth' });
     },
     scrollFunction() {
-      const element = this.element ?? document.body ?? document.documentElement;
+      const element = this.element || document.body || document.documentElement;
       if (element.scrollTop > 20 || element.scrollTop > 20) {
         this.show = true;
       } else {
