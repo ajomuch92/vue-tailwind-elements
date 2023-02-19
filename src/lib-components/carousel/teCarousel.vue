@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel slide relative" :class="{'carousel-dark': dark}" data-bs-ride="carousel">
+  <div :id="id" class="carousel slide relative" :class="{'carousel-dark': dark}" data-bs-ride="carousel">
     <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
       <button
         v-for="step in steps"
@@ -10,7 +10,7 @@
         :data-bs-target="`#${id}`"
         aria-current="true"
         :aria-label="`Slide ${step}`"
-        @click="currentStep=step-1"
+        @click="indicatorClickHandler(step-1)"
       />
     </div>
     <div class="carousel-inner relative w-full overflow-hidden">
@@ -44,6 +44,10 @@
 export default {
   name: 'TeCarousel',
   props: {
+    id: {
+      type: String,
+      default: () => Date.now().toString()
+    },
     showIndicators: {
       type: Boolean,
       default: true,
@@ -70,7 +74,7 @@ export default {
     },
     interval: {
       type: Number,
-      default: 800,
+      default: 1500,
     },
   },
   data: () => ({
@@ -98,7 +102,11 @@ export default {
       this.currentStep = val;
     },
     loop() {
-      this.clearInterval();
+      this.clearLoop();
+      this.setLoop();
+    },
+    inteval() {
+      this.clearLoop();
       this.setLoop();
     }
   },
@@ -111,6 +119,10 @@ export default {
       this.direction = 'prev';
       const prevStep = this.currentStep - 1;
       this.currentStep = prevStep < 0 ? this.steps - 1 : prevStep;
+    },
+    indicatorClickHandler(index) {
+      this.direction = index > this.currentStep ? 'next' : 'prev';
+      this.currentStep = index;
     },
     setLoop() {
       if (this.loop && this.interval) {
