@@ -1,6 +1,6 @@
 <template>
-  <transition>
-    <div v-show="isVisible" class="carousel-item relative float-left w-full">
+  <transition :name="transition">
+    <div v-show="isVisible" class="carousel-item block relative float-left w-full">
       <img
         v-if="imgUrl"
         :src="imgUrl"
@@ -40,9 +40,6 @@ export default {
     this.isMounted = true;
   },
   computed: {
-    steps() {
-      return this.$parent.$slots.default.length;
-    },
     position() {
       if (this.isMounted) {
         const children = this.$parent.$slots.default.map((r) => r.child);
@@ -51,6 +48,7 @@ export default {
       return -1;
     },
     isVisible() {
+      this.transition = this.$parent.direction;
       return this.$parent.currentStep === this.position;
     }
   },
@@ -58,7 +56,24 @@ export default {
 </script>
 
 <style scoped>
-  .carousel-item {
+  .carousel-item-wrapper {
     display: block;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    -webkit-transition: transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .prev-enter-active,
+  .prev-leave-active,
+  .next-enter-active,
+  .next-leave-active {
+    transition: transform 0.6s ease-in-out;
+  }
+  .prev-enter, .next-leave-to {
+    transform: translateX(-100%);
+  }
+  .prev-leave-to, .next-enter {
+    transform: translateX(100%);
   }
 </style>
