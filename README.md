@@ -5,6 +5,7 @@ The documentation and examples are being building [here](https://vue-tailwind-el
 ### New Features 💥
 * Fixing small bugs
 * Adding slot to dropdown
+* Adding social icons
 * Adding more props to some components (button, table)
 * Adding more components (Chip, ScrollToTop and Carousel)
 * Adding support to custom icons
