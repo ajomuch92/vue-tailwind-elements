@@ -48,7 +48,7 @@ export default {
       return -1;
     },
     isVisible() {
-      this.transition = this.$parent.direction;
+      this.transition = this.$parent.fade ? 'fade' : this.$parent.direction;
       return this.$parent.currentStep === this.position;
     }
   },
@@ -75,5 +75,13 @@ export default {
   }
   .prev-leave-to, .next-enter {
     transform: translateX(100%);
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
   }
 </style>
