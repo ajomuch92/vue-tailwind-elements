@@ -74,7 +74,7 @@ export default {
     headerTag: {
       type: String,
       default: 'a',
-      validator: (val) => ['a', 'router-link'].includes(val),
+      validator: (val) => ['a', 'router-link', 'nuxt-link'].includes(val),
     }
   },
   computed: {
