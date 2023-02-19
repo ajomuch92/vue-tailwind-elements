@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" class="carousel slide relative" :class="{'carousel-dark': dark, 'carousel-fade': fade}" data-bs-ride="carousel">
+  <div class="carousel slide relative" :class="{'carousel-dark': dark}" data-bs-ride="carousel">
     <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
       <button
         v-for="step in steps"
@@ -44,10 +44,6 @@
 export default {
   name: 'TeCarousel',
   props: {
-    id: {
-      type: String,
-      default: () => crypto.randomUUID(),
-    },
     showIndicators: {
       type: Boolean,
       default: true,
@@ -70,16 +66,24 @@ export default {
     },
     loop: {
       type: Boolean,
-      default: true,
+      default: false,
+    },
+    interval: {
+      type: Number,
+      default: 800,
     },
   },
   data: () => ({
     currentStep: 0,
     steps: 0,
-    direction: ''
+    direction: '',
+    intervalVal: undefined,
   }),
   mounted() {
     this.steps = this.$slots.default.length;
+  },
+  beforeDestroy() {
+    this.clearLoop();
   },
   computed :{
     activeStep() {
@@ -93,6 +97,10 @@ export default {
     value(val) {
       this.currentStep = val;
     },
+    loop() {
+      this.clearInterval();
+      this.setLoop();
+    }
   },
   methods: {
     moveFormard() {
@@ -104,6 +112,19 @@ export default {
       const prevStep = this.currentStep - 1;
       this.currentStep = prevStep < 0 ? this.steps - 1 : prevStep;
     },
+    setLoop() {
+      if (this.loop && this.interval) {
+        this.intervalVal = setInterval(() => {
+          this.moveFormard();
+        }, this.interval);
+      }
+    },
+    clearLoop() {
+      if (this.intervalVal) {
+        clearInterval(this.intervalVal);
+        this.intervalVal = undefined;
+      }
+    }
   }
 }
 </script>
