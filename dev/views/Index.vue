@@ -40,7 +40,7 @@
         </div>
       </nav>
     </te-offcanvas>
-    <main class="w-full px-4 sm:w-9/12 lg:w-10/12 sm:pr-10 lg:pr-4 overflow-y-auto sticky h-screen">
+    <main id="main" class="w-full px-4 sm:w-9/12 lg:w-10/12 sm:pr-10 lg:pr-4 overflow-y-auto sticky h-screen">
       <router-view />
       <te-button v-if="windowSizeType=='sm'" class="absolute right-0 top-7" @click="showPanel=!showPanel" only-text>
         <te-icon name="list" />
@@ -77,6 +77,10 @@ export default {
           href: '/badge'
         },
         {
+          label: 'Back To Top',
+          href: '/back-to-top'
+        },
+        {
           label: 'Buttons',
           href: '/buttons'
         },
@@ -87,6 +91,14 @@ export default {
         {
           label: 'Card',
           href: '/card'
+        },
+        {
+          label: 'Carousel',
+          href: '/carousel'
+        },
+        {
+          label: 'Chips',
+          href: '/chips'
         },
         {
           label: 'Dropdown',
@@ -181,7 +193,7 @@ export default {
       ]
     },
     showPanel: false,
-  })
+  }),
 }
 </script>
 

@@ -3,36 +3,17 @@
     <h1 class="text-3xl my-2">Breadcrumb</h1>
     <h1 class="text-lg">Default</h1>
     <te-breadcrumb :options="options" />
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-breadcrumb :options="[
-                {
-                  href: '/',
-                  label: 'Index'
-                },
-                {
-                  href: '/breadcrumb',
-                  label: 'Breadcrumb'
-                },
-              ]" />
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code" />
     <h1 class="text-lg">Custom Separator</h1>
     <te-breadcrumb :options="options" separator=">" />
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-breadcrumb :options="options" separator=">" />
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code2" />
   </div>
 </template>
 
 <script>
+import CodeView from '../components/CodeView.vue'
 export default {
+  components: { CodeView },
   name: 'Breadcrumb',
   data: () => ({
     options: [
@@ -44,7 +25,22 @@ export default {
         href: '/breadcrumb',
         label: 'Breadcrumb'
       },
-    ]
+    ],
+    code: `
+      <te-breadcrumb :options="[
+        {
+          href: '/',
+          label: 'Index'
+        },
+        {
+          href: '/breadcrumb',
+          label: 'Breadcrumb'
+        },
+      ]" />
+    `,
+    code2: `
+      <te-breadcrumb :options="options" separator=">" />
+    `,
   })
 }
 </script>

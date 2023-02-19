@@ -3,10 +3,12 @@ A light library of components based on [Tailwind Elements](https://tailwind-elem
 The documentation and examples are being building [here](https://vue-tailwind-elements.netlify.app/). Currently, there are more than 30 components. Best and new components and features are coming. Feel free to make a pull request.
 
 ### New Features 💥
-* Adding help files
-* Adding more slots and props to some components
-* Changing way to install the library
-* Global method to show loading, toasts and modals ($showLoading, $showToast, $showModal)
+* Fixing small bugs
+* Adding slot to dropdown
+* Adding social icons
+* Adding more props to some components (button, table)
+* Adding more components (Chip, ScrollToTop and Carousel)
+* Adding support to custom icons
 
 # Instalation
 
@@ -33,8 +35,27 @@ Put the last configuration into a plugin file and the use it into the nuxt.confi
 ```javascript
 ...
   plugins: [
-    '~/plugins/vue-tailwind-elements.js'
+    { src: '~/plugins/vue-tailwind-elements.js', mode: 'client' }
   ],
+...
+
+```
+
+And add this line to your tailwind.config.js file::
+
+```javascript
+...
+  module.exports = {
+    content: [
+      './node_modules/vue-tailwind-elements/**/*.{js,ts,vue}'
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: [
+      require('tw-elements/dist/plugin')
+    ],
+  }
 ...
 
 ```

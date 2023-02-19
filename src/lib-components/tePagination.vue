@@ -4,8 +4,9 @@
       <ul class="flex list-style-none">
         <li class="page-item">
           <a
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
-            :class="{'pointer-events-none': currentPage==1||pages==0, ...sizeClass}"
+            role="button"
+            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer select-none"
+            :class="{'pointer-events-none opacity-50': currentPage==1||pages==0, ...sizeClass}"
             @click="currentPage--"
           >
             <span v-if="!showIcons">{{labelPrev}}</span>
@@ -14,11 +15,12 @@
         </li>
         <li v-for="page in displayedPages" :key="page" class="page-item">
           <a
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 focus:shadow-none cursor-pointer"
+            role="button"
+            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 focus:shadow-none cursor-pointer select-none"
             :class="{
               'bg-blue-500 text-white': page===currentPage, 
               'text-gray-800 hover:text-gray-800 hover:bg-gray-200': page!==currentPage,
-              'rounded-full': page===currentPage && rounded,
+              'rounded-full': rounded,
               ...sizeClass
             }"
             @click="currentPage=page"
@@ -28,8 +30,9 @@
         </li>
         <li class="page-item">
           <a
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer"
-            :class="{'pointer-events-none': currentPage==pages||pages==0, ...sizeClass}"
+            role="button"
+            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer select-none"
+            :class="{'pointer-events-none opacity-50': currentPage==pages||pages==0, ...sizeClass}"
             @click="currentPage++"
           >
             <span v-if="!showIcons">{{labelNext}}</span>
@@ -82,7 +85,7 @@ export default {
     },
     labelPrev: {
       type: String,
-      default: 'Previous'
+      default: 'Prev.'
     },
   },
   data: () => ({
@@ -125,9 +128,9 @@ export default {
     },
     sizeClass() {
       return {
-        'text-sm py-1 px-2': this.size === 'small',
-        'py-1.5 px-3': this.size === 'medium',
-        'text-xl py-3 px-6': this.size === 'large',
+        'text-sm h-8 w-8': this.size === 'small',
+        'text-base h-10 w-10': this.size === 'medium',
+        'text-xl h-14 w-14': this.size === 'large',
       }
     }
   },
@@ -155,6 +158,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  a[role='button'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>

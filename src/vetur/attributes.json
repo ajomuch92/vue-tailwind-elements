@@ -695,6 +695,14 @@
     "description": "Boolean value to indicate when data on table is being loaded. By default is false",
     "type": "Boolean"
   },
+  "te-table/total": {
+    "description": "Value to set the total of items to show into the table component. It's used by backend pagination to calculate the total of pages.",
+    "type": "Number"
+  },
+  "te-table/backendPagination": {
+    "description": "Boolean value to indicate when pagination is made by backend. By default is false",
+    "type": "Boolean"
+  },
   "te-file/value": {
     "description": "Prop to use with v-model directive (base64 string passed or array of base64 string)",
     "type": "String|Array"
@@ -775,24 +783,64 @@
     "description": "Text to use as toast title",
     "type": "String"
   },
-  "te-toast-light/subtitle": {
-    "description": "Text to use as toast subtitle",
-    "type": "String"
+  "te-chip/type": {
+    "description": "String used to set the main color of the chip. By default is light",
+    "type": "String => 'normal'|'primary'|'secondary'|'success'|'warning'|'danger'|'pink'|'purple'|'light'|'dark'"
   },
-  "te-toast-light/type": {
-    "description": "Tost type. By default is info.",
-    "type": "String => 'info'|'success'|'warning'|'danger'"
+  "te-chip/size": {
+    "description": "String to set the chip size.",
+    "type": "String => 'small'|'medium'|'large'"
   },
-  "te-offcanvas/value": {
-    "description": "Prop to use with v-model directive. This prop indicates when to show or hide the drawer",
+  "te-chip/closable": {
+    "description": "Value to show a cross icon to close the chip emitting a close event.",
     "type": "Boolean"
   },
-  "te-offcanvas/title": {
-    "description": "String to show as drawer title",
+  "te-chip/img": {
+    "description": "Url to set an image on the left inside the chip component",
     "type": "String"
   },
-  "te-offcanvas/position": {
-    "description": "Position for the offcanvas",
-    "type": "String => 'right'|'left'"
+  "te-scroll-to-top/parent": {
+    "description": "A CSS selector to listen for its scroll event, preferably use the id of the parent. If it's empty, listen for document scroll event",
+    "type": "String"
+  },
+  "te-carousel/showIndicators": {
+    "description": "Boolean value to show the indicator from carousel. By default is true.",
+    "type": "Boolean"
+  },
+  "te-carousel/showArrows": {
+    "description": "Bolean value to show arrow icons on carousel. By default is true.",
+    "type": "Boolean"
+  },
+  "te-carousel/dark": {
+    "description": "Boolean value to set a black color to the icons and text inside the carousel. By default is false.",
+    "type": "Boolean"
+  },
+  "te-carousel/fade": {
+    "description": "Boolean value to set a fade animation on the carousel instead of the default animation",
+    "type": "Boolean"
+  },
+  "te-carousel/value": {
+    "description": "Prop to use with v-model directive. This indicate the current active step on the carousel",
+    "type": "Number"
+  },
+  "te-carousel/loop": {
+    "description": "Value to show automatically one by one the carousel slides. By default is false.",
+    "type": "Boolean"
+  },
+  "te-carousel/interval": {
+    "description": "Number of ms to show automatically one by one the carousel slides. By default is 1500.",
+    "type": "Number"
+  },
+  "te-carousel-item/imgUrl": {
+    "description": "String to set the image url",
+    "type": "String"
+  },
+  "te-carousel-item/alt": {
+    "description": "String to set the image alt property.",
+    "type": "String"
+  },
+  "te-carousel-item/title": {
+    "description": "String to set the item title.",
+    "type": "String"
   }
 }

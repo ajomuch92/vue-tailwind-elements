@@ -4,13 +4,7 @@
     <h1 class="text-lg">Checkbox</h1>
     <te-checkbox v-model="value1" label="Checkbox" />
     <p>{{value1}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-checkbox v-model="value1" label="Checkbox" />
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[0]" />
     <h1 class="text-lg">Checkbox with slot</h1>
     <te-checkbox v-model="value1">
       <template v-slot:default="{selected}">
@@ -19,28 +13,11 @@
       </template>
     </te-checkbox>
     <p>{{value1}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-checkbox v-model="value1">
-            <template v-slot:default="{selected}">
-              <p v-if="selected">:)</p>
-              <p v-else>:(</p>
-            </template>
-          </te-checkbox>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[1]" />
     <h1 class="text-lg">Switch</h1>
     <te-switch v-model="value2" class="pl-5" label="Switch" />
     <p>{{value2}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-switch v-model="value2" class="pl-5" label="Switch" />
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[2]" />
     <h1 class="text-lg">Switch with slot</h1>
     <te-switch v-model="value2">
       <template v-slot:default="{selected}">
@@ -49,18 +26,7 @@
       </template>
     </te-switch>
     <p>{{value2}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-switch v-model="value2">
-            <template v-slot:default="{selected}">
-              <p v-if="selected">:)</p>
-              <p v-else>:(</p>
-            </template>
-          </te-switch>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[3]" />
     <h1 class="text-lg">Radio</h1>
     <div class="flex flex-col">
       <te-radio v-model="value3" native-value="M" label="Male"/>
@@ -68,25 +34,49 @@
       <te-radio v-model="value3" native-value="O" label="Other"/>
     </div>
     <p>{{value3}}</p>
-    <pre class="language-markup">
-      <code>
-        <script type="prism-html-markup">
-          <te-radio v-model="value3" native-value="M" label="Male"/>
-          <te-radio v-model="value3" native-value="F" label="Female"/>
-          <te-radio v-model="value3" native-value="O" label="Other"/>
-        </script>
-      </code>
-    </pre>
+    <code-view :code="code[4]" />
   </div>
 </template>
 
 <script>
+import CodeView from '../components/CodeView.vue';
+
 export default {
+  components: { CodeView },
   name: 'Switchable',
   data: () => ({
     value1: false,
     value2: false,
-    value3: ''
+    value3: '',
+    code: [
+      `
+      <te-checkbox v-model="value1" label="Checkbox" />
+      `,
+      `
+      <te-checkbox v-model="value1">
+        <template v-slot:default="{selected}">
+          <p v-if="selected">:)</p>
+          <p v-else>:(</p>
+        </template>
+      </te-checkbox>
+      `,
+      `
+      <te-switch v-model="value2" class="pl-5" label="Switch" />
+      `,
+      `
+      <te-switch v-model="value2">
+        <template v-slot:default="{selected}">
+          <p v-if="selected">:)</p>
+          <p v-else>:(</p>
+        </template>
+      </te-switch>
+      `,
+      `
+      <te-radio v-model="value3" native-value="M" label="Male"/>
+      <te-radio v-model="value3" native-value="F" label="Female"/>
+      <te-radio v-model="value3" native-value="O" label="Other"/>
+      `,
+    ],
   })
 }
 </script>

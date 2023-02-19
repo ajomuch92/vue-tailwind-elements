@@ -151,6 +151,21 @@ const router = new VueRouter({
           name: 'Utilities',
           component: () => import('../views/Utilities.vue')
         },
+        {
+          path: '/chips',
+          name: 'Chips',
+          component: () => import('../views/Chips.vue')
+        },
+        {
+          path: '/back-to-top',
+          name: 'BackToTop',
+          component: () => import('../views/BackToTop.vue')
+        },
+        {
+          path: '/carousel',
+          name: 'Carousel',
+          component: () => import('../views/Carousel.vue')
+        },
       ]
     },
   ]

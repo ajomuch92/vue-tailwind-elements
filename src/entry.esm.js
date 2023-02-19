@@ -7,7 +7,7 @@ import showLoading from './lib-components/loading';
 import showToast from './lib-components/toast';
 
 // install function executed by Vue.use()
-const install = function installVueTailwindElements(Vue) {
+const install = function installVueTailwindElements(Vue, options = {}) {
   Object.entries(components).forEach(([componentName, component]) => {
     Vue.component(componentName, component);
   });
@@ -19,6 +19,9 @@ const install = function installVueTailwindElements(Vue) {
   Vue.prototype.$showModal = showModal;
   Vue.prototype.$showLoading = showLoading;
   Vue.prototype.$showToast = showToast;
+  if (options.customIcons) {
+    Vue.prototype.$tweCustomIcons = options.customIcons;
+  }
 };
 
 // Create module definition for Vue.use()

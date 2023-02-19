@@ -1,41 +1,43 @@
 <template>
-  <div class="table-container min-w-full" :class="{'overflow-x-auto': responsive, 'overflow-hidden': !responsive, 'relative': loading}">
-    <table class="min-w-full" :class="{'text-center': centered, 'border': bordered}">
-      <thead :class="{'border-b': !borderless, ...headerBackgroundClass}">
-        <tr>
-          <th v-if="showRowNum" class="text-sm font-medium" :class="{'text-left': !centered, ...headerCellClass, ...paddingClass}">{{rowNumLabel}}</th>
-          <th v-for="(header, key) in headers" :key="key" scope="col" class="text-sm font-medium px-6" :class="{'text-left': !centered, ...headerCellClass, ...paddingClass}">
-            {{header.label||header}}
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-if="hasSubheading">
-          <slot name="subheading" />
-        </tr>
-        <template v-if="filteredItems.length">
-          <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)" v-show="rowVisibility(key+1)">
-            <td v-if="showRowNum">{{key+1}}</td>
-            <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="{...paddingClass, 'border-r': bordered}">
-              <slot :name="header.field||header" v-bind="{value: getCellValue(item, header), row: item, index: key}">
-                {{getCellValue(item, header)}}
-              </slot>
-            </td>
-          </tr>
-        </template>
-        <template v-else>
+  <div>
+    <div class="table-container min-w-full" :class="{'overflow-x-auto': responsive, 'overflow-hidden': !responsive, 'relative': loading}">
+      <table class="min-w-full" :class="{'text-center': centered, 'border': bordered}">
+        <thead :class="{'border-b': !borderless, ...headerBackgroundClass}">
           <tr>
-            <td class="text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center" :class="[{...paddingClass, 'border-r': bordered}, header.cellClass]" :colspan="headers.length">
-              <slot name="no-data">
-                {{noDataLabel}}
-              </slot>
-            </td>
+            <th v-if="showRowNum" class="text-sm font-medium" :class="{'text-left': !centered, ...headerCellClass, ...paddingClass}">{{rowNumLabel}}</th>
+            <th v-for="(header, key) in headers" :key="key" scope="col" class="text-sm font-medium px-6" :class="{'text-left': !centered, ...headerCellClass, ...paddingClass}">
+              {{header.label||header}}
+            </th>
           </tr>
-        </template>
-      </tbody>
-    </table>
-    <div v-if="loading" class="h-full w-full bg-gray-50 rounded opacity-70 flex justify-center items-center absolute top-0 left-0 z-50">
-      <te-spinner size="large" />
+        </thead>
+        <tbody>
+          <tr v-if="hasSubheading">
+            <slot name="subheading" />
+          </tr>
+          <template v-if="filteredItems.length>0">
+            <tr v-for="(item, key) in filteredItems" :key="key" :class="rowClass(key)" v-show="rowVisibility(key+1)">
+              <td v-if="showRowNum">{{key+1}}</td>
+              <td v-for="(header, index) in headers" :key="index" class="text-sm text-gray-900 font-medium px-6 whitespace-nowrap" :class="[{...paddingClass, 'border-r': bordered}, header.cellClass]">
+                <slot :name="header.field||header" v-bind="{value: getCellValue(item, header), row: item, index: key}">
+                  {{getCellValue(item, header)}}
+                </slot>
+              </td>
+            </tr>
+          </template>
+          <template v-else>
+            <tr>
+              <td class="text-sm text-slate-500 font-medium px-6 whitespace-nowrap text-center" :class="[{...paddingClass, 'border-r': bordered}]" :colspan="headers.length">
+                <slot name="no-data">
+                  {{noDataLabel}}
+                </slot>
+              </td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+      <div v-if="loading" class="h-full w-full bg-gray-50 rounded opacity-70 flex justify-center items-center absolute top-0 left-0 z-50">
+        <te-spinner size="large" />
+      </div>
     </div>
     <te-pagination
       v-if="itemPerPage>0"
@@ -134,12 +136,20 @@ export default {
     },
     labelPrev: {
       type: String,
-      default: 'Previous'
+      default: 'Prev.'
     },
     loading: {
       type: Boolean,
       default: false
-    }
+    },
+    backendPagination: {
+      type: Boolean,
+      default: false,
+    },
+    total: {
+      type: Number,
+      default: 0,
+    },
   },
   computed: {
     headerBackgroundClass() {
@@ -172,12 +182,23 @@ export default {
       return this.items;
     },
     pages() {
+      if (this.backendPagination) {
+        if (this.total) {
+          return Math.ceil(this.total / this.itemPerPage);
+        }
+        return 0;
+      }
       return Math.ceil(this.filteredItems.length / this.itemPerPage);
     }
   },
   data: () => ({
     activePage: 1,
   }),
+  watch: {
+    activePage(val) {
+      this.$emit('page-changed', val);
+    },
+  },
   methods: {
     rowClass(index) {
       return {
@@ -188,6 +209,7 @@ export default {
       }
     },
     rowVisibility(index) {
+      if (this.backendPagination) return true;
       if (this.itemPerPage > 0) {
         const last = this.activePage * this.itemPerPage;
         const first = last - this.itemPerPage + 1
@@ -196,7 +218,7 @@ export default {
       return true;
     },
     getCellValue(item, header) {
-       return Object.keys(item).includes(header.field) ?  item[header.field] : item[header];
+      return Object.keys(item).includes(header.field) ?  item[header.field] : item[header];
     }
   }
 }
