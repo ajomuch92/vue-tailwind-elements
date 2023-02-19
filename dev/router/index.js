@@ -161,6 +161,11 @@ const router = new VueRouter({
           name: 'BackToTop',
           component: () => import('../views/BackToTop.vue')
         },
+        {
+          path: '/carousel',
+          name: 'Carousel',
+          component: () => import('../views/Carousel.vue')
+        },
       ]
     },
   ]

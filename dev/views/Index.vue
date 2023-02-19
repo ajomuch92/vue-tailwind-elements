@@ -93,6 +93,10 @@ export default {
           href: '/card'
         },
         {
+          label: 'Carousel',
+          href: '/carousel'
+        },
+        {
           label: 'Chips',
           href: '/chips'
         },
