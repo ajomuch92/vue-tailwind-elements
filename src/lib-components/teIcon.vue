@@ -106,7 +106,7 @@
     </svg>
 
   </span>
-  <i v-else class="bi" :class="iconName" />
+  <i v-else :class="iconName" />
 </template>
 
 <script>
@@ -120,15 +120,24 @@ export default {
     social: {
       type: Boolean,
       default: false,
+    },
+    family: {
+      type: String,
+      default: undefined,
     }
   },
   computed: {
     iconName() {
+      if (this.family) {
+        const customIcons = this.$tweCustomIcons;
+        const { icons, prefix } = customIcons[this.family];
+        return `${prefix}${icons[this.name]}`;
+      }
       let name = this.name;
       if (!name.includes('bi')) {
         name = `bi-${name}`
       }
-      return name;
+      return `bi ${name}`;
     }
   }
 }
