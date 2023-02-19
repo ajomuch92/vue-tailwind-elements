@@ -39,7 +39,7 @@ export default {
       <te-chip size="large">Hello World</te-chip>
       <te-chip size="medium" img-url="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg">Hello World</te-chip>
       <te-chip closable>Hello World</te-chip>
-      <te-chip closable type="primary">Hello World</te-chip>
+      <te-chip closable type="primary" @close="...">Hello World</te-chip>
     `,
     code2: `
       <te-chip size="small" type="normal">Hello World</te-chip>

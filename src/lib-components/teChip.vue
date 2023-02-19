@@ -11,7 +11,7 @@
   >
     <img v-if="imgUrl" class="rounded-full max-w-none mr-2" :src="imgUrl" :class="[sizeClass, widthImgClass]" />
     <slot />
-    <button v-if="closable" class="bg-transparent hover focus:outline-none">
+    <button v-if="closable" class="bg-transparent hover focus:outline-none" @click="emit('close', $event)">
       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times"
         class="w-3 ml-3" role="img" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 352 512">
