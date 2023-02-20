@@ -174,7 +174,6 @@
                   text-center text-sm
                   leading-none
                   rounded-full
-                  leading-loose
                   transition
                   ease-in-out
                   duration-100
