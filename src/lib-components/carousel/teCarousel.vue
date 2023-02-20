@@ -23,7 +23,9 @@
         data-bs-slide="prev"
         @click="moveBack"
       >
-        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        <slot name="prev-icon">
+          <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        </slot>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
@@ -32,7 +34,9 @@
         data-bs-slide="next"
         @click="moveFormard"
       >
-        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        <slot name="next-icon">
+          <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        </slot>
         <span class="visually-hidden">Next</span>
       </button>
     </template>
