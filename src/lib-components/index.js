@@ -37,5 +37,6 @@ export { default as teChip } from './teChip.vue';
 export { default as teScrollToTop } from './teScrollToTop.vue';
 export { default as teCarousel } from './carousel/teCarousel.vue';
 export { default as teCarouselItem } from './carousel/teCarouselItem.vue';
+export { default as teTooltip } from './teTooltip.vue';
 // export { default as carousel } from './carousel/carousel.vue';
 // export { default as carouselItem } from './carousel/carouselItem.vue';
