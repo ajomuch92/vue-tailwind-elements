@@ -7,6 +7,10 @@
       <te-chip size="large">Hello World</te-chip>
       <te-chip size="medium" img-url="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg">Hello World</te-chip>
       <te-chip closable>Hello World</te-chip>
+      <te-chip closable>
+        Custom Icon
+        <te-icon class="text-xl" name="trash2" slot="icon" />
+      </te-chip>
     </div>
     <code-view :code="code" />
     <h1 class="text-lg my-1">Types</h1>
@@ -40,6 +44,10 @@ export default {
       <te-chip size="medium" img-url="https://mdbootstrap.com/img/Photos/Avatars/avatar-6.jpg">Hello World</te-chip>
       <te-chip closable>Hello World</te-chip>
       <te-chip closable type="primary" @close="...">Hello World</te-chip>
+      <te-chip closable>
+        Custom Icon
+        <te-icon class="text-xl" name="trash2" slot="icon" />
+      </te-chip>
     `,
     code2: `
       <te-chip size="small" type="normal">Hello World</te-chip>
