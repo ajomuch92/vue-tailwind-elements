@@ -166,6 +166,11 @@ const router = new VueRouter({
           name: 'Carousel',
           component: () => import('../views/Carousel.vue')
         },
+        {
+          path: '/offcanvas',
+          name: 'Offcanvas',
+          component: () => import('../views/Offcanvas.vue')
+        },
       ]
     },
   ]

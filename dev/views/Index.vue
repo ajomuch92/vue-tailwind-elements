@@ -15,7 +15,7 @@
             {{key}}
           </h2>
           <div class="flex flex-col space-y-1">
-            <a v-for="(option, i) in item" :key="i" :href="option.href">{{option.label}}</a>
+            <router-link v-for="(option, i) in item" :key="i" :to="option.href">{{option.label}}</router-link>
           </div>
         </div>
       </nav>
@@ -35,7 +35,7 @@
             {{key}}
           </h2>
           <div class="flex flex-col space-y-1">
-            <a v-for="(option, i) in item" :key="i" :href="option.href">{{option.label}}</a>
+            <router-link v-for="(option, i) in item" :key="i" :to="option.href">{{option.label}}</router-link>
           </div>
         </div>
       </nav>
@@ -127,6 +127,10 @@ export default {
         {
           label: 'Notification',
           href: '/notification'
+        },
+        {
+          label: 'Offcanvas',
+          href: '/offcanvas'
         },
         {
           label: 'Toast',
