@@ -12,7 +12,7 @@
       <te-navbar-item disabled>Disabled</te-navbar-item>
       <template slot="right">
         <a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4" href="#">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart"
+          <svg aria-hidden="true" focusable="false" data-prefix="fas"
             class="w-4" role="img" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512">
             <path fill="currentColor"
@@ -33,7 +33,7 @@
       <te-navbar-item dark>Projects</te-navbar-item>
       <template slot="right">
         <a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4" href="#">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart"
+          <svg aria-hidden="true" focusable="false" data-prefix="fas"
             class="w-4" role="img" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512">
             <path fill="currentColor"
@@ -55,7 +55,7 @@
       <te-navbar-item>Projects</te-navbar-item>
       <template slot="right">
         <a class="text-gray-500 hover:text-gray-700 focus:text-gray-700 mr-4" href="#">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shopping-cart"
+          <svg aria-hidden="true" focusable="false" data-prefix="fas"
             class="w-4" role="img" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 576 512">
             <path fill="currentColor"
