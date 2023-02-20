@@ -1,8 +1,6 @@
 <template>
   <div class="offcanvas fixed bottom-0 flex flex-col max-w-full bg-white bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-gray-700 border-none w-96"
     :class="getClass"
-    tabindex="-1"
-    aria-labelledby="offcanvasExampleLabel"
   >
     <div class="offcanvas-header flex items-center justify-between p-4">
       <h5 class="offcanvas-title mb-0 leading-normal font-semibold">{{title}}</h5>
@@ -44,9 +42,9 @@ export default {
       if (val) {
         this.backdrop = document.createElement('div');
         this.backdrop.className = 'offcanvas-backdrop fade show';
-        document.body.appendChild(this.backdrop);
+        this.$parent.$el.appendChild(this.backdrop);
       } else {
-        document.body.removeChild(this.backdrop);
+        this.$parent.$el.removeChild(this.backdrop);
         this.backdrop = undefined;
       }
       this.$emit('input', val);
