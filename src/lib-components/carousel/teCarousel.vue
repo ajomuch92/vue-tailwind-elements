@@ -1,6 +1,6 @@
 <template>
   <div :id="id" class="carousel slide relative" :class="{'carousel-dark': dark}" data-bs-ride="carousel">
-    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+    <div v-if="showIndicators" class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
       <button
         v-for="step in steps"
         :key="step"
@@ -23,7 +23,9 @@
         data-bs-slide="prev"
         @click="moveBack"
       >
-        <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        <slot name="prev-icon">
+          <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        </slot>
         <span class="visually-hidden">Previous</span>
       </button>
       <button
@@ -32,7 +34,9 @@
         data-bs-slide="next"
         @click="moveFormard"
       >
-        <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        <slot name="next-icon">
+          <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+        </slot>
         <span class="visually-hidden">Next</span>
       </button>
     </template>

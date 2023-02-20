@@ -842,5 +842,13 @@
   "te-carousel-item/title": {
     "description": "String to set the item title.",
     "type": "String"
+  },
+  "te-tooltip/arrow": {
+    "description": "Boolean value to show the tooltip arrow.",
+    "type": "Boolean"
+  },
+  "te-tooltip/position": {
+    "description": "String to indicate the tooltip position.",
+    "type": "String => 'top'|'right'|'bottom'|'left'"
   }
 }

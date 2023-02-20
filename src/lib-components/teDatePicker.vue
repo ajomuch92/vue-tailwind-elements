@@ -172,7 +172,6 @@
                 class="
                   cursor-pointer
                   text-center text-sm
-                  leading-none
                   rounded-full
                   leading-loose
                   transition
