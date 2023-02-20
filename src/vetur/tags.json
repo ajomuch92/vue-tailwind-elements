@@ -487,5 +487,13 @@
     ],
     "description": "te-carousel-item component",
     "subtags": []
+  },
+  "te-tooltip": {
+    "attributes": [
+      "arrow",
+      "position"
+    ],
+    "description": "te-tooltip component",
+    "subtags": []
   }
 }
