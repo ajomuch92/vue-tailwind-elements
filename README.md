@@ -7,7 +7,7 @@ The documentation and examples are being building [here](https://vue-tailwind-el
 * Adding slot to dropdown
 * Adding social icons
 * Adding more props to some components (button, table)
-* Adding more components (Chip, ScrollToTop and Carousel)
+* Adding more components (Chip, ScrollToTop, Tooltip and Carousel)
 * Adding support to custom icons
 
 # Instalation
