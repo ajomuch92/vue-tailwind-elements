@@ -80,9 +80,9 @@
     <code-view :code="code[2]" />
     <h1 class="text-lg my-2">Custom Trigger Slot</h1>
     <te-dropdown label="Dark" type="dark">
-      <template #trigger>
+      <template #trigger="{active}">
         <span class="bg-red-50 px-2 py-1 cursor-pointer rounded-sm">
-          Custom active
+          Custom active <te-icon :name="active? 'chevron-up': 'chevron-down'" />
         </span>
       </template>
       <te-dropdown-item>Item 1</te-dropdown-item>
@@ -179,9 +179,9 @@ export default {
       `,
       `
       <te-dropdown label="Dark" type="dark">
-        <template #trigger>
+        <template #trigger="{active}">
           <span class="bg-red-50 px-2 py-1 cursor-pointer rounded-sm">
-            Custom active
+            Custom active <te-icon :name="active? 'chevron-up': 'chevron-down'" />
           </span>
         </template>
         <te-dropdown-item>Item 1</te-dropdown-item>

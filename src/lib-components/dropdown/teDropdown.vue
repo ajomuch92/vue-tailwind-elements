@@ -1,7 +1,7 @@
 <template>
   <span class="dropdown relative" v-click-outside="outsideHandler">
-    <button v-if="$slots.trigger" class="trigger" @click="show=!show">
-      <slot name="trigger"/>
+    <button v-if="$slots.trigger||$scopedSlots.trigger" class="trigger" @click="show=!show">
+      <slot name="trigger" v-bind="{active:show}"/>
     </button>
     <te-button v-else class="dropdown-toggle mb-0" :type="type" :size="size" :outlined="outlined" :ripple="ripple" @click="show=!show">
       <div class="flex">
