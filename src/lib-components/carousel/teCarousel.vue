@@ -1,6 +1,6 @@
 <template>
   <div :id="id" class="carousel slide relative" :class="{'carousel-dark': dark}" data-bs-ride="carousel">
-    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+    <div v-if="showIndicators" class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
       <button
         v-for="step in steps"
         :key="step"
