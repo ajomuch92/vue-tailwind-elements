@@ -171,6 +171,11 @@ const router = new VueRouter({
           name: 'Offcanvas',
           component: () => import('../views/Offcanvas.vue')
         },
+        {
+          path: '/tooltip',
+          name: 'Tooltip',
+          component: () => import('../views/Tooltip.vue')
+        },
       ]
     },
   ]

@@ -137,6 +137,10 @@ export default {
           href: '/toast'
         },
         {
+          label: 'Tooltip',
+          href: '/tooltip'
+        },
+        {
           label: 'Icons',
           href: '/icons'
         },
