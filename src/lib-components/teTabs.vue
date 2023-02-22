@@ -1,33 +1,61 @@
 <template>
   <div class="tabs-container" :class="{'flex items-start': vertical}">
     <ul class="nav flex flex-col flex-wrap list-none border-b-0 pl-0 mb-3" :class="{'md:flex-row': !vertical, 'nav-tabs': !pills, 'nav-pills': pills}" role="tablist">
-      <li v-for="(title, key) in titles" :key="key" class="nav-item" :class="navItemClass" role="presentation" >
-        <a class="
-            nav-link
-            block
-            font-medium
-            text-xs
-            leading-tight
-            uppercase
-            border-x-0 border-t-0 border-b-2 border-transparent
-            px-6
-            py-3
-            my-2
-            cursor-pointer
-          "
-          :class="{
-            'pointer-events-none cursor-not-allowed': title.disabled, 
-            'active': key===currentValue,
-            'hover:border-transparent hover:bg-gray-100 focus:border-transparent': !pills,
-            'focus:outline-none focus:ring-0 rounded': pills
-          }"
-          :id="`tab-${key}`"
-          role="tab"
-          aria-selected="true"
-          @click="currentValue=key"
-        >
-          {{title.label||title}}
-        </a>
+      <li v-for="(title, key) in titles" :key="key" class="nav-item" :class="navItemClass" role="presentation">
+        <te-notification v-if="title.notification" v-bind="title.notification" style="margin: 0px;">
+          <a class="
+              nav-link
+              block
+              font-medium
+              text-xs
+              leading-tight
+              uppercase
+              border-x-0 border-t-0 border-b-2 border-transparent
+              px-6
+              py-3
+              my-2
+              cursor-pointer
+            "
+            :class="{
+              'cursor-not-allowed pointer-events-none opacity-50': title.disabled, 
+              'active': key===currentValue,
+              'hover:border-transparent hover:bg-gray-100 focus:border-transparent': !pills,
+              'focus:outline-none focus:ring-0 rounded': pills
+            }"
+            :id="`tab-${key}`"
+            role="tab"
+            aria-selected="true"
+            @click="currentValue=key"
+          >
+            {{title.label||title}}
+          </a>
+        </te-notification>
+        <a v-else class="
+              nav-link
+              block
+              font-medium
+              text-xs
+              leading-tight
+              uppercase
+              border-x-0 border-t-0 border-b-2 border-transparent
+              px-6
+              py-3
+              my-2
+              cursor-pointer
+            "
+            :class="{
+              'cursor-not-allowed pointer-events-none opacity-50': title.disabled, 
+              'active': key===currentValue,
+              'hover:border-transparent hover:bg-gray-100 focus:border-transparent': !pills,
+              'focus:outline-none focus:ring-0 rounded': pills
+            }"
+            :id="`tab-${key}`"
+            role="tab"
+            aria-selected="true"
+            @click="currentValue=key"
+          >
+            {{title.label||title}}
+          </a>
       </li>
     </ul>
     <div class="tab-content">
@@ -39,8 +67,13 @@
 </template>
 
 <script>
+import teNotification from './teNotification.vue';
+
 export default {
   name: 'teTabs',
+  components: {
+    teNotification
+  },
   props: {
     value: {
       type: Number,

@@ -36,7 +36,6 @@ export default {
     position: {
       type: String,
       default: 'top-right',
-      // validator: (value) => ['top-left', 'top-center', 'top-right', 'center-left', 'center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'].includes(value)
       validator: (value) => ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(value)
     },
     color: {
