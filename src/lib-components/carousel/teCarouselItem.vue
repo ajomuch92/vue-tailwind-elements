@@ -7,7 +7,7 @@
         class="block w-full"
         :alt="alt"
       />
-      <div class="carousel-caption hidden md:block absolute text-center">
+      <div class="carousel-caption hidden md:block absolute text-center" :class="{'left-1/2 top-1/2 width-full transform -translate-x-1/2 -translate-y-1/2 h-max': center}">
         <h5 class="text-xl">{{ title }}</h5>
         <slot name="default" />
       </div>
@@ -50,12 +50,19 @@ export default {
     isVisible() {
       this.transition = this.$parent.fade ? 'fade' : this.$parent.direction;
       return this.$parent.currentStep === this.position;
-    }
+    },
+    center() {
+      return this.$parent.center;
+    },
   },
 }
 </script>
 
 <style scoped>
+
+  .h-max {
+    height: max-content;
+  }
   .carousel-item-wrapper {
     display: block;
     margin-right: -100%;
