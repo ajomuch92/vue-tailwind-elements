@@ -22,7 +22,7 @@ export default {
     code: [
       '<span v-outside="myMethod" class="p-3 mb-3 bg-yellow-400">Click outside</span>',
       `
-      import { sizeMixin } from 'vue-tailwind-elements/src/mixins/index';
+      import { sizeMixin } from 'vue-tailwind-elements';
 
       export default {
         ...

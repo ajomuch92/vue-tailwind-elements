@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { sizeMixin } from '../../src/lib-components/mixins/index';
+import { sizeMixin } from '@/entry.esm';
 
 export default {
   name: 'Index',
