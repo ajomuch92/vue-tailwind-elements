@@ -176,6 +176,11 @@ const router = new VueRouter({
           name: 'Tooltip',
           component: () => import('../views/Tooltip.vue')
         },
+        {
+          path: '/timeline',
+          name: 'Timeline',
+          component: () => import('../views/Timeline.vue')
+        },
       ]
     },
   ]

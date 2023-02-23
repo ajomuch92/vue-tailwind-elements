@@ -133,6 +133,10 @@ export default {
           href: '/offcanvas'
         },
         {
+          label: 'Timeline',
+          href: '/timeline'
+        },
+        {
           label: 'Toast',
           href: '/toast'
         },
