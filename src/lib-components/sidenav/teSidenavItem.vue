@@ -60,7 +60,15 @@ export default {
     expanded: {
       type: Boolean,
       default: false,
-    }
+    },
+    activeClass: {
+      type: String,
+      default: '',
+    },
+    exact: {
+      type: Boolean,
+      default: true,
+    },
   },
   data: () => ({
     open: false,
@@ -79,7 +87,7 @@ export default {
     },
     tagOptions() {
       if (this.tag === 'a') return { href: this.linkTo, target: this.target };
-      return { to: this.linkTo }
+      return { to: this.linkTo, activeClass: this.activeClass, exact: this.exact }
     },
     styleContent() {
       return this.open && this.isMounted ? { maxHeight: `${this.$refs.content.scrollHeight}px` } : {};

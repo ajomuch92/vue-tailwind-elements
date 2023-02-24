@@ -18,6 +18,7 @@
         <te-icon name="list" />
       </te-button>
     </main>
+    <te-scroll-to-top class="bg-blue-500 text-white" parent="main" />
   </div>
 </template>
 
@@ -36,7 +37,8 @@ export default {
           {
             label: 'Home',
             linkTo: '/',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
         ]
       },
@@ -46,112 +48,134 @@ export default {
           {
             label: 'Accordion',
             linkTo: '/accordion',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Alert',
             linkTo: '/alert',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Badge',
             linkTo: '/badge',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Back To Top',
             linkTo: '/back-to-top',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Buttons',
             linkTo: '/buttons',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Buttongroup',
             linkTo: '/buttongroup',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Card',
             linkTo: '/card',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Carousel',
             linkTo: '/carousel',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Chips',
             linkTo: '/chips',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Dropdown',
             linkTo: '/dropdown',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Listgroup',
             linkTo: '/listgroup',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Modal',
             linkTo: '/modal',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Spinner',
             linkTo: '/spinner',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Stepper',
             linkTo: '/stepper',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Table',
             linkTo: '/table',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Notification',
             linkTo: '/notification',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Offcanvas',
             linkTo: '/offcanvas',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Timeline',
             linkTo: '/timeline',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Toast',
             linkTo: '/toast',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Tooltip',
             linkTo: '/tooltip',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Icons',
             linkTo: '/icons',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Rating',
             linkTo: '/rating',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
         ]
       },
@@ -161,27 +185,32 @@ export default {
           {
             label: 'Breadcrumb',
             linkTo: '/breadcrumb',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Navbar',
             linkTo: '/navbar',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Pagination',
             linkTo: '/pagination',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Sidenav',
             linkTo: '/sidenav',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Tab',
             linkTo: '/tab',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
         ]
       },
@@ -191,32 +220,38 @@ export default {
           {
             label: 'Date',
             linkTo: '/date',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Input',
             linkTo: '/input',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Files',
             linkTo: '/files',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Range',
             linkTo: '/range',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Switchable',
             linkTo: '/switchable',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
           {
             label: 'Select',
             linkTo: '/select',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
         ]
       },
@@ -226,7 +261,8 @@ export default {
           {
             label: 'Directives/Mixins',
             linkTo: '/utilities',
-            tag: 'router-link'
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
           },
         ]
       }
