@@ -1,7 +1,7 @@
 <template>
   <ul class="relative m-0 list-none px-0.2rem">
     <li class="relative cursor-pointer">
-      <component :is="tagComputed" class="flex h-12 items-center truncate rounded-md w-full hover:bg-blue-50 py-4 pr-6 pl-3 text-md text-gray-600 outline-none transition duration-300 ease-linear" @click="showOptionsHandler">
+      <component :is="tagComputed" v-bind="tagOptions" class="flex h-12 items-center truncate rounded-md w-full hover:bg-blue-50 py-4 pr-6 pl-3 text-md text-gray-600 outline-none transition duration-300 ease-linear" @click="showOptionsHandler">
         <span class="mr-1 h-5 w-5">
           <slot name="icon" />
         </span>
@@ -64,9 +64,13 @@ export default {
   },
   data: () => ({
     open: false,
+    isMounted: false,
   }),
   created() {
     this.open = this.expanded;
+  },
+  mounted() {
+    this.isMounted = true;
   },
   computed: {
     tagComputed() {
@@ -78,7 +82,7 @@ export default {
       return { to: this.linkTo }
     },
     styleContent() {
-      return this.open ? { maxHeight: `${this.$refs.content.scrollHeight}px` } : {};
+      return this.open && this.isMounted ? { maxHeight: `${this.$refs.content.scrollHeight}px` } : {};
     }
   },
   methods: {
