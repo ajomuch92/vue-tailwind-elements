@@ -181,6 +181,11 @@ const router = new VueRouter({
           name: 'Timeline',
           component: () => import('../views/Timeline.vue')
         },
+        {
+          path: '/sidenav',
+          name: 'Sidenav',
+          component: () => import('../views/Sidenav.vue')
+        },
       ]
     },
   ]
