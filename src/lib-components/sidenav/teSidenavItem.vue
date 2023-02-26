@@ -80,6 +80,11 @@ export default {
   mounted() {
     this.isMounted = true;
   },
+  watch: {
+    expanded(val) {
+      this.open = val;
+    }
+  },
   computed: {
     tagComputed() {
       if (this.options.length) return 'button';
