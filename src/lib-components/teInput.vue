@@ -19,6 +19,7 @@
           focus:bg-white focus:outline-none
         "
         :class="[sizeClass, ...disabledClass, ...invalidadClass, ...paddingForIcons]"
+        :readonly="readonly"
         @blur="onBlurHandler"
         @change="onChangeHandler"
         @focus="onFocusHandler"
