@@ -1,6 +1,6 @@
 <template>
   <label class="inline-flex items-center">
-    <input v-model="currentValue" type="checkbox" class="form-checkbox" :disabled="disabled" :value="nativeValue" />
+    <input v-model="currentValue" type="checkbox" class="form-checkbox h-4 w-4" :disabled="disabled" :value="nativeValue" />
     <span class="ml-2" :class="{'opacity-50': disabled}">
       <slot name="default" v-bind:selected="currentValue">
         {{label}}
@@ -14,7 +14,7 @@ export default {
   name: 'teCheckbox',
   props: {
     value: {
-      type: Boolean,
+      type: [Boolean, Array],
       default: false,
     },
     label: {
@@ -47,6 +47,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  input {
+    accent-color: rgb(59, 130, 246);
+  }
 </style>
