@@ -1,6 +1,6 @@
 <template>
   <label class="inline-flex items-center">
-    <input v-model="currentValue" type="checkbox" class="form-checkbox" :disabled="disabled" />
+    <input v-model="currentValue" type="checkbox" class="form-checkbox" :disabled="disabled" :value="nativeValue" />
     <span class="ml-2" :class="{'opacity-50': disabled}">
       <slot name="default" v-bind:selected="currentValue">
         {{label}}
@@ -24,7 +24,11 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
-    }
+    },
+    nativeValue: {
+      type: [String, Number],
+      default: undefined,
+    },
   },
   data: () => ({
     currentValue: false,
