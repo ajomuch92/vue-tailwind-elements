@@ -83,6 +83,11 @@ export default {
   watch: {
     expanded(val) {
       this.open = val;
+    },
+    open(val) {
+      if (val !== this.expanded) {
+        this.$emit('update:expanded', val);
+      }
     }
   },
   computed: {
