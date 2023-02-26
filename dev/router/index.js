@@ -186,6 +186,11 @@ const router = new VueRouter({
           name: 'Sidenav',
           component: () => import('../views/Sidenav.vue')
         },
+        {
+          path: '/multiselect',
+          name: 'Multiselect',
+          component: () => import('../views/Multiselect.vue')
+        },
       ]
     },
   ]

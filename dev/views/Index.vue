@@ -236,6 +236,12 @@ export default {
             activeClass: 'bg-blue-300'
           },
           {
+            label: 'Multiselect',
+            linkTo: '/multiselect',
+            tag: 'router-link',
+            activeClass: 'bg-blue-300'
+          },
+          {
             label: 'Range',
             linkTo: '/range',
             tag: 'router-link',
