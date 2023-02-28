@@ -1,6 +1,6 @@
 <template>
   <div class="w-full flex flex-wrap">
-    <aside v-if="windowSizeType!='sm'" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto sticky h-screen shadow-lg">
+    <aside v-if="isDesktop" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto sticky h-screen shadow-lg">
       <nav class="space-y-8 text-sm">
         <te-sidenav-item v-for="(option, i) in options" :key="i" v-bind="option" :expanded="expanded[option.keyOpen]" @update:expanded="expandHandler(option.keyOpen)">
           <template v-if="option.icon" #icon>
@@ -18,9 +18,9 @@
         </te-sidenav-item>
       </nav>
     </te-offcanvas>
-    <main id="main" class="w-full px-4 sm:w-9/12 lg:w-10/12 sm:pr-10 lg:pr-4 overflow-y-auto sticky h-screen">
+    <main id="main" class="w-full px-4 lg:w-10/12 sm:pr-10 lg:pr-4 overflow-y-auto sticky h-screen">
       <router-view />
-      <te-button v-if="windowSizeType=='sm'" class="absolute right-0 top-7" @click="showPanel=!showPanel" only-text>
+      <te-button v-if="isMobile" class="absolute right-0 top-7" @click="showPanel=!showPanel" only-text>
         <te-icon name="list" />
       </te-button>
     </main>
