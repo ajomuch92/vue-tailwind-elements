@@ -100,7 +100,7 @@ export default {
       return { to: this.linkTo, activeClass: this.activeClass, exact: this.exact }
     },
     styleContent() {
-      return this.open && this.isMounted ? { maxHeight: `${this.$refs.content.scrollHeight}px` } : {};
+      return this.open && this.isMounted && this.$refs?.content ? { maxHeight: `${this.$refs.content.scrollHeight}px` } : {};
     }
   },
   methods: {
