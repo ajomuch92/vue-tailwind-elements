@@ -319,6 +319,14 @@
     "description": "Indicate if right icon is clickable emitting `right-icon-click` event. By default is false.",
     "type": "Boolean"
   },
+  "te-input/rightIconFamily": {
+    "description": "String to indicate the family to use on right icon. By default is undefined",
+    "type": "String"
+  },
+  "te-input/rightIconClass": {
+    "description": "String to set a custom class on right icon. By default is `text-2xl`",
+    "type": "String"
+  },
   "te-input/leftIcon": {
     "description": "Indicates the name of the icon used on the left side.",
     "type": "String"
@@ -326,6 +334,14 @@
   "te-input/leftIconClickable": {
     "description": "Indicate if right icon is clickable emitting `left-icon-click` event. By default is false.",
     "type": "Boolean"
+  },
+  "te-input/leftIconFamily": {
+    "description": "String to indicate the family to use on left icon. By default is undefined",
+    "type": "String"
+  },
+  "te-input/leftIconClass": {
+    "description": "String to set a custom class on left icon. By default is `text-2xl`",
+    "type": "String"
   },
   "te-date-picker/value": {
     "description": "Prop to use with v-model directive",
