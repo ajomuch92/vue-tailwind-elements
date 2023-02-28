@@ -2,7 +2,7 @@
   <div class="w-full flex flex-wrap">
     <aside v-if="isDesktop" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto sticky h-screen shadow-lg">
       <nav class="space-y-8 text-sm">
-        <te-input v-model="search" placeholder="Search..." right-icon="search" />
+        <te-input v-model="search" placeholder="Search..." right-icon="search" right-icon-class="text-xl"/>
         <te-sidenav-item v-for="(option, i) in filteredOptions" :key="i" v-bind="option" :expanded="expanded[option.keyOpen]" @update:expanded="expandHandler(option.keyOpen)">
           <template v-if="option.icon" #icon>
             <te-icon v-bind="option.icon" class="text-base" />
