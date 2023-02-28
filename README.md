@@ -10,6 +10,7 @@ Currently, there are more than 40 components including custom directives and ico
 * Adding more components (Timeline, multiselect, sidenav)
 * Updating stepper component (Breaking change)
 * Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) (Breaking change)
+* Changing way to import the size mixin (Breaking change)
 * Updating documentation
 
 # Instalation
