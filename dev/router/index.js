@@ -176,6 +176,21 @@ const router = new VueRouter({
           name: 'Tooltip',
           component: () => import('../views/Tooltip.vue')
         },
+        {
+          path: '/timeline',
+          name: 'Timeline',
+          component: () => import('../views/Timeline.vue')
+        },
+        {
+          path: '/sidenav',
+          name: 'Sidenav',
+          component: () => import('../views/Sidenav.vue')
+        },
+        {
+          path: '/multiselect',
+          name: 'Multiselect',
+          component: () => import('../views/Multiselect.vue')
+        },
       ]
     },
   ]

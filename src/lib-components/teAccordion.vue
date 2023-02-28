@@ -41,6 +41,7 @@
         :id="`collapse-${key}`"
         class="accordion-collapse"
         :class="{'border-0': flush}"
+        :style="getItemStyle(key)"
       >
         <div class="accordion-body py-4 px-5">
           <slot :name="`content-${key+1}`" />
@@ -61,22 +62,38 @@ export default {
     flush: {
       type: Boolean,
       default: false,
+    },
+    singleOpen: {
+      type: Boolean,
+      default: false,
     }
   },
   data: () => ({
     itemsOpened: [],
+    isMounted: false,
   }),
+  mounted() {
+    this.isMounted = true;
+  },
+  watch: {
+    singleOpen() {
+      this.itemsOpened = [];
+    },
+  },
   methods: {
     toggle(key) {
-      const ref = this.$refs[`collapse-${key}`][0]
       if (!this.itemsOpened.includes(key)) {
-        ref.style.maxHeight = `${ref.scrollHeight}px`
+        if (this.singleOpen) this.itemsOpened = [];
         this.itemsOpened.push(key);
       } else {
-        ref.style.maxHeight = null;
         const index = this.itemsOpened.indexOf(key)
         this.itemsOpened.splice(index, 1);
       }
+    },
+    getItemStyle(key) {
+      if (!this.isMounted) return {};
+      const ref = this.$refs[`collapse-${key}`][0];
+      return this.itemsOpened.includes(key) ? { maxHeight: `${ref.scrollHeight}px` } : {}
     },
   }
 }

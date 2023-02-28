@@ -68,6 +68,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    center: {
+      type: Boolean,
+      default: false,
+    },
     value: {
       type: Number,
       default: 0,

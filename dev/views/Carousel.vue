@@ -2,7 +2,7 @@
   <div class="p-6">
     <h1 class="text-3xl my-2">Carousel</h1>
     <h1 class="text-lg">Example</h1>
-    <te-carousel :fade="fade" :loop="loop" :interval="interval" :show-indicators="indicators" :show-arrows="arrows">
+    <te-carousel :fade="fade" :loop="loop" :interval="interval" :show-indicators="indicators" :show-arrows="arrows" :dark="dark" :center="center">
       <template slot="prev-icon">
         <te-icon v-if="customIcons" name="chevron-double-left"/>
       </template>
@@ -20,6 +20,8 @@
       <te-checkbox v-model="loop" class="mx-2">Loop</te-checkbox>
       <te-checkbox v-model="indicators" class="mx-2">Indicators</te-checkbox>
       <te-checkbox v-model="arrows" class="mx-2">Arrows</te-checkbox>
+      <te-checkbox v-model="dark" class="mx-2">Dark</te-checkbox>
+      <te-checkbox v-model="center" class="mx-2">Center</te-checkbox>
       <te-checkbox v-model="customIcons" class="mx-2">Custom Icons</te-checkbox>
       <label class="mr-1">Interval:</label>
       <te-input placeholder="Interval" v-model.number="interval"></te-input>
@@ -42,7 +44,9 @@ export default {
     fade: false,
     indicators: true,
     arrows: true,
-    customIcons: true,
+    customIcons: false,
+    center: false,
+    dark: false,
     images2: [
       'https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg',
       'https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg',
@@ -50,7 +54,7 @@ export default {
     ],
     code: [
       `
-      <te-carousel :fade="fade" :loop="loop" :interval="interval" :show-indicators="indicators" :show-arrows="arrows">
+      <te-carousel :fade="fade" :loop="loop" :interval="interval" :show-indicators="indicators" :show-arrows="arrows" :dark="dark" :center="center">
         <template slot="prev-icon">
           <te-icon v-if="customIcons" name="chevron-double-left"/>
         </template>

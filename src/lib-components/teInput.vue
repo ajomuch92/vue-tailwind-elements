@@ -19,6 +19,7 @@
           focus:bg-white focus:outline-none
         "
         :class="[sizeClass, ...disabledClass, ...invalidadClass, ...paddingForIcons]"
+        :readonly="readonly"
         @blur="onBlurHandler"
         @change="onChangeHandler"
         @focus="onFocusHandler"
@@ -29,15 +30,17 @@
       />
       <te-icon
         v-if="rightIcon&&type!='number'"
-        class="text-2xl text-gray-400 absolute right-2 top-1/2 translate-y-1/2"
-        :class="{'cursor-pointer hover:text-gray-500': rightIconClickable}"
+        class="text-gray-400 absolute right-2 top-1/2 translate-y-1/2"
+        :family="rightIconFamily"
+        :class="[{'cursor-pointer hover:text-gray-500': rightIconClickable}, rightIconClass]"
         :name="rightIcon"
         @click.native="rightIconClickable? $emit('right-icon-click', $event): () => {}"
       />
       <te-icon
         v-if="leftIcon"
-        class="text-2xl text-gray-400 absolute left-2 top-1/2 translate-y-1/2"
-        :class="{'cursor-pointer hover:text-gray-500': leftIconClickable}"
+        class="text-gray-400 absolute left-2 top-1/2 translate-y-1/2"
+        :class="[{'cursor-pointer hover:text-gray-500': leftIconClickable}, leftIconClass]"
+        :family="leftIconFamily"
         :name="leftIcon"
         @click.native="leftIconClickable? $emit('right-icon-click', $event): () => {}"
       />
@@ -136,6 +139,14 @@ export default {
       type: String,
       default: ''
     },
+    rightIconFamily: {
+      type: String,
+      default: undefined
+    },
+    rightIconClass: {
+      type: String,
+      default: 'text-2xl'
+    },
     rightIconClickable: {
       type: Boolean,
       default: false
@@ -147,6 +158,14 @@ export default {
     leftIconClickable: {
       type: Boolean,
       default: false
+    },
+    leftIconFamily: {
+      type: String,
+      default: undefined
+    },
+    leftIconClass: {
+      type: String,
+      default: 'text-2xl'
     }
   },
   computed: {

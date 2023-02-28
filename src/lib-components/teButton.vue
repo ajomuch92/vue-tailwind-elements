@@ -8,7 +8,7 @@
         ease-linear
         transition-all
         duration-150
-        disabled:opacity-75
+        disabled:opacity-50
       "
     :class="getClass"
     :disabled="disabled"
@@ -128,7 +128,7 @@ export default {
         'text-sm py-2 h-10': this.size === 'medium',
         'text-base py-3 h-12': this.size === 'large',
         'cursor-not-allowed opacity-50': this.disabled,
-        'pointer-events-none cursor-not-allowed': this.loading,
+        'opacity-50 cursor-not-allowed': this.loading,
         'relative overflow-hidden': this.ripple,
         'px-4': this.size === 'small' && !this.icon,
         'px-6': this.size === 'medium' && !this.icon,
