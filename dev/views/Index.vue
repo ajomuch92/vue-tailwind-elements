@@ -312,6 +312,9 @@ export default {
         return options.filter((r) => r.label.toLowerCase().includes(this.search.toLowerCase()));
       }
       return this.options;
+    },
+    route() {
+      return this.$route.path;
     }
   },
   watch: {
@@ -319,6 +322,9 @@ export default {
       for (const keyExpanded of Object.keys(this.expanded)) {
         this.$set(this.expanded, keyExpanded, !!val);
       }
+    },
+    route() {
+      this.showPanel = false;
     }
   },
   methods: {
