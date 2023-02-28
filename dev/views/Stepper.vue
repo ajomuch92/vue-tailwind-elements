@@ -1,16 +1,26 @@
 <template>
   <div class="p-6">
     <h1 class="text-3xl my-2">Stepper</h1>
-    <div class="w-1/3 my-2">
-      <label class="w-1/3">Choose a color</label>
-      <te-select v-model="color" :options="colors" />
-    </div>
-    <te-stepper :steps="['Job details', 'Application form', 'Preview', 'Result']" :active-step.sync="activeStep" :color="color" />
+    <te-stepper :steps="steps" v-model="activeStep">
+      <template #step-1>
+        <p class="text-xl">Step 1 content</p>
+      </template>
+      <template #step-2>
+        <p class="text-xl">Step 2 content</p>
+      </template>
+      <template #step-3>
+        <p class="text-xl">Step 3 content</p>
+      </template>
+      <template #step-4>
+        <p class="text-xl">Step 4 content</p>
+      </template>
+    </te-stepper>
     <p>Active page {{activeStep}}</p>
-    <code-view :code="code[0]" />
-    <h1 class="text-3xl my-2">Disable steps</h1>
-    <te-stepper :steps="['Job details', 'Application form', 'Preview', 'Result']" :disabled="[false, true, false, false]" />
+    <code-view :code="code[0]" lang="js" />
     <code-view :code="code[1]" />
+    <h1 class="text-3xl my-2">Disable steps</h1>
+    <te-stepper :steps="stepsDisabled" />
+    <code-view :code="code[2]" />
   </div>
 </template>
 
@@ -22,10 +32,69 @@ export default {
   components: { CodeView },
   data: () => ({
     activeStep: 0,
-    colors: ['primary', 'secondary', 'success', 'warning', 'danger', 'pink', 'purple', 'dark'],
-    color: 'primary',
+    steps: [
+      {
+        label: 'Job details',
+      },
+      {
+        label: 'Application form',
+      },
+      {
+        label: 'Preview',
+      },
+      {
+        label: 'Result',
+      },
+    ],
+    stepsDisabled: [
+      {
+        label: 'Job details',
+      },
+      {
+        label: 'Application form',
+        disabled: true,
+      },
+      {
+        label: 'Preview',
+      },
+      {
+        label: 'Result',
+      },
+    ],
     code: [
-      `<te-stepper :steps="['Job details', 'Application form', 'Preview', 'Result']" :active-step.sync="activeStep" :color="color" />`,
+      `
+      steps: [
+        {
+          label: 'Job details',
+        },
+        {
+          label: 'Application form',
+          disabled: true,
+        },
+        {
+          label: 'Preview',
+        },
+        {
+          label: 'Result',
+        },
+      ]
+      `,
+      `
+      <te-stepper :steps="steps" v-model="activeStep">
+        <template #step-1>
+          <p class="text-xl">Step 1 content</p>
+        </template>
+        <template #step-2>
+          <p class="text-xl">Step 2 content</p>
+        </template>
+        <template #step-3>
+          <p class="text-xl">Step 3 content</p>
+        </template>
+        <template #step-4>
+          <p class="text-xl">Step 4 content</p>
+        </template>
+      </te-stepper>
+      `,
       `<te-stepper :steps="['Job details', 'Application form', 'Preview', 'Result']" :disabled="[false, true, false, false]" />`
     ]
   }),
