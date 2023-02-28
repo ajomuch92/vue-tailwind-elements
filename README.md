@@ -1,14 +1,16 @@
 # Vue Tailwind Elements
-A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind](https://tailwindcss.com/) for Vuejs.
+A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind 2](https://v2.tailwindcss.com/) for Vuejs.
 Currently, there are more than 40 components including custom directives and icon utility.
 
 ### New Features 💥
 * Fixing small bugs
-* Adding slot to dropdown
-* Adding social icons
-* Adding more props to some components (button, table)
-* Adding more components (Chip, ScrollToTop, Tooltip and Carousel)
-* Adding support to custom icons
+* Adding notifications to tabs
+* Adding animations to tabs
+* Adding single selection for accordion component
+* Adding more components (Timeline, multiselect, sidenav)
+* Updating stepper component (Breaking change)
+* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) (Breaking change)
+* Updating documentation
 
 # Instalation
 
