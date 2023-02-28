@@ -6,9 +6,12 @@
     <code-view :code="code[0]" />
     <h1 class="text-3xl my-2">Mixins</h1>
     <h1 class="text-lg my-2">Size Mixin</h1>
-    <p>Mixin to detect the window size and its changes</p>
+    <p>Mixin to detect the window size and its changes based on <a class="text-blue-700" href="https://v2.tailwindcss.com/docs/breakpoints" target="_blank">Tailwind breakpoints</a></p>
     <code-view :code="code[1]" />
-    <p>You could use the computed values <strong>windowSizeType</strong> to check what is window size. This computed could be 'sm', 'md' or 'lg' values.</p>
+    <p>
+      You could use the computed values <strong>sizeType</strong> to check what is window size. This computed could be 'xsm', 'sm', 'm', 'l', 'xl' or 'xxl' values, or you can use the isMobile, isTablet or isDesktop computed.
+      Also you can use the <strong>orientation</strong> variable to check the screen orientation.
+    </p>
   </div>
 </template>
 
