@@ -2,7 +2,8 @@
   <div class="w-full flex flex-wrap">
     <aside v-if="isDesktop" class="w-full p-6 sm:w-3/12 lg:w-2/12 bg-white text-gray-800 overflow-y-auto sticky h-screen shadow-lg">
       <nav class="space-y-8 text-sm">
-        <te-sidenav-item v-for="(option, i) in options" :key="i" v-bind="option" :expanded="expanded[option.keyOpen]" @update:expanded="expandHandler(option.keyOpen)">
+        <te-input v-model="search" placeholder="Search..." right-icon="search" />
+        <te-sidenav-item v-for="(option, i) in filteredOptions" :key="i" v-bind="option" :expanded="expanded[option.keyOpen]" @update:expanded="expandHandler(option.keyOpen)">
           <template v-if="option.icon" #icon>
             <te-icon v-bind="option.icon" class="text-base" />
           </template>
@@ -11,7 +12,8 @@
     </aside>
     <te-offcanvas v-else v-model="showPanel">
       <nav class="space-y-8 text-sm">
-        <te-sidenav-item v-for="(option, i) in options" :key="i" v-bind="option" :expanded="expanded[option.keyOpen]" @update:expanded="expandHandler(option.keyOpen)">
+        <te-input v-model="search" placeholder="Search..." right-icon="search" />
+        <te-sidenav-item v-for="(option, i) in filteredOptions" :key="i" v-bind="option" :expanded="expanded[option.keyOpen]" @update:expanded="expandHandler(option.keyOpen)">
           <template v-if="option.icon" #icon>
             <te-icon v-bind="option.icon" class="text-base" />
           </template>
@@ -35,6 +37,7 @@ export default {
   name: 'Index',
   mixins: [sizeMixin],
   data: () => ({
+    search: '',
     options: [
       {
         label: 'Home',
@@ -302,6 +305,22 @@ export default {
       utils: false,
     }
   }),
+  computed: {
+    filteredOptions() {
+      if (this.search.length) {
+        const options = this.options.flatMap((r) => r.options).filter((r) => r !== undefined);
+        return options.filter((r) => r.label.toLowerCase().includes(this.search.toLowerCase()));
+      }
+      return this.options;
+    }
+  },
+  watch: {
+    search(val) {
+      for (const keyExpanded of Object.keys(this.expanded)) {
+        this.$set(this.expanded, keyExpanded, !!val);
+      }
+    }
+  },
   methods: {
     expandHandler(key) {
       for (const keyExpanded of Object.keys(this.expanded)) {
