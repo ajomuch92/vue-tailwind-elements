@@ -37,20 +37,14 @@ export default {
   data: () => ({
     options: [
       {
-        label: 'Getting Started',
-        expanded: true,
+        label: 'Home',
         keyOpen: 'start',
         icon: {
           name: 'house'
         },
-        options: [
-          {
-            label: 'Home',
-            linkTo: '/',
-            tag: 'router-link',
-            activeClass: 'bg-blue-100'
-          },
-        ]
+        linkTo: '/',
+        tag: 'router-link',
+        activeClass: 'bg-blue-100'
       },
       {
         label: 'Components',
