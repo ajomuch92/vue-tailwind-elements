@@ -1,6 +1,6 @@
 <template>
   <div class="tabs-container" :class="{'flex items-start': vertical}">
-    <ul class="nav flex flex-col flex-wrap list-none border-b-0 pl-0 mb-3" :class="{'md:flex-row': !vertical, 'nav-tabs': !pills, 'nav-pills': pills}" role="tablist">
+    <ul ref="nav" class="nav flex flex-col flex-wrap list-none border-b-0 pl-0 mb-3" :class="{'md:flex-row': !vertical, 'nav-tabs': !pills, 'nav-pills': pills}" role="tablist">
       <li v-for="(title, key) in titles" :key="key" class="nav-item" :class="navItemClass" role="presentation">
         <te-notification v-if="title.notification" v-bind="title.notification" style="margin: 0px;">
           <a class="
@@ -58,21 +58,25 @@
           </a>
       </li>
     </ul>
-    <div class="tab-content">
-      <div v-for="index in titles.length" :key="index" class="tab-pane fade" :class="{'show active': (index-1)===currentValue}" :id="`tab-content-${index-1}`" role="tabpanel">
-        <slot :name="`tab-${index}`" />
-      </div>
+    <div class="content relative w-full overflow-hidden" :style="styleContent">
+      <slide-transition v-for="index in titles.length" :key="index" :index="currentValue" single :vertical="vertical">
+        <div v-show="(index-1)===currentValue" class="tab-panel relative float-left w-full" :id="`tab-content-${index-1}`" role="tabpanel">
+          <slot :name="`tab-${index}`" />
+        </div>
+      </slide-transition>
     </div>
   </div>
 </template>
 
 <script>
 import teNotification from './teNotification.vue';
+import SlideTransition from './transition/slideTransition.vue';
 
 export default {
   name: 'teTabs',
   components: {
-    teNotification
+    teNotification,
+    SlideTransition
   },
   props: {
     value: {
@@ -98,9 +102,13 @@ export default {
   },
   data: () => ({
     currentValue: -1,
+    isMounted: false,
   }),
   created() {
     this.currentValue = this.value;
+  },
+  mounted() {
+    this.isMounted = true;
   },
   watch: {
     currentValue(val) {
@@ -117,11 +125,22 @@ export default {
         'flex-grow text-center': this.vertical,
         'mx-1': this.pills && !this.vertical,
       }
+    },
+    styleContent() {
+      if (this.isMounted) {
+        return this.vertical ? { minHeight: `${this.$refs.nav.scrollHeight}px` } : {};
+      }
+      return {};
     }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+  .tab-panel {
+    display: block;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    min-height: inherit;
+  }
 </style>
