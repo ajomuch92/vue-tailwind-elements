@@ -6,7 +6,7 @@
           <slot name="icon" />
         </span>
         <span :class="{'font-bold': options.length}">
-          <slot name="default">
+          <slot name="label">
             {{ label }}
           </slot>
         </span>
