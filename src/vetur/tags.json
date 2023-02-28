@@ -495,5 +495,57 @@
     ],
     "description": "te-tooltip component",
     "subtags": []
+  },
+  "te-multiselect": {
+    "attributes": [
+      "value",
+      "singleSelect",
+      "options",
+      "displayField",
+      "valueField",
+      "placeholder",
+      "searchable",
+      "visibleItems",
+      "placeholderSearch",
+      "disabled",
+      "showSelectAll",
+      "clearable",
+      "minWidth",
+      "listHeight"
+    ],
+    "description": "te-multiselect component. Available slots: item",
+    "subtags": []
+  },
+  "te-sidenav-item": {
+    "attributes": [
+      "label",
+      "linkTo",
+      "target",
+      "options",
+      "tag",
+      "expanded",
+      "activeClass",
+      "exact"
+    ],
+    "description": "te-sidenav-item component. Available slots: icon, label, default.",
+    "subtags": []
+  },
+  "te-timeline": {
+    "attributes": [
+      "horizontal",
+      "inverted",
+      "colorClass"
+    ],
+    "description": "te-timeline component. Available slots: icon, label, default.",
+    "subtags": []
+  },
+  "te-timeline-item": {
+    "attributes": [
+      "title",
+      "subtitle",
+      "dotClass"
+    ],
+    "description": "te-timeline-item component. Available slots: icon, title, subtitle, default.",
+    "subtags": []
   }
 }

@@ -831,6 +831,10 @@
     "description": "Number of ms to show automatically one by one the carousel slides. By default is 1500.",
     "type": "Number"
   },
+  "te-carousel/center": {
+    "description": "Boolean value to indicate when text on carousel items are centered.",
+    "type": "Boolean"
+  },
   "te-carousel-item/imgUrl": {
     "description": "String to set the image url",
     "type": "String"
@@ -850,5 +854,117 @@
   "te-tooltip/position": {
     "description": "String to indicate the tooltip position.",
     "type": "String => 'top'|'right'|'bottom'|'left'"
+  },
+  "te-multiselect/value": {
+    "description": "Prop to use with v-model directive. It's an array, number or string value",
+    "type": "Array | Number | String"
+  },
+  "te-multiselect/singleSelect": {
+    "description": "Boolean value to indicate when values are single selection. By default is false.",
+    "type": "Boolean"
+  },
+  "te-multiselect/options": {
+    "description": "Array with options to show on the multiselect component.",
+    "type": "Array<object>"
+  },
+  "te-multiselect/displayField": {
+    "description": "String key to get the value to display from options array. By default is 'text'.",
+    "type": "String"
+  },
+  "te-multiselect/valueField": {
+    "description": "String key to get the value to set on v-model from options array. By default is 'value'.",
+    "type": "String"
+  },
+  "te-multiselect/placeholder": {
+    "description": "String to set the input placeholder.",
+    "type": "String"
+  },
+  "te-multiselect/searchable": {
+    "description": "Boolean to indicate when to show an input to search on options (display field). By default is false.",
+    "type": "Boolean"
+  },
+  "te-multiselect/visibleItems": {
+    "description": "Number of visible items when it's multiple selection on. By default is 3.",
+    "type": "Number"
+  },
+  "te-multiselect/placeholderSearch": {
+    "description": "String to set the search input placeholder. By default is 'Search...'",
+    "type": "String"
+  },
+  "te-multiselect/disabled": {
+    "description": "Boolean value to indicate when input is disabled. By default is false.",
+    "type": "Boolean"
+  },
+  "te-multiselect/showSelectAll": {
+    "description": "Boolean value to indicate when to show an option to select all options when is multiple selection. By default is false.",
+    "type": "Boolean"
+  },
+  "te-multiselect/clearable": {
+    "description": "Boolean value to indicate when to show a cross button to clear input value. By default is false.",
+    "type": "Boolean"
+  },
+  "te-multiselect/minWidth": {
+    "description": "String or number to set the min width input. By default is 250px.",
+    "type": "String | Number"
+  },
+  "te-multiselect/listHeight": {
+    "description": "String or number to set the height for list container. By default is 250px.",
+    "type": "String | Number"
+  },
+  "te-sidenav-item/label": {
+    "description": "String to set the item label. You can customize it using `label` slot.",
+    "type": "String"
+  },
+  "te-sidenav-item/linkTo": {
+    "description": "String to set the href attribute for option.",
+    "type": "String"
+  },
+  "te-sidenav-item/target": {
+    "description": "String to set the target for the a tag.",
+    "type": "String"
+  },
+  "te-sidenav-item/options": {
+    "description": "Array with options to show as item child. Same structure as father.",
+    "type": "Array<object>"
+  },
+  "te-sidenav-item/tag": {
+    "description": "String to set the component to use. By default is 'a' but you can use `router-link` or `nuxt-link`.",
+    "type": "String"
+  },
+  "te-sidenav-item/expanded": {
+    "description": "Boolean value to indicate when childre are shown. By default is false and you can use .sync modifier on this prop.",
+    "type": "Boolean"
+  },
+  "te-sidenav-item/activeClass": {
+    "description": "String to set the active class on `router-link` or `nuxt-link`.",
+    "type": "String"
+  },
+  "te-sidenav-item/exact": {
+    "description": "Boolean value to set exact prop on `router-link` or `nuxt-link`. By default is true.",
+    "type": "Boolean"
+  },
+  "te-timeline/horizontal": {
+    "description": "Boolean value to set when timeline is shown horizontaly. By default is false.",
+    "type": "Boolean"
+  },
+  "te-timeline/inverted": {
+    "description": "Boolean value to indicate when to show subtitle first. By default is false.",
+    "type": "Boolean"
+  },
+  "te-timeline/colorClass": {
+    "description": "String to set the border color. Use the border color notation from tailwind.",
+    "type": "String"
+  },
+  "te-timeline-item/title": {
+    "description": "String value to set item title.",
+    "type": "String"
+  },
+  "te-timeline-item/subtitle": {
+    "description": "String value to set item subtitle.",
+    "type": "String"
+  },
+  "te-timeline-item/dotClass": {
+    "description": "String value to set a custom class for dot element.",
+    "type": "String"
   }
 }
