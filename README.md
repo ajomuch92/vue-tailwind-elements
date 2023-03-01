@@ -21,7 +21,7 @@ Currently, there are more than 40 components including custom directives and ico
 ```bash
 npm install vue-tailwind-elements
 ```
-Import in your main.js (or index.js) file and install it:
+3. Import in your main.js (or index.js) file and install it:
 
 ```javascript
 ...
@@ -31,7 +31,7 @@ Vue.use(VueTailwindElements);
 ...
 ```
 
-3. And add this line to your tailwind.config.js file::
+4. And add this line to your tailwind.config.js file::
 
 ```javascript
 ...
