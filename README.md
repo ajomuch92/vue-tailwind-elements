@@ -17,7 +17,7 @@ Currently, there are more than 40 components including custom directives and ico
 
 1. Set up the Tailwind configuration files. Follow this [link](https://tailwindcss.com/docs/installation/using-postcss) to do it.
 
-2. Install from NPM (both libraries):  
+2. Install from NPM:  
 ```bash
 npm install vue-tailwind-elements
 ```
