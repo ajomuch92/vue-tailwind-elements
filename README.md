@@ -1,5 +1,5 @@
 # Vue Tailwind Elements
-A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind 2](https://v2.tailwindcss.com/) for Vuejs.
+A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind](https://v2.tailwindcss.com/) for Vuejs.
 Currently, there are more than 40 components including custom directives and icon utility.
 
 ### New Features 💥
@@ -8,10 +8,10 @@ Currently, there are more than 40 components including custom directives and ico
 * Adding animations to tabs
 * Adding single selection for accordion component
 * Adding more components (Timeline, multiselect, sidenav)
-* Updating stepper component *(Breaking change)*
-* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) *(Breaking change)*
-* Changing way to import the size mixin *(Breaking change)*
-* Updating documentation and way to install the Tailwind plugin *(Breaking change)*
+* Updating stepper component **(Breaking change)**
+* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) **(Breaking change)**
+* Changing way to import the size mixin **(Breaking change)**
+* Updating documentation and way to install the Tailwind plugin **(Breaking change)**
 
 # Instalation
 
@@ -31,19 +31,7 @@ Vue.use(VueTailwindElements);
 ...
 ```
 
-## Nuxt:
-Put the last configuration into a plugin file and the use it into the nuxt.config.js file like this:
-
-```javascript
-...
-  plugins: [
-    { src: '~/plugins/vue-tailwind-elements.js', mode: 'client' }
-  ],
-...
-
-```
-
-And add this line to your tailwind.config.js file::
+3. And add this line to your tailwind.config.js file::
 
 ```javascript
 ...
@@ -58,6 +46,18 @@ And add this line to your tailwind.config.js file::
       require('vue-tailwind-elements/src/plugin')
     ],
   }
+...
+
+```
+
+## Nuxt:
+Put the last configuration into a plugin file and the use it into the nuxt.config.js file like this:
+
+```javascript
+...
+  plugins: [
+    { src: '~/plugins/vue-tailwind-elements.js', mode: 'client' }
+  ],
 ...
 
 ```
