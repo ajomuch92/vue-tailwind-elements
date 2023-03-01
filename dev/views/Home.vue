@@ -21,19 +21,20 @@ export default {
   components: { CodeView },
   data: () => ({
     code: `
-      import 'tw-elements';
       import VueTailwindElements from 'vue-tailwind-elements';
 
       Vue.use(VueTailwindElements);
     `,
     code2: `
     module.exports = {
-      content: [...],
+      content: [
+        ...,
+      ],
       theme: {
         extend: {},
       },
       plugins: [
-        require('tw-elements/dist/plugin')
+        require('vue-tailwind-elements/src/plugin')
       ],
     }
     `

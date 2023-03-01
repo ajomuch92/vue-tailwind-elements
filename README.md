@@ -8,10 +8,10 @@ Currently, there are more than 40 components including custom directives and ico
 * Adding animations to tabs
 * Adding single selection for accordion component
 * Adding more components (Timeline, multiselect, sidenav)
-* Updating stepper component (Breaking change)
-* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) (Breaking change)
-* Changing way to import the size mixin (Breaking change)
-* Updating documentation
+* Updating stepper component *(Breaking change)*
+* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) *(Breaking change)*
+* Changing way to import the size mixin *(Breaking change)*
+* Updating documentation and way to install the Tailwind plugin *(Breaking change)*
 
 # Instalation
 
@@ -19,13 +19,12 @@ Currently, there are more than 40 components including custom directives and ico
 
 2. Install from NPM (both libraries):  
 ```bash
-npm install tw-elements vue-tailwind-elements
+npm install vue-tailwind-elements
 ```
 Import in your main.js (or index.js) file and install it:
 
 ```javascript
 ...
-import 'tw-elements';
 import VueTailwindElements from 'vue-tailwind-elements';
 
 Vue.use(VueTailwindElements);
@@ -56,7 +55,7 @@ And add this line to your tailwind.config.js file::
       extend: {},
     },
     plugins: [
-      require('tw-elements/dist/plugin')
+      require('vue-tailwind-elements/src/plugin')
     ],
   }
 ...
