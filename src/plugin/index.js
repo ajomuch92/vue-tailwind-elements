@@ -1,9 +1,8 @@
-const bsStyles = require('./styles');
+const styles = require('./styles');
 const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(
-  ({ addComponents }) => {
-    addComponents(bsStyles);
+    addComponents(styles);
   },
   {}
 );
