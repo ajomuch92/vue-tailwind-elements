@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block rounded-full spinner" :class="[{...typeClass}, size, color]" role="status">
+  <div class="spinner" :class="[{...typeClass}, size, color]" role="status">
     <span class="visually-hidden">Loading...</span>
   </div>
 </template>
