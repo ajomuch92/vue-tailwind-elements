@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin');
 const buttons = require( './buttons');
 const pagination = require('./pagination');
 const inputs = require('./inputs');
+const spinners = require('./spinners');
 
 module.exports = plugin(
   ({ addComponents, theme }) => {
@@ -10,6 +11,7 @@ module.exports = plugin(
     addComponents(buttons(theme));
     addComponents(pagination(theme));
     addComponents(inputs(theme));
+    addComponents(spinners(theme));
   },
   {}
 );
