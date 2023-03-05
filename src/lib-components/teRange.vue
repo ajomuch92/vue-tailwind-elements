@@ -2,15 +2,7 @@
   <input
     v-model.number="currentValue"
     type="range"
-    class="
-      form-range
-      appearance-none
-      w-full
-      h-6
-      p-0
-      bg-transparent
-      focus:outline-none focus:ring-0 focus:shadow-none
-    "
+    class="form-range focus:ring-0"
     :min="min"
     :max="max"
     :step="step"
@@ -63,3 +55,5 @@ export default {
 <style>
 
 </style>
+
+<!--  -->
