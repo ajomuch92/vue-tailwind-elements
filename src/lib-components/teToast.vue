@@ -1,6 +1,6 @@
 <template>
-  <div :class="colorClass" class="shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block" role="alert" aria-live="assertive" aria-atomic="true">
-    <div :class="{...colorClass, ...borderClass}" class="flex justify-between items-center py-2 px-3 bg-clip-padding border-b rounded-t-lg">
+  <div class="toast-wrapper" :class="[color]" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast" :class="[color]">
       <p :class="fontColorClass" class="font-bold flex items-center">
         <slot name="icon" v-bind="{type: color}">
           <svg v-if="color==='primary'" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="info-circle" class="w-4 h-4 mr-2 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -23,7 +23,7 @@
         <button v-if="showCloseButton" type="button" :class="closeButtonClass" class="btn-close box-content w-4 h-4 ml-2 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:opacity-75 hover:no-underline" aria-label="Close" @click="$emit('close', $event)"/>
       </div>
     </div>
-    <div :class="{...colorClass, ...fontColorClass}" class="p-3 rounded-b-lg break-words">
+    <div :class="{ ...fontColorClass}" class="p-3 rounded-b-lg break-words message">
       <slot name="default">
         {{message}}
       </slot>
@@ -58,28 +58,10 @@ export default {
     }
   },
   computed: {
-    colorClass() {
-      return {
-        'bg-white': this.color === 'normal',
-        'bg-blue-500': this.color === 'primary',
-        'bg-green-500': this.color === 'success',
-        'bg-yellow-500': this.color === 'warning',
-        'bg-red-500': this.color === 'danger',
-      }
-    },
     fontColorClass() {
       return {
         'text-gray-700': this.color === 'normal',
         'text-white': ['primary', 'success', 'warning', 'danger'].includes(this.color),
-      }
-    },
-    borderClass() {
-      return {
-        'border-gray-200': this.color === 'normal',
-        'border-blue-400': this.color === 'primary',
-        'border-green-400': this.color === 'success',
-        'border-yellow-400': this.color === 'warning',
-        'border-red-400': this.color === 'danger',
       }
     },
     closeButtonClass() {
@@ -93,5 +75,4 @@ export default {
 </script>
 
 <style>
-
 </style>

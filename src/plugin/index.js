@@ -5,6 +5,7 @@ const pagination = require('./pagination');
 const inputs = require('./inputs');
 const spinners = require('./spinners');
 const alerts = require( './alerts');
+const toasts = require('./toasts');
 
 module.exports = plugin(
   ({ addComponents, theme }) => {
@@ -14,6 +15,7 @@ module.exports = plugin(
     addComponents(inputs(theme));
     addComponents(spinners(theme));
     addComponents(alerts(theme));
+    addComponents(toasts(theme));
   },
   {}
 );
