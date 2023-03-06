@@ -28,11 +28,11 @@ module.exports = function (theme) {
         }
       },
       '&.success': {
-        color: theme('colors.indigo.600'),
-        backgroundColor: `${theme('colors.indigo.500')}1a`,
-        borderColor: theme('colors.indigo.400'),
+        color: theme('colors.green.600'),
+        backgroundColor: `${theme('colors.green.500')}1a`,
+        borderColor: theme('colors.green.400'),
         '&.solid':{
-          backgroundColor: theme('colors.indigo.500'),
+          backgroundColor: theme('colors.green.500'),
         }
       },
       '&.info': {
