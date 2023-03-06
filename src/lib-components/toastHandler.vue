@@ -1,19 +1,21 @@
 <template>
   <transition name="fade">
     <div v-show="visible" class="fixed py-4 px-3" :class="toastClass">
-      <te-toast v-if="type==='normal'" v-bind="toast" @close="close()"/>
+      <te-alert v-if="alert" :solid="alertSolid" :type="alertType" :text="alertText" />
+      <te-toast v-else-if="type==='normal'" v-bind="toast" @close="close()"/>
       <te-toast-light v-else v-bind="toast"/>
     </div>
   </transition>
 </template>
 
 <script>
+import TeAlert from './teAlert.vue';
 import teToast from './teToast.vue';
 import TeToastLight from './teToastLight.vue';
 
 export default {
   name: 'TeToastHandler',
-  components: { teToast, TeToastLight },
+  components: { teToast, TeToastLight, TeAlert },
   props: {
     position: {
       type: String,
@@ -33,6 +35,22 @@ export default {
     toast: {
       type: Object,
       default: () => ({}),
+    },
+    alert: {
+      type: Boolean,
+      default: false,
+    },
+    alertType: {
+      type: String,
+      default: '',
+    },
+    alertText: {
+      type: String,
+      default: '',
+    },
+    alertSolid: {
+      type: Boolean,
+      default: false,
     }
   },
   data: () => ({

@@ -5,6 +5,7 @@ import * as directives from '@/lib-components/directives/index';
 import showModal from './lib-components/modalProgrammatically';
 import showLoading from './lib-components/loading';
 import showToast from './lib-components/toast';
+import showAlert from './lib-components/alert';
 
 // install function executed by Vue.use()
 const install = function installVueTailwindElements(Vue, options = {}) {
@@ -19,6 +20,7 @@ const install = function installVueTailwindElements(Vue, options = {}) {
   Vue.prototype.$showModal = showModal;
   Vue.prototype.$showLoading = showLoading;
   Vue.prototype.$showToast = showToast;
+  Vue.prototype.$showAlert = showAlert;
   if (options.customIcons) {
     Vue.prototype.$tweCustomIcons = options.customIcons;
   }

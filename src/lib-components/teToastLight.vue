@@ -1,18 +1,6 @@
 <template>
-  <div
-    class="
-      flex
-      w-96
-      max-w-full
-      mx-auto
-      overflow-hidden
-      bg-white
-      rounded-lg
-      shadow-md
-      dark:bg-gray-800
-    "
-  >
-    <div class="flex items-center justify-center w-12" :class="backgroundColorClass">
+  <div class="toast-light-wrapper">
+    <div class="toast-light" :class="[type]">
       <slot name="icon" v-bind="{type}">
         <svg
           class="w-6 h-6 text-white fill-current"
@@ -58,7 +46,7 @@
     </div>
     <div class="px-4 py-2 -mx-3">
       <div class="mx-3">
-        <span class="font-semibold" :class="textColorClass">{{title}}</span>
+        <span class="toast-text" :class="[type]">{{title}}</span>
         <p class="text-sm text-gray-600 dark:text-gray-200">
           {{subtitle}}
         </p>
@@ -85,24 +73,6 @@ export default {
       validator: (value) => ['info', 'success', 'warning', 'danger'].includes(value)
     }
   },
-  computed: {
-    backgroundColorClass() {
-      return {
-        'bg-blue-500': this.type === 'info',
-        'bg-green-500': this.type === 'success',
-        'bg-yellow-500': this.type === 'warning',
-        'bg-red-500': this.type === 'danger',
-      }
-    },
-    textColorClass() {
-      return {
-        'text-blue-500 dark:text-blue-400': this.type === 'info',
-        'text-green-500 dark:text-green-400': this.type === 'success',
-        'text-yellow-500 dark:text-yellow-400': this.type === 'warning',
-        'text-red-500 dark:text-red-400': this.type === 'danger',
-      }
-    }
-  }
 }
 </script>
 

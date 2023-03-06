@@ -1,20 +1,6 @@
 <template>
-  <select class="form-select
-    appearance-none
-    block
-    font-normal
-    text-gray-700
-    bg-white bg-clip-padding bg-no-repeat
-    border border-solid border-gray-300
-    rounded
-    transition
-    ease-in-out
-    m-0
-    focus:text-gray-700
-    focus:bg-white
-    focus:border-blue-600
-    focus:outline-none"
-    :class="sizeClass"
+  <select class="form-select"
+    :class="[size]"
     :disabled="disabled"
     :multiple="multiple"
     v-model="currentValue"
@@ -70,15 +56,6 @@ export default {
   created() {
     this.currentValue = this.value || undefined;
   },
-  computed: {
-    sizeClass() {
-      return {
-        'px-x py-1 text-sm': this.size === 'small',
-        'px-3 py-1.5 text-base': this.size === 'medium',
-        'px-4 py-2 text-xl': this.size === 'large',
-      }
-    }
-  },
   watch: {
     currentValue(val) {
       this.$emit('input', val)
@@ -91,7 +68,4 @@ export default {
 </script>
 
 <style scoped>
-  .form-select {
-    min-width: 150px;
-  }
 </style>

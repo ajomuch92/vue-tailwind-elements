@@ -8,7 +8,7 @@
     <te-select v-model="valueSingle" :options="options2" placeholder="Select One" value-field="id" display-field="label"/>
     <p>{{valueSingle}}</p>
     <code-view :code="code[1]" />
-    <te-multiple-select v-model="valueMultiple" :options="options3"/>
+    <te-select v-model="valueMultiple" :options="options3" multiple/>
     <p class="pb-8">{{valueMultiple}}</p>
     <code-view :code="code[2]" />
   </div>
@@ -51,7 +51,7 @@ export default {
     code: [
       '<te-select v-model="value" :options="options1" placeholder="Select One"/>',
       '<te-select v-model="valueSingle" :options="options2" placeholder="Select One" value-field="id" display-field="label"/>',
-      '<te-multiple-select v-model="valueMultiple" :options="options3"/>',
+      '<te-select v-model="valueMultiple" :options="options3" multiple />',
     ]
   })
 }

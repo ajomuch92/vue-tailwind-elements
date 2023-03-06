@@ -5,8 +5,8 @@
         <li class="page-item">
           <a
             role="button"
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer select-none"
-            :class="{'pointer-events-none opacity-50': currentPage==1||pages==0, ...sizeClass}"
+            class="page-link prev"
+            :class="{'pointer-events-none opacity-50 select-none': currentPage==1||pages==0, [size]: true}"
             @click="currentPage--"
           >
             <span v-if="!showIcons">{{labelPrev}}</span>
@@ -16,12 +16,12 @@
         <li v-for="page in displayedPages" :key="page" class="page-item">
           <a
             role="button"
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 focus:shadow-none cursor-pointer select-none"
+            class="page-link"
             :class="{
-              'bg-blue-500 text-white': page===currentPage, 
-              'text-gray-800 hover:text-gray-800 hover:bg-gray-200': page!==currentPage,
+              'active': page===currentPage, 
+              'inactive': page!==currentPage,
               'rounded-full': rounded,
-              ...sizeClass
+              [size]: true
             }"
             @click="currentPage=page"
           >
@@ -31,8 +31,8 @@
         <li class="page-item">
           <a
             role="button"
-            class="page-link relative block rounded border-0 bg-transparent outline-none transition-all duration-300 text-gray-800 hover:text-gray-800 hover:bg-gray-200 focus:shadow-none cursor-pointer select-none"
-            :class="{'pointer-events-none opacity-50': currentPage==pages||pages==0, ...sizeClass}"
+            class="page-link next"
+            :class="{'pointer-events-none opacity-50 select-none': currentPage==pages||pages==0, [size]: true}"
             @click="currentPage++"
           >
             <span v-if="!showIcons">{{labelNext}}</span>
@@ -126,13 +126,6 @@ export default {
         'justify-start': this.position === 'lett',
       }
     },
-    sizeClass() {
-      return {
-        'text-sm h-8 w-8': this.size === 'small',
-        'text-base h-10 w-10': this.size === 'medium',
-        'text-xl h-14 w-14': this.size === 'large',
-      }
-    }
   },
   methods: {
     setInitialPages() {
@@ -159,9 +152,4 @@ export default {
 </script>
 
 <style scoped>
-  a[role='button'] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 </style>

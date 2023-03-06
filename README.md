@@ -3,15 +3,17 @@ A light library of components based on [Tailwind Elements](https://tailwind-elem
 Currently, there are more than 40 components including custom directives and icon utility.
 
 ### New Features 💥
-* Fixing small bugs
-* Adding notifications to tabs
-* Adding animations to tabs
-* Adding single selection for accordion component
-* Adding more components (Timeline, multiselect, sidenav)
-* Updating stepper component **(Breaking change)**
-* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) **(Breaking change)**
-* Changing way to import the size mixin **(Breaking change)**
-* Updating documentation and way to install the Tailwind plugin **(Breaking change)**
+* Simplicating the name of the classes used on the project.
+* Fixing small bugs.
+* Adding notifications to tabs.
+* Adding animations to tabs.
+* Adding single selection for accordion component.
+* Adding more components (Timeline, multiselect, sidenav).
+* Updating stepper component **(Breaking change)**.
+* Updating size mixin to add [Tailwind breakpoints](https://v2.tailwindcss.com/docs/breakpoints) **(Breaking change)**.
+* Changing way to import the size mixin **(Breaking change)**.
+* Updating documentation and way to install the Tailwind plugin **(Breaking change)**.
+* Adding a global method to show alerts.
 
 # Instalation
 
