@@ -147,8 +147,61 @@ module.exports = function (theme) {
       },
     }
   };
+  const chips = {
+    '.chip': {
+      padding: `${theme('padding.2')} 0px`,
+      borderRadius: theme('borderRadius.full'),
+      fontWeight: theme('fontWeight.semibold'),
+      fontSize: theme('fontSize.sm'),
+      display: 'flex',
+      alignItems: 'center',
+      width: theme('width.max'),
+      color: theme('colors.white'),
+      '&.normal': {
+        backgroundColor: theme('colors.gray.500'),
+      },
+      '&.secondary': {
+        backgroundColor: theme('colors.indigo.500'),
+      },
+      '&.success': {
+        backgroundColor: theme('colors.green.500'),
+      },
+      '&.primary': {
+        backgroundColor: theme('colors.blue.500'),
+      },
+      '&.warning': {
+        backgroundColor: theme('colors.yellow.500'),
+      },
+      '&.danger': {
+        backgroundColor: theme('colors.red.500'),
+      },
+      '&.purple': {
+        backgroundColor: theme('colors.purple.500'),
+      },
+      '&.pink': {
+        backgroundColor: theme('colors.pink.500'),
+      },
+      '&.dark': {
+        backgroundColor: theme('colors.gray.800'),
+      },
+      '&.light': {
+        backgroundColor: theme('colors.gray.200'),
+        color: theme('colors.black'),
+      },
+      '&.small': {
+        height: theme('height.9')
+      },
+      '&.medium': {
+        height: theme('height.11')
+      },
+      '&.large': {
+        height: theme('height.14')
+      },
+    }
+  };
   return {
     ...alerts,
     ...notifications,
+    ...chips
   };
 }

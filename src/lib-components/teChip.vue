@@ -1,14 +1,5 @@
 <template>
-  <span class="
-    py-2
-    rounded-full
-    font-semibold
-    text-sm
-    flex
-    items-center
-    w-max"
-    :class="[colorClass, sizeClass, imgUrl ? 'pr-4': 'px-4']"
-  >
+  <span class="chip" :class="[type, size, imgUrl ? 'pr-4': 'px-4']">
     <img v-if="imgUrl" class="rounded-full max-w-none mr-2" :src="imgUrl" :class="[sizeClass, widthImgClass]" />
     <slot />
     <button v-if="closable" class="bg-transparent hover focus:outline-none" @click="emit('close', $event)">
@@ -49,27 +40,6 @@ export default {
     }
   },
   computed: {
-    colorClass() {
-      return {
-        'bg-gray-500 text-white': this.type === 'normal',
-        'bg-indigo-500 text-white': this.type === 'secondary',
-        'bg-green-500 text-white': this.type === 'success',
-        'bg-blue-500 text-white': this.type === 'primary',
-        'bg-yellow-500 text-white': this.type === 'warning',
-        'bg-red-500 text-white': this.type === 'danger',
-        'bg-purple-500 text-white': this.type === 'purple',
-        'bg-pink-500 text-white': this.type === 'pink',
-        'bg-gray-800 text-white': this.type === 'dark',
-        'bg-gray-200 text-black': this.type === 'light',
-      };
-    },
-    sizeClass() {
-      return {
-        'h-9': this.size === 'small',
-        'h-11': this.size === 'medium',
-        'h-14': this.size === 'large',
-      };
-    },
     widthImgClass() {
       return {
         'w-9': this.size === 'small',
