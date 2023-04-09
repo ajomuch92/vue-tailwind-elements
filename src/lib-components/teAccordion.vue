@@ -66,6 +66,10 @@ export default {
     singleOpen: {
       type: Boolean,
       default: false,
+    },
+    defaultOpen: {
+      type: Array,
+      default: () => [],
     }
   },
   data: () => ({
@@ -74,6 +78,7 @@ export default {
   }),
   mounted() {
     this.isMounted = true;
+    this.itemsOpened = this.defaultOpen;
   },
   watch: {
     singleOpen() {
@@ -85,9 +90,11 @@ export default {
       if (!this.itemsOpened.includes(key)) {
         if (this.singleOpen) this.itemsOpened = [];
         this.itemsOpened.push(key);
+        this.$emit('open', key);
       } else {
         const index = this.itemsOpened.indexOf(key)
         this.itemsOpened.splice(index, 1);
+        this.$emit('close', key);
       }
     },
     getItemStyle(key) {
