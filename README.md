@@ -1,15 +1,19 @@
 # Vue Tailwind Elements
-A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind](https://v2.tailwindcss.com/) for Vuejs.
-Currently, there are more than 40 components including custom directives and icon utility.
+A light library of components based on [Tailwind Elements](https://tailwind-elements.com/) and [Tailwind](https://tailwindcss.com/) for Vuejs.
+Currently, there are more than 40 components including custom directives and icons utility.
 
 ### New Features 💥
 * Adding openend default items on accordion component
+* Updating way to install our package to avoid extra dependencies.
 
 # Instalation
 
-1. Set up the Tailwind configuration files. Follow this [link](https://tailwindcss.com/docs/installation/using-postcss) to do it.
+1. Install Tailwind from NPM:
+```bash
+npm install tailwindcss
+```
 
-2. Install from NPM:  
+2. Install the package from NPM:  
 ```bash
 npm install vue-tailwind-elements
 ```
@@ -18,6 +22,7 @@ npm install vue-tailwind-elements
 ```javascript
 ...
 import VueTailwindElements from 'vue-tailwind-elements';
+import 'vue-tailwind-elements/dist/styles.css';
 
 Vue.use(VueTailwindElements);
 ...
@@ -35,7 +40,6 @@ Vue.use(VueTailwindElements);
       extend: {},
     },
     plugins: [
-      require('vue-tailwind-elements/src/plugin')
     ],
   }
 ...
