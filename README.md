@@ -4,14 +4,11 @@ Currently, there are more than 40 components including custom directives and ico
 
 ### New Features 💥
 * Adding openend default items on accordion component
-* Updating way to install our package to avoid extra dependencies.
+* Updating way to install our package to avoid extra dependencies **(Breaking change)**.
 
 # Instalation
 
-1. Install Tailwind from NPM:
-```bash
-npm install tailwindcss
-```
+1. Install Tailwind. Follow this [guide](https://tailwindcss.com/docs/guides/vite#vue) to do it.
 
 2. Install the package from NPM:  
 ```bash
