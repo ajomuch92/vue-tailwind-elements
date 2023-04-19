@@ -20,7 +20,6 @@ npm install vue-tailwind-elements
 ```javascript
 ...
 import VueTailwindElements from 'vue-tailwind-elements';
-import 'vue-tailwind-elements/dist/styles.css';
 
 Vue.use(VueTailwindElements);
 ...
