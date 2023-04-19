@@ -5,6 +5,7 @@ Currently, there are more than 40 components including custom directives and ico
 ### New Features 💥
 * Adding openend default items on accordion component
 * Updating way to install our package to avoid extra dependencies **(Breaking change)**.
+* Now compatible with Tailwind v3
 
 # Instalation
 
@@ -25,7 +26,7 @@ Vue.use(VueTailwindElements);
 ...
 ```
 
-4. And add this line to your tailwind.config.js file::
+4. And add these lines to your tailwind.config.js file:
 
 ```javascript
 ...
@@ -37,6 +38,7 @@ Vue.use(VueTailwindElements);
       extend: {},
     },
     plugins: [
+      require('vue-tailwind-elements/src/plugin'),
     ],
   }
 ...
