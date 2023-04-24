@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden" :class="{'shadow-md rounded-md': !shadowless}" :style="getWidth">
+  <div class="overflow-hidden" :class="[{'shadow-md rounded-md': !shadowless}, `w-[${width}]`]">
     <div v-if="hasHeader" class="py-3 px-6 border-b border-gray-300 text-center">
       <slot name="header" />
     </div>
@@ -50,16 +50,5 @@ export default {
       default: ''
     }
   },
-  computed: {
-    getWidth() {
-      return {
-        width: this.width
-      }
-    }
-  }
 }
 </script>
-
-<style>
-
-</style>

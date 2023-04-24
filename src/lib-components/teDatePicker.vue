@@ -1,5 +1,5 @@
 <template>
-  <div class="antialiased sans-serif w-44">
+  <div class="antialiased sans-serif" :class="`w-[${width}]`">
     <div class="relative">
       <slot name="trigger">
         <input
@@ -248,6 +248,10 @@ export default {
       type: Array,
       default: () => [],
       validator: (value) => value.length === 0 || value.every(r => r instanceof Date && r.getTime())
+    },
+    width: {
+      type: String,
+      default: '10rem'
     }
   },
   data: () => ({
