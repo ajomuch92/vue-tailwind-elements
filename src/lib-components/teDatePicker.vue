@@ -26,7 +26,7 @@
         />
       </slot>
 
-      <div class="absolute top-0 right-0 px-3 py-2">
+      <div class="absolute top-1/2 transform -translate-y-1/2 right-0 px-3 py-2">
         <slot name="icon">
           <svg
             class="h-6 w-6 text-gray-400"
