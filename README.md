@@ -4,7 +4,7 @@ Currently, there are more than 40 components including custom directives and ico
 
 ### New Features 💥
 * Now compatible with Tailwind v3
-* Adding width prop to date and time picker
+* Adding min width to date and time picker
 * Adding selectable prop to button group
 
 # Instalation
