@@ -3,9 +3,9 @@ A light library of components based on [Tailwind Elements](https://tailwind-elem
 Currently, there are more than 40 components including custom directives and icons utility.
 
 ### New Features 💥
-* Adding openend default items on accordion component
-* Updating way to install our package to avoid extra dependencies **(Breaking change)**.
 * Now compatible with Tailwind v3
+* Adding width prop to date and time picker
+* Adding selectable prop to button group
 
 # Instalation
 
