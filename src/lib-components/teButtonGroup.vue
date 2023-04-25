@@ -7,9 +7,9 @@
       :size="size"
       :outlined="outlined"
       no-rounded
-      :class="{'rounded-l': n===1, 'rounded-r': n===quantity}"
+      :class="{'rounded-l': n===1, 'rounded-r': n===quantity, 'active': selectable&&selectedIndex.includes(n)}"
       :disabled="disabled[n-1]||false"
-      @click="$emit('click', {index: n, event: $event})"
+      @click="clickHandler({index: n, event: $event})"
     >
       <slot :name="`button-${n}`" v-bind:index="n" />
     </te-button>
@@ -45,6 +45,25 @@ export default {
       type: Array,
       default: () => []
     },
+    selectable: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  data: () => ({
+    selectedIndex: [],
+  }),
+  methods: {
+    clickHandler({ index, event }) {
+      if (this.selectable) {
+        if (this.selectedIndex.includes(index)) {
+          this.selectedIndex = this.selectedIndex.filter((r) => r !== index);
+        } else {
+          this.selectedIndex.push(index);
+        }
+      }
+      this.$emit('click', { index, event });
+    }
   }
 }
 </script>
