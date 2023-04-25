@@ -1,4 +1,4 @@
-src/plugin/*
-src/vetur/*
+/src/plugin
+/src/vetur
 build
 dev
