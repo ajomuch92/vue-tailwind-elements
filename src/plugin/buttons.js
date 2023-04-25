@@ -18,7 +18,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.gray.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.gray.800'),
         },
         '&.only-text': {
@@ -45,7 +45,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.indigo.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.indigo.800'),
         },
         '&.only-text': {
@@ -72,7 +72,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.green.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.green.800'),
         },
         '&.only-text': {
@@ -99,7 +99,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.blue.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.blue.800'),
         },
         '&.only-text': {
@@ -126,7 +126,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.yellow.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.yellow.800'),
         },
         '&.only-text': {
@@ -153,7 +153,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.red.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.red.800'),
         },
         '&.only-text': {
@@ -180,7 +180,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.purple.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.purple.800'),
         },
         '&.only-text': {
@@ -207,7 +207,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.pink.700'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.pink.800'),
         },
         '&.only-text': {
@@ -234,7 +234,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.gray.900'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.black'),
         },
         '&.only-text': {
@@ -261,7 +261,7 @@ module.exports =  function buttons(theme) {
         '&:hover': {
           backgroundColor: theme('colors.gray.300'),
         },
-        '&:active': {
+        '&:active, &.active': {
           backgroundColor: theme('colors.gray.400'),
         },
         '&.only-text': {
