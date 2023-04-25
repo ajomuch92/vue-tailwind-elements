@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-2 px-5 py-2 w-44 bg-white rounded-lg border-2" :class="{'pointer-events-none bg-gray-50': disabled}">
+  <div class="mt-2 px-5 py-2 bg-white rounded-lg border-2 time-picker" :class="{'pointer-events-none bg-gray-50': disabled}">
     <div class="flex">
       <select
         name="hours"
@@ -111,3 +111,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .time-picker {
+    max-width: 12rem;
+  }
+</style>

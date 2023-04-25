@@ -1,5 +1,5 @@
 <template>
-  <div class="antialiased sans-serif" :class="`w-[${width}]`">
+  <div class="antialiased sans-serif date-picker">
     <div class="relative">
       <slot name="trigger">
         <input
@@ -249,10 +249,6 @@ export default {
       default: () => [],
       validator: (value) => value.length === 0 || value.every(r => r instanceof Date && r.getTime())
     },
-    width: {
-      type: String,
-      default: '10rem'
-    }
   },
   data: () => ({
     datepickerValue: '',
@@ -315,7 +311,7 @@ export default {
         } 
       }
       return true;
-    }
+    },
   },
   methods: {
     initDate() {
@@ -389,6 +385,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .date-picker {
+    max-width: 12rem;
+  }
 </style>
