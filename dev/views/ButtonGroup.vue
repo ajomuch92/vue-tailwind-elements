@@ -1,7 +1,8 @@
 <template>
   <div class="p-6">
     <h1 class="text-3xl my-2">Button Group</h1>
-    <te-button-group :quantity="3">
+    <te-checkbox v-model="selectable">Selectable</te-checkbox>
+    <te-button-group :quantity="3" :selectable="selectable">
       <template slot="button-1">Button 1</template>
       <template slot="button-2">Button 2</template>
       <template slot="button-3">Button 3</template>
@@ -63,8 +64,9 @@ export default {
   name: 'ButtonGroup',
   data: () => ({
     index: null,
+    selectable: false,
     code: [
-      `<te-button-group :quantity="3">
+      `<te-button-group :quantity="3" :selectable="selectable">
         <template slot="button-1">Button 1</template>
         <template slot="button-2">Button 2</template>
         <template slot="button-3">Button 3</template>

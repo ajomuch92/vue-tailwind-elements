@@ -108,12 +108,16 @@
     "type": "String => 'small'|'medium'|'large'"
   },
   "te-button-group/outlined": {
-    "description": "Indicates when buttons only will have a colored border. By default is false",
+    "description": "Indicates when buttons only will have a colored border. By default is false.",
     "type": "Boolean"
   },
   "te-button-group/disabled": {
-    "description": "This array corresponds to disability to each button according with its index",
+    "description": "This array corresponds to disability to each button according with its index.",
     "type": "Array<boolean>"
+  },
+  "te-button-group/selectable": {
+    "description": "Value to set selectable prop to show active on button group.",
+    "type": "Boolean"
   },
   "te-card/imgSrc": {
     "description": "Source to show into the main card image.",

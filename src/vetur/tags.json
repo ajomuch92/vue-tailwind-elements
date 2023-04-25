@@ -56,7 +56,8 @@
       "type",
       "size",
       "outlined",
-      "disabled"
+      "disabled",
+      "selectable"
     ],
     "description": "te-button-group component",
     "subtags": []
