@@ -7,6 +7,8 @@ Currently, there are more than 40 components including custom directives and ico
 * Adding min width to date and time picker
 * Adding selectable prop to button group
 
+A package for Vue JS 3 is being develop [here](https://www.npmjs.com/package/vue3-tailwind-elements).
+
 # Instalation
 
 1. Install Tailwind. Follow this [guide](https://tailwindcss.com/docs/guides/vite#vue) to do it.
